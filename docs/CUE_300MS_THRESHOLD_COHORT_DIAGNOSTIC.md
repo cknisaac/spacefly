@@ -1,0 +1,35 @@
+# Outcome-373 300-ms target-cohort threshold test
+
+**Status:** complete, 2026-09-30. Synthetic Branch A only. This tests one structural subset at seed 2002, outcome 373; it is not a learning-rule revision or a new training run. The [locked protocol](../configs/cue_300ms_threshold_cohort_diagnostic.json), [raw result and complete traces](figures/cue_300ms_threshold_cohort/result.json), [source manifest](figures/cue_300ms_threshold_cohort/meta.json), saved branch checkpoints, and [independent audit](figures/cue_300ms_threshold_cohort/audit.json) preserve the comparison.
+
+## Selection before probing
+
+The preceding [300-ms necessity test](CUE_300MS_NECESSITY_DIAGNOSTIC.md) showed that omitting all 48 edges in this cue bin nearly restored no-update timing. The [cooldown test](CUE_300MS_COOLDOWN_MEDIATION_DIAGNOSTIC.md) established that the full update moved the **first motor threshold crossing** 73 ms earlier and that the fixed 200-ms cooldown transmitted this advance to the scored DOWN. The question here is which structurally defined part of the 300-ms update causes that upstream crossing advance.
+
+Before the new probe, the saved A5 per-edge update and motor-spike traces were inspected. Immediately before the real-full branch's first crossing at **372.383 s**, nine motor spikes occupied the 20-ms readout window. Motor cells **94, 95 and 96** spiked on the crossing tick, raising the count to 12, beyond threshold 10. The four 300-ms relay cells **48–51** each connect to those three motor targets. This gave one destination-defined split: their **12 relay→motor edges** versus the other **36** 300-ms edges targeting motor cells 97–105. The locked edge slots are `136,137,138,148,149,150,160,161,162,172,173,174`. Selection used the saved crossing batch and connectivity, not probe score. No other subset was tested.
+
+The protocol prescribed exactly three branches from the same pre-dopamine state: **no update**, **real full update**, and **real full update with only these 12 applied weight changes omitted**. The full branch used the unchanged production plasticity method. The omission branch restored those 12 weights to their pre-update values after the identical real update. It did not renormalize or redistribute changes, alter clipping on retained edges, or change any other state. The selected cohort carried **8.087 mV raw proposed L1** and **6.831 mV applied L1**; the omitted branch retained **55.339 mV** of the full **62.170 mV** applied L1.
+
+The first upward motor on-threshold crossing of the **first note** was the primary endpoint. A shift from the full branch **toward** the no-update crossing, by at least one 1-ms tick, would identify the omitted cohort as a causal contributor to this early crossing. An earlier crossing would be classified as an opposing or nonlinear effect, without a rescue claim. The first DOWN, scored DOWN, spike-window counts and full-panel score were secondary. Each branch used the identical A5 32-note frozen panel, with exploration and plasticity off.
+
+## Result
+
+| Branch | First threshold rise / null DOWN (s) | Motor window count, previous tick → crossing | First scored DOWN (s) | First scored error | Frozen GOOD+ | Mean utility |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| No update | 372.456 | 7 → 11 | 372.656 | −69 ms, GOOD | 17/32 | −0.111328 |
+| Real full update | 372.383 | 9 → 12 | 372.583 | −142 ms, MISS | 0/32 | −1 |
+| Full except 300-ms targets 94–96 | **372.375** | 8 → 10 | **372.576** | −149 ms, MISS | 0/32 | −1 |
+
+Omitting the target-94–96 cohort moved the first threshold crossing **8 ms earlier than real full**, which is **81 ms earlier than no update**. It therefore did **not** shift the crossing back toward no update. The first null DOWN moved with the threshold crossing. The scored DOWN was 7 ms earlier than full and 80 ms earlier than no update; its one-millisecond departure from the crossing shift reflects discrete closed-loop readout dynamics. All three branches produced **64 DOWN actions**, including 32 null actions. The omission branch retained 32 MISS, 0/32 GOOD+ and mean utility −1, just like full. Complete action and signed-timing ledgers are in the raw result; these downstream scores were not used to choose the subset.
+
+The spike record gives a concrete reason the omission can advance the crossing despite delaying activity in the selected cells. In the real-full branch, the first spikes from cells 94–96 occur at **372.354–372.355 s**. At **372.375 s**, those spikes have expired from the readout's `(time−20 ms, time]` window; its count is **7**, below threshold. Later spikes bring the real-full count from 9 to 12 at 372.383 s. With the cohort omitted, cells 94–96 first spike at **372.358 s**, three to four milliseconds later. At 372.375 s they are still in the 20-ms window, giving **10** spikes and crossing threshold. This is directly supported by the saved motor batches and reconstructed window count. Why the changed weights shift the selected cells' spike phase remains unresolved.
+
+## Interpretation and limits
+
+The selected 12-edge cohort **does affect** spike timing and threshold-window occupancy, but its omission affects the first crossing in the **opposite direction** from a rescue. It is therefore **not demonstrated to be the necessary upstream contributor** to the harmful 73-ms advance in this combined update. This single test cannot identify which of the remaining 36 edges, or which interaction among the 48, causes the advance. A downstream score-only comparison would have missed the opposite movement of the primary endpoint. The result is limited to this exact selected synthetic state and first note. It neither validates nor modifies the production learning rule, and it is not evidence that M2 passes.
+
+## Audit and execution record
+
+The runner verified the saved A5 pre-dopamine weights, 480 eligibilities, RPE, raw and applied proposals, and component states including neurons, queued events, RNG, predictor and motor/readout. The real-full and no-update branches exactly reproduced the prior A5 probe. Before probing, the omission differed from full **only** at the selected 12 applied weights; every other weight and nonweight state matched. The frozen panel, exploration-off and plasticity-off settings were identical. The independent auditor rechecked source/protocol hashes, cohort selection from the original crossing, update arithmetic and branch state, reran all three probes, and reconstructed every threshold rise and readout decision from the motor-spike batches. It passed **3 branches, 96 note outcomes, 192 DOWN actions and 892 upward on-threshold crossings**. The full `unittest` regression suite passed **111 tests**.
+
+An initial runner check compared the internal `_resolved` set with an order-sensitive pickle hash and stopped **before probing**. It was repaired to compare the set by equality and other game fields individually. The locked cohort, protocol, branch operations and outcome criteria were unchanged. No extra branch, training, tuning or production-code edit followed.

@@ -1,0 +1,13 @@
+{
+  "study_id": "synthetic_2002_373_300ms_first_threshold_cohort_v1",
+  "protocol_sha256": "10b5767788e839bb96c1996b20ad9370ecfc2ac8f2be7ac4845b1f9048c162dc",
+  "a5_result_sha256": "b7d184737cd25da6b3a40d3130c6918ce4fb1266aa9af50930128bcd4df48f71",
+  "a5_audit_sha256": "aac26fbdd388b736185752361431b42829ef1b704f91ffd5cad2fe149d4b76bf",
+  "a5_pre_checkpoint_sha256": "291130f7874829e30d14292b2bf9b313f7daad243fb9f8ea1293c5c9f21ebb71",
+  "checkpoint_sha256": {
+    "no_update": "952ed20b1df11ae427356e831dbf14165ea52459d749542852a14f08f5c41515",
+    "real_full": "6b430e1a93eb51b827c513aea0204ee4eaf82f1a4fbbdd677b7bac31088fcc99",
+    "real_except_300ms_targets_94_96": "462b8c103aacbc0620f62a8828481d070b0c97c6bd0e24c7b1e15c2b7525e03f"
+  },
+  "synthetic_topology": "build_tiny_brain; no imported connectome"
+}

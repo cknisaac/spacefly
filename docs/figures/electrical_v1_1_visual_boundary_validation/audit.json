@@ -1,0 +1,266 @@
+{
+  "added_active_fast_rows": 48,
+  "added_source_rows": 62,
+  "independent_nominal_first_pulse_replays": 9,
+  "matched_groups": 90,
+  "protocol_sha256": "1aba6197243b158f02b77b497462470192973a5ab4b8b3a21770260aa44af67b",
+  "stage_result": "FAIL",
+  "status": "pass",
+  "summaries": {
+    "high": {
+      "v1_1_connected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          79
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          1056
+        ],
+        "new_KC_median_onset_gap_mv": 13.57335931055415,
+        "new_KC_min_onset_gap_mv": 12.293437242216612,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          110
+        ]
+      },
+      "v1_1_disconnected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          59
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          110
+        ]
+      },
+      "v1_reference": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          59
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          66
+        ]
+      }
+    },
+    "low": {
+      "v1_1_connected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          0
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          0
+        ]
+      },
+      "v1_1_disconnected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          0
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          0
+        ]
+      },
+      "v1_reference": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          0
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          0
+        ]
+      }
+    },
+    "nominal": {
+      "v1_1_connected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          79
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          720
+        ],
+        "new_KC_median_onset_gap_mv": 13.685134458092683,
+        "new_KC_min_onset_gap_mv": 12.74053783237072,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          75
+        ]
+      },
+      "v1_1_disconnected": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          59
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          75
+        ]
+      },
+      "v1_reference": {
+        "APL_peak_local_state": [
+          0.0
+        ],
+        "KC_receiving_count_per_trial": [
+          59
+        ],
+        "KC_spiking_count_per_trial": [
+          0
+        ],
+        "MBON32_min_onset_gap_mv": 15.0,
+        "MBON32_spikes_per_trial": [
+          0
+        ],
+        "added_visual_fast_events_per_trial": [
+          0
+        ],
+        "new_KC_median_onset_gap_mv": 14.0,
+        "new_KC_min_onset_gap_mv": 14.0,
+        "newly_contacted_KC_spiking_per_trial": [
+          0
+        ],
+        "trials": 30,
+        "visual_spikes_per_trial": [
+          45
+        ]
+      }
+    }
+  },
+  "trials_checked": 270,
+  "v1_1_config_sha256": "43d5b05c575d6baa595deadd5e86a21e02e8f4f632f6f1558781101432065c7a",
+  "v1_1_visual_boundary_pass": false,
+  "v1_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "v1_source_rows_preserved": 10009,
+  "visual_event_terms_checked": 306360
+}

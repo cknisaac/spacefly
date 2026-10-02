@@ -1,0 +1,53 @@
+{
+  "policy_id": "larval_l1re_rate_mbon_v1",
+  "variant": "L1R-E-option3",
+  "status": "FROZEN_BEFORE_SIMULATION",
+  "frozen_date": "2026-10-02",
+  "revision_basis": {
+    "category": "ENGINEERING MODEL REDUCTION",
+    "predecessor_result": "runs/larval_l1re_continuous_readout_v1.json",
+    "predecessor_sha256": "61C3E6644F3F4B0CC969B128A99BF33B2C4BEF33EEDC9547CE0694F7B7ABE31F",
+    "rationale": "The LIF membrane mean preserved a broad monotonic trend but spike resets caused state/factor reversals. Replace only the MBON electrical dynamics with a fixed monotonic rate equation, retaining the measured KC -> MBON-m1 adjacency and fixed action interface."
+  },
+  "manifest": {
+    "path": "configs/larval_l1re_manifest_v1.json",
+    "sha256": "58AAE08A16C9CAABB1A987B6FB10B4C81908722ABEEC60182ABF2483B7036A9C"
+  },
+  "model": {
+    "kc_state": "binary rate activity x_i=1 for KCs in the current-position group, else 0",
+    "mbon_rate_equation": "r_j = gain * sum_i(contact_count_ij ^ alpha * x_i * weight_factor) / max_s(sum_j sum_i(contact_count_ij ^ alpha * x_i))",
+    "bilateral_readout": "sum_j r_j over the two measured MBON-m1 cells",
+    "contact_exponent_alpha": [0.75, 1.0, 1.25, 1.5],
+    "rate_gain": [0.75, 1.0, 1.25],
+    "state_grouping": "sort 88 measured KC IDs ascending and divide into eight non-overlapping groups of eleven",
+    "normalization": "for each alpha, divide by the maximum bilateral anatomical drive across the eight frozen groups; no response data enter the denominator",
+    "time_dynamics": "none in the MBON units; these are continuous rate variables, not spikes",
+    "all_values_category": "ENGINEERING ASSUMPTION"
+  },
+  "teaching_and_learning": {
+    "artificial_teacher": "inactive during this gate; no biological cell identity",
+    "plasticity": "disabled",
+    "learning": "not tested"
+  },
+  "weight_factors": [1.0, 0.8, 0.6, 0.4, 0.2],
+  "action_interface": {
+    "armed_only_by_valid_current_position_state": true,
+    "direction": "lower bilateral MBON rate means greater action drive",
+    "fixed_cutoff_derivation": "For each alpha/gain configuration, set two non-trainable cutoffs to 0.2 times the second-smallest and sixth-smallest bilateral full-weight rate among the eight anatomy-defined states. These are calculated from pinned contact rows before running any response table.",
+    "category": "ENGINEERING OVERLAY",
+    "trainable": false
+  },
+  "gate": {
+    "state_activation": "all eight states have positive drive to at least one MBON-m1 through measured KC contact rows",
+    "rate_monotonicity": "rates are non-increasing for all eight states at every ordered weight factor",
+    "endpoint_effect": "factor 0.2 reduces each state's rate by exactly 80 percent from factor 1.0",
+    "action_sets": "for both anatomy-derived cutoffs, action sets are nested as weight decreases, full weight has no action state, and factor 0.2 has 2 and 6 action states respectively",
+    "deterministic_replay": "two exact calculations for every state/factor/configuration produce identical rate and action records",
+    "family_robustness": "at least 9 of 12 configurations qualify, all four alpha values and all three gain values are represented, the largest face-adjacent component has at least 8 configurations, and at least 6 component members qualify at both adjacent anatomy-derived cutoffs"
+  },
+  "outcome_policy": {
+    "pass": "admit an engineering rate-model plasticity design gate; do not claim spiking dynamics",
+    "fail": "continue to the next listed abstraction option while preserving this result",
+    "interpretation_limit": "This gate validates a deterministic anatomy-weighted rate mapping only. It does not demonstrate internal learning or fly physiology."
+  }
+}

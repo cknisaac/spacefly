@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "stage_id": "B5.2",
+  "name": "visual-input boundary evidence audit",
+  "question": "Can independently identified visual afferents in the pinned MaleCNS traced parent justify expanding or replacing the three-cell input boundary to the selected 107 right KCg-d cells?",
+  "why_next": "B5.1 found 48 of 107 KCs without a selected visual-parent pair and grossly weak effective drive in most contacted KCs; numerical gain changes would not identify omitted afferents.",
+  "hypothesis_outcomes": {
+    "supported_expansion": "Source-identified, traced direct parents with defensible independent visual identity contact at least one of the 48 currently unreached KCs; report their exact coverage and evidence, without installing them.",
+    "no_supported_expansion": "No such independently supportable parent exists in the pinned traced source; the current boundary remains incomplete or other transfer assumptions require independent investigation.",
+    "inconclusive": "Putative parents exist but exact MaleCNS identity, direct KC contact, or visual origin cannot be resolved from source and primary literature."
+  },
+  "intervention": "Read-only join of all traced direct parents of the selected 107 KCg-d_R bodies to MaleCNS neuron annotations and source-row contacts; independent primary-literature/cross-dataset identity review for visual candidate classes.",
+  "controls": ["MaleCNS v1.0 traced parent file SHA-256 values from validation receipt", "same 107 KC source IDs", "same three B5 visual source IDs", "no source-row exclusion by contact strength", "no neuron/effect/delay/boundary/current revision"],
+  "primary_endpoint": "For each evidence-qualified visual parent class/source-ID set, number and IDs of formerly unreached KCs with direct source contact, plus total direct KC coverage relative to 59/107; separate annotation evidence from inferred visual role.",
+  "secondary_endpoints": ["all-parent pair/contact counts and class distributions", "visual candidate contact and convergence distributions", "source row ledger and crosswalk provenance", "unresolved cell identities or ROI ambiguity"],
+  "predeclared_interpretation": "Supported expansion requires an exact MaleCNS source ID, traced direct KC pair, independently defensible visual origin/class evidence, and at least one newly reached KC. Contact count alone, transmitter alone, or B5 spike rescue cannot qualify a source. Ambiguous homology or visual tuning remains INCONCLUSIVE. This is an anatomy/evidence decision, not an electrical pass.",
+  "do_not": ["choose candidates by maximal KC coverage alone", "set a current from contact counts", "activate UNKNOWN effects", "simulate", "change Electrical Model V1", "create Electrical Model V1.1", "use osu or task performance", "learn or train", "tune until propagation"],
+  "output": ["docs/B5_2_VISUAL_INPUT_BOUNDARY_AUDIT.md", "docs/figures/b5_2_visual_input_boundary/parent_ledger.json", "docs/figures/b5_2_visual_input_boundary/summary.json", "docs/figures/b5_2_visual_input_boundary/audit.json", "CURRENT.md"],
+  "stop_condition": "Decide whether a source-ID-level visual boundary revision is independently defensible; do not implement it or launch an electrical revalidation as part of this stage."
+}

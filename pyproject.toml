@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-b"
+version = "0.0.1"
+description = "Connectome-constrained Drosophila neural-learning research prototype and simulation fixtures"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6"]
+
+[project.optional-dependencies]
+connectome = ["numpy>=1.26", "pyarrow>=21"]
+
+[project.scripts]
+project-b-osu = "project_b.osu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

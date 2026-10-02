@@ -1,0 +1,211 @@
+{
+  "source": {
+    "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/syn-partners-male-cns-v1.0-minconf-0.5-traced-only.feather?generation=1780494912394119",
+    "generation": "1780494912394119",
+    "bytes": 2965367002,
+    "md5_base64": "9bwcXONKAbaJVkFLUw7dqA==",
+    "sha256": "3db100d3b4c7cfdc9b34506b3eb8b5ead2d9760b38952e5656285bb362327efc"
+  },
+  "source_rows": 124025046,
+  "extracted_rows": 70236,
+  "blocks": {
+    "KCg-d_R_to_MBON32": {
+      "contacts": 1129,
+      "pairs": 105,
+      "primary_post": {
+        "CentralBrain-unspecified": 298,
+        "gL(R)": 831
+      },
+      "unique_presynaptic_sites": 1129,
+      "post_xyz_min": [
+        36625,
+        16088,
+        12572
+      ],
+      "post_xyz_max": [
+        41386,
+        19797,
+        15786
+      ]
+    },
+    "PPL103_R_to_KCg-d_R": {
+      "contacts": 743,
+      "pairs": 107,
+      "primary_post": {
+        "CentralBrain-unspecified": 313,
+        "gL(R)": 430
+      },
+      "unique_presynaptic_sites": 292,
+      "post_xyz_min": [
+        36655,
+        15870,
+        12550
+      ],
+      "post_xyz_max": [
+        41423,
+        19627,
+        15887
+      ]
+    },
+    "PPL103_L_to_KCg-d_R": {
+      "contacts": 620,
+      "pairs": 107,
+      "primary_post": {
+        "CentralBrain-unspecified": 240,
+        "gL(R)": 379,
+        "b'L(R)": 1
+      },
+      "unique_presynaptic_sites": 267,
+      "post_xyz_min": [
+        36744,
+        15976,
+        12543
+      ],
+      "post_xyz_max": [
+        41435,
+        19741,
+        17694
+      ]
+    },
+    "14182_to_519131": {
+      "contacts": 219,
+      "pairs": 1,
+      "primary_post": {
+        "CentralBrain-unspecified": 25,
+        "gL(R)": 141,
+        "CRE(R)": 1,
+        "a'L(R)": 45,
+        "b'L(R)": 7
+      },
+      "unique_presynaptic_sites": 219,
+      "post_xyz_min": [
+        36695,
+        15087,
+        12611
+      ],
+      "post_xyz_max": [
+        43459,
+        20384,
+        17363
+      ]
+    },
+    "11752_to_519131": {
+      "contacts": 223,
+      "pairs": 1,
+      "primary_post": {
+        "CentralBrain-unspecified": 25,
+        "gL(R)": 142,
+        "a'L(R)": 50,
+        "b'L(R)": 6
+      },
+      "unique_presynaptic_sites": 223,
+      "post_xyz_min": [
+        37170,
+        15042,
+        12519
+      ],
+      "post_xyz_max": [
+        41519,
+        19810,
+        17149
+      ]
+    },
+    "519131_to_519624": {
+      "contacts": 38,
+      "pairs": 1,
+      "primary_post": {
+        "LAL(L)": 30,
+        "CentralBrain-unspecified": 5,
+        "VES(L)": 3
+      },
+      "unique_presynaptic_sites": 38,
+      "post_xyz_min": [
+        52538,
+        22389,
+        17309
+      ],
+      "post_xyz_max": [
+        59086,
+        28256,
+        22399
+      ]
+    },
+    "519131_to_523769": {
+      "contacts": 55,
+      "pairs": 1,
+      "primary_post": {
+        "LAL(L)": 47,
+        "CentralBrain-unspecified": 8
+      },
+      "unique_presynaptic_sites": 55,
+      "post_xyz_min": [
+        52975,
+        22286,
+        16930
+      ],
+      "post_xyz_max": [
+        58798,
+        27939,
+        22438
+      ]
+    },
+    "519624_to_523769": {
+      "contacts": 255,
+      "pairs": 1,
+      "primary_post": {
+        "LAL(L)": 146,
+        "VES(L)": 66,
+        "CentralBrain-unspecified": 5,
+        "EPA(L)": 2,
+        "SPS(L)": 16,
+        "WED(L)": 1,
+        "IPS(L)": 15,
+        "GNG": 4
+      },
+      "unique_presynaptic_sites": 255,
+      "post_xyz_min": [
+        51486,
+        21870,
+        16035
+      ],
+      "post_xyz_max": [
+        59130,
+        37036,
+        35100
+      ]
+    },
+    "519131_to_10975": {
+      "contacts": 0,
+      "pairs": 0,
+      "primary_post": {},
+      "unique_presynaptic_sites": 0,
+      "post_xyz_min": [
+        null,
+        null,
+        null
+      ],
+      "post_xyz_max": [
+        null,
+        null,
+        null
+      ]
+    },
+    "519131_to_10360": {
+      "contacts": 0,
+      "pairs": 0,
+      "primary_post": {},
+      "unique_presynaptic_sites": 0,
+      "post_xyz_min": [
+        null,
+        null,
+        null
+      ],
+      "post_xyz_max": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "output_sha256": "95c942ba0ab5e68baf166205f81c4ac912949751b2fb873adb93d47419d59a57"
+}

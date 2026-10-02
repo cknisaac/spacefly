@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "runs": 32,
+  "frozen_note_outcomes": 512,
+  "game_action_records_replayed": 2438,
+  "quiet_readout_disarms": 747,
+  "quiet_readout_rearms": 747,
+  "legacy_reference_matches": 8,
+  "protocol_sha256": "d35850686eecf44b33e9c220821215ab9c8df8296dacd337d9709acc7677da0b",
+  "ledger_sha256": "9c2eae4e9231bf0ed732348eda9cf4cf2676de516dda40289157d4d032d81c9e",
+  "result_sha256": "3719fb7784e1925aeb9a0632c039632f9ed5eac5d18cbd65652b302d55f3da0e"
+}

@@ -1,0 +1,28 @@
+{
+  "study_id": "synthetic_A8_action_credit_information_readiness_v1",
+  "branch": "A",
+  "stage": "A8",
+  "question": "Does the existing synthetic training path expose a signed, first-action-specific causal credit signal at the selected plastic synapses without adding an information channel?",
+  "evidence": [
+    "exact current source for exploration, readout, game-action handling, reward delivery and eligibility",
+    "audited original 32-seed frozen first-action result"
+  ],
+  "primary_endpoint": "Presence or absence of both an action-boundary feedback event for null first DOWN and a signed synapse-specific or motor-specific perturbation/eligibility term in the current learning path.",
+  "secondary_endpoints": [
+    "nonnegative-eligibility and scalar-dopamine sign invariant",
+    "fraction of original frozen GOOD+ preceded by a null DOWN",
+    "whether the orchestration has access to game disposition before the final judgement"
+  ],
+  "interpretation_locked_before_audit": {
+    "pass": "Both action-boundary feedback and signed causal perturbation/eligibility are already present and enough to specify a deterministic candidate without another interface.",
+    "fail": "Either ingredient is absent. Identify its minimal insertion point, but do not invent a behavioral result or call a candidate validated.",
+    "inconclusive": "Source or historical audit cannot establish the relevant path unambiguously."
+  },
+  "prohibitions": [
+    "no new training or frozen probe",
+    "no production edit",
+    "no learning-rate, threshold, edge-mask or reward-strength search",
+    "no claim that interface absence alone proves a particular replacement rule will pass M2"
+  ],
+  "stop": "Save a source-backed design-readiness report and propose one next discriminating stage; do not run it in A8."
+}

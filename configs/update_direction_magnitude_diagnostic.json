@@ -1,0 +1,14 @@
+{
+  "study_id": "synthetic_local_update_direction_magnitude_A2_v1",
+  "locked_before_probe_outcomes": "2026-09-30",
+  "source": "Existing deterministic on-condition training rows in docs/figures/long_continuation/runs.jsonl; reconstruct from the original heldout/on configuration and unchanged long-continuation map.",
+  "seeds": [2004, 2002],
+  "selection_rule": "For each seed, among one-based training outcomes 193 through 288 inclusive, select the earliest update with raw_l1_mv >= 20 and proposed_below_min_edges == 0 and proposed_above_max_edges == 0. Also select outcome 384. Use only saved update geometry, never probe performance. Exactly two update events per seed.",
+  "selected_outcomes": {"2004": [213, 384], "2002": [200, 384]},
+  "small_raw_fraction": 0.05,
+  "branches": ["no_update", "small_positive", "full_actual", "small_negative"],
+  "branch_rule": "Clone the identical pre-real-update session. Apply dopamine amplitudes 0, +0.05D, D, and -0.05D through the unchanged production plasticity method, then freeze plasticity and exploration in the probe. The negative branch is diagnostic only.",
+  "probe_panel": "The same 32 relative note offsets and cue gains saved in docs/figures/long_continuation/meta.json for every branch and checkpoint. Translate offsets to the exact update time; no probe feedback enters training or settings selection.",
+  "analysis_rule": "Compare each branch with no update on paired per-note utility, all DOWN actions, signed timing and judgement. Small positive better/full worse supports magnitude overshoot; small positive worse/small negative better supports local direction error. If both small steps are behaviorally silent, mark inconclusive. Report raw and applied vectors and clipping separately. No extra steps, checkpoints or seeds after seeing outcomes.",
+  "scope": "Synthetic diagnostic only; no production-rule change, learning-rate search, new long training sweep, fly inference, or M2 gate claim."
+}

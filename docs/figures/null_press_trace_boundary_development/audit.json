@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007
+  ],
+  "runs": 32,
+  "action_records_replayed": 2712,
+  "frozen_note_outcomes": 512,
+  "training_trace_resets": 249,
+  "legacy_reference_matches": 8,
+  "protocol_sha256": "42e4ff2c639f735c6afe7dbefa83b572c380c7c149c9eea798e5dd0ea7a26b51",
+  "ledger_sha256": "0826b8eb6f75671fb0ae90228fc4e3fdef8a3a9f964337a80776e6a374176574",
+  "result_sha256": "91729ea659f10f06c59b0fe93e71b8684f6e9709d79d5fc6865282943856a408"
+}

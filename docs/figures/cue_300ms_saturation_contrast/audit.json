@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "cases": 2,
+  "branches": 6,
+  "frozen_note_outcomes": 192,
+  "down_actions": 352,
+  "readout_on_threshold_rises": 1193,
+  "selected_300ms_edges_per_case": 36,
+  "historical_pickle_mismatch_outcomes": [
+    372,
+    377
+  ],
+  "protocol_sha256": "a8a3fef2eafdd8bd62cfa8d5090089bf6f35cae274a4e7586b4f786d570f2886",
+  "result_sha256": "e239e7099d98617eae17c0fc0a67e58ab2c0c50eb98d1e88b3bb790ff64611b9"
+}

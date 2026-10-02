@@ -1,0 +1,39 @@
+{
+  "contract_id": "MVP-C1-checkpoint-v1",
+  "schema_version": 1,
+  "candidate_id": "MVP-C1",
+  "checkpoint_boundary": "COMMITTED_TICK_AFTER_FEEDBACK_AND_LEDGER_FLUSH",
+  "time_unit": "integer_microseconds",
+  "float_encoding": "finite_ieee754_binary64_hex",
+  "integer_encoding": "signed_64_bit_decimal",
+  "format": "canonical_utf8_json_with_sorted_keys_and_sha256_payloads",
+  "identity_required": [
+    "MaleCNS_release_and_traced_scope", "source_neuron_and_connection_sha256",
+    "source_partner_sha256", "B1_anatomy_sha256", "B2_design_sha256",
+    "B2_contact_audit_sha256", "B2_runtime_mask_sha256",
+    "ordered_source_ids_sha256", "ordered_CSR_graph_sha256",
+    "effect_and_boundary_overlay_sha256", "resolved_config_sha256",
+    "renderer_and_note_schedule_sha256", "ruleset_and_metric_sha256",
+    "code_revision_or_source_tree_sha256", "runtime_backend_and_numeric_version"
+  ],
+  "state_required": {
+    "clock_and_scheduler": ["time_us", "next_tick_us", "phase", "global_event_sequence", "queued_event_records", "cancellation_generations"],
+    "neural": ["voltage", "synaptic_drive", "refractory_until_us", "spike_counts", "external_drive", "apl_graded_state", "neural_diagnostic_counters"],
+    "plasticity": ["selected_plastic_weights_by_kc_source_id", "kc_trace_value_and_last_update_us", "pam_trace_value_and_last_update_us", "last_event_time_us", "last_spike_batch_time_us", "enabled", "mask_sha256"],
+    "sensory": ["renderer_clock_and_visible_note_ids", "observation_cursor", "queued_delayed_kc_drive", "canceled_cue_generations"],
+    "boundary_and_pam": ["boundary_signs", "boundary_next_flip_us", "boundary_rng_states", "boundary_clock_us", "active_pam_current_pulses", "pending_pam_requests", "spontaneous_pam_rng_state_if_enabled"],
+    "motor_and_game": ["motor_spike_time_deque", "motor_key_down", "motor_last_down_us", "motor_last_observed_us", "motor_cooldown_state", "game_clock_us", "game_key_states", "game_note_cursors", "game_resolved_note_ids", "game_expiry_heap", "first_action_assignment_state"],
+    "feedback_and_training": ["expected_utility", "pending_late_prime", "pending_early_flush", "feedback_decision_cursor", "training_note_index", "evaluation_mode", "exploration_rng_state_if_enabled"],
+    "audit": ["ledger_offsets", "ledger_hash_chain_heads", "last_committed_event_id", "last_committed_plasticity_batch_id"]
+  },
+  "restore_policy": {
+    "schema_mismatch": "reject",
+    "identity_mismatch": "reject",
+    "unknown_or_missing_state_field": "reject",
+    "nonfinite_float": "reject",
+    "partial_tick_or_unflushed_ledger": "reject",
+    "migration": "none_in_v1",
+    "validation_before_mutation": true
+  },
+  "scope": "A2.1 schema only; no coupled checkpoint writer, restore, exact replay or frozen snapshot is implemented"
+}

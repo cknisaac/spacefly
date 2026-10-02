@@ -1,0 +1,29 @@
+{
+  "study_id": "fixed_checkpoint_update_direction_v1",
+  "purpose": "Diagnostic comparison of no update, one predefined small displacement along the actual last applied update, and the full update; no parameter selection by score.",
+  "source_stage": "heldout",
+  "source_condition": "on",
+  "source_seeds": [2000, 2009, 2013],
+  "checkpoint": "Immediately after the 24th training outcome and its weight update, before the 25th note.",
+  "update_vector": "For each selected edge, d = recorded post-update weight minus its pre-update weight; zero for an unchanged edge.",
+  "branches": ["no_update", "small_update", "full_update"],
+  "small_rule": "epsilon=min(1,0.004 mV/max_abs(d)); the largest small displacement is at most 10% of the initial 0.04 mV edge weight.",
+  "primary_probe": "Original saved 16 frozen notes with plasticity and exploration disabled, preserving map times and cue gains.",
+  "secondary_probe": "Same 16 notes with plasticity disabled and the original exploration process enabled. Three streams: inherited checkpoint RNG state and future states generated from seed XOR 324508639 and seed XOR 610839776; the identical stream is used in every weight branch.",
+  "noise_stream_xor_constants": [324508639, 610839776],
+  "metrics": [
+    "mean original per-note utility and judgement distribution",
+    "GOOD-or-better and non-MISS counts",
+    "signed and absolute hit error, conditioned on scored non-MISS presses",
+    "all DOWN times and dispositions, including null presses",
+    "initial lower/upper weight-bound occupancy and raw/applied last-update norms"
+  ],
+  "decision_rules": [
+    "If the small update improves paired utility while the full update reduces it on the same probes, support oversized-step or clipping, not a universal conclusion.",
+    "If both small and full changes move timing away from zero and lower paired utility, support a locally unfavorable update direction.",
+    "If utility is tied at existing judgement tiers, report directional timing evidence and leave the reward-gradient question unresolved.",
+    "If effects depend on exploration mode or stream, report a policy mismatch or instability rather than a robust improvement."
+  ],
+  "selection_limit": "These three cases were chosen from known outcomes in the previous diagnosis. They estimate mechanisms, not prevalence or a confirmatory reliability rate.",
+  "no_followup_adaptation": true
+}

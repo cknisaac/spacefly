@@ -1,0 +1,79 @@
+{
+  "model_id": "larval_l2_electrical_model_v2_signed_effect_classes",
+  "status": "FROZEN_BEFORE_V2_NEUTRAL_OR_CONTROLLABILITY",
+  "manifest_id": "larval_l2_dan-d1_mbon-d1_v1",
+  "manifest_sha256": "84fb7af5160a405a072170466ea19e134cd12bc61ed1a7c565f301972da07c89",
+  "evidence_notice": "Preserves v1 numerical assumptions. KC_to_MBON-d1 positive effect remains ENGINEERING ASSUMPTION; MBON-d1_to_Ipsigoro negative and Ipsigoro_to_Goro positive are literature-constrained net effect classes encoded as simplified signed edges, not measured unitary conductances. Exact KC_to_MBON-d1 plasticity remains INFERRED.",
+  "neuron_model": {
+    "class": "current_based_LIF",
+    "capacitance_nF": 1.0,
+    "leak_resistance_MOhm": 10.0,
+    "tau_m_us": 10000,
+    "tau_syn_us": 5000,
+    "rest_mV": 0.0,
+    "reset_mV": 0.0,
+    "threshold_mV": 1.0,
+    "refractory_us": 2000,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "integration": {
+    "dt_us": 1000,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "chemical_edges": {
+    "included_directions": [
+      "KC_to_MBON-d1",
+      "MBON-d1_to_Ipsigoro",
+      "Ipsigoro_to_Goro"
+    ],
+    "weight_mV_per_anatomical_contact": 0.01,
+    "transform": "weight = contacts * 0.01 mV-equivalent",
+    "delay_us": 2000,
+    "synaptic_kernel": "single exponential tau_syn_us from neuron_model",
+    "category": "ENGINEERING ASSUMPTION",
+    "warning": "Signs encode reported functional effect classes where available, not unitary synaptic physiology; magnitudes, delays, transfer through omitted cells, and KC-to-MBON efficacy remain uncertain.",
+    "sign_by_direction": {
+      "KC_to_MBON-d1": "positive",
+      "MBON-d1_to_Ipsigoro": "negative",
+      "Ipsigoro_to_Goro": "positive"
+    },
+    "category_by_direction": {
+      "KC_to_MBON-d1": "ENGINEERING ASSUMPTION",
+      "MBON-d1_to_Ipsigoro": "LITERATURE-CONSTRAINED net effect class / simplified signed edge",
+      "Ipsigoro_to_Goro": "LITERATURE-CONSTRAINED net effect class / simplified signed edge"
+    }
+  },
+  "modulatory_edges": {
+    "direction": "DAN-d1_to_MBON-d1",
+    "electrical_spike_edge": "excluded",
+    "representation": "DAN-d1 remains a separate modulatory event source; task feedback connection is a future explicit engineering overlay",
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "plasticity": {
+    "enabled": false,
+    "candidate_mask": "all KC_to_MBON-d1 rows, inferred and not compartment-local",
+    "learning_rule": "DAN-d1-gated KC_to_MBON-d1 LTD is an independently motivated INFERRED hypothesis; no learning implemented in this reference."
+  },
+  "sensory_boundary": {
+    "drive_target": "KC nodes only",
+    "signal": "current visible position bin represented by a fixed nonoverlapping 8-KC population code",
+    "codebook": "sort KC source IDs ascending; divide them into 8 consecutive groups as evenly as possible; position bin 0..7 selects its group",
+    "drive_mV_equivalent": 12.0,
+    "pulse_duration_us": 5000,
+    "future_time_access": false,
+    "category": "ENGINEERING ASSUMPTION",
+    "selection_basis": "predeclared physical fixture: with tau_m=10 ms, 12 mV-equivalent constant drive yields a single-cell threshold crossing within 1 ms; fixed before any circuit-level response is inspected"
+  },
+  "action_boundary": {
+    "readout": "Goro source IDs 3720037 and 5206247",
+    "threshold": "at least one Goro spike in a 100 ms response window",
+    "key_down": "one fixed action if threshold met; otherwise no action",
+    "category": "ENGINEERING OVERLAY",
+    "selection_basis": "minimal integer event threshold fixed before circuit-level response is inspected"
+  },
+  "precommitment": "Only the two downstream net effect signs differ from v1, based on independently reviewed third-instar functional evidence. All numeric values, topology, sensory input, and action threshold are inherited unchanged. No outcome-based tuning. This frozen version receives one neutral and fixed controllability test; failure ends this version.",
+  "background_drive": {
+    "all_neurons_mV_equivalent": 0.0,
+    "category": "ENGINEERING ASSUMPTION"
+  }
+}

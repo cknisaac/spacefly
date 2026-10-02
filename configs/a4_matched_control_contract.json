@@ -1,0 +1,48 @@
+{
+  "contract_id": "MVP-C1-A4-matched-controls-v1",
+  "stage_id": "A4",
+  "purpose": "control infrastructure verification, not task performance or B3",
+  "parent": {
+    "master_seed": 11,
+    "boundary_level": "nominal",
+    "committed_cut_us": 139000,
+    "notes": [
+      {"note_id": "n1", "visible_from_us": 100000, "hit_us": 900000},
+      {"note_id": "n2", "visible_from_us": 1300000, "hit_us": 2100000}
+    ]
+  },
+  "arms": {
+    "baseline": {"plasticity": "on", "teaching": "aligned", "dan": "on", "eligibility": "on"},
+    "plasticity_off": {"plasticity": "off", "teaching": "aligned", "dan": "on", "eligibility": "on"},
+    "wrong_note": {"plasticity": "on", "teaching": "wrong_note", "dan": "on", "eligibility": "on"},
+    "dan_disabled": {"plasticity": "on", "teaching": "aligned", "dan": "disabled", "eligibility": "on"},
+    "eligibility_disabled": {"plasticity": "on", "teaching": "aligned", "dan": "on", "eligibility": "disabled"}
+  },
+  "matched_start_required": [
+    "parent checkpoint state SHA-256", "MaleCNS and B1/B2/B2.1 identities",
+    "ordered source graph", "all three boundary RNG stream states",
+    "note schedule", "current-position encoder identity and state",
+    "motor identity and state", "ruleset and A3 metric contract",
+    "neural state, queued events, selected weights and traces"
+  ],
+  "allowed_start_differences": "only the one declared control-policy field, wrong-note router label, or plasticity enabled flag for plasticity-off",
+  "controlled_fixture": {
+    "synthetic_feedback_origin": "n1",
+    "synthetic_feedback_time_us": 139000,
+    "synthetic_feedback_category": "early_judged",
+    "synthetic_feedback_disposition": "synthetic_fixture",
+    "short_end_us": 189000,
+    "wrong_note_long_origin": "a4-fixture",
+    "wrong_note_long_end_us": 1320000,
+    "not_a_game_action": true,
+    "not_a_performance_result": true
+  },
+  "expected_switch_behavior": {
+    "baseline": "source request, aligned artificial PAM delivery, actual PAM spikes and selected updates are distinct records",
+    "plasticity_off": "actual PAM activity remains but selected weights do not change",
+    "wrong_note": "aligned source pulse is held until the next actually observed different cue, then delivered",
+    "dan_disabled": "source request remains; artificial current and PAM spikes are suppressed",
+    "eligibility_disabled": "source request and PAM spikes remain; local traces and selected updates are blocked"
+  },
+  "do_not": ["interpret synthetic feedback as task outcome", "tune a model parameter", "run B3", "run training", "select a seed by score"]
+}

@@ -1,0 +1,14 @@
+{
+  "study_id": "synthetic_null_press_trace_boundary_dev_v1",
+  "locked_before_new_training": "2026-09-30",
+  "mechanistic_hypothesis": "Judgement RPE at a scored second press is being applied to pre/post eligibility accumulated before an earlier null DOWN. Resetting the local eligibility and its presynaptic precursor immediately after the null action should prevent that cross-action credit without adding a reward penalty.",
+  "intervention": "Diagnostic-only overlay on game.apply_action. Immediately after each training-phase DOWN whose disposition is null_press, set every selected plastic edge's eligibility trace and every selected presynaptic trace to zero at that tick. Do not change effective weights, dopamine, reward predictor, judgement utility, game score, sensory input, motor readout, eligibility decay constants or topology. Do not reset traces in frozen evaluation. This is one action-boundary rule, not a searched time window.",
+  "seeds": [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007],
+  "map_and_training": "Exact overnight_synthetic.json map generator and choices: 24 training and 16 frozen notes, readout threshold 10, unchanged exploration and plasticity parameters. These are development seeds previously used for model diagnosis, not held-out M2 evidence.",
+  "conditions": ["legacy_on", "boundary_reset_on", "boundary_reset_off", "boundary_reset_shuffled"],
+  "controls": "legacy_on has no reset; boundary_reset_off has plasticity disabled; boundary_reset_shuffled uses the existing deterministic permutation of boundary_reset_on training judgement utilities while retaining the same fixed reset. Each seed shares its map, cue gains and global-tick exploration RNG construction across conditions.",
+  "primary_outcomes": ["frozen GOOD+ count and percent", "pooled hit timing MAE", "first frozen DOWN time and disposition per note", "frozen null and early-MISS DOWN counts"],
+  "secondary_outcomes": ["all training/frozen judgements and actions", "trace reset count and pre-reset eligibility L1", "final weight bounds and vector", "exploration pulses", "peak arrival queue"],
+  "progression_rule": "Promising only if boundary_reset_on strictly improves frozen GOOD+ in at least 6/8 seeds against legacy_on and both reset controls, lowers pooled hit MAE, reduces frozen null DOWN count without increasing early-MISS DOWN count or silent-note count. This is a development screen, not M2 passage; if it fails, do not tune a reset interval or use a favorable seed as validation.",
+  "scope_limit": "Exactly one trace-reset rule, one eight-seed development cohort, no parameter search, no production-rule edit, no fly-circuit inference. Fresh held-out on/off/shuffled testing remains required."
+}

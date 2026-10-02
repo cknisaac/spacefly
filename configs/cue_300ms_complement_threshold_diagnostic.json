@@ -1,0 +1,15 @@
+{
+  "study_id": "synthetic_2002_373_300ms_complement_threshold_v1",
+  "locked_before_new_probe": "2026-09-30",
+  "source": "Saved A5 exact pre-dopamine checkpoint and A7 target-cohort first-crossing traces. No new historical training replay.",
+  "selection_evidence": "A7 omitted 300-ms relay sources 48-51 to first-crossing target motor cells 94-96 and moved first crossing 8 ms earlier, not toward no update. The sole complementary structural cohort within this 300-ms bin comprises the same sources to the other nine target motor cells 97-105. This choice is fixed by source bin and destination complement, without using any new probe outcome.",
+  "selected_relay_source_ids": [48, 49, 50, 51],
+  "selected_motor_target_ids": [97, 98, 99, 100, 101, 102, 103, 104, 105],
+  "selected_edge_slots": [139, 140, 141, 142, 143, 144, 145, 146, 147, 151, 152, 153, 154, 155, 156, 157, 158, 159, 163, 164, 165, 166, 167, 168, 169, 170, 171, 175, 176, 177, 178, 179, 180, 181, 182, 183],
+  "branches": ["no_update", "real_full", "real_except_300ms_targets_97_105"],
+  "intervention": "Apply the real outcome-373 dopamine event through production plasticity and restore only the 36 selected applied weights to pre-update values. Keep the prior 12 target-94-96 300-ms changes and all 432 other plastic-edge changes exactly as in real full. No rescaling, redistribution, modified clipping, new training or production edit.",
+  "frozen_probe": "Exact A5 32-note panel, fixed cue gains, no exploration and no probe plasticity. The first note and first upward on-threshold crossing are primary; later scores are secondary.",
+  "primary_endpoint": "First motor on-threshold upward crossing in integer microseconds; compare to saved no-update 372456000 us and full 372383000 us. Moving the crossing later toward no update by at least one 1000-us tick indicates this omitted cohort causally contributes to early threshold timing in this exact combined update. An unchanged, earlier, missing or qualitatively changed crossing is reported without rescue attribution. A near-no timing does not prove individual-edge necessity, sufficiency, or generality.",
+  "secondary_endpoints": ["first null DOWN", "first scored DOWN", "pre-crossing motor spike batches and readout-window counts", "all DOWN actions", "all signed errors", "GOOD+", "mean utility"],
+  "scope_limit": "One structural complement test only. No candidate ranking, parameter search, broader training, production-rule change, or fly-circuit claim."
+}

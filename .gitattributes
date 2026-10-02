@@ -1,0 +1,14 @@
+# Keep published text bytes stable across Windows, macOS, and Linux.
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.html text eol=lf
+# Preserve the original CRLF bytes of the archived visualization fragment.
+visualization/malecns-level4d-source.html -text
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.svg text eol=lf
+*.png binary

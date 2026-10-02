@@ -1,0 +1,26 @@
+{
+  "study_id": "synthetic_A8_1_first_action_reward_attribution_v1",
+  "stage": "A8.1",
+  "seed": 2002,
+  "replay_through_outcome": 377,
+  "primary_outcomes_one_based": [372, 373, 377],
+  "selection": "These are the three already selected positive-RPE seed-2002 checkpoints with measured first motor-crossing advances. Selection predates this first-action replay.",
+  "first_action_utility_rule": {
+    "null_press": -1.0,
+    "early_miss": -1.0,
+    "no_DOWN_before_expiry": -1.0,
+    "first_DOWN_is_valid_hit": "same centered game utility as its resolved judgement"
+  },
+  "diagnostic_rpe": "first_action_utility minus the unchanged saved expected_utility_before for that outcome; do not update the predictor with this diagnostic value",
+  "source_replay": "Reconstruct the exact saved 384-note seed-2002 on configuration; replay only through outcome 377; require every observed training event to match the existing long-continuation ledger exactly.",
+  "action_association": "Use the existing action_record note-window mapping: a DOWN belongs to the one note whose time is between 500 ms after the action and the game expiry offset before/at the action. Report all actions, including those outside any note window.",
+  "primary_endpoint": "actual scored-judgement RPE sign versus diagnostic first-action RPE sign at outcomes 372, 373 and 377, with every DOWN for those notes",
+  "secondary_endpoints": ["all 377 first-action rows", "null-first/scored-later count", "sign disagreements", "baseline and utility values", "action timing offsets"],
+  "interpretation": {
+    "support_attribution_gap": "At a selected harmful update, first DOWN is null and first-action RPE has the opposite sign to the actual positive scored-judgement RPE.",
+    "weaken_attribution_gap": "First DOWN is the scored hit or both RPE signs agree at that checkpoint.",
+    "inconclusive": "Action association or deterministic replay cannot be verified."
+  },
+  "prohibitions": ["no alternative dopamine delivery", "no alternative weight update", "no frozen probe", "no parameter tuning", "no checkpoint or seed selection after viewing first-action results"],
+  "stop": "Save raw replay, independent audit and one report; do not launch a corrected training run."
+}

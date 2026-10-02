@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "stage": "MaleCNS Level 4D final moving-note repair",
+  "contract_result": "FAIL",
+  "branch_classification": "Mechanistic success / behavioral robustness incomplete",
+  "source_receipt_sha256": "a1868987301ed16ad468ad48cbffdadc68107eabfa335d2e07e0dfcbacb22556",
+  "config_sha256": "f81785d3a186b545cdbbda3c5a2145a6515bef98ae90b4e55bb2238c4cf4acbe",
+  "fixed_settings": {
+    "duration_us": 500000,
+    "kc_count": 32,
+    "mbon": "MBON05",
+    "dan_source_ids": [
+      87177,
+      107285,
+      55210
+    ],
+    "encoder_sigma": 0.08,
+    "threshold_mv": 0.005572335995331903,
+    "eta": 5e-05,
+    "original_weight_floor_fraction": 0.2
+  },
+  "training_duration": {
+    "blocks": 120,
+    "presentations": 1200,
+    "presentations_per_block": 10,
+    "trial_spacing_us": 200000,
+    "stop_early": false,
+    "schedule_source": "exact frozen Level 3B 120-block sequence; class labels only schedule teacher events"
+  },
+  "criteria": {
+    "naive_baseline_has_no_first_action": true,
+    "target_first_action_in_core": false,
+    "wrong_first_action_in_core": true,
+    "plasticity_off_weights_unchanged_and_no_action": true,
+    "target_and_wrong_actions_persist_dan_plasticity_off": false,
+    "output_validity_waits_for_mbon05_response": true,
+    "no_action_before_mbon05_output_validity": true,
+    "all_weight_updates_within_frozen_eligibility_window": true,
+    "all_weight_updates_have_local_eligibility_and_anatomical_dan_gate": true,
+    "immutable_original_weight_floor_respected_throughout": true,
+    "all_predeclared_blocks_and_presentations_completed": true,
+    "all_scheduled_dan_events_activate_all_three_dans": true
+  },
+  "arms": {
+    "baseline": {
+      "first_action": null,
+      "action_positions": [],
+      "total_kc_spikes": 30
+    },
+    "target": {
+      "first_action": null,
+      "action_positions": [],
+      "total_kc_spikes": 30,
+      "presentations": 1200,
+      "weight_changes": 1506,
+      "floor_hit_kc_count": 2,
+      "scheduled_dan_pulses": 600,
+      "active_dan_events": 600
+    },
+    "wrong": {
+      "first_action": {
+        "time_us": 413000,
+        "position": 0.2,
+        "position_bin": [
+          0.17500000000000002,
+          0.225
+        ],
+        "mbon05_max_voltage_mv": 0.004040827635331568
+      },
+      "action_positions": [
+        0.2
+      ],
+      "total_kc_spikes": 30,
+      "presentations": 1200,
+      "weight_changes": 1432,
+      "floor_hit_kc_count": 2,
+      "scheduled_dan_pulses": 600,
+      "active_dan_events": 600
+    },
+    "plasticity_off": {
+      "first_action": null,
+      "action_positions": [],
+      "total_kc_spikes": 30,
+      "presentations": 1200,
+      "weight_changes": 0,
+      "floor_hit_kc_count": 0,
+      "scheduled_dan_pulses": 600,
+      "active_dan_events": 600
+    }
+  }
+}

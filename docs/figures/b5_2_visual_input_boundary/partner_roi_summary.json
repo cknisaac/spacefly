@@ -1,0 +1,151 @@
+{
+  "candidate_source_ids": [
+    12211,
+    12295,
+    12517,
+    12737,
+    12740,
+    13190,
+    13285,
+    13707,
+    13874,
+    15007,
+    15029,
+    15377,
+    18033,
+    18070,
+    513307,
+    532334
+  ],
+  "candidate_types": [
+    "LoVP42",
+    "LoVP97",
+    "MeVP41",
+    "PLP095",
+    "aMe12",
+    "aMe20",
+    "aMe26"
+  ],
+  "extract_sha256": "f087120e56a5b5cc6b6a685b6f4ccccf5a072dd3f005c25e271021e6cdb7482c",
+  "extracted_contact_count": 3183,
+  "id_primary_post": {
+    "12211": {
+      "CentralBrain-unspecified": 9,
+      "PLP(R)": 48,
+      "SCL(R)": 2
+    },
+    "12295": {
+      "CentralBrain-unspecified": 7,
+      "ICL(R)": 40,
+      "PLP(R)": 168,
+      "SCL(R)": 61
+    },
+    "12517": {
+      "CentralBrain-unspecified": 7,
+      "PLP(R)": 60,
+      "SCL(R)": 3
+    },
+    "12737": {
+      "CentralBrain-unspecified": 24,
+      "PLP(R)": 35,
+      "SCL(R)": 2
+    },
+    "12740": {
+      "CentralBrain-unspecified": 25,
+      "ICL(R)": 1,
+      "PLP(R)": 243,
+      "SCL(R)": 30
+    },
+    "13190": {
+      "CentralBrain-unspecified": 13,
+      "PLP(R)": 225,
+      "SCL(R)": 32
+    },
+    "13285": {
+      "CentralBrain-unspecified": 4,
+      "ICL(R)": 4,
+      "PLP(R)": 487,
+      "SCL(R)": 106
+    },
+    "13707": {
+      "CentralBrain-unspecified": 71,
+      "PLP(R)": 58,
+      "SCL(R)": 294
+    },
+    "13874": {
+      "CentralBrain-unspecified": 33,
+      "ICL(R)": 69,
+      "PLP(R)": 240,
+      "SCL(R)": 61
+    },
+    "15007": {
+      "PLP(R)": 2
+    },
+    "15029": {
+      "PLP(R)": 1
+    },
+    "15377": {
+      "PLP(R)": 1
+    },
+    "18033": {
+      "CentralBrain-unspecified": 6,
+      "ICL(R)": 15,
+      "PLP(R)": 278
+    },
+    "18070": {
+      "CentralBrain-unspecified": 41,
+      "ICL(R)": 11,
+      "PLP(R)": 308
+    },
+    "513307": {
+      "PLP(R)": 2
+    },
+    "532334": {
+      "CentralBrain-unspecified": 5,
+      "PLP(R)": 49,
+      "SCL(R)": 2
+    }
+  },
+  "parent_ledger_sha256": "2d00cb8779fd1f5135de54dfb65ce561c74f4d8509ae659c7eb875c7c57ef72d",
+  "source_partner_rows_scanned": 124025046,
+  "source_sha256": "3db100d3b4c7cfdc9b34506b3eb8b5ead2d9760b38952e5656285bb362327efc",
+  "type_primary_post": {
+    "LoVP42": {
+      "CentralBrain-unspecified": 33,
+      "ICL(R)": 69,
+      "PLP(R)": 240,
+      "SCL(R)": 61
+    },
+    "LoVP97": {
+      "CentralBrain-unspecified": 71,
+      "PLP(R)": 58,
+      "SCL(R)": 294
+    },
+    "MeVP41": {
+      "CentralBrain-unspecified": 4,
+      "ICL(R)": 4,
+      "PLP(R)": 487,
+      "SCL(R)": 106
+    },
+    "PLP095": {
+      "CentralBrain-unspecified": 47,
+      "ICL(R)": 26,
+      "PLP(R)": 586
+    },
+    "aMe12": {
+      "CentralBrain-unspecified": 83,
+      "ICL(R)": 1,
+      "PLP(R)": 660,
+      "SCL(R)": 71
+    },
+    "aMe20": {
+      "CentralBrain-unspecified": 7,
+      "ICL(R)": 40,
+      "PLP(R)": 168,
+      "SCL(R)": 61
+    },
+    "aMe26": {
+      "PLP(R)": 6
+    }
+  }
+}

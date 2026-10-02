@@ -1,0 +1,83 @@
+{
+  "experiment_id": "MALECNS-LEVEL4A-TEMPORAL-INPUT-ADMISSION-v1",
+  "status": "frozen_before_run",
+  "parent_level4_config": "configs/malecns_level4_moving_note.json",
+  "parent_level4_config_sha256": "8487538edf132f68f1df5570ed465c28c3079ea28b08d4be09918a53bad52f7c",
+  "parent_level4_result": "runs/malecns_level4_moving_note/result.json",
+  "parent_level4_result_sha256": "a54e2473c8bd2c92596478d0a90aa15b210ba13090a3c0b6d4f92c5b30225754",
+  "parent_level3b_config": "configs/malecns_dan_bridge_level3b_ensemble.json",
+  "parent_level3b_config_sha256": "92eefb802c1387a314fe8cc9f1257c8eeb80fc5a49117bc6e8b5641b61e29b0f",
+  "dan_source_ids": [
+    87177,
+    107285,
+    55210
+  ],
+  "protocol": {
+    "candidate_durations_ms": [
+      100,
+      250,
+      500,
+      750,
+      1000
+    ],
+    "duration_us": [
+      100000,
+      250000,
+      500000,
+      750000,
+      1000000
+    ],
+    "trajectory": "one naive note moves linearly from normalized x=1.0 to x=0.0; only duration varies across candidates",
+    "position_rule": "x(t) = 1 - t / duration, clamped to [0,1]; Gaussian drive uses only current x at each inherited dt tick",
+    "dt_us": 1000,
+    "position_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "position_bin_width": 0.05,
+    "encoder_sigma": 0.08,
+    "peak_drive_mv_equivalent": 1.2,
+    "action_threshold_mv": 0.005572335995331903,
+    "meaningful_mbon_response": "MBON05 max voltage exceeds the frozen action threshold in at least three adjacent position bins and is nonzero; three 0.05 bins span at least 0.10 normalized position",
+    "naive_baseline_gate": "not action everywhere means at least one position bin has MBON05 max voltage above the frozen action threshold",
+    "deterministic_replay": "for each duration, run the identical input twice from fresh resting state and require exact equality of per-tick position/MBON trace, KC spike events/counts, position map and action positions",
+    "runs_per_duration": 2,
+    "learning": "OFF",
+    "dan_teaching": "OFF; no DAN stimulation",
+    "weights": "immutable original Level 3B cohort weights; no updates",
+    "network": "inherit frozen Level 3B 32 KC\u2192MBON05 edges, LIF/contact model, encoder and fixed readout",
+    "fixed_dan_ensemble": [
+      87177,
+      107285,
+      55210
+    ],
+    "plasticity_parameters_retained_but_not_used": {
+      "tau_us": 1000000,
+      "eta": 5e-05,
+      "minimum_fraction": 0.2
+    },
+    "pass": "all four admission gates pass: nonzero KC spikes, meaningful MBON response, naive baseline not action everywhere, deterministic replay",
+    "selection": "choose the shortest candidate duration satisfying every admission gate; if none passes, report FAIL and identify temporal drive/integration as blocker",
+    "stop": "task-free admission only; do not run learning, teaching, tuning, or any other duration; if admitted, freeze the selected duration for the next Level 4 protocol and stop"
+  },
+  "scope": "task-free temporal-input admission only; no learning or DAN teaching"
+}

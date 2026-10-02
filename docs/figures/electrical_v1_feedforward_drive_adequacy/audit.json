@@ -1,0 +1,24 @@
+{
+  "checked_event_charge_terms": 538920,
+  "checked_target_timing_rows": 28980,
+  "checked_trials": 120,
+  "dynamic_replay": [
+    {
+      "arm": "A",
+      "checked_targets": 107,
+      "events": 1141,
+      "level": "nominal",
+      "saved_event_and_spike_trace_equal": true
+    },
+    {
+      "arm": "E",
+      "checked_targets": 1,
+      "events": 6382,
+      "level": "direct_3x",
+      "saved_event_and_spike_trace_equal": true
+    }
+  ],
+  "protocol_sha256": "0519d206e78c597ae87a563812e51297a1312016e4673ff55bc57dc103f13f7a",
+  "result_sha256": "2d7f06d302685224e8f4e4696a44d322ccf0df9db63de884f6e4eb4c218051de",
+  "status": "pass"
+}

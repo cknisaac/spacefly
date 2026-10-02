@@ -1,0 +1,209 @@
+{
+  "status": "passed",
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+  ],
+  "branches": 30,
+  "frozen_outcomes": 960,
+  "down_actions": 1677,
+  "reference_common_exact_matches": 5,
+  "reference_continuation_exact_matches": 5,
+  "protocol_sha256": "698236aad27cd4d299ee981f03084bc0b438f687041a87f710a20decae191b36",
+  "ledger_sha256": "cab2b2fc807edc8f63219969c9707cb960c8ee7fd25484ebfd1681c4e6d2b28d",
+  "per_seed": {
+    "2000": {
+      "384": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -0.9609375,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -0.94140625,
+          "down_actions": 64
+        }
+      },
+      "96": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "down_actions": 32
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -0.62890625,
+          "down_actions": 32
+        }
+      },
+      "24": {
+        "common": {
+          "good_percent": 100.0,
+          "mean_utility": 0.92578125,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 100.0,
+          "mean_utility": 0.92578125,
+          "down_actions": 64
+        }
+      }
+    },
+    "2001": {
+      "384": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -0.833984375,
+          "down_actions": 32
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -0.8046875,
+          "down_actions": 32
+        }
+      },
+      "96": {
+        "common": {
+          "good_percent": 100.0,
+          "mean_utility": 0.4453125,
+          "down_actions": 96
+        },
+        "continuation": {
+          "good_percent": 100.0,
+          "mean_utility": 0.46484375,
+          "down_actions": 96
+        }
+      },
+      "24": {
+        "common": {
+          "good_percent": 100.0,
+          "mean_utility": 0.328125,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 100.0,
+          "mean_utility": 0.328125,
+          "down_actions": 64
+        }
+      }
+    },
+    "2002": {
+      "384": {
+        "common": {
+          "good_percent": 78.125,
+          "mean_utility": 0.11328125,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 84.375,
+          "mean_utility": 0.15234375,
+          "down_actions": 64
+        }
+      },
+      "96": {
+        "common": {
+          "good_percent": 12.5,
+          "mean_utility": -0.70703125,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 15.625,
+          "mean_utility": -0.62890625,
+          "down_actions": 64
+        }
+      },
+      "24": {
+        "common": {
+          "good_percent": 100.0,
+          "mean_utility": 0.625,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 100.0,
+          "mean_utility": 0.6640625,
+          "down_actions": 64
+        }
+      }
+    },
+    "2003": {
+      "384": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -0.7265625,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -0.66796875,
+          "down_actions": 64
+        }
+      },
+      "96": {
+        "common": {
+          "good_percent": 75.0,
+          "mean_utility": 0.09375,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 87.5,
+          "mean_utility": 0.25,
+          "down_actions": 64
+        }
+      },
+      "24": {
+        "common": {
+          "good_percent": 100.0,
+          "mean_utility": 0.984375,
+          "down_actions": 64
+        },
+        "continuation": {
+          "good_percent": 100.0,
+          "mean_utility": 0.9765625,
+          "down_actions": 64
+        }
+      }
+    },
+    "2004": {
+      "384": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "down_actions": 32
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "down_actions": 32
+        }
+      },
+      "96": {
+        "common": {
+          "good_percent": 25.0,
+          "mean_utility": -0.5,
+          "down_actions": 40
+        },
+        "continuation": {
+          "good_percent": 15.625,
+          "mean_utility": -0.6875,
+          "down_actions": 37
+        }
+      },
+      "24": {
+        "common": {
+          "good_percent": 0.0,
+          "mean_utility": -0.90234375,
+          "down_actions": 32
+        },
+        "continuation": {
+          "good_percent": 0.0,
+          "mean_utility": -0.84375,
+          "down_actions": 32
+        }
+      }
+    }
+  }
+}

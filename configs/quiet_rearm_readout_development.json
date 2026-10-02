@@ -1,0 +1,14 @@
+{
+  "study_id": "synthetic_quiet_rearm_readout_dev_v1",
+  "locked_before_new_training": "2026-09-30",
+  "mechanistic_hypothesis": "The fixed readout's 200-ms cooldown permits a second DOWN during sustained motor activity after an ignored null first DOWN. Requiring the existing 20-ms motor-spike count to fall to or below the existing off threshold before another DOWN should prevent that repeated-press loop and make reward depend more directly on the first motor action.",
+  "intervention": "Diagnostic-only FixedMotorReadout variant. Preserve 20-ms window, on threshold 10, off threshold 2, hold limits, 200-ms cooldown and fixed motor population. After any DOWN, disarm further DOWNs until the spike-window count is at or below the existing off threshold on a later tick; then rearm. No new numeric parameter, game-state input, sensory cue state, ideal press time, dopamine or plasticity change. Record every disarm/rearm event and DOWN action.",
+  "seeds": [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007],
+  "map_and_training": "Exact overnight_synthetic.json development map generator: 24 training and 16 frozen notes, original exploration probability and learning parameters, threshold 10. These are reused development seeds, not fresh M2 gate seeds.",
+  "conditions": ["legacy_on", "quiet_rearm_on", "quiet_rearm_off", "quiet_rearm_shuffled"],
+  "controls": "legacy_on is unchanged. quiet_rearm_off disables plasticity. quiet_rearm_shuffled uses the existing deterministic permutation of the quiet_rearm_on training judgement utilities. All conditions share map, cue gains and global-tick exploration RNG construction.",
+  "primary_outcomes": ["frozen GOOD+ count and percent", "pooled hit timing MAE", "first frozen DOWN disposition and signed offset", "frozen null/extra DOWN count", "silent-note count"],
+  "secondary_outcomes": ["all actions and judgements", "readout rearm events", "final weight vector and bounds", "exploration pulses", "peak queue"],
+  "progression_rule": "Promising only if quiet_rearm_on has at least 6/8 strict frozen GOOD+ wins against legacy_on and both readout-matched controls, reduces null-first GOOD+ reliance and extra DOWNs without increasing silent notes, and lowers pooled hit MAE. This development criterion is not M2 passage. If it fails, preserve the failure and do not tune quiet duration, threshold or cooldown from these seeds.",
+  "scope_limit": "One readout state-machine change using existing thresholds, one eight-seed development cohort, no parameter search, no production edit, no fly-circuit inference. Fresh held-out controls are required before any M2 claim."
+}

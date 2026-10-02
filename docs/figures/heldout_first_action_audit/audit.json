@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "seeds": 32,
+  "frozen_notes": 512,
+  "historical_summary_matches": 32,
+  "game_action_records_replayed": 3998,
+  "good_plus": 236,
+  "good_plus_after_same_note_null": 233,
+  "good_plus_on_first_down": 3,
+  "protocol_sha256": "a2e134d4ef12b5d3574c84c6fc904adac038eeef29715e5340c374f2e3168bdd",
+  "ledger_sha256": "15895ab4ad350dc3f46f4698ee7e2c180f4398ad420fa7d00d6e3b0d2ab0ebc0",
+  "result_sha256": "aba98a75b3a5d22cfca7bd5f0807bcd922b28c267589342039de4c3f2ce1757d"
+}

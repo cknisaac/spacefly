@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "protocol_id": "male-cns-115-b5-task-independent-route-v1",
+  "electrical_model_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "boundary_condition": "A",
+  "boundary_level": "nominal",
+  "boundary_seeds": [31001, 31002, 31003],
+  "settling_us": 10000000,
+  "pulse_onsets_us": [11000000, 13000000, 15000000, 17000000, 19000000, 21000000, 23000000, 25000000, 27000000, 29000000],
+  "pulse_duration_us": 200000,
+  "pre_window_us": 500000,
+  "post_window_us": 500000,
+  "trace_interval_us": 10000,
+  "deterministic_replay": "Repeat the first pulse for every arm, level and seed from the identical unperturbed checkpoint; compare complete trial records byte-for-byte after canonical JSON serialization.",
+  "trial_policy": "Each pulse is an independent clone of the same seed's unperturbed checkpoint at its onset; no prior pulse enters a later trial. Matched branches share the complete initial neural/boundary state and pulse timing.",
+  "current_policy": {
+    "normalization": "I_ref = g_leak * (V_onset - V_rest) from frozen Electrical Model V1 class parameters; square current at selected source cells; no change to model weights/delays/boundary",
+    "visual_target_ids": [13285, 13707, 13874],
+    "visual_levels": {"low": 1.0, "nominal": 1.5, "high": 2.0},
+    "direct_KC_multiplier": 3.0,
+    "direct_MBON32_multiplier": 3.0,
+    "evidence": "ENGINEERING ASSUMPTION"
+  },
+  "arms": {
+    "A": {"perturbation": "visual", "functional_disconnection": "none"},
+    "B": {"perturbation": "visual", "functional_disconnection": "visual_to_KC"},
+    "C": {"perturbation": "visual", "functional_disconnection": "KC_to_MBON32"},
+    "D": {"perturbation": "visual", "functional_disconnection": "MBON32_to_DNs"},
+    "E": {"perturbation": "all_107_KCs", "functional_disconnection": "none"},
+    "E_off": {"perturbation": "all_107_KCs", "functional_disconnection": "KC_to_MBON32"},
+    "F": {"perturbation": "MBON32", "functional_disconnection": "none"},
+    "F_off": {"perturbation": "MBON32", "functional_disconnection": "MBON32_to_DNs"}
+  },
+  "primary_levels": ["low", "nominal", "high"],
+  "primary_full_route_level": "nominal",
+  "direct_probe_level": "direct_3x",
+  "stage_criteria": {
+    "minimum_responding_pulses_per_seed": 8,
+    "minimum_DN_modulated_pulses_per_seed": 5,
+    "minimum_DN_first_spike_delay_us": 500,
+    "required_seeds": 3,
+    "chemical_delay_us": 1000,
+    "primary_full_route_uses_nominal_only": true,
+    "upstream_spikes_must_precede_downstream_spikes": true,
+    "DN_inhibitory_prediction": "In at least one DN, the full arm must lose spikes or delay its first post-arrival spike relative to MBON-output-disconnected D in at least five of ten matched pulses for every seed; summed post-window spike count may not exceed D. No paired DN difference may precede first MBON arrival. Apply the same criterion to F versus F_off for the direct probe."
+  },
+  "prohibited": ["osu", "notes", "desired_key", "future_action_time", "motor_readout", "reward", "exploration", "plasticity", "PPL103_teaching", "parameter_tuning"]
+}

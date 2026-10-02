@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "study_id": "synthetic_timing_gate_v1",
+  "config_sha256": "14d245d36b117a0416706fe6bfaee9b3007e43b9263d79d3a400cefe80ac6040",
+  "gate": {
+    "selected_threshold": 10,
+    "on_good_or_better_percent": 46.09375,
+    "on_hit_mean_absolute_error_ms": 60.57452574525745,
+    "comparisons": {
+      "off": {
+        "mean_paired_advantage_percentage_points": 46.09375,
+        "strict_win_seeds": 16,
+        "tie_seeds": 16,
+        "strict_loss_seeds": 0,
+        "passes": false
+      },
+      "shuffled": {
+        "mean_paired_advantage_percentage_points": 34.5703125,
+        "strict_win_seeds": 15,
+        "tie_seeds": 14,
+        "strict_loss_seeds": 3,
+        "passes": false
+      }
+    },
+    "passes": false
+  },
+  "completed_runs": 192,
+  "planned_runs": 192,
+  "finished_utc": "2026-09-28T18:42:49.334903+00:00"
+}

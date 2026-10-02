@@ -1,0 +1,12 @@
+{
+  "study_id": "synthetic_original_heldout_first_action_audit_v1",
+  "locked_before_replay": "2026-09-30",
+  "source": "Original overnight_synthetic.json 32 held-out plasticity-on runs at selected readout threshold 10. Every replayed summary must exactly match its old ledger row before action statistics are interpreted.",
+  "seeds": {"start": 2000, "count": 32},
+  "run_scope": "Reproduce unchanged production training, 24 training plus 16 frozen notes per seed, same note times and cue gains, no new method, no changed config or learning rule. Save complete game action records and first-DOWN-to-note pairing. These seeds are now used for diagnosis, not a fresh future gate.",
+  "action_pairing": "Because note intervals are at least 800 ms, assign a DOWN to note i only inside [note_i-500 ms, note_i+expiry] and record exact disposition. A frozen GOOD+ is null-first if at least one earlier null DOWN assigned to that same note precedes the judged hit DOWN. Do not count a null press on another note or an UP. Also report the first DOWN time and whether the GOOD+ was the first or later DOWN.",
+  "primary_outcomes": ["number and fraction of original frozen GOOD+ notes preceded by a same-note null DOWN", "all frozen first-DOWN dispositions and signed offsets", "frozen GOOD+ reached on first DOWN versus a later DOWN"],
+  "secondary_outcomes": ["per-seed counts", "all frozen action records", "exact historical summary reproduction", "frozen early-MISS and silent-note counts"],
+  "interpretation": "A high null-first fraction supports a broad two-press readout/game artifact in the original M2 result. It does not show that no learning occurred, nor does it validate a correction. If the fraction is low, restrict the null-first diagnosis to the selected checkpoint/development cases.",
+  "scope_limit": "Observational replay only; no parameter search, new training method, production change or M2 pass claim."
+}

@@ -1,0 +1,14 @@
+{
+  "study": "synthetic_lane_one_reward_controls_v1",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "training_notes": 8,
+  "frozen_notes": 8,
+  "first_note_us": 800000,
+  "note_interval_us": 1000000,
+  "primary_metric": "frozen_non_miss_percent",
+  "reliability_gate": {
+    "minimum_mean_paired_advantage_percentage_points_vs_each_control": 20,
+    "minimum_seeds_strictly_above_each_control": 12
+  },
+  "control_description": "Plasticity off uses the same seed and exploration stream. Shuffled reward uses the on-policy run's training utility multiset, permuted offline and delivered in note order during a separate run. Frozen evaluation disables exploration and plasticity in all conditions."
+}

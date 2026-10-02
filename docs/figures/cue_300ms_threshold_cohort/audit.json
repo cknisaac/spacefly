@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "branches": 3,
+  "frozen_note_outcomes": 96,
+  "down_actions": 192,
+  "readout_on_threshold_rises": 892,
+  "selected_300ms_edges": 12,
+  "protocol_sha256": "10b5767788e839bb96c1996b20ad9370ecfc2ac8f2be7ac4845b1f9048c162dc",
+  "result_sha256": "6908888fbe3a27b6be38a9b2dc6c4d7e422b57db6c1490a38ebf3d41041bd7cc"
+}

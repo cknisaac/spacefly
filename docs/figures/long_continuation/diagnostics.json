@@ -1,0 +1,760 @@
+{
+  "diagnostics_by_checkpoint": {
+    "24": {
+      "on": {
+        "mean_training_good_percent": 34.895833333333336,
+        "mean_training_game_utility": -0.3069661458333333,
+        "mean_training_abs_game_prediction_error": 0.6931324615180958,
+        "mean_training_signed_game_prediction_error": -0.10164861397687808,
+        "mean_training_abs_learning_rpe": 0.6931324615180958,
+        "mean_training_downs_per_note": 1.5677083333333333,
+        "mean_training_null_downs_per_note": 0.7239583333333334,
+        "mean_training_exploration_pulses_per_note": 0.9583333333333334,
+        "mean_raw_update_l1_mv_per_outcome": 143.58619874196737,
+        "mean_applied_update_l1_mv_per_outcome": 68.01111211587116,
+        "mean_upper_clipped_edge_proposals_per_outcome": 66.75520833333333,
+        "mean_lower_clipped_edge_proposals_per_outcome": 89.32291666666667,
+        "mean_upper_bound_edges": 68.875,
+        "mean_probe_good_percent": 62.5,
+        "mean_probe_game_utility": 0.15234375,
+        "mean_probe_null_downs": 20,
+        "mean_probe_early_attempted_misses": 7.25,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 59.31302083333333
+      },
+      "off": {
+        "mean_training_good_percent": 19.791666666666668,
+        "mean_training_game_utility": -0.6175130208333334,
+        "mean_training_abs_game_prediction_error": 0.6507927202516807,
+        "mean_training_signed_game_prediction_error": -0.2514621604394943,
+        "mean_training_abs_learning_rpe": 0.6507927202516807,
+        "mean_training_downs_per_note": 0.921875,
+        "mean_training_null_downs_per_note": 0.5416666666666666,
+        "mean_training_exploration_pulses_per_note": 1.1458333333333333,
+        "mean_raw_update_l1_mv_per_outcome": 0.0,
+        "mean_applied_update_l1_mv_per_outcome": 0.0,
+        "mean_upper_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_lower_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_upper_bound_edges": 0,
+        "mean_probe_good_percent": 0.0,
+        "mean_probe_game_utility": -1.0,
+        "mean_probe_null_downs": 0,
+        "mean_probe_early_attempted_misses": 0,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": null
+      },
+      "shuffled": {
+        "mean_training_good_percent": 25.520833333333336,
+        "mean_training_game_utility": -0.5234375,
+        "mean_training_abs_game_prediction_error": 0.723139986169395,
+        "mean_training_signed_game_prediction_error": -0.3456933734637351,
+        "mean_training_abs_learning_rpe": 0.7058836358933341,
+        "mean_training_downs_per_note": 1.1041666666666667,
+        "mean_training_null_downs_per_note": 0.640625,
+        "mean_training_exploration_pulses_per_note": 1.140625,
+        "mean_raw_update_l1_mv_per_outcome": 63.892802033662754,
+        "mean_applied_update_l1_mv_per_outcome": 36.917031018155335,
+        "mean_upper_clipped_edge_proposals_per_outcome": 8.869791666666666,
+        "mean_lower_clipped_edge_proposals_per_outcome": 150.44270833333334,
+        "mean_upper_bound_edges": 0,
+        "mean_probe_good_percent": 0.0,
+        "mean_probe_game_utility": -0.9560546875,
+        "mean_probe_null_downs": 4,
+        "mean_probe_early_attempted_misses": 0,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 116.625
+      }
+    },
+    "96": {
+      "on": {
+        "mean_training_good_percent": 59.548611111111114,
+        "mean_training_game_utility": 0.04188368055555555,
+        "mean_training_abs_game_prediction_error": 0.6426187900973659,
+        "mean_training_signed_game_prediction_error": 0.051519712388472846,
+        "mean_training_abs_learning_rpe": 0.6426187900973659,
+        "mean_training_downs_per_note": 2.2534722222222223,
+        "mean_training_null_downs_per_note": 1.2534722222222223,
+        "mean_training_exploration_pulses_per_note": 0.9114583333333334,
+        "mean_raw_update_l1_mv_per_outcome": 229.4194099972355,
+        "mean_applied_update_l1_mv_per_outcome": 81.31439523745817,
+        "mean_upper_clipped_edge_proposals_per_outcome": 159.57638888888889,
+        "mean_lower_clipped_edge_proposals_per_outcome": 40.39236111111111,
+        "mean_upper_bound_edges": 181.75,
+        "mean_probe_good_percent": 64.0625,
+        "mean_probe_game_utility": 0.02490234375,
+        "mean_probe_null_downs": 37,
+        "mean_probe_early_attempted_misses": 5.75,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 56.71328125
+      },
+      "off": {
+        "mean_training_good_percent": 22.04861111111111,
+        "mean_training_game_utility": -0.5834418402777778,
+        "mean_training_abs_game_prediction_error": 0.5540566839197262,
+        "mean_training_signed_game_prediction_error": 0.02099825000382291,
+        "mean_training_abs_learning_rpe": 0.5540566839197262,
+        "mean_training_downs_per_note": 0.9513888888888888,
+        "mean_training_null_downs_per_note": 0.5590277777777778,
+        "mean_training_exploration_pulses_per_note": 1.1371527777777777,
+        "mean_raw_update_l1_mv_per_outcome": 0.0,
+        "mean_applied_update_l1_mv_per_outcome": 0.0,
+        "mean_upper_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_lower_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_upper_bound_edges": 0,
+        "mean_probe_good_percent": 0.0,
+        "mean_probe_game_utility": -1.0,
+        "mean_probe_null_downs": 0,
+        "mean_probe_early_attempted_misses": 0,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": null
+      },
+      "shuffled": {
+        "mean_training_good_percent": 35.24305555555556,
+        "mean_training_game_utility": -0.31380208333333337,
+        "mean_training_abs_game_prediction_error": 0.7412251555986895,
+        "mean_training_signed_game_prediction_error": -0.3046307025786893,
+        "mean_training_abs_learning_rpe": 0.6963077485776339,
+        "mean_training_downs_per_note": 1.4027777777777777,
+        "mean_training_null_downs_per_note": 0.6788194444444444,
+        "mean_training_exploration_pulses_per_note": 1.0017361111111112,
+        "mean_raw_update_l1_mv_per_outcome": 91.76236284954595,
+        "mean_applied_update_l1_mv_per_outcome": 64.35596654787645,
+        "mean_upper_clipped_edge_proposals_per_outcome": 19.49826388888889,
+        "mean_lower_clipped_edge_proposals_per_outcome": 59.52430555555556,
+        "mean_upper_bound_edges": 38,
+        "mean_probe_good_percent": 21.875,
+        "mean_probe_game_utility": -0.525634765625,
+        "mean_probe_null_downs": 9.875,
+        "mean_probe_early_attempted_misses": 6.125,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 77.53125
+      }
+    },
+    "384": {
+      "on": {
+        "mean_training_good_percent": 55.685763888888886,
+        "mean_training_game_utility": -0.026095920138888888,
+        "mean_training_abs_game_prediction_error": 0.5768420408030568,
+        "mean_training_signed_game_prediction_error": -0.008973887170254395,
+        "mean_training_abs_learning_rpe": 0.5768420408030568,
+        "mean_training_downs_per_note": 2.1762152777777777,
+        "mean_training_null_downs_per_note": 1.1762152777777777,
+        "mean_training_exploration_pulses_per_note": 0.8537326388888888,
+        "mean_raw_update_l1_mv_per_outcome": 185.16248374024966,
+        "mean_applied_update_l1_mv_per_outcome": 69.54779800227674,
+        "mean_upper_clipped_edge_proposals_per_outcome": 138.80251736111111,
+        "mean_lower_clipped_edge_proposals_per_outcome": 47.34809027777778,
+        "mean_upper_bound_edges": 158.875,
+        "mean_probe_good_percent": 9.765625,
+        "mean_probe_game_utility": -0.720458984375,
+        "mean_probe_null_downs": 16,
+        "mean_probe_early_attempted_misses": 15.375,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 109.30422794117646
+      },
+      "off": {
+        "mean_training_good_percent": 22.04861111111111,
+        "mean_training_game_utility": -0.5762261284722222,
+        "mean_training_abs_game_prediction_error": 0.5729179572008104,
+        "mean_training_signed_game_prediction_error": -0.003816130529372318,
+        "mean_training_abs_learning_rpe": 0.5729179572008104,
+        "mean_training_downs_per_note": 0.9205729166666666,
+        "mean_training_null_downs_per_note": 0.521267361111111,
+        "mean_training_exploration_pulses_per_note": 1.112847222222222,
+        "mean_raw_update_l1_mv_per_outcome": 0.0,
+        "mean_applied_update_l1_mv_per_outcome": 0.0,
+        "mean_upper_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_lower_clipped_edge_proposals_per_outcome": 0.0,
+        "mean_upper_bound_edges": 0,
+        "mean_probe_good_percent": 0.0,
+        "mean_probe_game_utility": -1.0,
+        "mean_probe_null_downs": 0,
+        "mean_probe_early_attempted_misses": 0,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": null
+      },
+      "shuffled": {
+        "mean_training_good_percent": 35.9375,
+        "mean_training_game_utility": -0.3136393229166667,
+        "mean_training_abs_game_prediction_error": 0.7445744140631754,
+        "mean_training_signed_game_prediction_error": -0.2904293203638931,
+        "mean_training_abs_learning_rpe": 0.6610867788460045,
+        "mean_training_downs_per_note": 1.3702256944444444,
+        "mean_training_null_downs_per_note": 0.6440972222222222,
+        "mean_training_exploration_pulses_per_note": 0.9665798611111112,
+        "mean_raw_update_l1_mv_per_outcome": 80.79668539942044,
+        "mean_applied_update_l1_mv_per_outcome": 56.59497453205182,
+        "mean_upper_clipped_edge_proposals_per_outcome": 14.434461805555555,
+        "mean_lower_clipped_edge_proposals_per_outcome": 69.56206597222223,
+        "mean_upper_bound_edges": 5,
+        "mean_probe_good_percent": 13.671875,
+        "mean_probe_game_utility": -0.55810546875,
+        "mean_probe_null_downs": 5.375,
+        "mean_probe_early_attempted_misses": 3.125,
+        "mean_probe_hit_absolute_error_ms_among_seeds_with_hits": 77.8875
+      }
+    }
+  },
+  "per_seed_probe": {
+    "2000": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 100.0,
+          "mean_utility": 0.92578125,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.9609375,
+          "null_downs": 32,
+          "upper_bound_edges": 339
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 15,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2001": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 100.0,
+          "mean_utility": 0.328125,
+          "null_downs": 32,
+          "upper_bound_edges": 286
+        },
+        {
+          "after": 96,
+          "good_percent": 100.0,
+          "mean_utility": 0.4453125,
+          "null_downs": 64,
+          "upper_bound_edges": 411
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.833984375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 75.0,
+          "mean_utility": 0.1875,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 87.5,
+          "mean_utility": 0.7578125,
+          "null_downs": 28,
+          "upper_bound_edges": 1
+        }
+      ]
+    },
+    "2002": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 100.0,
+          "mean_utility": 0.625,
+          "null_downs": 32,
+          "upper_bound_edges": 265
+        },
+        {
+          "after": 96,
+          "good_percent": 12.5,
+          "mean_utility": -0.70703125,
+          "null_downs": 32,
+          "upper_bound_edges": 326
+        },
+        {
+          "after": 384,
+          "good_percent": 78.125,
+          "mean_utility": 0.11328125,
+          "null_downs": 32,
+          "upper_bound_edges": 289
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 100.0,
+          "mean_utility": 0.77734375,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2003": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 100.0,
+          "mean_utility": 0.984375,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 75.0,
+          "mean_utility": 0.09375,
+          "null_downs": 32,
+          "upper_bound_edges": 315
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.7265625,
+          "null_downs": 32,
+          "upper_bound_edges": 309
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 32,
+          "upper_bound_edges": 304
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.453125,
+          "null_downs": 0,
+          "upper_bound_edges": 35
+        }
+      ]
+    },
+    "2004": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -0.90234375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 25.0,
+          "mean_utility": -0.5,
+          "null_downs": 8,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -0.521484375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2005": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -0.765625,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 100.0,
+          "mean_utility": 0.7421875,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.58984375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2006": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 100.0,
+          "mean_utility": 0.984375,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 100.0,
+          "mean_utility": 0.328125,
+          "null_downs": 64,
+          "upper_bound_edges": 402
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.58984375,
+          "null_downs": 32,
+          "upper_bound_edges": 334
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 21.875,
+          "mean_utility": -0.7265625,
+          "null_downs": 15,
+          "upper_bound_edges": 4
+        }
+      ]
+    },
+    "2007": {
+      "on": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -0.9609375,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 100.0,
+          "mean_utility": 0.4453125,
+          "null_downs": 64,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.765625,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "after": 24,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 96,
+          "good_percent": 0.0,
+          "mean_utility": -1.0,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "after": 384,
+          "good_percent": 0.0,
+          "mean_utility": -0.453125,
+          "null_downs": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    }
+  }
+}

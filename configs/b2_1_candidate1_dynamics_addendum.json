@@ -1,0 +1,68 @@
+{
+  "stage_id": "MVP-B2.1",
+  "candidate_id": "MVP-C1",
+  "version": "mvp-c1-executable-dynamics-v1",
+  "status": "engineering_design_only",
+  "provenance": "ENGINEERING ASSUMPTION; selected before an MVP-C1 neural or task run, not fit to task performance",
+  "chemical_current": {
+    "model": "signed voltage-equivalent impulse into a decaying current state",
+    "delay_us": 2000,
+    "tau_syn_us": 5000,
+    "arrival_rule": "At exact arrival microsecond add the weight captured at presynaptic spike emission to the target's chemical-current state. Do not change voltage instantaneously.",
+    "between_events": "S(t+dt)=S(t)*exp(-dt/5000); integrate LIF voltage with the exact exponential-current kernel specified in the report, including during refractory reset clamp",
+    "same_time_order": "Sort arrivals by (due_us, post_source_id, pre_source_id, source_row, insertion_sequence); apply after boundary flips and before integration beyond this time",
+    "source": "Existing project LIF reference uses an exponential current state; 5 ms is an explicit engineering choice for this candidate, not measured MaleCNS kinetics"
+  },
+  "autonomous_boundary": {
+    "targets_source_ids": [10495, 11145, 10713],
+    "nominal_means_threshold_units": {"10495": 0.5, "11145": 2.0, "10713": 2.0},
+    "level_multipliers": {"low": 0.5, "nominal": 1.0, "high": 1.5},
+    "amplitude_fraction": 0.2,
+    "rng_algorithm": "Python random.Random MT19937, runtime version pinned in checkpoint identity",
+    "stream_names": ["boundary_10495", "boundary_11145", "boundary_10713"],
+    "stream_seed": "int.from_bytes(sha256(utf8('mvp-c1-boundary-v1|'+decimal_master_seed+'|'+decimal_source_id)).digest(),'big')",
+    "initial_sign": "+1 if first stream random() < 0.5, otherwise -1",
+    "waiting_distribution": "independent inverse-CDF exponential intervals with continuous mean 100000 microseconds",
+    "wait_us": "max(1, round(-100000*log1p(-u))) where u is the next stream random() and round is Python ties-to-even",
+    "flip_rule": "Initial sign at t=0; first flip at wait_us. At every scheduled flip toggle sign, draw next strictly positive wait and add it to prior flip time. Process exact integer-microsecond flips in ascending (time_us, source_id) order.",
+    "current_rule": "At target i between flips, I_i=level_multiplier*nominal_mean_i*(1+0.2*sign_i), held constant over that interval",
+    "causal_inputs": ["resolved addendum", "declared master seed", "dedicated stream state", "elapsed simulation time"],
+    "checkpoint": ["sign per target", "next_flip_us per target", "full MT19937 state per target", "last boundary time_us"],
+    "source": "Same explicit inverse-CDF/MT19937 convention as the project's historical DN boundary, with new independent Candidate 1 streams"
+  },
+  "graded_apl": {
+    "source_id": 10977,
+    "model": "one nonspiking global graded state L in [0,1]",
+    "initial_state": 0.0,
+    "tau_apl_us": 20000,
+    "kc_input_delay_us": 2000,
+    "input_rule": "Every measured KC-to-APL pair schedules a graded input at KC spike time plus 2000 us, with amount equal to pair contact count divided by all selected-KC-to-APL contacts. At arrival time decay L to that time, sum all same-time increments in canonical source-row order, then clamp L to [0,1].",
+    "output_rule": "For each measured APL-to-target pair in the selected roster, use inhibitory voltage-equivalent current -0.2*L. The per-target APL effect-class denominator equals that pair's own contact count; no unmeasured APL target is added.",
+    "integration_rule": "Between events L(t+dt)=L(t)*exp(-dt/20000). Integrate its continuous output with the exact exponential-current LIF kernel, including the tau_apl=tau_membrane limit. Graded output begins only after a due KC-to-APL arrival, affects the following interval, and creates no APL spike or chemical arrival.",
+    "same_time_rule": "Boundary flips, then chemical and KC-to-APL arrivals, then integration beyond that time; arrivals change L but do not jump target voltage at the same instant. At a threshold tick, finish integration, emit one simultaneous spike batch and schedule later arrivals.",
+    "checkpoint": ["L as exact finite binary64", "last_apl_update_us", "queued KC-to-APL arrival records with origin, source row and insertion sequence"],
+    "source": "Graded APL role is literature-constrained; one global state, gain, normalization and exact 20-ms decay are engineering assumptions"
+  },
+  "event_ties": {
+    "time_unit": "signed integer microseconds",
+    "threshold_grid_us": 1000,
+    "interval_rule": "For every event time t, first integrate the open interval from the previous event to t using the state effective in that interval. Then apply same-time discontinuities in priority order. A discontinuity at t changes state for the next positive interval and cannot retroactively change voltage at t.",
+    "interior_events": "Split neural integration at every chemical arrival, graded APL arrival, boundary flip, delayed sensory or PAM current change, and threshold tick. Apply all state discontinuities before integrating the next positive interval.",
+    "same_instant_priority": ["game expiry and cue removal", "current visible observation and sensory schedule", "boundary flips in source ID order", "PAM current request/pulse transitions and delayed sensory-current changes", "chemical and KC-to-APL arrivals in canonical order", "integrate through interval ending at threshold tick", "simultaneous threshold/spike batch", "local gamma4 update from pre-batch traces", "fixed DNp42 readout and key transition", "game judgement, first-action assignment and feedback request", "ledger flush and committed checkpoint cut"],
+    "no_zero_delay_feedback": true,
+    "checkpoint_cut": "COMMITTED_TICK_AFTER_FEEDBACK_AND_LEDGER_FLUSH"
+  },
+  "full_runner_interface": {
+    "roster": "718 pinned B1 source IDs: 717 explicit spiking states plus graded APL 10977",
+    "source_graph": "All induced source pairs retained in immutable anatomy ledger; only declared active classes reach the electrical scheduler. UNKNOWN_QUARANTINED_NO_CURRENT pairs are audited and receive no numerical current.",
+    "active_classes": ["KC_to_KC", "KC_to_MBON05", "KC_to_MBON20", "KC_to_APL_graded_input", "APL_to_measured_targets_graded_output", "MBON05_to_MBON20", "MBON20_to_DNp42"],
+    "modulatory_class": "All measured PAM08 outputs retained as anatomical/modulatory records; actual PAM08 spikes alone drive the local gamma4 trace",
+    "owners": ["source graph and effect overlay", "LIF and chemical queue", "graded APL", "autonomous boundary", "current-position delayed encoder", "PAM current and gamma4 local rule", "fixed DNp42 readout", "game and first-action feedback", "audit ledger and checkpoint"],
+    "future_event_owners": {"chemical_arrival": "LIF and chemical queue", "kc_to_apl_arrival": "graded APL", "boundary_flip": "autonomous boundary", "delayed_sensory_change": "current-position delayed encoder", "pam_pulse_start_end": "PAM current and gamma4 local rule", "pending_early_flush": "game and first-action feedback", "pending_late_prime": "game and first-action feedback", "note_expiry": "game and first-action feedback", "motor_action": "fixed DNp42 readout", "game_judgement": "game and first-action feedback", "gamma4_weight_update": "PAM current and gamma4 local rule", "ledger_commit": "audit ledger and checkpoint"},
+    "identity": "Resolved B2.1 config SHA, B2 base SHA, B2.1 addendum SHA, B2 runtime mask SHA, B1 anatomy SHA, normalized source hashes and code/backend identity",
+    "checkpoint": "Follow MVP-C1-checkpoint-v1; save exact boundary RNG/next flips, APL state/arrivals, chemical current and captured-weight arrivals plus all A2.1 owners at the committed cut. Validate all before mutation.",
+    "forbidden": ["future note timestamp at encoder", "signed dopamine concentration", "ordinary APL spikes", "unknown-edge default excitation", "trainable motor readout", "performance-based parameter choice"]
+  },
+  "frozen_b2_fields": ["roster", "plastic_contact_mask", "effect_policy", "effective_weight_policy", "generic_neuron_assumptions except new tau_syn_us", "sensory", "renderer", "first_action", "utility_prediction", "teaching", "motor", "boundary means/amplitude/levels", "plasticity", "training_policy"],
+  "stop": "Design and static validation only; no full neural runner, A2.2/A2.3 full replay, B3 intervention, training or parameter tuning"
+}

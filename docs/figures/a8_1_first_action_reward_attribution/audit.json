@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "stage": "A8.1",
+  "historical_outcomes_checked": 377,
+  "game_actions_replayed": 1545,
+  "primary_outcomes": [
+    372,
+    373,
+    377
+  ],
+  "primary_sign_disagreements": 3,
+  "protocol_sha256": "0ccbfe7fc07c557d71fdfac31ec2cebc74a5da62b1d92190ed1eddc68e79a1b8",
+  "result_sha256": "ff08619080a867f76e457181c094b7e266eb3d13909fef13629f276404b66c94"
+}

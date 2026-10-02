@@ -1,0 +1,2837 @@
+{
+  "graph_policies": {
+    "A_signed": {
+      "DAN_to_KC": false,
+      "DAN_to_learning_MBON": false,
+      "KC_to_action": false,
+      "functional_isolates": [
+        11176,
+        11327,
+        13285,
+        13707,
+        13874,
+        62731,
+        63391,
+        90867,
+        100258,
+        113067,
+        114700,
+        129563,
+        141615,
+        144315,
+        145094,
+        146603,
+        156028,
+        164086,
+        167009,
+        205884,
+        212085,
+        252045,
+        325731,
+        506819,
+        515034,
+        519131,
+        519624,
+        523638,
+        523769,
+        543677
+      ],
+      "functional_isolates_by_role": {
+        "apl_local_feedback": 0,
+        "dna02_action_boundary": 1,
+        "dna03_descending_relay": 1,
+        "mbon01_gamma5_learning_output": 0,
+        "mbon11_gamma1_learning_output": 0,
+        "mbon26_output_relay": 1,
+        "mbon27_visual_output": 1,
+        "mbon32_competing_output": 1,
+        "pam_gamma5_teaching_cohort": 21,
+        "ppl1_gamma1_teaching": 1,
+        "visual_input_lovp42": 1,
+        "visual_input_lovp97": 1,
+        "visual_input_mevp41": 1,
+        "visual_kenyon_cells": 0
+      },
+      "functionally_active": {
+        "contacts": 9634,
+        "pairs": 321
+      },
+      "retained": {
+        "contacts": 9634,
+        "pairs": 321
+      },
+      "sensory_to_KC": false,
+      "sensory_to_action": false,
+      "sensory_to_learning_MBON": false
+    },
+    "B_signed_plus_modulatory": {
+      "DAN_to_KC": true,
+      "DAN_to_learning_MBON": true,
+      "KC_to_action": false,
+      "functional_isolates": [
+        11176,
+        13285,
+        13707,
+        13874,
+        515034,
+        519131,
+        519624,
+        523769
+      ],
+      "functional_isolates_by_role": {
+        "apl_local_feedback": 0,
+        "dna02_action_boundary": 1,
+        "dna03_descending_relay": 1,
+        "mbon01_gamma5_learning_output": 0,
+        "mbon11_gamma1_learning_output": 0,
+        "mbon26_output_relay": 1,
+        "mbon27_visual_output": 1,
+        "mbon32_competing_output": 1,
+        "pam_gamma5_teaching_cohort": 0,
+        "ppl1_gamma1_teaching": 0,
+        "visual_input_lovp42": 1,
+        "visual_input_lovp97": 1,
+        "visual_input_mevp41": 1,
+        "visual_kenyon_cells": 0
+      },
+      "functionally_active": {
+        "contacts": 12656,
+        "pairs": 1193
+      },
+      "retained": {
+        "contacts": 12656,
+        "pairs": 1193
+      },
+      "sensory_to_KC": false,
+      "sensory_to_action": false,
+      "sensory_to_learning_MBON": false
+    },
+    "C_all_anatomy_unknown_inactive": {
+      "DAN_to_KC": true,
+      "DAN_to_learning_MBON": true,
+      "KC_to_action": false,
+      "functional_isolates": [
+        11176,
+        13285,
+        13707,
+        13874,
+        515034,
+        519131,
+        519624,
+        523769
+      ],
+      "functional_isolates_by_role": {
+        "apl_local_feedback": 0,
+        "dna02_action_boundary": 1,
+        "dna03_descending_relay": 1,
+        "mbon01_gamma5_learning_output": 0,
+        "mbon11_gamma1_learning_output": 0,
+        "mbon26_output_relay": 1,
+        "mbon27_visual_output": 1,
+        "mbon32_competing_output": 1,
+        "pam_gamma5_teaching_cohort": 0,
+        "ppl1_gamma1_teaching": 0,
+        "visual_input_lovp42": 1,
+        "visual_input_lovp97": 1,
+        "visual_input_mevp41": 1,
+        "visual_kenyon_cells": 0
+      },
+      "functionally_active": {
+        "contacts": 12656,
+        "pairs": 1193
+      },
+      "retained": {
+        "contacts": 57771,
+        "pairs": 12153
+      },
+      "sensory_to_KC": false,
+      "sensory_to_action": false,
+      "sensory_to_learning_MBON": false
+    }
+  },
+  "groups": {
+    "APL": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 6495,
+          "pairs": 133
+        }
+      },
+      "neurons": 1,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 5455,
+          "pairs": 106
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 843,
+          "pairs": 25
+        }
+      }
+    },
+    "DAN": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 2274,
+          "pairs": 1028
+        }
+      },
+      "neurons": 22,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 3022,
+          "pairs": 872
+        },
+        "UNKNOWN": {
+          "contacts": 724,
+          "pairs": 128
+        }
+      }
+    },
+    "DN": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 511,
+          "pairs": 7
+        }
+      },
+      "neurons": 2,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 262,
+          "pairs": 4
+        }
+      }
+    },
+    "KC": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 5455,
+          "pairs": 106
+        },
+        "MODULATORY": {
+          "contacts": 1713,
+          "pairs": 850
+        },
+        "UNKNOWN": {
+          "contacts": 30531,
+          "pairs": 9480
+        }
+      },
+      "neurons": 107,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 4146,
+          "pairs": 214
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 40609,
+          "pairs": 10647
+        }
+      }
+    },
+    "all_MBON": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 4146,
+          "pairs": 214
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 1309,
+          "pairs": 22
+        },
+        "UNKNOWN": {
+          "contacts": 5299,
+          "pairs": 307
+        }
+      },
+      "neurons": 5,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 1249,
+          "pairs": 79
+        }
+      }
+    },
+    "learning_MBON": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 4146,
+          "pairs": 214
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 1309,
+          "pairs": 22
+        },
+        "UNKNOWN": {
+          "contacts": 704,
+          "pairs": 6
+        }
+      },
+      "neurons": 2,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 750,
+          "pairs": 45
+        }
+      }
+    },
+    "relay_MBON": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 4595,
+          "pairs": 301
+        }
+      },
+      "neurons": 3,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 499,
+          "pairs": 34
+        }
+      }
+    },
+    "sensory": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 5,
+          "pairs": 5
+        }
+      },
+      "neurons": 3,
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 1428,
+          "pairs": 77
+        }
+      }
+    }
+  },
+  "provenance": {
+    "parent_subset_field_matches": 700,
+    "policy_anatomical_rows_match": 12153,
+    "policy_endpoint_metadata_matches": 24306,
+    "raw_annotation_rows": 140,
+    "raw_nt_rows": 140
+  },
+  "roles": {
+    "apl_local_feedback": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 6495,
+          "pairs": 133
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 5455,
+          "pairs": 106
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 843,
+          "pairs": 25
+        }
+      }
+    },
+    "dna02_action_boundary": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 314,
+          "pairs": 3
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 4,
+          "pairs": 1
+        }
+      }
+    },
+    "dna03_descending_relay": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 197,
+          "pairs": 4
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 258,
+          "pairs": 3
+        }
+      }
+    },
+    "mbon01_gamma5_learning_output": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 2060,
+          "pairs": 107
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 528,
+          "pairs": 21
+        },
+        "UNKNOWN": {
+          "contacts": 441,
+          "pairs": 3
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 160,
+          "pairs": 28
+        }
+      }
+    },
+    "mbon11_gamma1_learning_output": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 2086,
+          "pairs": 107
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 781,
+          "pairs": 1
+        },
+        "UNKNOWN": {
+          "contacts": 263,
+          "pairs": 3
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 33,
+          "pairs": 1
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 590,
+          "pairs": 17
+        }
+      }
+    },
+    "mbon26_output_relay": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 343,
+          "pairs": 65
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 59,
+          "pairs": 6
+        }
+      }
+    },
+    "mbon27_visual_output": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 3026,
+          "pairs": 123
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 128,
+          "pairs": 7
+        }
+      }
+    },
+    "mbon32_competing_output": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 1226,
+          "pairs": 113
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 312,
+          "pairs": 21
+        }
+      }
+    },
+    "pam_gamma5_teaching_cohort": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 1741,
+          "pairs": 923
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 1981,
+          "pairs": 776
+        },
+        "UNKNOWN": {
+          "contacts": 409,
+          "pairs": 125
+        }
+      }
+    },
+    "ppl1_gamma1_teaching": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 533,
+          "pairs": 105
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 1041,
+          "pairs": 96
+        },
+        "UNKNOWN": {
+          "contacts": 315,
+          "pairs": 3
+        }
+      }
+    },
+    "visual_input_lovp42": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 0,
+          "pairs": 0
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 403,
+          "pairs": 30
+        }
+      }
+    },
+    "visual_input_lovp97": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 0,
+          "pairs": 0
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 424,
+          "pairs": 17
+        }
+      }
+    },
+    "visual_input_mevp41": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 5,
+          "pairs": 5
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 601,
+          "pairs": 30
+        }
+      }
+    },
+    "visual_kenyon_cells": {
+      "incoming": {
+        "EXCITATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "INHIBITORY": {
+          "contacts": 5455,
+          "pairs": 106
+        },
+        "MODULATORY": {
+          "contacts": 1713,
+          "pairs": 850
+        },
+        "UNKNOWN": {
+          "contacts": 30531,
+          "pairs": 9480
+        }
+      },
+      "outgoing": {
+        "EXCITATORY": {
+          "contacts": 4146,
+          "pairs": 214
+        },
+        "INHIBITORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "MODULATORY": {
+          "contacts": 0,
+          "pairs": 0
+        },
+        "UNKNOWN": {
+          "contacts": 40609,
+          "pairs": 10647
+        }
+      }
+    }
+  },
+  "selected_predicted_consensus_disagreements": [
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.799554759313014,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 19102
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7655237365514159,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 30397
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6960016748701121,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 35180
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7155491163017523,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 36723
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.5437575270975512,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 38657
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8042342222766751,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 39316
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7293314586357039,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 39771
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7592600026763013,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 41134
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7625423318819545,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 42370
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7786382089026241,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 42969
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7757411702791206,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 43867
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7253925383300003,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 44485
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7605899607763575,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 44948
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7649078147677794,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 46196
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.741521498847998,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 47354
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7565831560611667,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 47847
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7021114377297724,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48147
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7112275120666959,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48438
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7452598371230447,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48533
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8135937041744061,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48632
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7813148382286195,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48641
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7688689589539887,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 48978
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7497412973526401,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 49052
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.729275856044724,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 49345
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7599365325521955,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 49709
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7567317672026521,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 49710
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7145068575253751,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 50582
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7637664068908943,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 51679
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7591588050314465,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 51998
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.731001737835154,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 52594
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7531199630226605,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 52751
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.759603289791969,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 52907
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7788895825625848,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 53217
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7194328391734053,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 53505
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6851502933839289,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 56284
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6749203757458474,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57302
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7993306048834627,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57413
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7359237421383648,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57460
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7525906616646437,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57498
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7778175155514314,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57545
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7777560316579462,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 57550
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7881800092385318,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 58501
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8023153160119599,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 58524
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7819877842283502,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 58782
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.747558947651446,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 60344
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7375159755154206,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 60708
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7844356796116505,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 60829
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7713484381054577,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 61056
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7716273979962707,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 62076
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7566508593145663,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 62274
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7829711921663864,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 63543
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7341079823391143,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 64302
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7339968076996378,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 64310
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7697389579759862,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 66973
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7846840333744193,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 67355
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7999610991625119,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 67853
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8255808874912648,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 67984
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7492839678053916,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 71486
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7440516673979815,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 71688
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8038822283368274,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 72230
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6859865241800803,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 72512
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.716285679729076,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 73227
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8234336546349467,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 74094
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.756554589955696,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 74269
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7526583296767587,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 74542
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7496700182058922,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 76023
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.759558093346574,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 76076
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.760482180293501,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 78768
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7762051003935021,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 81056
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7232865501598102,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 81177
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7781416632485644,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 81656
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7820332445980447,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 83584
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8060956435036047,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 84011
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7768764588601439,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 84628
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.811184829248222,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 85349
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7861723663522012,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 85851
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7572144884184691,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 85923
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7521525499042931,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 86183
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7411634773441967,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 86909
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7555770907279407,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 87387
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7851166617786033,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 89327
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7619386239372965,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 91244
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7758865977150771,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 96304
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7496348057963624,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 99391
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7358741701607268,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 102283
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7923366483873966,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 103663
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6483442137002717,
+      "consensus": "acetylcholine",
+      "predicted": "gaba",
+      "source_id": 104513
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7581371976917591,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 106301
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7558870422617997,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 111744
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.795855020602906,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 120949
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6897932557205941,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 127046
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8199369151710385,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 128925
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8000045707181512,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 135421
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7733047089179164,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 144220
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7727394679045622,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 150014
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8062054646728222,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 153545
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8049809388285725,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 157325
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7831876255392012,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 159580
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7588689072327044,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 520204
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.6392287856267977,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 520206
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7786170938649578,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 526900
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7793313027046845,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 531428
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7663291745748204,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 533220
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8050969601677149,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 533345
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7772509764222739,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 534786
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.7924727835775628,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 535720
+    },
+    {
+      "cell_type": "KCg-d",
+      "celltype_confidence": 0.7530592569174162,
+      "celltype_predicted": "dopamine",
+      "confidence": 0.8169383298392733,
+      "consensus": "acetylcholine",
+      "predicted": "dopamine",
+      "source_id": 536363
+    }
+  ],
+  "selected_transmitter_consensus": {
+    "acetylcholine": 114,
+    "dopamine": 22,
+    "gaba": 3,
+    "glutamate": 1
+  },
+  "source": "MaleCNS v1.0, 140-body Circuit V1 exact induced graph",
+  "stages": {
+    "DAN_to_KC": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 1713,
+        "pairs": 850
+      },
+      "UNKNOWN": {
+        "contacts": 0,
+        "pairs": 0
+      }
+    },
+    "DAN_to_learning_MBON": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 1309,
+        "pairs": 22
+      },
+      "UNKNOWN": {
+        "contacts": 2,
+        "pairs": 2
+      }
+    },
+    "DN_to_DN": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 259,
+        "pairs": 2
+      }
+    },
+    "KC_to_learning_MBON": {
+      "EXCITATORY": {
+        "contacts": 4146,
+        "pairs": 214
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 0,
+        "pairs": 0
+      }
+    },
+    "KC_to_relay_MBON": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 4096,
+        "pairs": 269
+      }
+    },
+    "learning_MBON_to_relay_MBON": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 96,
+        "pairs": 5
+      }
+    },
+    "relay_MBON_to_DN": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 252,
+        "pairs": 5
+      }
+    },
+    "sensory_to_KC": {
+      "EXCITATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "INHIBITORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "MODULATORY": {
+        "contacts": 0,
+        "pairs": 0
+      },
+      "UNKNOWN": {
+        "contacts": 1427,
+        "pairs": 76
+      }
+    }
+  },
+  "totals": {
+    "EXCITATORY": {
+      "contacts": 4146,
+      "pairs": 214
+    },
+    "INHIBITORY": {
+      "contacts": 5488,
+      "pairs": 107
+    },
+    "MODULATORY": {
+      "contacts": 3022,
+      "pairs": 872
+    },
+    "UNKNOWN": {
+      "contacts": 45115,
+      "pairs": 10960
+    }
+  },
+  "unknown_categories": {
+    "conflicting_predicted_vs_consensus": {
+      "contacts": 40609,
+      "pairs": 10647,
+      "top_post_roles": [
+        [
+          "visual_kenyon_cells",
+          9370
+        ],
+        [
+          "pam_gamma5_teaching_cohort",
+          795
+        ],
+        [
+          "apl_local_feedback",
+          106
+        ],
+        [
+          "mbon27_visual_output",
+          106
+        ],
+        [
+          "mbon32_competing_output",
+          105
+        ],
+        [
+          "ppl1_gamma1_teaching",
+          102
+        ],
+        [
+          "mbon26_output_relay",
+          58
+        ],
+        [
+          "visual_input_mevp41",
+          5
+        ]
+      ],
+      "top_post_roles_by_contacts": [
+        [
+          "visual_kenyon_cells",
+          29043
+        ],
+        [
+          "apl_local_feedback",
+          5521
+        ],
+        [
+          "mbon27_visual_output",
+          2829
+        ],
+        [
+          "pam_gamma5_teaching_cohort",
+          1517
+        ],
+        [
+          "mbon32_competing_output",
+          1129
+        ],
+        [
+          "ppl1_gamma1_teaching",
+          427
+        ],
+        [
+          "mbon26_output_relay",
+          138
+        ],
+        [
+          "visual_input_mevp41",
+          5
+        ]
+      ],
+      "top_pre_roles": [
+        [
+          "visual_kenyon_cells",
+          10647
+        ]
+      ],
+      "top_pre_roles_by_contacts": [
+        [
+          "visual_kenyon_cells",
+          40609
+        ]
+      ]
+    },
+    "modulatory_nonbinary_unresolved": {
+      "contacts": 724,
+      "pairs": 128,
+      "top_post_roles": [
+        [
+          "pam_gamma5_teaching_cohort",
+          88
+        ],
+        [
+          "apl_local_feedback",
+          22
+        ],
+        [
+          "mbon27_visual_output",
+          13
+        ],
+        [
+          "mbon32_competing_output",
+          2
+        ],
+        [
+          "mbon11_gamma1_learning_output",
+          2
+        ],
+        [
+          "mbon26_output_relay",
+          1
+        ]
+      ],
+      "top_post_roles_by_contacts": [
+        [
+          "apl_local_feedback",
+          447
+        ],
+        [
+          "mbon27_visual_output",
+          153
+        ],
+        [
+          "pam_gamma5_teaching_cohort",
+          111
+        ],
+        [
+          "mbon32_competing_output",
+          9
+        ],
+        [
+          "mbon26_output_relay",
+          2
+        ],
+        [
+          "mbon11_gamma1_learning_output",
+          2
+        ]
+      ],
+      "top_pre_roles": [
+        [
+          "pam_gamma5_teaching_cohort",
+          125
+        ],
+        [
+          "ppl1_gamma1_teaching",
+          3
+        ]
+      ],
+      "top_pre_roles_by_contacts": [
+        [
+          "pam_gamma5_teaching_cohort",
+          409
+        ],
+        [
+          "ppl1_gamma1_teaching",
+          315
+        ]
+      ]
+    },
+    "transmitter_known_target_effect_unknown": {
+      "contacts": 3782,
+      "pairs": 185,
+      "top_post_roles": [
+        [
+          "visual_kenyon_cells",
+          110
+        ],
+        [
+          "pam_gamma5_teaching_cohort",
+          40
+        ],
+        [
+          "mbon26_output_relay",
+          6
+        ],
+        [
+          "mbon32_competing_output",
+          6
+        ],
+        [
+          "apl_local_feedback",
+          5
+        ],
+        [
+          "dna03_descending_relay",
+          4
+        ],
+        [
+          "mbon27_visual_output",
+          4
+        ],
+        [
+          "mbon01_gamma5_learning_output",
+          3
+        ]
+      ],
+      "top_post_roles_by_contacts": [
+        [
+          "visual_kenyon_cells",
+          1488
+        ],
+        [
+          "apl_local_feedback",
+          527
+        ],
+        [
+          "mbon01_gamma5_learning_output",
+          441
+        ],
+        [
+          "dna02_action_boundary",
+          314
+        ],
+        [
+          "mbon11_gamma1_learning_output",
+          261
+        ],
+        [
+          "mbon26_output_relay",
+          203
+        ],
+        [
+          "dna03_descending_relay",
+          197
+        ],
+        [
+          "pam_gamma5_teaching_cohort",
+          113
+        ]
+      ],
+      "top_pre_roles": [
+        [
+          "visual_input_lovp42",
+          30
+        ],
+        [
+          "visual_input_mevp41",
+          30
+        ],
+        [
+          "mbon01_gamma5_learning_output",
+          28
+        ],
+        [
+          "apl_local_feedback",
+          25
+        ],
+        [
+          "mbon32_competing_output",
+          21
+        ],
+        [
+          "mbon11_gamma1_learning_output",
+          17
+        ],
+        [
+          "visual_input_lovp97",
+          17
+        ],
+        [
+          "mbon27_visual_output",
+          7
+        ]
+      ],
+      "top_pre_roles_by_contacts": [
+        [
+          "apl_local_feedback",
+          843
+        ],
+        [
+          "visual_input_mevp41",
+          601
+        ],
+        [
+          "mbon11_gamma1_learning_output",
+          590
+        ],
+        [
+          "visual_input_lovp97",
+          424
+        ],
+        [
+          "visual_input_lovp42",
+          403
+        ],
+        [
+          "mbon32_competing_output",
+          312
+        ],
+        [
+          "dna03_descending_relay",
+          258
+        ],
+        [
+          "mbon01_gamma5_learning_output",
+          160
+        ]
+      ]
+    }
+  },
+  "unknown_role_pairs": [
+    {
+      "contacts": 29043,
+      "pairs": 9370,
+      "post": "visual_kenyon_cells",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 5521,
+      "pairs": 106,
+      "post": "apl_local_feedback",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 2829,
+      "pairs": 106,
+      "post": "mbon27_visual_output",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 1517,
+      "pairs": 795,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 1129,
+      "pairs": 105,
+      "post": "mbon32_competing_output",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 601,
+      "pairs": 30,
+      "post": "visual_kenyon_cells",
+      "pre": "visual_input_mevp41"
+    },
+    {
+      "contacts": 493,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 439,
+      "pairs": 1,
+      "post": "mbon01_gamma5_learning_output",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 427,
+      "pairs": 102,
+      "post": "ppl1_gamma1_teaching",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 423,
+      "pairs": 16,
+      "post": "visual_kenyon_cells",
+      "pre": "visual_input_lovp97"
+    },
+    {
+      "contacts": 403,
+      "pairs": 30,
+      "post": "visual_kenyon_cells",
+      "pre": "visual_input_lovp42"
+    },
+    {
+      "contacts": 307,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "ppl1_gamma1_teaching"
+    },
+    {
+      "contacts": 261,
+      "pairs": 1,
+      "post": "mbon11_gamma1_learning_output",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 255,
+      "pairs": 1,
+      "post": "dna02_action_boundary",
+      "pre": "dna03_descending_relay"
+    },
+    {
+      "contacts": 153,
+      "pairs": 13,
+      "post": "mbon27_visual_output",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 153,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 140,
+      "pairs": 21,
+      "post": "apl_local_feedback",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 138,
+      "pairs": 58,
+      "post": "mbon26_output_relay",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 110,
+      "pairs": 87,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 108,
+      "pairs": 1,
+      "post": "dna03_descending_relay",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 66,
+      "pairs": 1,
+      "post": "ppl1_gamma1_teaching",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 64,
+      "pairs": 18,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 58,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 55,
+      "pairs": 1,
+      "post": "dna02_action_boundary",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 47,
+      "pairs": 1,
+      "post": "dna03_descending_relay",
+      "pre": "mbon26_output_relay"
+    },
+    {
+      "contacts": 42,
+      "pairs": 15,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 39,
+      "pairs": 1,
+      "post": "ppl1_gamma1_teaching",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 38,
+      "pairs": 1,
+      "post": "dna03_descending_relay",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 35,
+      "pairs": 1,
+      "post": "mbon27_visual_output",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 28,
+      "pairs": 14,
+      "post": "visual_kenyon_cells",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 28,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 20,
+      "pairs": 10,
+      "post": "visual_kenyon_cells",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 18,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 14,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 12,
+      "pairs": 9,
+      "post": "visual_kenyon_cells",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 11,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 9,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 8,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "mbon26_output_relay"
+    },
+    {
+      "contacts": 7,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 7,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "ppl1_gamma1_teaching"
+    },
+    {
+      "contacts": 6,
+      "pairs": 1,
+      "post": "mbon27_visual_output",
+      "pre": "apl_local_feedback"
+    },
+    {
+      "contacts": 6,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 5,
+      "pairs": 5,
+      "post": "visual_input_mevp41",
+      "pre": "visual_kenyon_cells"
+    },
+    {
+      "contacts": 5,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 4,
+      "pairs": 1,
+      "post": "dna03_descending_relay",
+      "pre": "dna02_action_boundary"
+    },
+    {
+      "contacts": 4,
+      "pairs": 1,
+      "post": "dna02_action_boundary",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 3,
+      "pairs": 3,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 3,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "mbon11_gamma1_learning_output"
+    },
+    {
+      "contacts": 2,
+      "pairs": 2,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "mbon26_output_relay"
+    },
+    {
+      "contacts": 2,
+      "pairs": 2,
+      "post": "mbon11_gamma1_learning_output",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 2,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "dna03_descending_relay"
+    },
+    {
+      "contacts": 2,
+      "pairs": 1,
+      "post": "mbon27_visual_output",
+      "pre": "mbon01_gamma5_learning_output"
+    },
+    {
+      "contacts": 2,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 2,
+      "pairs": 1,
+      "post": "mbon32_competing_output",
+      "pre": "pam_gamma5_teaching_cohort"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "mbon26_output_relay",
+      "pre": "dna03_descending_relay"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "mbon01_gamma5_learning_output",
+      "pre": "mbon26_output_relay"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "mbon27_visual_output",
+      "pre": "mbon26_output_relay"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "ppl1_gamma1_teaching",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "visual_kenyon_cells",
+      "pre": "mbon27_visual_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "mbon01_gamma5_learning_output",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "mbon32_competing_output"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "pam_gamma5_teaching_cohort",
+      "pre": "ppl1_gamma1_teaching"
+    },
+    {
+      "contacts": 1,
+      "pairs": 1,
+      "post": "apl_local_feedback",
+      "pre": "visual_input_lovp97"
+    }
+  ]
+}

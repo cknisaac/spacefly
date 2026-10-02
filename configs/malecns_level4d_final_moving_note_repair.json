@@ -1,0 +1,97 @@
+{
+  "experiment_id": "MALECNS-LEVEL4D-FINAL-MOVING-NOTE-REPAIR-v1",
+  "status": "frozen_before_final_learning_run",
+  "parent_level4c_config": "configs/malecns_level4c_moving_note_learning.json",
+  "parent_level4c_config_sha256": "a657d6da285e0b24222dd299a8fcb0ea3517020a703e20724834858bd4f0411b",
+  "parent_level4c_result": "runs/malecns_level4c_moving_note_learning/result.json",
+  "parent_level4c_result_sha256": "201869f5559dfab6223b51e9104de31fb3770e53155d491dfd7107eb58b2bae4",
+  "parent_level4b_readout_config": "configs/malecns_level4_moving_note_500ms_readout_validity_v1.json",
+  "parent_level4b_readout_config_sha256": "c6be64251d0d28d2e51c64dafc41e5b79b1d89819e47cb5ddd3ee6baab6b3131",
+  "parent_level4b_config": "configs/malecns_level4b_moving_output_admission_repair.json",
+  "parent_level4b_config_sha256": "219c204f16d0d2f183e7e3ed2eb961f166c595496152250756889504fd3a782e",
+  "parent_level4b_result_sha256": "cb781d57e5c7861e94aa6554c7df56b356598db9fab3f2f6f8866ac2b1939586",
+  "parent_level3b_config": "configs/malecns_dan_bridge_level3b_ensemble.json",
+  "parent_level3b_config_sha256": "92eefb802c1387a314fe8cc9f1257c8eeb80fc5a49117bc6e8b5641b61e29b0f",
+  "parent_level3b_result": "runs/malecns_dan_bridge_level3b/result.json",
+  "parent_level3b_result_sha256": "3e76b71b893e5ceed41bf25bda707f7393ce70442b9bc6fe688645a84ace7e00",
+  "anatomy_audit": "docs/figures/l3_gamma4_dan_cohort_coverage_audit.json",
+  "anatomy_audit_sha256": "dd92f85ab03d8381860a2c8bf324ced19802e593ca95d6bbae9008b6cb3e9897",
+  "dan_source_ids": [87177, 107285, 55210],
+  "protocol": {
+    "traversal_duration_us": 500000,
+    "dt_us": 1000,
+    "position_bin_width": 0.05,
+    "kc_count": 32,
+    "mbon_source": "MBON05",
+    "encoder": "same frozen Gaussian encoder",
+    "encoder_sigma": 0.08,
+    "peak_drive_mv_equivalent": 1.2,
+    "eta": 0.00005,
+    "eligibility_tau_us": 1000000,
+    "weight_floor_fraction_of_immutable_original": 0.2,
+    "lif_contact_model": "same frozen Level 3B model",
+    "dan_source_ids": [87177, 107285, 55210],
+    "training_duration": {
+      "blocks": 120,
+      "presentations": 1200,
+      "presentations_per_block": 10,
+      "trial_spacing_us": 200000,
+      "stop_early": false,
+      "schedule_source": "exact frozen Level 3B 120-block sequence; class labels only schedule teacher events"
+    },
+    "action_cores": {"target": [0.65, 0.75], "wrong": [0.15, 0.25]},
+    "dan_stimulation": {
+      "pulse_amplitude_mv_equivalent": 2.0,
+      "pulse_duration_us": 20000,
+      "trigger_positions": {"target": 0.7, "wrong": 0.2},
+      "pulse_onset": "the tick at which the moving note reaches the arm trigger position",
+      "fresh_resting_lif_state_per_dan": true,
+      "activity_gate": "first spike from at least one stimulated DAN with an anatomical KC contact"
+    },
+    "action_output_validity_repair": {
+      "reset_each_note": true,
+      "valid_after": "first MBON05 sample with voltage strictly above its zero-mV resting baseline; raw KC spikes alone do not enable output",
+      "threshold_mv": 0.005572335995331903,
+      "readout_after_validity": "unchanged Level 4B readout: maximum MBON05 voltage among valid samples in each 0.05-position bin; action iff that maximum is <= the inherited threshold",
+      "first_action_position": "position-bin center of the earliest action bin in trajectory order",
+      "first_action_time": "time of the last valid sample in that bin, when its frozen maximum-voltage decision is available",
+      "pre_sensory_bins": "disabled when they contain no valid MBON05 samples"
+    },
+    "eligibility_locality_repair": {
+      "window_us": 50000,
+      "window_rule": "at the first connected DAN spike, include KC spikes from the current note with times in [DAN spike time - 50000 us, DAN spike time], inclusive; earlier spikes receive zero eligibility",
+      "spatial_span_at_frozen_speed": 0.1,
+      "basis": "At the frozen 500-ms traversal, 50 ms spans 0.10 normalized position; the saved pre-repair note has 3 unique-KC spikes in the final 50 ms for each teaching crossing, while 75 ms includes activity outside the taught-region halo.",
+      "eligibility_tau_us": 1000000,
+      "tau_status": "unchanged inherited exponential decay inside the hard locality window",
+      "reset": "at the start and end of each note"
+    },
+    "learning": {
+      "rule": "same presentation-local LocalLTD rule and update formula",
+      "eta": 0.00005,
+      "weight_floor_fraction_of_immutable_original": 0.2,
+      "commit": "at note end; updated weights first affect the next note",
+      "anatomical_gate": "update KC slot only for positive current-window eligibility and an active, anatomically connected ensemble DAN"
+    },
+    "action_threshold_mv": 0.005572335995331903,
+    "arms": [
+      "target teaching: target-class notes, DAN pulse at x=0.70, plasticity on",
+      "wrong-region teaching: wrong-region-class notes, DAN pulse at x=0.20, plasticity on",
+      "matched DAN-on/plasticity-off control: target-class notes, DAN pulse at x=0.70, plasticity off"
+    ],
+    "post_training_evaluation": "one fresh 500-ms note per arm, DAN OFF, plasticity OFF, final weights retained",
+    "predeclared_pass_criteria": [
+      "naive baseline has no first action",
+      "target-trained first action is in [0.65,0.75] and persists with DAN/plasticity off",
+      "wrong-region-trained first action is in [0.15,0.25] and persists with DAN/plasticity off",
+      "matched DAN-on/plasticity-off weights remain unchanged and have no first action",
+      "action output remains disabled until MBON05 shows a nonzero sensory response",
+      "no action occurs before MBON05 output validity",
+      "all updates have positive eligibility inside the frozen 50-ms note-local window and an active anatomically connected DAN",
+      "all weights remain at or above 20% of immutable original weights",
+      "all 120 blocks and 1200 presentations complete in all arms"
+    ],
+    "stop_rule": "one final run only; no parameter tuning or follow-up search; stop Level 4 after this run"
+  },
+  "scope": "final Level 4 moving-note learning experiment; no osu timing scoring or biological downstream motor neurons"
+}

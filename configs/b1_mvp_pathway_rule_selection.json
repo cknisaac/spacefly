@@ -1,0 +1,18 @@
+{
+  "stage_id": "MVP-B1",
+  "date": "2026-10-01",
+  "scope": "New-plan Branch B pathway and rule selection; research and read-only source-data analysis only",
+  "question": "Which MaleCNS pathway and experimentally supported local learning mechanism form the strongest complete candidate for first-action learning from fixed current-position input?",
+  "rationale": "The pivot allows direct fixed KC input and makes the learning mechanism, internal plastic locus and downstream controllability the central selection criteria.",
+  "candidate_families": ["MBON32 gamma2 with PPL103 (legacy reference)", "MBON12 gamma2-alpha-prime1 with PPL103", "MBON11 gamma1-peduncle with PPL101", "gamma4/gamma5 MBON with cognate PAM, if primary experimental support warrants"],
+  "selection_criteria_in_order": ["Direct experimental support for plasticity in the named MBON/compartment and a local rule with stated sign and timing", "Matching annotated MaleCNS cells and measured KC/DAN connectivity", "Measured downstream route to an annotated descending neuron with transparent functional uncertainty", "Compatibility with causal fixed position input, first-action feedback and fixed motor interface", "Implementation and diagnosis burden within eight active development hours per complete candidate"],
+  "intervention": "Primary-literature review and deterministic anatomy queries; no neural simulation or weight change",
+  "frozen_controls": ["Existing MaleCNS release and source provenance", "Historical synthetic and visual reports/configs/raw data/audits", "Existing production electrical models and learning code"],
+  "primary_endpoint": "One coherent candidate package, or explicit INCONCLUSIVE if a package lacks defensible plasticity evidence or a measured output route",
+  "secondary_endpoints": ["Evidence ledger with transfer limits", "Candidate comparison and rejection reasons", "Exact source IDs and edge counts for selected route", "B2 design gaps and B3 falsification requirements"],
+  "interpretation": {"PASS": "A complete candidate can be selected with relevant experimental rule support and measured anatomy; success of learning remains untested", "INCONCLUSIVE": "Available sources do not support a coherent package", "FAIL": "No reviewed candidate meets the mandatory boundary/evidence requirements"},
+  "prohibitions": ["No Candidate 1 implementation", "No V1.2", "No scientific simulation/training", "No future-time input", "No external trained decoder", "No converting engineered numerical values to measured physiology", "No automatic B2 execution"],
+  "outputs": ["docs/B1_MVP_PATHWAY_RULE_SELECTION.md", "docs/figures/b1_mvp_pathway_rule_selection/", "scripts/audit_b1_mvp_anatomy.py", "CURRENT.md", "ASSUMPTIONS.md", "MILESTONES.md", "docs/BRANCH_B_FLY_LEARNING_ROADMAP.md"],
+  "stop_condition": "Finish B1 report and selection, propose B2 only; stop before candidate implementation",
+  "budget": {"candidate_active_hours_max": 8, "candidate_count_max": 3, "total_active_development_hours_max": 24, "b1_start_utc": "2026-10-01 01:30:51 UTC"}
+}

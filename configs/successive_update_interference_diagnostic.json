@@ -1,0 +1,18 @@
+{
+  "study_id": "synthetic_successive_update_interference_v1",
+  "locked_before_new_probe_outcomes": "2026-09-30",
+  "selection_basis": "Existing longitudinal on-condition frozen probes only: seed 2001 has 32/32 GOOD+ at outcome 96 and 0/32 at 384; seed 2002 is the sole on trajectory with GOOD+ at 384 (25/32). Use the latest saved useful checkpoint for 2001 and the final 16 real outcomes preceding the saved strong late checkpoint for 2002. No intermediate frozen outcomes were available or used for window selection.",
+  "seeds_and_windows": [
+    {"seed": 2001, "start_after_outcomes": 96, "end_after_outcomes": 112, "role": "previously useful then collapsed by 384"},
+    {"seed": 2002, "start_after_outcomes": 368, "end_after_outcomes": 384, "role": "contrasting stronger late retained performance"}
+  ],
+  "probe_panel": "Use the existing long-continuation 32-note relative-offset/cue-gain panel at update 0 and after each of the 16 real outcomes. Translate the same relative panel to each exact checkpoint time. Freeze plasticity and exploration in each clone. No probe result changes training or settings.",
+  "meaningful_single_update_deterioration": "Previous frozen GOOD+ >= 16/32, next frozen GOOD+ at least 8/32 lower, and next mean game utility at least 0.25 lower. To allow a subsequent-sequence skip comparison, the transition must occur no later than four outcomes before the window end.",
+  "meaningful_single_update_improvement": "Frozen GOOD+ rises by at least 8/32 and mean game utility rises by at least 0.25 in one transition.",
+  "candidate_priority": "If any qualifying deterioration occurs, choose the earliest qualifying transition in seed 2001; otherwise choose the earliest in seed 2002. One skip intervention total. Do not choose another case after seeing the counterfactual.",
+  "causal_skip": "From the same complete checkpoint after the preceding outcome, replay the real next outcome twice. At its real dopamine call, branch A applies the production update and branch B calls the same method with zero dopamine. Thereafter both continue through the fixed window end with unchanged production rule, map, reward and seeded tick-by-tick RNG stream. Probe immediately after the target outcome and after the window end. Audit exact source replay for A, matched pre-update state, RNG state at the intervention, later exploration pulse times and any endogenous divergence.",
+  "progressive_timing_criterion": "For each 17-point frozen sequence, use the median signed nearest-note DOWN offset across all recorded DOWNs as a descriptive action-timing measure. Call drift progressive only if absolute end-start shift >= 20 ms and at least 12 of 16 consecutive nonzero shifts share its sign. Report scored-attempt errors and hit-only MAE separately; undefined hit MAE stays null.",
+  "precollapse_timing_criterion": "A timing shift is visible before category collapse only if an earlier transition changes the median signed nearest-note DOWN offset by >= 5 ms while GOOD+ count is unchanged, and a later transition in the same window meets the meaningful-deterioration criterion.",
+  "interpretation": "One harmful transition plus a matched skip that preserves frozen utility/GOOD+ at the end supports specific-update interference. A net collapse without a qualifying one-step drop supports only descriptive cumulative deterioration. If skip does not preserve behavior or its realized exploration pulses differ, retain the limitation; do not blame one update solely. No qualifying transition means no skip and an inconclusive causal result.",
+  "scope": "Synthetic 128-neuron diagnostic only; no learning-rate tuning, production rule change, broad seed sweep, or additional window after probe results."
+}

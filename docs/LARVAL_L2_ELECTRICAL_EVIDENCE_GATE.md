@@ -1,0 +1,39 @@
+# Larval L2 electrical evidence gate
+
+**Review date:** 2026-10-02  
+**Decision:** **INCONCLUSIVE — do not admit a new electrical L2 model yet**  
+**Scope:** Literature and authoritative connectome evidence only. The frozen L2 manifest, electrical model v1, and failed controllability probe were not changed or rerun.
+
+## Frozen state checked
+
+The three supplied SHA-256 values match the current files:
+
+| Artifact | SHA-256 |
+| --- | --- |
+| `configs/larval_l2_subgraph_manifest_v1.json` | `84fb7af5160a405a072170466ea19e134cd12bc61ed1a7c565f301972da07c89` |
+| `configs/larval_l2_electrical_model_v1.json` | `76a6f2612ed1361f86b061f8a4da117715456d748f3aa7d8384bdb4db9291952` |
+| `runs/larval_l2_controllability_probe_v1.json` | `97e6f526fbc4e6f46b5b0dbeb6fb32287dc531ebbb6a4ef0e0ee8d343c9cf381` |
+
+The probe remains a frozen **FAIL**: no Ipsigoro or Goro/action output at any tested KC→MBON-d1 multiplier through 4×. Its interpretation is limited to the declared v1 electrical transform; it is not evidence that the biological pathway cannot act.
+
+## Evidence by link and mechanism
+
+| Question | Evidence and developmental stage | What it constrains | What remains unknown |
+| --- | --- | --- | --- |
+| **KC→MBON-d1 anatomy** | The L1 supplement’s `ad_connectivity_matrix.csv` gives 404 axon→dendrite contacts from 60 annotated ipsilateral KC skeletons to left MBON-d1 (7055857), and 437 from 59 to right MBON-d1 (4241237). The L1 mushroom-body reconstruction reports direct KC→MBON connections in each compartment ([Eichler et al., 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5806122/); pinned local mirror: `data/raw/larval_l1em/supplementary_data_s1.zip`). | Direct, measured L1 anatomical input exists. Counts are structural contact counts, not efficacy. | No identified larval experiment measures the sign, unitary effect, or plasticity of the KC→MBON-d1 contacts. The S1 matrix does not identify which individual contacts store the odor memory. |
+| **Plasticity at the exact KC→MBON-d1 edge** | In L1 larvae, aversive odor training decreased CS+ odor responses in multicompartment MBON-m1, but the authors explicitly leave possible direct and indirect MB pathways as explanations ([Eschbach et al., 2021](https://elifesciences.org/articles/62567)). Their KC stimulation produced mixed MBON-m1 responses across animals; this is not a d1-compartment result. In third-instar larvae, optogenetic DAN-d1 pairing supports aversive punishment memory ([Eschbach et al., 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7145459/); [Weiglein et al., 2021](https://onlinelibrary.wiley.com/doi/10.1002/cne.25037)). A reviewed synthesis calls KC→MBON-d1 the “best candidate” memory locus, but labels it as a candidate/inference, not a direct synaptic measurement ([Weiglein et al., reviewed preprint](https://doi.org/10.7554/eLife.106148.1)). | Larval learning and DAN-d1 teaching are real; local KC→MBON-d1 plasticity is plausible. | There is no direct L1 or L3 physiological demonstration that conditioning changes KC→MBON-d1 efficacy, nor a measured depression rule, amplitude, or recovery profile for this exact compartment. The MBON-m1 result cannot be transferred to MBON-d1. Adult KC→MBON plasticity is not used to fill this gap. |
+| **DAN-d1 teaching / DAN→MBON effect** | In third-instar larvae, pairing DAN-d1 activation with odor produces aversive punishment memory; timing studies find punishment memory from forward pairing and no relief-memory reversal ([Eschbach et al., 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7145459/); [Weiglein et al., 2021](https://onlinelibrary.wiley.com/doi/10.1002/cne.25037)). The L1 anatomy and contact matrix show DAN-d1 and MBON-d1 share the lateral-appendix compartment and have direct contacts. | DAN-d1 is a larval teaching input for aversive odor learning; an L1 anatomical DAN-d1→MBON-d1 edge exists. | Behavioral teaching does not fix an acute DAN-d1→MBON-d1 current sign, strength, latency, or a causal local plasticity rule. A DAN teaching signal must not be converted to an ordinary positive spike synapse by assumption. |
+| **MBON-d1→Ipsigoro effect** | A Cambridge PhD thesis reports third-instar ex-vivo calcium imaging: optogenetic MBON-d1 activation significantly reduced Ipsigoro ΔF/F (N=6), interpreted as an inhibitory functional effect. It also reports MBON-d1 activation reduced Goro ΔF/F (N=12). The thesis explicitly says all behavioral experiments used third-instar wandering larvae. [Jones, *Circuit Mechanisms of Context-dependent Memory-based Action Selection* (2024), Ch. 6](https://api.repository.cam.ac.uk/server/api/core/bitstreams/737cafca-8765-40b0-869e-a7756817d803/content). | Independent of the v1 probe, primary third-instar physiology supports an inhibitory MBON-d1→Ipsigoro effect class and a net inhibitory MBON-d1→Goro effect. | This is optogenetic population stimulation and a calcium response, not a measured unitary conductance or calibrated synaptic weight. It does not set L1 magnitudes or timing constants. The thesis is primary research but not a peer-reviewed journal article. |
+| **Ipsigoro→Goro effect and Goro action role** | The same thesis reports third-instar ex-vivo activation of Ipsigoro increased Goro ΔF/F (N=8), and thermogenetic Ipsigoro activation promoted heat-evoked rolling; Ipsigoro activation alone was not sufficient without noxious context. Ohyama et al. show Goro is a rolling command-like neuron and that activating Goro evokes rolling ([Nature 2015](https://www.nature.com/articles/nature14297)). VFB identifies Ipsigoro→Goro and Goro’s role in the rolling pathway ([Ipsigoro](https://jupyter.virtualflybrain.org/blog/2022/01/01/larval-ipsigoro-neuron-fbbt_00111239/); [Goro](https://jupyter.virtualflybrain.org/blog/2022/01/01/larval-goro-neuron-fbbt_00111240/)). | Third-instar physiology supports an excitatory Ipsigoro→Goro effect class and a context-dependent rolling-promoting action path; Goro has experimental command-like action evidence. | These effects do not calibrate an L1 threshold of one simulated Goro spike as a biological rolling threshold. The 2024 thesis provides pathway-level functional effects, not single-synapse parameters. |
+
+## Developmental and model limits
+
+The connectome and contact counts are from first-instar anatomy. Most functional learning, DAN timing, and MBON-d1/Ipsigoro/Goro physiology reviewed here are from third-instar larvae. Those results constrain the *kind* of effects that may be appropriate, but do not supply L1 synaptic conductances, delays, or response thresholds. The developmental mismatch must remain visible in any future design.
+
+The action-path findings show why the all-positive v1 contact transform is not an evidence-based physiological assignment: the reported MBON-d1→Ipsigoro response is inhibitory while Ipsigoro→Goro is excitatory. They do **not** authorize editing model v1 or trying signs/weights until action appears. The frozen failure stays intact.
+
+## Gate decision
+
+**INCONCLUSIVE.** The downstream pathway now has independently measured third-instar effect classes, and Goro’s rolling role is supported. But the required internal-learning mechanism remains unresolved: there is no direct larval measurement that the exact KC→MBON-d1 synapses change with learning, and no physiological rule that fixes how DAN-d1 gates that change. A new electrical model cannot yet assign evidence-based KC→MBON-d1 sign/effect and DAN-gated plasticity without reverting to inference or engineering assumptions at the central learning site.
+
+No electrical model v2, parameter change, simulation, or task-score test is authorized by this evidence review. The next discriminating evidence would be a primary larval experiment measuring conditioned KC→MBON-d1 transmission or a selective causal manipulation that localizes memory expression to those synapses.

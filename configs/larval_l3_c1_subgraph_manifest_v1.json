@@ -1,0 +1,2360 @@
+{
+  "manifest_id": "larval_l3_dan-c1_mbon-c1_v1",
+  "candidate_status": "anatomy_pass_model_design_candidate",
+  "dataset": "L1 Larval CNS / Winding et al. 2023 Supplementary Data S1",
+  "source_stage": "first-instar connectome; functional DAN-c1 study third-instar",
+  "source_inputs": {
+    "data/raw/larval_l1em/supplementary_data_s1.zip": "8C1F43809ED5D527BA61B154E377CC21DA26383A75EDA8AAB85CE05607A72A4C",
+    "data/raw/larval_l1em/candidate_l3_c1_audit.json": "009B05FD773E3BA663E09ECF296DA571D2691A2B73CFC57803D57054E707457A"
+  },
+  "nodes": [
+    {
+      "source_id": 29,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3347708,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3347834,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3497901,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3587612,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3664102,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 3819157,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4117305,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4134539,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4227304,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4227544,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4229950,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4230061,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4230739,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4241192,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4411505,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4412036,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4412315,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4414426,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4415241,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4444354,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 4518546,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5019924,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5051342,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5835799,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5835815,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836035,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836163,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836181,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836197,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836206,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5836387,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 5937084,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 6702830,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 6704232,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7187384,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7196392,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7690945,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7786053,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7828725,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7829784,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7838405,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7840203,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7868195,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 7891312,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8066542,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8068173,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8118474,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8177991,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8262302,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8262372,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8262503,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8263140,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8263285,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8274902,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8413663,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8419602,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8509987,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8513389,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8559607,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8835968,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8850802,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8864096,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8865199,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8891315,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 8980589,
+      "role": "MBON-c1",
+      "annotation": "MBON-c1; CN-59",
+      "transmitter": "acetylcholine",
+      "transmitter_evidence": "LITERATURE-CONSTRAINED; transmitter class does not determine postsynaptic effect",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9525492,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9531722,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9556700,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9609048,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9730873,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9766793,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9796812,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9809626,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9813188,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9847388,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9889095,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9897223,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 9983191,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 10056280,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 10411574,
+      "role": "DN-VNC CN-28/PL-17",
+      "annotation": "DN-VNC CN-28/PL-17",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 11691603,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 11725127,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 11725803,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 11785627,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 11813287,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 12726582,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 14460113,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 14519048,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 14522124,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 14898295,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 14898816,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 15592096,
+      "role": "DAN-c1",
+      "annotation": "DAN-c1",
+      "transmitter": "dopamine",
+      "transmitter_evidence": "LITERATURE-CONSTRAINED; transmitter class does not determine postsynaptic effect",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 15721919,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 15722867,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 15734988,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16039470,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16058860,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16210988,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16223537,
+      "role": "MBON-c1",
+      "annotation": "MBON-c1; CN-59",
+      "transmitter": "acetylcholine",
+      "transmitter_evidence": "LITERATURE-CONSTRAINED; transmitter class does not determine postsynaptic effect",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16240569,
+      "role": "DAN-c1",
+      "annotation": "DAN-c1",
+      "transmitter": "dopamine",
+      "transmitter_evidence": "LITERATURE-CONSTRAINED; transmitter class does not determine postsynaptic effect",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16435965,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16438190,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16440649,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16444327,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16627773,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16627838,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16627861,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16629757,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16629788,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16629931,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16630024,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16630264,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16630385,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16630941,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16631114,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16720240,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16850888,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16939375,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 16977881,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 17147410,
+      "role": "KC",
+      "annotation": "KC",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    },
+    {
+      "source_id": 17379420,
+      "role": "DN-VNC CN-28/PL-17",
+      "annotation": "DN-VNC CN-28/PL-17",
+      "transmitter": "UNKNOWN",
+      "transmitter_evidence": "UNKNOWN",
+      "physiological_output_sign": "UNKNOWN",
+      "evidence_source": "Winding et al. 2023 S1 annotations; MBON-c1 identity also cross-referenced to FlyBase FBbt:00047967"
+    }
+  ],
+  "edges": [
+    {
+      "pre_id": 29,
+      "post_id": 8980589,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3347708,
+      "post_id": 8980589,
+      "contacts": 26,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3347834,
+      "post_id": 8980589,
+      "contacts": 3,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3497901,
+      "post_id": 8980589,
+      "contacts": 6,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3587612,
+      "post_id": 8980589,
+      "contacts": 6,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3664102,
+      "post_id": 8980589,
+      "contacts": 57,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 3819157,
+      "post_id": 16223537,
+      "contacts": 3,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4117305,
+      "post_id": 16223537,
+      "contacts": 9,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4134539,
+      "post_id": 16223537,
+      "contacts": 33,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4227304,
+      "post_id": 8980589,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4227544,
+      "post_id": 8980589,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4229950,
+      "post_id": 8980589,
+      "contacts": 41,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4230061,
+      "post_id": 8980589,
+      "contacts": 39,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4230739,
+      "post_id": 8980589,
+      "contacts": 40,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4241192,
+      "post_id": 8980589,
+      "contacts": 38,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4411505,
+      "post_id": 16223537,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4412036,
+      "post_id": 16223537,
+      "contacts": 39,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4412315,
+      "post_id": 16223537,
+      "contacts": 45,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4414426,
+      "post_id": 8980589,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4415241,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4444354,
+      "post_id": 8980589,
+      "contacts": 29,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 4518546,
+      "post_id": 16223537,
+      "contacts": 27,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5019924,
+      "post_id": 8980589,
+      "contacts": 38,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5051342,
+      "post_id": 8980589,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5835799,
+      "post_id": 8980589,
+      "contacts": 21,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5835815,
+      "post_id": 8980589,
+      "contacts": 5,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836035,
+      "post_id": 8980589,
+      "contacts": 19,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836163,
+      "post_id": 8980589,
+      "contacts": 38,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836181,
+      "post_id": 8980589,
+      "contacts": 3,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836197,
+      "post_id": 8980589,
+      "contacts": 44,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836206,
+      "post_id": 8980589,
+      "contacts": 45,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5836387,
+      "post_id": 8980589,
+      "contacts": 15,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 5937084,
+      "post_id": 16223537,
+      "contacts": 26,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 6702830,
+      "post_id": 16223537,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 6704232,
+      "post_id": 16223537,
+      "contacts": 1,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7187384,
+      "post_id": 16223537,
+      "contacts": 51,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7196392,
+      "post_id": 8980589,
+      "contacts": 3,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7690945,
+      "post_id": 8980589,
+      "contacts": 10,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7786053,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7828725,
+      "post_id": 8980589,
+      "contacts": 14,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7829784,
+      "post_id": 8980589,
+      "contacts": 5,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7838405,
+      "post_id": 8980589,
+      "contacts": 8,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7840203,
+      "post_id": 8980589,
+      "contacts": 33,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7868195,
+      "post_id": 8980589,
+      "contacts": 21,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 7891312,
+      "post_id": 8980589,
+      "contacts": 14,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8066542,
+      "post_id": 8980589,
+      "contacts": 25,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8068173,
+      "post_id": 8980589,
+      "contacts": 47,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8118474,
+      "post_id": 16223537,
+      "contacts": 37,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8177991,
+      "post_id": 16223537,
+      "contacts": 5,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8262302,
+      "post_id": 16223537,
+      "contacts": 37,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8262372,
+      "post_id": 16223537,
+      "contacts": 31,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8262503,
+      "post_id": 16223537,
+      "contacts": 26,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8263140,
+      "post_id": 16223537,
+      "contacts": 9,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8263285,
+      "post_id": 16223537,
+      "contacts": 17,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8274902,
+      "post_id": 8980589,
+      "contacts": 15,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8413663,
+      "post_id": 8980589,
+      "contacts": 27,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8419602,
+      "post_id": 8980589,
+      "contacts": 5,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8509987,
+      "post_id": 8980589,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8513389,
+      "post_id": 16223537,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8559607,
+      "post_id": 8980589,
+      "contacts": 21,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8835968,
+      "post_id": 8980589,
+      "contacts": 1,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8850802,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8864096,
+      "post_id": 16223537,
+      "contacts": 1,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8865199,
+      "post_id": 16223537,
+      "contacts": 15,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8891315,
+      "post_id": 8980589,
+      "contacts": 19,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9525492,
+      "post_id": 8980589,
+      "contacts": 17,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9531722,
+      "post_id": 8980589,
+      "contacts": 9,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9556700,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9609048,
+      "post_id": 8980589,
+      "contacts": 24,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9730873,
+      "post_id": 8980589,
+      "contacts": 3,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9766793,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9796812,
+      "post_id": 8980589,
+      "contacts": 39,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9809626,
+      "post_id": 8980589,
+      "contacts": 17,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9813188,
+      "post_id": 8980589,
+      "contacts": 14,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9847388,
+      "post_id": 8980589,
+      "contacts": 1,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9889095,
+      "post_id": 8980589,
+      "contacts": 15,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9897223,
+      "post_id": 8980589,
+      "contacts": 20,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 9983191,
+      "post_id": 16223537,
+      "contacts": 6,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 10056280,
+      "post_id": 8980589,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 11691603,
+      "post_id": 16223537,
+      "contacts": 48,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 11725127,
+      "post_id": 16223537,
+      "contacts": 39,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 11725803,
+      "post_id": 16223537,
+      "contacts": 29,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 11785627,
+      "post_id": 16223537,
+      "contacts": 4,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 11813287,
+      "post_id": 8980589,
+      "contacts": 34,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 12726582,
+      "post_id": 16223537,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 14460113,
+      "post_id": 16223537,
+      "contacts": 11,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 14519048,
+      "post_id": 16223537,
+      "contacts": 4,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 14522124,
+      "post_id": 16223537,
+      "contacts": 10,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 14898295,
+      "post_id": 16223537,
+      "contacts": 4,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 14898816,
+      "post_id": 16223537,
+      "contacts": 63,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 15721919,
+      "post_id": 16223537,
+      "contacts": 33,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 15722867,
+      "post_id": 16223537,
+      "contacts": 15,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 15734988,
+      "post_id": 16223537,
+      "contacts": 2,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16039470,
+      "post_id": 16223537,
+      "contacts": 31,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16058860,
+      "post_id": 16223537,
+      "contacts": 22,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16210988,
+      "post_id": 16223537,
+      "contacts": 14,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16435965,
+      "post_id": 16223537,
+      "contacts": 13,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16438190,
+      "post_id": 16223537,
+      "contacts": 16,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16440649,
+      "post_id": 16223537,
+      "contacts": 6,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16444327,
+      "post_id": 16223537,
+      "contacts": 29,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16627773,
+      "post_id": 16223537,
+      "contacts": 13,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16627838,
+      "post_id": 16223537,
+      "contacts": 28,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16627861,
+      "post_id": 16223537,
+      "contacts": 19,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16629757,
+      "post_id": 16223537,
+      "contacts": 7,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16629788,
+      "post_id": 16223537,
+      "contacts": 35,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16629931,
+      "post_id": 16223537,
+      "contacts": 4,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16630024,
+      "post_id": 16223537,
+      "contacts": 8,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16630264,
+      "post_id": 16223537,
+      "contacts": 12,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16630385,
+      "post_id": 16223537,
+      "contacts": 53,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16630941,
+      "post_id": 16223537,
+      "contacts": 21,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16631114,
+      "post_id": 16223537,
+      "contacts": 25,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16720240,
+      "post_id": 8980589,
+      "contacts": 12,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16850888,
+      "post_id": 8980589,
+      "contacts": 47,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16939375,
+      "post_id": 16223537,
+      "contacts": 7,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16977881,
+      "post_id": 16223537,
+      "contacts": 29,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 17147410,
+      "post_id": 16223537,
+      "contacts": 10,
+      "direction": "KC_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "INFERRED: whole-cell KC\u2192MBON-c1 pairs; LP-specific plastic contacts are not resolved in S1",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 15592096,
+      "post_id": 8980589,
+      "contacts": 45,
+      "direction": "DAN-c1_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed/modulatory pathway; not modeled as ordinary chemical current",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 15592096,
+      "post_id": 16223537,
+      "contacts": 63,
+      "direction": "DAN-c1_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed/modulatory pathway; not modeled as ordinary chemical current",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16240569,
+      "post_id": 8980589,
+      "contacts": 60,
+      "direction": "DAN-c1_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed/modulatory pathway; not modeled as ordinary chemical current",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16240569,
+      "post_id": 16223537,
+      "contacts": 41,
+      "direction": "DAN-c1_to_MBON-c1",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed/modulatory pathway; not modeled as ordinary chemical current",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 8980589,
+      "post_id": 17379420,
+      "contacts": 9,
+      "direction": "MBON-c1_to_DN-VNC-CN28-PL17",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed downstream",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    },
+    {
+      "pre_id": 16223537,
+      "post_id": 10411574,
+      "contacts": 20,
+      "direction": "MBON-c1_to_DN-VNC-CN28-PL17",
+      "anatomical_status": "MEASURED",
+      "plasticity_candidate": "fixed downstream",
+      "physiological_sign": "UNKNOWN",
+      "source": "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+    }
+  ],
+  "boundary_overlays": [
+    {
+      "name": "current_visible_position_to_KC",
+      "category": "ENGINEERING ASSUMPTION",
+      "topology_edit": false,
+      "description": "Fixed causal position-bin input; no future note timestamp or time-to-contact."
+    },
+    {
+      "name": "DN-VNC-CN28-PL17_to_KEY_DOWN",
+      "category": "ENGINEERING OVERLAY",
+      "topology_edit": false,
+      "description": "Candidate direct descending cell is mapped to an action by a fixed readout; this is not a measured fly-to-key correspondence."
+    },
+    {
+      "name": "task_outcome_to_DAN-c1_teaching",
+      "category": "ENGINEERING ASSUMPTION",
+      "topology_edit": false,
+      "description": "Artificial task teaching interface; reward and DAN activity remain separately logged."
+    }
+  ],
+  "limits": [
+    "The original L1 \u03b31pedc/MBON-m1 pairing is rejected; L3 uses the lower-peduncle DAN-c1 / MBON-c1 anatomical pairing.",
+    "KC\u2192MBON-c1 memory storage remains an INFERRED hypothesis, not a direct physiological measurement.",
+    "Whole-cell S1 partners do not localize each KC contact to LP.",
+    "All physiological output signs/effects remain UNKNOWN unless explicitly constrained in a later sourced model.",
+    "First-instar anatomy and third-instar behavior are not stage matched.",
+    "The DN-VNC-to-action interface is an engineering overlay."
+  ]
+}

@@ -1,0 +1,815 @@
+{
+  "source_scene": "v1.0/database/neuprint-inputs/male-cns:v1.0.json",
+  "volume": "rois/malecns-subcompartments-v3",
+  "resolution_nm": 256,
+  "coordinate_conversion": "floor(source_xyz_8nm / 32)",
+  "decoder_spec": "https://raw.githubusercontent.com/google/neuroglancer/master/src/sliceview/compressed_segmentation/README.md",
+  "decoder_manual_fixtures": "passed",
+  "source_receipts": [
+    {
+      "name": "v1.0/database/neuprint-inputs/male-cns:v1.0.json",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/database/neuprint-inputs/male-cns%3Av1.0.json?generation=1780895255196995",
+      "generation": "1780895255196995",
+      "bytes": 57139,
+      "md5_base64": "QWoQeTHdndUULrN+Kbn1yA==",
+      "sha256": "74cffee5a2b353d5130081b6345c4308092a86d6c06dc0e1a0c7a59c6ef57130"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/info",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/info?generation=1777786230126710",
+      "generation": "1777786230126710",
+      "bytes": 1545,
+      "md5_base64": "NMNE642OO4gnOxJZp0KZMA==",
+      "sha256": "29b33c1ac54cf38d246be25c0e0cffa99dea25c376211058dcdb6750f2bee1b9"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/segment_properties/info",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/segment_properties/info?generation=1777786230941991",
+      "generation": "1777786230941991",
+      "bytes": 7036,
+      "md5_base64": "OXndBLashtHHayCh3G76gA==",
+      "sha256": "74490670acafe653900b68fa360ab1836a0bdd76678e1a14b65e0dd5092f3f33"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1088-1152_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1088-1152_512-576_448-512?generation=1777786227280850",
+      "generation": "1777786227280850",
+      "bytes": 6220,
+      "md5_base64": "m7gvMg7wg+6YS1xUZ37Iog==",
+      "sha256": "d64ced7b7014e2af8effc95e00324e747d7dbd0197e85283e989df70866a5a02"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1088-1152_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1088-1152_576-640_448-512?generation=1777786227296573",
+      "generation": "1777786227296573",
+      "bytes": 8988,
+      "md5_base64": "CXwmObKri5MKJcVu+XjT9Q==",
+      "sha256": "39256f8bf71344a504c6d9d5e8a8b9c770612b5b2bf73977a4c7c13ba46395c2"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_448-512_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_448-512_448-512?generation=1777786227432542",
+      "generation": "1777786227432542",
+      "bytes": 10212,
+      "md5_base64": "WFR7m99bnJreJX2+GoNgVQ==",
+      "sha256": "30747fa2487e21e4ddacc6aa8e466d5cf0e8059859e500f021d1319957f6cb07"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_448-512_512-576?generation=1777786227423876",
+      "generation": "1777786227423876",
+      "bytes": 12756,
+      "md5_base64": "HfI/+j9nrqSglXZEjA/COA==",
+      "sha256": "267b2d30caa48a8ef472c45d7b42351ada0e5b82a99e0619affc33a3e034860e"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_384-448?generation=1777786227465966",
+      "generation": "1777786227465966",
+      "bytes": 9700,
+      "md5_base64": "nFBmJTd3j2Jn0+9t9fWTfg==",
+      "sha256": "dc66153d4fd87415edb56e4354a26fee474c76f118e1d0af0a4b949542157240"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_448-512?generation=1777786227461665",
+      "generation": "1777786227461665",
+      "bytes": 12684,
+      "md5_base64": "PoCFeqbXYNWo8u3ynP+d9Q==",
+      "sha256": "98ee1aa8e550b8b954d443434143d7dad1054f12ad8a1246c3beaf23cc32c414"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_512-576?generation=1777786227455946",
+      "generation": "1777786227455946",
+      "bytes": 22620,
+      "md5_base64": "prkrS/PeVzPbmA36POVhMw==",
+      "sha256": "251e9ff94dde4b9c584e99baafa13bb2260afcd2d4b2daa93c419a4ecf16ce33"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_512-576_576-640?generation=1777786227460633",
+      "generation": "1777786227460633",
+      "bytes": 8996,
+      "md5_base64": "UJVTL/11Wic8FHaFQhzigA==",
+      "sha256": "e0ab2272b0f2764c3bd8404003fcd09b44054bead0973002edadc7faf2153508"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_384-448?generation=1777786227456359",
+      "generation": "1777786227456359",
+      "bytes": 7396,
+      "md5_base64": "3TddLlIo94ZbsgP1n7PKjg==",
+      "sha256": "d12452faaf0d988f38dacb51ba46f9c694d63c10b67b3c86fcb295fc99591b45"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_448-512?generation=1777786227463030",
+      "generation": "1777786227463030",
+      "bytes": 13500,
+      "md5_base64": "voQGzeaDudsVzESvoNH76w==",
+      "sha256": "1ae9d4eaa4f8b96cb4544f6224cf1d9d6e97363a98a22b51e61661a54da2516a"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_512-576?generation=1777786227468565",
+      "generation": "1777786227468565",
+      "bytes": 21980,
+      "md5_base64": "jSlWC/Mdl8ObGtqtJaqULg==",
+      "sha256": "64f9d8fafd71b1c03e27d5906e2e25f41decd801932c2cf5652511e2113c835c"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1152-1216_576-640_576-640?generation=1777786227478340",
+      "generation": "1777786227478340",
+      "bytes": 13036,
+      "md5_base64": "Ngr87p4vufwawC0hTJsMZA==",
+      "sha256": "4423c808df9175aea83d24811ff2335cbf672c420df61777d91d9e633fe80424"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_384-448?generation=1777786227666525",
+      "generation": "1777786227666525",
+      "bytes": 12676,
+      "md5_base64": "EWOhppp30CxBjQkJB3A4qg==",
+      "sha256": "7518ffcedae04f3bd8698b991167f332c1f4b1ac6f0871a266420ebfffaff4aa"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_448-512?generation=1777786227655463",
+      "generation": "1777786227655463",
+      "bytes": 19308,
+      "md5_base64": "d33Z0rq+8WeEyb5UOq5jtw==",
+      "sha256": "9ac4a2c80ef83e295999ed0418adece710b891728f9e015cf77f1b79e9fec845"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_448-512_512-576?generation=1777786227670359",
+      "generation": "1777786227670359",
+      "bytes": 15468,
+      "md5_base64": "MTjzTFXICW1L6DDn4zx5Ag==",
+      "sha256": "b7d197541b876e7dba78edc81e76d39b1dfe3b9be76c17123ba5d8f10780b3e6"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_384-448?generation=1777786227674039",
+      "generation": "1777786227674039",
+      "bytes": 12772,
+      "md5_base64": "J4b9rV1CnOPka7E+DXfBnQ==",
+      "sha256": "aa9af04bf8c2d2162d66192941634c7e1acdb31dc4428e3b78d2800d64689aed"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_448-512?generation=1777786227672499",
+      "generation": "1777786227672499",
+      "bytes": 13548,
+      "md5_base64": "aK8cHKy+9NdBERqfkGl/TQ==",
+      "sha256": "88ad4495448e5bdfb6d81402c022fc1b9254a66a9c5699ff7e2897885756ee6f"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_512-576_512-576?generation=1777786227664175",
+      "generation": "1777786227664175",
+      "bytes": 18860,
+      "md5_base64": "t64+jHqk0GCC8855ky3rRg==",
+      "sha256": "c7edd059f7bb45558ea17fb9766499c4c45747c7f1bbc453b94e071d2605a638"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_576-640_384-448?generation=1777786227679695",
+      "generation": "1777786227679695",
+      "bytes": 11044,
+      "md5_base64": "7B4Y7DNjHW509zxAC5s9NQ==",
+      "sha256": "d90b70046e8d9901b53e65cffd09b386fc21a5da05ed03cc943f262d076a6bca"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1216-1280_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1216-1280_576-640_448-512?generation=1777786227669319",
+      "generation": "1777786227669319",
+      "bytes": 16100,
+      "md5_base64": "xwjRFihas2kFRK4/LDT4kg==",
+      "sha256": "f51c987b46c01b6124649669b974f7f02e828249018a113dd0fe32103030486e"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_448-512_384-448?generation=1777786227854191",
+      "generation": "1777786227854191",
+      "bytes": 14564,
+      "md5_base64": "++sg+4zavL77r7b0UUzEZA==",
+      "sha256": "1d15fb20ffff4229f1bd3d472f218d994dec63032a36550fc259cbda66b30280"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_448-512_512-576?generation=1777786227850366",
+      "generation": "1777786227850366",
+      "bytes": 4108,
+      "md5_base64": "uK6KsLVGMLEl9+CqQDkHZg==",
+      "sha256": "9103e92f5f09befcf51a4bdd3c9f6f7430be48f2f39e95c0f9207727df08e5ca"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_512-576_384-448?generation=1777786227853911",
+      "generation": "1777786227853911",
+      "bytes": 9188,
+      "md5_base64": "LtT+Y5MVaCU4GEHxG+yJLw==",
+      "sha256": "cf6325fde3da62d9ad49231d07083150ef58280a460dc7448779586ce17d445b"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_512-576_512-576?generation=1777786227865025",
+      "generation": "1777786227865025",
+      "bytes": 15156,
+      "md5_base64": "qsIBd/NZfA1YZYWoL7NqAg==",
+      "sha256": "c9f685a21f702fd303c37c9df627dbe6b149dd4c7f1f11e8aea5ce1e2c708551"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_576-640_384-448?generation=1777786227882206",
+      "generation": "1777786227882206",
+      "bytes": 9916,
+      "md5_base64": "hh6TRhq60zrF+qHWe6q6tA==",
+      "sha256": "adf8ca61437a217ea9c9881ff5a9575393ac6000f45931e37f736cd129b03d6e"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1280-1344_768-832_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1280-1344_768-832_576-640?generation=1777786227966693",
+      "generation": "1777786227966693",
+      "bytes": 8692,
+      "md5_base64": "DyCwXz7EDe/2MtoP4Zjeww==",
+      "sha256": "7b7c94716c2455f12c2c85d5641793ce8dcb47b3c0d7c069b57bffebebf337d0"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_320-384_512-576",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_320-384_576-640",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_384-448?generation=1777786228096775",
+      "generation": "1777786228096775",
+      "bytes": 12644,
+      "md5_base64": "Ubpgs0OegoKxWQSEnE41Jg==",
+      "sha256": "8c4ca337c3fbcf4fc03ce2c69817e7f3bfbc5a60e0bedbec8fed3b4bca9e623d"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_448-512?generation=1777786228099370",
+      "generation": "1777786228099370",
+      "bytes": 6884,
+      "md5_base64": "WrW5/NAkOT3ehdnQAPycYg==",
+      "sha256": "e3d481f8393f874b3bf7694f77f2dbcbd2b2fc91fe9cc0a80a3ed382c842c31c"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_512-576?generation=1777786228085122",
+      "generation": "1777786228085122",
+      "bytes": 6564,
+      "md5_base64": "ccwEM//RigElc2iDY6MDcg==",
+      "sha256": "01cafa7f9444e91a5e869931ae832720f546a49c1b6c85efdaf9b2d25938ff12"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_576-640?generation=1777786228099438",
+      "generation": "1777786228099438",
+      "bytes": 5220,
+      "md5_base64": "s+BGnycFzK/GjV3WFMkjaQ==",
+      "sha256": "05e9980e1a860c5084dc095b78092256e1578765cc985a30bc416c871c67b933"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_384-448_640-704",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_448-512_512-576?generation=1777786228080937",
+      "generation": "1777786228080937",
+      "bytes": 7092,
+      "md5_base64": "J3rjYnnJ9KGMOIfs/isqbw==",
+      "sha256": "5c104cf737206df112c3b43975c5bf0a82e425123c7945b20dbc8491d5dd0e0f"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_448-512_640-704",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_448-512_640-704?generation=1777786228114124",
+      "generation": "1777786228114124",
+      "bytes": 4380,
+      "md5_base64": "FsT+ygLqlFAiw3YZPaOG5Q==",
+      "sha256": "4157e844deff4a1703158e3717518a1b760eb37c440b3975c14ff0aae8ba3706"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_512-576_512-576?generation=1777786228092642",
+      "generation": "1777786228092642",
+      "bytes": 15444,
+      "md5_base64": "20O3tu9CkU8WECxJX7kGAw==",
+      "sha256": "ff341d4c231f6a935324b2a5ec6598ec5cf30460a6eb96c81056a5ce8b058a03"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1344-1408_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1344-1408_576-640_448-512?generation=1777786228137942",
+      "generation": "1777786228137942",
+      "bytes": 20756,
+      "md5_base64": "To+yyxCTl+c2SFqtprQ9lg==",
+      "sha256": "8d30fd00acb407f39c5d40bf88996cda7c850a29d0359c393605ff9775f5ea8d"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_320-384_512-576",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_384-448?generation=1777786228259672",
+      "generation": "1777786228259672",
+      "bytes": 12132,
+      "md5_base64": "NmRkViYnaLG10Ji2SXov1A==",
+      "sha256": "b61b92a056b158c63d87e9886078ef50e93573c8d59084ad45cb9ab7e659accc"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_448-512?generation=1777786228277390",
+      "generation": "1777786228277390",
+      "bytes": 10916,
+      "md5_base64": "nGESX68OBIb7nsvUVypVHw==",
+      "sha256": "bb78e9bfe51088fa8caac87fe8dd9dda6243d1e78f7bcea42bd501b2d1c8bcbc"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_512-576?generation=1777786228260341",
+      "generation": "1777786228260341",
+      "bytes": 4316,
+      "md5_base64": "qWl05lQcI78z/n3F9K6DTA==",
+      "sha256": "d2678742b0b3a52b479399c73853943bb6f8d9926e01f8f131092bb59a324b2f"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_384-448_576-640",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_448-512_384-448?generation=1777786228263295",
+      "generation": "1777786228263295",
+      "bytes": 13116,
+      "md5_base64": "M1Fug8S3/i02caMqk0gUVQ==",
+      "sha256": "02ceb7a81cf33a3bf71efbc5b2120606f57e46126bac3e4cc48f8a4a9f3497dd"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_448-512_512-576?generation=1777786228262148",
+      "generation": "1777786228262148",
+      "bytes": 18804,
+      "md5_base64": "tJKvw7CZ07zboyv4u6O0vg==",
+      "sha256": "d1c940171b222c6963277b50b4fc13bc4131a945a9837de09eede276ee8b3ca5"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1408-1472_704-768_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1408-1472_704-768_576-640?generation=1777786228395849",
+      "generation": "1777786228395849",
+      "bytes": 15580,
+      "md5_base64": "ghc6FBYuNodLqvvgXJqEzA==",
+      "sha256": "3058e18382f38ab4e7b758838e9d03fd485fb8cbc6a91877169904576404d8bc"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_320-384_448-512",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_384-448_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1536-1600_384-448_512-576?generation=1777786228562918",
+      "generation": "1777786228562918",
+      "bytes": 5028,
+      "md5_base64": "onXELdya7XVcPVGyU7JVFA==",
+      "sha256": "679ca3e24723421657b5949a05b9e4e776bf07dd5cebe16d7b76ba2948688b49"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_384-448?generation=1777786228562547",
+      "generation": "1777786228562547",
+      "bytes": 12988,
+      "md5_base64": "rZwwGp6VyBDDnpThjkcCjw==",
+      "sha256": "6a0c5a95666fd08428cff2589838417c36ffd03de00fd576c8b1bf16d3725967"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1536-1600_576-640_384-448?generation=1777786228583425",
+      "generation": "1777786228583425",
+      "bytes": 15908,
+      "md5_base64": "93MJfuCuJDqR1hkk6r7PLg==",
+      "sha256": "7f5b8ca7ed44616f25b14142614c41889d51a34646cdd3767e7129731d465d47"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_320-384_448-512",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_384-448_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_384-448_448-512?generation=1777786228705805",
+      "generation": "1777786228705805",
+      "bytes": 9188,
+      "md5_base64": "FsXVMpKJgRgc2KcImeHV2A==",
+      "sha256": "f62b16ff9790946dcb468bf88ffcee7f2f7631577321708cd1934896a93640bf"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_384-448?generation=1777786228713153",
+      "generation": "1777786228713153",
+      "bytes": 10780,
+      "md5_base64": "wTpPC8PWxrBqfX3RKBS59Q==",
+      "sha256": "66ede0b699b54887b9983a5f757d47496f123738e4ab4e7f01b111520e95972b"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_512-576?generation=1777786228715045",
+      "generation": "1777786228715045",
+      "bytes": 11316,
+      "md5_base64": "EZ1sBJ1ZAid8lIimfsx+Kg==",
+      "sha256": "ece88c7ec6855cb547bf1e0eeec8bcc6a3c4b93780a79b9de4ad44ffb1387fe1"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_384-448?generation=1777786228732759",
+      "generation": "1777786228732759",
+      "bytes": 13388,
+      "md5_base64": "/wGiBgfXDoeYEJMAj0vqKw==",
+      "sha256": "ff14d85bbdaedf9008d8314a0956a1c3744d4e4d0f385a32f46a11d342d2f377"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_576-640_384-448?generation=1777786228737971",
+      "generation": "1777786228737971",
+      "bytes": 13396,
+      "md5_base64": "7tiC8lzV8Dy4br9I7jIyuw==",
+      "sha256": "27dd4a8f6919e27204316a2b63c5d2185cf86d13600d83e9e6b5ac3bbff901ad"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_768-832_704-768",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1600-1664_768-832_704-768?generation=1777786228823400",
+      "generation": "1777786228823400",
+      "bytes": 12708,
+      "md5_base64": "+/g/ynRCj0a+76GskXXU+g==",
+      "sha256": "c05544b7358bec99edf12a601d2447dd23fd0635540e85073fd4d8e2bd3d3659"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_384-448_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1664-1728_384-448_512-576?generation=1777786228866866",
+      "generation": "1777786228866866",
+      "bytes": 9060,
+      "md5_base64": "fqHNllHVJZ7DOUS8vjjQHg==",
+      "sha256": "9e9809b2d9859f3f56de41aef11bbc318597005abf856138f2b79fb66c1598dd"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_384-448_576-640",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1664-1728_384-448_576-640?generation=1777786228881695",
+      "generation": "1777786228881695",
+      "bytes": 11812,
+      "md5_base64": "UYjsoH76ZNqracKNPXxIgg==",
+      "sha256": "7aab11597903fb68bc719ec6b2a3254ab6c8d0b01e0db0c08f935285efc3be53"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_320-384",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_320-384?generation=1777786228886868",
+      "generation": "1777786228886868",
+      "bytes": 9636,
+      "md5_base64": "lGSb1tafYYmlbHwJ7sEklA==",
+      "sha256": "be19b88bf685a761240c116397ad8ad034959d62174af4a34f60093f619b1a49"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_384-448?generation=1777786228894089",
+      "generation": "1777786228894089",
+      "bytes": 12212,
+      "md5_base64": "oW8Lo+asqHZcmHGgoEHI6Q==",
+      "sha256": "39a2fa8ee9c57b72d070629aaebd5ad040c503beec8538af237404c9f53bd2b2"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1664-1728_576-640_384-448?generation=1777786228929886",
+      "generation": "1777786228929886",
+      "bytes": 15284,
+      "md5_base64": "XupXPN62UUM4UCcxvBTRCQ==",
+      "sha256": "5b4a10c60d690b2bb0ac84e4c78f4ea9627f66833811f0072034f31073978ef8"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_320-384_640-704",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_320-384_640-704?generation=1777786229132522",
+      "generation": "1777786229132522",
+      "bytes": 11164,
+      "md5_base64": "SkPJ2y+lwb5Cz/1LnSN9Mg==",
+      "sha256": "2e17f11728c630a101c86c50f8117bb61f9ba0d4c915d801a9706e88f43d451a"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_320-384_704-768",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_384-448_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_384-448_512-576?generation=1777786229131582",
+      "generation": "1777786229131582",
+      "bytes": 16188,
+      "md5_base64": "P1nOSxQHRRPFtyDzz7UgoQ==",
+      "sha256": "f10bac6f71e26046eec265536267fb1646932d6238082a1c0413cba3d2ad3df0"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_384-448?generation=1777786229135601",
+      "generation": "1777786229135601",
+      "bytes": 16772,
+      "md5_base64": "kKf7BwPMUXxzZMfDbOWrvg==",
+      "sha256": "5dad54c8f9bd349bca4225c0163ca9d4ead3f4f97cb2b66f9aa5b053caa2d873"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_448-512?generation=1777786229152560",
+      "generation": "1777786229152560",
+      "bytes": 23492,
+      "md5_base64": "DFKNAni4D5SZ3Hpj1nmzuQ==",
+      "sha256": "69dd6ac0b95a117943c9a8de6f115fd67cb0c3e733e2d4f887d681538c9281fc"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_512-576?generation=1777786229138507",
+      "generation": "1777786229138507",
+      "bytes": 14756,
+      "md5_base64": "NHKYPkZXPbf84nF0T+mQ3g==",
+      "sha256": "4c5906377f4a5daf2410fbda559e9726fd7ddfef6665b9043d043d41c8bdffda"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_320-384",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_320-384?generation=1777786229159543",
+      "generation": "1777786229159543",
+      "bytes": 10012,
+      "md5_base64": "SyOQ0qabkvVfSMWhFxC7jg==",
+      "sha256": "02de16de0467f036c5c5d5d03de840962d425b8398a7c7124d09649fb2e692c6"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_384-448?generation=1777786229162883",
+      "generation": "1777786229162883",
+      "bytes": 10380,
+      "md5_base64": "oLUXXLSs7tGeYfgiqeYINA==",
+      "sha256": "351351f41a6b9e1e7e06613c9d97b70b2f604492c1cb20b4899a66421b553fb2"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_448-512?generation=1777786229157232",
+      "generation": "1777786229157232",
+      "bytes": 16308,
+      "md5_base64": "5qV3bBavyPGthh5XCi9Xkg==",
+      "sha256": "4cd29789ac8662902b97ff6eb89273def44411d86487179c502e7365cb54c8c1"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_512-576?generation=1777786229175107",
+      "generation": "1777786229175107",
+      "bytes": 17540,
+      "md5_base64": "l3H/zgPPg/h2Lr8X2t383A==",
+      "sha256": "2329bbab973b4cbd05f97e39723ba8a56e1d62e7c327f5079d0dce10de56212b"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_384-448?generation=1777786229176765",
+      "generation": "1777786229176765",
+      "bytes": 18484,
+      "md5_base64": "NayXRNW/cAq8O6GCnfYt7w==",
+      "sha256": "2e83e0e16d9f17388a064a2aada123140f45f1bfb3e38dfb091cfe81f0e1cdba"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_448-512?generation=1777786229171287",
+      "generation": "1777786229171287",
+      "bytes": 19028,
+      "md5_base64": "YA3W68x+lQkcnZRWo+KBxQ==",
+      "sha256": "98924fe180e18d3965433581a1aecac4810350161b3a8c843e4160df92621d15"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_384-448?generation=1777786229363470",
+      "generation": "1777786229363470",
+      "bytes": 7844,
+      "md5_base64": "nu3aJfKifbPn0g5wE/T4bw==",
+      "sha256": "3b0adbf2c648d81f151e75cd3f0622ac724d7e417c6e8ef526c57554fd06f7ec"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_448-512?generation=1777786229348761",
+      "generation": "1777786229348761",
+      "bytes": 19620,
+      "md5_base64": "19HorJ8NDN4ON0L4ZdciNg==",
+      "sha256": "3d07488308522b8500082fb038d30fb85bbc7c5f22614dbe4bc2ac87a8587a11"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_512-576?generation=1777786229362533",
+      "generation": "1777786229362533",
+      "bytes": 21372,
+      "md5_base64": "cCRO9a4K0xEC8Wquf3wzaw==",
+      "sha256": "f2cdbcd30149f2b899c5ac980d6a7b9adf4082729a658bb23107e6184b805180"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_320-384",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_384-448?generation=1777786229342455",
+      "generation": "1777786229342455",
+      "bytes": 11492,
+      "md5_base64": "YocoISmkq5deDPv4ScKMKQ==",
+      "sha256": "0ae5a4b9650c56729e992529d12ce1a59e58c98107e8bf09e5c7405fe2a878d7"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_448-512?generation=1777786229348337",
+      "generation": "1777786229348337",
+      "bytes": 14476,
+      "md5_base64": "ZVekkk1LfKiIlI6IC3z1ig==",
+      "sha256": "2081d12c322ea2a3bd8034f5612f3e331b28ebbd6215d77776a80a7d9ecfbbcc"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_512-576?generation=1777786229359169",
+      "generation": "1777786229359169",
+      "bytes": 19796,
+      "md5_base64": "iWTJA654Zv0zVwuvAc8pMQ==",
+      "sha256": "7b1d7f0fec5808dcb4b9870db0493f14c1b7b4f0888363d191f68ebc8f2abd32"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_384-448?generation=1777786229358486",
+      "generation": "1777786229358486",
+      "bytes": 13460,
+      "md5_base64": "tb9qyju76sFA9ZYKFsIagg==",
+      "sha256": "64f31276f96244a0fc8277ce2351b6139476359dfcf54f1cb542bdb3e623189f"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_448-512?generation=1777786229360409",
+      "generation": "1777786229360409",
+      "bytes": 18756,
+      "md5_base64": "kISvNH+RQ3kFfCrgWiP8HQ==",
+      "sha256": "9d4ce2b872f04ffde772e9ac609eea0a3bcdcf6f5c250de8bbdd10a4862dc573"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_448-512?generation=1777786229520983",
+      "generation": "1777786229520983",
+      "bytes": 5700,
+      "md5_base64": "4C0iTONtwn8nQHAw7ULbtA==",
+      "sha256": "8a6d349800263ecc85d1474e8cac854f20c0105d4ad86c3afcc24d02046b6a04"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_512-576?generation=1777786229497075",
+      "generation": "1777786229497075",
+      "bytes": 5060,
+      "md5_base64": "lnKdMMGTp2UCivBtry4Ejg==",
+      "sha256": "ab8f8a1e8c166385cdbbbb2270fbe0476eb80521d43e8ae6cd2b9af7751b1caf"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_384-448?generation=1777786229501557",
+      "generation": "1777786229501557",
+      "bytes": 6628,
+      "md5_base64": "s0liEAZ8IaPAFMM+gDo+rA==",
+      "sha256": "e92d56c9cfcbcccb3c6715e1eed708e44b36830a8c643239a457d7cdedfcf38f"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_448-512?generation=1777786229504016",
+      "generation": "1777786229504016",
+      "bytes": 10740,
+      "md5_base64": "+uEgt4ZxlGH4+VdnYBGscA==",
+      "sha256": "6cfd2d143dc7ee7df459c00418fcdbfbf5f755daa1ea1e03aa950ad3f31d7709"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_512-576",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_512-576?generation=1777786229498979",
+      "generation": "1777786229498979",
+      "bytes": 18956,
+      "md5_base64": "vVdPfHd614IHSLjgvNsO3g==",
+      "sha256": "d6a75069ae32c7418632c3237d8d94fb51bf203af25267a9e29c25e1b8b6f9f1"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_384-448",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_384-448?generation=1777786229507783",
+      "generation": "1777786229507783",
+      "bytes": 4772,
+      "md5_base64": "d/4fvx+oDapLd/0QJuvGSw==",
+      "sha256": "59675645271ec3d2273889dc352d521a2a9700a3c2b1ba90ecbffefe2c054874"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_448-512",
+      "url": "https://storage.googleapis.com/flyem-male-cns/rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_448-512?generation=1777786229518535",
+      "generation": "1777786229518535",
+      "bytes": 10700,
+      "md5_base64": "GYKpo6mvei3geGcBHX4+ng==",
+      "sha256": "4497f8ff59574253a9602deea0e025309d02e44a3e081fff0e0ed0cb00dfa5ee"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_320-384_1024-1088",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    },
+    {
+      "name": "rois/malecns-subcompartments-v3/256_256_256/1984-2011_320-384_1024-1088",
+      "bytes": 0,
+      "status": "HTTP_404_UNKNOWN"
+    }
+  ],
+  "groups": {
+    "KC_to_MBON32": {
+      "contacts": 1129,
+      "pre_roi": {
+        "<unspecified>": 297,
+        "g3(R)": 8,
+        "g2(R)": 824
+      },
+      "post_roi": {
+        "<unspecified>": 298,
+        "g3(R)": 8,
+        "g2(R)": 823
+      },
+      "both_g2_R_contacts": 808,
+      "both_g2_R_pairs": 104
+    },
+    "PPL103_R_to_KCs": {
+      "contacts": 743,
+      "pre_roi": {
+        "<unspecified>": 305,
+        "g3(R)": 13,
+        "g2(R)": 425
+      },
+      "post_roi": {
+        "<unspecified>": 313,
+        "g3(R)": 13,
+        "g2(R)": 417
+      },
+      "both_g2_R_contacts": 408,
+      "both_g2_R_pairs": 102
+    },
+    "PPL103_L_to_KCs": {
+      "contacts": 620,
+      "pre_roi": {
+        "<unspecified>": 231,
+        "g3(R)": 20,
+        "g2(R)": 368,
+        "b'1(R)": 1
+      },
+      "post_roi": {
+        "<unspecified>": 240,
+        "g3(R)": 20,
+        "g2(R)": 359,
+        "b'1(R)": 1
+      },
+      "both_g2_R_contacts": 352,
+      "both_g2_R_pairs": 96
+    },
+    "PPL103_R_to_MBON32": {
+      "contacts": 219,
+      "pre_roi": {
+        "<unspecified>": 23,
+        "g2(R)": 141,
+        "CRE(-ROB)(-RUB)(R)": 1,
+        "a'1(R)": 47,
+        "b'1(R)": 7
+      },
+      "post_roi": {
+        "<unspecified>": 25,
+        "g2(R)": 141,
+        "CRE(-ROB)(-RUB)(R)": 1,
+        "a'1(R)": 45,
+        "b'1(R)": 7
+      },
+      "both_g2_R_contacts": 139,
+      "both_g2_R_pairs": 1
+    },
+    "PPL103_L_to_MBON32": {
+      "contacts": 223,
+      "pre_roi": {
+        "<unspecified>": 27,
+        "g2(R)": 140,
+        "a'1(R)": 50,
+        "b'1(R)": 6
+      },
+      "post_roi": {
+        "<unspecified>": 25,
+        "g2(R)": 142,
+        "a'1(R)": 50,
+        "b'1(R)": 6
+      },
+      "both_g2_R_contacts": 140,
+      "both_g2_R_pairs": 1
+    }
+  },
+  "output_sha256": "0ff1f842e4797a1c13ae25419db4035f42617f2a053d7d09cb22eff81ed3ab1c"
+}

@@ -1,0 +1,12 @@
+{
+  "study_id": "synthetic_outcome_373_first_note_cooldown_mediation_v1",
+  "locked_before_new_probes": "2026-09-30",
+  "source": "Existing A5 no_update and real_full post-dopamine checkpoints and exact 32-note frozen panel; no historical training replay.",
+  "branches": ["no_update_reference", "real_full_reference", "no_update_cooldown_plus_one_tick", "real_full_cooldown_plus_one_tick"],
+  "diagnostic_intervention": "In each plus-one-tick branch, after the first readout DOWN, which the existing reference identifies as a null press, extend cooldown_us from 200000 to 201000 microseconds until the next readout DOWN, then restore 200000 microseconds immediately after that decision. Change no weights, motor spikes, game windows, initial readout state, other thresholds, or production code. A single 1000-microsecond extension is the model's existing tick size, not a parameter search.",
+  "primary_scope": "First probe note only. Run the complete existing frozen panel to preserve closed-loop dynamics, but all later notes are secondary because the first timing change can alter subsequent state.",
+  "reference_match": "The two unmodified branch probes must exactly equal A5 results. Their first upward on-threshold crossing, first null DOWN, and first scored DOWN are the fixed reference timings.",
+  "primary_measures": ["first on-threshold rise time", "first null DOWN time", "first scored DOWN time", "first scored signed error", "first-note judgement", "spike-window count at the original and perturbed second DOWN", "motor spike batches before original second DOWN"],
+  "interpretation": "If the plus-one-tick branch keeps the first threshold rise/null DOWN unchanged and moves the second scored DOWN exactly +1000 microseconds in both weight states, with enough motor spikes above the on threshold at that tick, the first scored press is cooldown-bound in this exact state. The existing real-versus-no first-null advance then propagates to the scored press through this gate. If second timing changes by more, vanishes, or action pattern changes, classify the local mechanism as nonlinear or drive-limited. This first-note diagnostic does not prove generality or that cooldown alone caused the upstream 300-ms weight effect.",
+  "scope_limit": "No production rule/readout edit, learning-rate tuning, additional training, other cue-bin intervention, or fly claim."
+}

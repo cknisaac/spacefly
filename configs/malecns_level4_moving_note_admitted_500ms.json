@@ -1,0 +1,99 @@
+{
+  "experiment_id": "MALECNS-LEVEL4-MOVING-NOTE-ADMITTED-500MS-v1",
+  "status": "speed_frozen_for_future_learning_not_run",
+  "parent_level3b_config": "configs/malecns_dan_bridge_level3b_ensemble.json",
+  "parent_level3b_config_sha256": "92eefb802c1387a314fe8cc9f1257c8eeb80fc5a49117bc6e8b5641b61e29b0f",
+  "parent_level3b_result": "runs/malecns_dan_bridge_level3b/result.json",
+  "parent_level3b_result_sha256": "3e76b71b893e5ceed41bf25bda707f7393ce70442b9bc6fe688645a84ace7e00",
+  "dan_source_ids": [
+    87177,
+    107285,
+    55210
+  ],
+  "dan_stimulation": {
+    "onset": "fixed Level 2 teacher event time: observation window plus inherited 1000-us lag",
+    "amplitude_mv_equivalent": 2.0,
+    "duration_us": 20000,
+    "model": "same LIF parameters and dt as the frozen Level 2 circuit; fresh resting DAN state per presentation",
+    "activity_gate": "1.0 if at least one observed DAN spike during the fixed current pulse; otherwise 0.0",
+    "ensemble_policy": "Stimulate all three DAN bodies simultaneously at every scheduled teaching event; each uses its own fresh resting LIF state."
+  },
+  "local_gate": {
+    "anatomical_rule": "A KC\u2192MBON05 weight slot is eligible for DAN-gated LTD only when the KC has local presentation eligibility and at least one DAN in dan_source_ids has a strict same-compartment \u03b34 contact to that KC and spikes on this presentation. The union of these slots spans the frozen cohort; all 32 weights remain present.",
+    "plasticity_rule": "Level 2 presentation-local eligibility and LTD formula; replace artificial teacher bit by observed DAN spike activity. This is an engineering assumption.",
+    "no_dan_activity": "zero LTD update regardless of eligibility",
+    "dan_to_mbon05_direct_pair": "48 measured contacts are recorded in the audit but no direct electrical effect is added to this reduced readout; its physiological effect is unknown.",
+    "dan_gate": "per KC: local eligibility AND at least one anatomically connected ensemble DAN spike; no connected DAN spike means zero update."
+  },
+  "protocol": {
+    "blocks": 120,
+    "presentations": 1200,
+    "trial_spacing_us": 200000,
+    "duration_us": 500000,
+    "dt_us": 1000,
+    "trajectory": "one note moves linearly from normalized x=1.0 to x=0.0 over 500000 us; one fresh resting LIF presentation per note",
+    "input_rule": "x(t) = 1 - t / duration; encode x(t) only at each dt tick",
+    "bin_width": 0.05,
+    "position_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "target_region_trigger_position": 0.7,
+    "wrong_region_trigger_position": 0.2,
+    "dan_spike_latency_us": 14000,
+    "dan_latency_basis": "Level 3B pretraining gate: 2.0-mV-equivalent, 20-ms isolated DAN pulse at t=101000 us produced the first spike at t=115000 us; latency is frozen at 14000 us",
+    "action_threshold_mv": 0.005572335995331903,
+    "eta": 5e-05,
+    "eligibility_tau_us": 1000000,
+    "minimum_fraction": 0.2,
+    "teacher_schedule": "retain the frozen 1200-row Level 3B schedule labels only for timing external teaching; labels never enter the encoder; target/control pulse on 600 target-class notes, wrong-region pulse on 600 wrong-class notes",
+    "eligibility_reset": "zero at the start of each moving-note presentation; accumulate KC spikes only through the first connected DAN spike; discard before the next note",
+    "weight_commit": "apply the LTD update at the end of the current moving-note presentation using eligibility measured at the scheduled connected-DAN spike; updated weights first affect the next note",
+    "evaluation": "after training, replay one full x=1.0-to-0.0 note using frozen weights, teacher OFF and plasticity OFF; bin the maximum MBON05 voltage by the inherited 0.05 position grid; also record the inherited static 21-position map",
+    "controls": [
+      "target teacher",
+      "wrong-region teacher",
+      "matched DAN-on/plasticity-off control"
+    ],
+    "pass_criteria": [
+      "both teaching arms have moving-note action at all three positions in their own core (target 0.65/0.70/0.75; wrong 0.15/0.20/0.25)",
+      "actions remain within the arm-specific inherited halo, or at least 90% of outside-halo bins remain no-action",
+      "matched DAN-on/plasticity-off control has exact baseline weights and moving-note map and remains no-action",
+      "the trained moving-note maps persist with teacher and plasticity OFF",
+      "all 120 blocks and 1200 presentations complete per arm; each scheduled event activates all three DANs",
+      "all weight updates require positive current-presentation eligibility and an anatomically connected active DAN and remain within the union gamma4 mask",
+      "the immutable 20-percent original-weight floor, fixed encoder, threshold, and readout are preserved"
+    ],
+    "stop_rule": "one run only; no early stopping, parameter tuning, rerun, or Level 3B reopening"
+  },
+  "readout": "inherited fixed MBON05 maximum-voltage threshold; no trained decoder",
+  "scope": "replace static position presentations with a single moving note and current-position-only Gaussian drive; preserve Level 3B learning rule, anatomy gate, DAN ensemble, fixed readout and inherited training schedule",
+  "admitted_speed": {
+    "duration_ms": 500,
+    "duration_us": 500000,
+    "source_stage": "MALECNS-LEVEL4A-TEMPORAL-INPUT-ADMISSION-v1",
+    "result_receipt": "runs/malecns_level4a_temporal_input_admission/result.json",
+    "result_receipt_sha256": "2e78ba9c64375cad707b920b32455151f011fdc95fad67fcf0eb6940dd41829f",
+    "selection_rule": "shortest tested duration that passed all four predeclared admission gates",
+    "learning_authorized_by_this_config": false
+  }
+}

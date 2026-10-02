@@ -1,0 +1,24 @@
+{
+  "analysis_sha256": "221a199f0fe17e465abf443635a392ce9fdef5cc41407080a6c4c39478e71c7a",
+  "delivered_events_checked": 544450,
+  "deterministic_replay_checks": 48,
+  "lesion_source_row_counts": {
+    "KC_to_MBON32": 105,
+    "MBON32_to_DNs": 2,
+    "none": 0,
+    "visual_to_KC": 76
+  },
+  "limit": "Saved-record audit verifies timing/source rows and boundary samples; it does not measure biological receptor effects or independently re-integrate membrane ODEs.",
+  "matched_checkpoints": 30,
+  "raw_sha256": {
+    "seed_31001.json.gz": "a775883d3615cced27264cd82808c2f1816ba4cc7782facddc48c78066b7365e",
+    "seed_31002.json.gz": "aa034e008c1cda5142edf09ed76d4f65b7ff8ca252b4d9b73d913aff37fff4ae",
+    "seed_31003.json.gz": "4e6015f863a966832f72ac828a9589f7f6cad84593902f3cae0011ef0c59ee59"
+  },
+  "result_sha256": "b62f97a05eedf33652032e763a2162cbabdd9ab8c550225ffe2d65fd5116c909",
+  "seed_files": 3,
+  "spikes_checked": 219700,
+  "status": "passed",
+  "trace_samples_checked": 24480,
+  "trials": 480
+}

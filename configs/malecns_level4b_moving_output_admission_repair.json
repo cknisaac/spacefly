@@ -1,0 +1,61 @@
+{
+  "experiment_id": "MALECNS-LEVEL4B-MOVING-OUTPUT-ADMISSION-REPAIR-v1",
+  "status": "frozen_before_naive_rerun",
+  "parent_speed_config": "configs/malecns_level4_moving_note_admitted_500ms.json",
+  "parent_speed_config_sha256": "95abdc36736bcdb8f890ab2ff48a5e64ba2aefd41f48a920d21c6ac110ba18af",
+  "parent_level4a_result": "runs/malecns_level4a_temporal_input_admission/result.json",
+  "parent_level4a_result_sha256": "2e78ba9c64375cad707b920b32455151f011fdc95fad67fcf0eb6940dd41829f",
+  "parent_level3b_config": "configs/malecns_dan_bridge_level3b_ensemble.json",
+  "parent_level3b_config_sha256": "92eefb802c1387a314fe8cc9f1257c8eeb80fc5a49117bc6e8b5641b61e29b0f",
+  "dan_source_ids_retained_but_not_stimulated": [
+    87177,
+    107285,
+    55210
+  ],
+  "protocol": {
+    "duration_us": 500000,
+    "dt_us": 1000,
+    "action_validity_rule": "for each moving note, action output is disabled until the first KC spike of that note; starting at that spike tick, action is exactly (MBON05 maximum voltage <= the inherited fixed threshold)",
+    "validity_resets": "false at the start of every note; enabled by first KC spike in that same note only",
+    "learning": "OFF",
+    "dan_teaching": "OFF; no DAN stimulation",
+    "plasticity": "OFF; immutable original weights",
+    "action_threshold_mv": 0.005572335995331903,
+    "encoder_sigma": 0.08,
+    "peak_drive_mv_equivalent": 1.2,
+    "position_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "position_bin_width": 0.05,
+    "replay_count": 2,
+    "pass_criteria": [
+      "at least one KC spike occurs on the naive 500-ms moving note",
+      "MBON05 has nonzero activity on the trajectory",
+      "no action is emitted at any time before the first KC spike of the current note",
+      "no action occurs in target region [0.65,0.75] or wrong region [0.15,0.25] on the naive baseline",
+      "the two fresh-state runs exactly match in KC spikes, MBON timecourse, output-validity trace, position map and actions"
+    ],
+    "stop_rule": "if all admission criteria pass, freeze this validity rule and stop; no Level 4 learning"
+  },
+  "scope": "naive moving-note output-admission repair only; no DAN teaching or learning"
+}

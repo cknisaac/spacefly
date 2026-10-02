@@ -1,0 +1,21 @@
+{
+  "study_id": "synthetic_timing_gate_v1",
+  "wall_budget_seconds": 21600,
+  "development_seeds": {"start": 1000, "count": 32},
+  "heldout_seeds": {"start": 2000, "count": 32},
+  "candidate_readout_thresholds": [6, 8, 10],
+  "training_notes": 24,
+  "frozen_notes": 16,
+  "note_interval_ms_choices": [800, 900, 1000, 1100, 1200],
+  "cue_gain_choices": [0.75, 0.9, 1.0, 1.1, 1.25],
+  "candidate_selection": "Highest mean frozen GOOD_200-or-better percent on development seeds; tie-break by mean frozen non-MISS percent, then lower threshold. Controls and heldout seeds do not enter selection.",
+  "primary_metric": "frozen_good_or_better_percent",
+  "heldout_gate": {
+    "minimum_mean_paired_advantage_percentage_points_vs_each_control": 20,
+    "minimum_strict_win_seeds_vs_each_control": 24,
+    "minimum_on_good_or_better_percent": 30,
+    "maximum_on_hit_mean_absolute_error_ms": 40
+  },
+  "conditions": ["on", "off", "shuffled"],
+  "map_scope": "Single lane, slow randomized spacing and independent per-note cue gain. No dense-map or fly-data conclusion."
+}

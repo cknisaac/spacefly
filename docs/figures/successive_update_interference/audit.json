@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "trajectories": 2,
+  "frozen_checkpoints": 34,
+  "real_updates": 32,
+  "audited_frozen_note_outcomes": 1216,
+  "audited_down_actions": 2800,
+  "selected_causal_skip": [
+    2002,
+    373
+  ],
+  "counterfactual_status": "complete",
+  "protocol_sha256": "b5be62ee57571f8c5e2cc5d2d4d21d78dcf5d463148328a28b8bd71443b925c6",
+  "ledger_sha256": "a24b74d59cd67d47b5383c4cd0c3962586e1b4b3ec26ca9346dfe2bc1f79abf3",
+  "counterfactual_sha256": "8879babbc5a37329ba070da39096f6ce178dacaee7b2955ff2147ddace833097"
+}

@@ -1,0 +1,253 @@
+{
+  "study_id": "synthetic_late_state_weight_rollback_v1",
+  "status": "complete",
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+  ],
+  "maps": {
+    "common": {
+      "384": {
+        "mean_good_percent": 15.625,
+        "mean_utility": -0.681640625,
+        "mean_early_attempted_misses": 16.6,
+        "mean_down_actions": 51.2,
+        "mean_null_downs": 19.2,
+        "per_seed": {
+          "2000": {
+            "good_percent": 0.0,
+            "mean_utility": -0.9609375,
+            "early_attempted_misses": 28,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2001": {
+            "good_percent": 0.0,
+            "mean_utility": -0.833984375,
+            "early_attempted_misses": 15,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2002": {
+            "good_percent": 78.125,
+            "mean_utility": 0.11328125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2003": {
+            "good_percent": 0.0,
+            "mean_utility": -0.7265625,
+            "early_attempted_misses": 8,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2004": {
+            "good_percent": 0.0,
+            "mean_utility": -1.0,
+            "early_attempted_misses": 32,
+            "weight_displacement_l1_mv": 0.0
+          }
+        }
+      },
+      "96": {
+        "mean_good_percent": 42.5,
+        "mean_utility": -0.26328125,
+        "mean_early_attempted_misses": 9.2,
+        "mean_down_actions": 59.2,
+        "mean_null_downs": 27.2,
+        "per_seed": {
+          "2000": {
+            "good_percent": 0.0,
+            "mean_utility": -0.6484375,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 391.9899936371365
+          },
+          "2001": {
+            "good_percent": 100.0,
+            "mean_utility": 0.4453125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 470.2647297928454
+          },
+          "2002": {
+            "good_percent": 12.5,
+            "mean_utility": -0.70703125,
+            "early_attempted_misses": 22,
+            "weight_displacement_l1_mv": 37.50278921022194
+          },
+          "2003": {
+            "good_percent": 75.0,
+            "mean_utility": 0.09375,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 27.375013991267533
+          },
+          "2004": {
+            "good_percent": 25.0,
+            "mean_utility": -0.5,
+            "early_attempted_misses": 24,
+            "weight_displacement_l1_mv": 113.3803080095127
+          }
+        }
+      },
+      "24": {
+        "mean_good_percent": 80.0,
+        "mean_utility": 0.3921875,
+        "mean_early_attempted_misses": 4.4,
+        "mean_down_actions": 57.6,
+        "mean_null_downs": 25.6,
+        "per_seed": {
+          "2000": {
+            "good_percent": 100.0,
+            "mean_utility": 0.92578125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 160.81243225257668
+          },
+          "2001": {
+            "good_percent": 100.0,
+            "mean_utility": 0.328125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 351.5271377270551
+          },
+          "2002": {
+            "good_percent": 100.0,
+            "mean_utility": 0.625,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 65.80020056415057
+          },
+          "2003": {
+            "good_percent": 100.0,
+            "mean_utility": 0.984375,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 167.88600530685838
+          },
+          "2004": {
+            "good_percent": 0.0,
+            "mean_utility": -0.90234375,
+            "early_attempted_misses": 22,
+            "weight_displacement_l1_mv": 103.42044484086065
+          }
+        }
+      }
+    },
+    "continuation": {
+      "384": {
+        "mean_good_percent": 16.875,
+        "mean_utility": -0.65234375,
+        "mean_early_attempted_misses": 14.8,
+        "mean_down_actions": 51.2,
+        "mean_null_downs": 19.2,
+        "per_seed": {
+          "2000": {
+            "good_percent": 0.0,
+            "mean_utility": -0.94140625,
+            "early_attempted_misses": 26,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2001": {
+            "good_percent": 0.0,
+            "mean_utility": -0.8046875,
+            "early_attempted_misses": 12,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2002": {
+            "good_percent": 84.375,
+            "mean_utility": 0.15234375,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2003": {
+            "good_percent": 0.0,
+            "mean_utility": -0.66796875,
+            "early_attempted_misses": 4,
+            "weight_displacement_l1_mv": 0.0
+          },
+          "2004": {
+            "good_percent": 0.0,
+            "mean_utility": -1.0,
+            "early_attempted_misses": 32,
+            "weight_displacement_l1_mv": 0.0
+          }
+        }
+      },
+      "96": {
+        "mean_good_percent": 43.75,
+        "mean_utility": -0.24609375,
+        "mean_early_attempted_misses": 9.2,
+        "mean_down_actions": 58.6,
+        "mean_null_downs": 26.6,
+        "per_seed": {
+          "2000": {
+            "good_percent": 0.0,
+            "mean_utility": -0.62890625,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 391.9899936371365
+          },
+          "2001": {
+            "good_percent": 100.0,
+            "mean_utility": 0.46484375,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 470.2647297928454
+          },
+          "2002": {
+            "good_percent": 15.625,
+            "mean_utility": -0.62890625,
+            "early_attempted_misses": 19,
+            "weight_displacement_l1_mv": 37.50278921022194
+          },
+          "2003": {
+            "good_percent": 87.5,
+            "mean_utility": 0.25,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 27.375013991267533
+          },
+          "2004": {
+            "good_percent": 15.625,
+            "mean_utility": -0.6875,
+            "early_attempted_misses": 27,
+            "weight_displacement_l1_mv": 113.3803080095127
+          }
+        }
+      },
+      "24": {
+        "mean_good_percent": 80.0,
+        "mean_utility": 0.41015625,
+        "mean_early_attempted_misses": 3.2,
+        "mean_down_actions": 57.6,
+        "mean_null_downs": 25.6,
+        "per_seed": {
+          "2000": {
+            "good_percent": 100.0,
+            "mean_utility": 0.92578125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 160.81243225257668
+          },
+          "2001": {
+            "good_percent": 100.0,
+            "mean_utility": 0.328125,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 351.5271377270551
+          },
+          "2002": {
+            "good_percent": 100.0,
+            "mean_utility": 0.6640625,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 65.80020056415057
+          },
+          "2003": {
+            "good_percent": 100.0,
+            "mean_utility": 0.9765625,
+            "early_attempted_misses": 0,
+            "weight_displacement_l1_mv": 167.88600530685838
+          },
+          "2004": {
+            "good_percent": 0.0,
+            "mean_utility": -0.84375,
+            "early_attempted_misses": 16,
+            "weight_displacement_l1_mv": 103.42044484086065
+          }
+        }
+      }
+    }
+  },
+  "branch_count": 30,
+  "frozen_outcomes": 960
+}

@@ -1,0 +1,2529 @@
+{
+  "status": "INCONCLUSIVE_MISSING_ROI",
+  "scope": "All annotated MaleCNS DAN bodies with traced-only presynaptic contacts to the frozen cohort; both DAN presynaptic and KC postsynaptic endpoints must map to g4(L). KC coverage is counted only for KCs with a strict g4(L) KC→MBON05 pair.",
+  "sources": {
+    "partner_sha256": "3db100d3b4c7cfdc9b34506b3eb8b5ead2d9760b38952e5656285bb362327efc",
+    "partner_rows_scanned": 124025046,
+    "neuron_annotations": "data\\processed\\malecns_v1_traced\\neurons.parquet",
+    "roi_volume": "rois/malecns-subcompartments-v3",
+    "roi_chunks_used": [
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1472-1536_512-576_384-448",
+        "sha256": "8ab8a205c31461a7f990f493f1b8655de31713ecb1f68d4a37e5df0fd1ad65e4"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1472-1536_512-576_448-512",
+        "sha256": "38c52c6dd9b57e8c5cf7fa22b2e638eefdc8b1effeeb6e7f354e0658fa986d1e"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1472-1536_576-640_384-448",
+        "sha256": "cf9f9a08d2be1373cf99f720dc722327fee8d093145d51c0c6ee968bc66d9fab"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_384-448",
+        "sha256": "6a0c5a95666fd08428cff2589838417c36ffd03de00fd576c8b1bf16d3725967"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_448-512",
+        "sha256": "e32b01bc64b70bf94b849e97d0665004507d519a0c50104589f981723961d391"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_512-576",
+        "sha256": "b3d926d16eac4a21df0601f03e0e698257835e6311fe8ca8897e356b8937b97c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_384-448",
+        "sha256": "256ef0aec38f06dab9756ecb17bb35c9c442f0b99f94660b247fad614758105d"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_448-512",
+        "sha256": "18943ff2023e9bd64010cea4fe427dfe61988fed412ca91dd590fb77f8fc988c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_512-576",
+        "sha256": "31dbcc0367065eeb4bf58220963a1b450d236e19f4cc213dfe2718f9bb7cffdd"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_576-640_384-448",
+        "sha256": "7f5b8ca7ed44616f25b14142614c41889d51a34646cdd3767e7129731d465d47"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_576-640_448-512",
+        "sha256": "347f1fd6e3f56509dfcf7792a7336aac9315922f0052ddf6f93aaea7ff146b5e"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_384-448",
+        "sha256": "66ede0b699b54887b9983a5f757d47496f123738e4ab4e7f01b111520e95972b"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_448-512",
+        "sha256": "76055e664692de610a7e8b201e045b154992e6c0263e95a202c0728ddf2be440"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_512-576",
+        "sha256": "ece88c7ec6855cb547bf1e0eeec8bcc6a3c4b93780a79b9de4ad44ffb1387fe1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_384-448",
+        "sha256": "ff14d85bbdaedf9008d8314a0956a1c3744d4e4d0f385a32f46a11d342d2f377"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_448-512",
+        "sha256": "3deddb2afed2f888ff39a4808dd628be87b8b17f4d0e0551080ab0585f2d6a8a"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_512-576",
+        "sha256": "5786154521fe39c0b4b8c3d69aad06074b2e7df84d1e9b929eb2f8a58068f704"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_576-640_384-448",
+        "sha256": "27dd4a8f6919e27204316a2b63c5d2185cf86d13600d83e9e6b5ac3bbff901ad"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_576-640_448-512",
+        "sha256": "db9075db71fe651545e8e793790a4a1649390d2ae1c6ec7a7a7e5687bf25ae74"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_384-448",
+        "sha256": "39a2fa8ee9c57b72d070629aaebd5ad040c503beec8538af237404c9f53bd2b2"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_448-512",
+        "sha256": "2c13f384aca6b7a939d988e5909988be5375687d61f9c2a1120f98ba36e02f76"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_512-576_384-448",
+        "sha256": "5798b914e172f98b915b06ea7456df0a1be8c908ec41a959086e997bc04276c1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_512-576_448-512",
+        "sha256": "780da5e519150120d66206fed6db80546d38dfcb445785989695609b4c47c5be"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_576-640_384-448",
+        "sha256": "5b4a10c60d690b2bb0ac84e4c78f4ea9627f66833811f0072034f31073978ef8"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_576-640_448-512",
+        "sha256": "ddab5fc2009b8394de5316ab3b7035c64803fae99c3131aec8b1d2675117601e"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_384-448",
+        "sha256": "5dad54c8f9bd349bca4225c0163ca9d4ead3f4f97cb2b66f9aa5b053caa2d873"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_448-512",
+        "sha256": "69dd6ac0b95a117943c9a8de6f115fd67cb0c3e733e2d4f887d681538c9281fc"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_512-576",
+        "sha256": "4c5906377f4a5daf2410fbda559e9726fd7ddfef6665b9043d043d41c8bdffda"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_384-448",
+        "sha256": "351351f41a6b9e1e7e06613c9d97b70b2f604492c1cb20b4899a66421b553fb2"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_448-512",
+        "sha256": "4cd29789ac8662902b97ff6eb89273def44411d86487179c502e7365cb54c8c1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_512-576",
+        "sha256": "2329bbab973b4cbd05f97e39723ba8a56e1d62e7c327f5079d0dce10de56212b"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_384-448",
+        "sha256": "2e83e0e16d9f17388a064a2aada123140f45f1bfb3e38dfb091cfe81f0e1cdba"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_576-640_448-512",
+        "sha256": "98924fe180e18d3965433581a1aecac4810350161b3a8c843e4160df92621d15"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_384-448",
+        "sha256": "3b0adbf2c648d81f151e75cd3f0622ac724d7e417c6e8ef526c57554fd06f7ec"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_448-512",
+        "sha256": "3d07488308522b8500082fb038d30fb85bbc7c5f22614dbe4bc2ac87a8587a11"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_512-576",
+        "sha256": "f2cdbcd30149f2b899c5ac980d6a7b9adf4082729a658bb23107e6184b805180"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_384-448",
+        "sha256": "0ae5a4b9650c56729e992529d12ce1a59e58c98107e8bf09e5c7405fe2a878d7"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_448-512",
+        "sha256": "2081d12c322ea2a3bd8034f5612f3e331b28ebbd6215d77776a80a7d9ecfbbcc"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_512-576",
+        "sha256": "7b1d7f0fec5808dcb4b9870db0493f14c1b7b4f0888363d191f68ebc8f2abd32"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_384-448",
+        "sha256": "64f31276f96244a0fc8277ce2351b6139476359dfcf54f1cb542bdb3e623189f"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_448-512",
+        "sha256": "9d4ce2b872f04ffde772e9ac609eea0a3bcdcf6f5c250de8bbdd10a4862dc573"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_448-512",
+        "sha256": "8a6d349800263ecc85d1474e8cac854f20c0105d4ad86c3afcc24d02046b6a04"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_384-448",
+        "sha256": "e92d56c9cfcbcccb3c6715e1eed708e44b36830a8c643239a457d7cdedfcf38f"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_448-512",
+        "sha256": "6cfd2d143dc7ee7df459c00418fcdbfbf5f755daa1ea1e03aa950ad3f31d7709"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_512-576",
+        "sha256": "d6a75069ae32c7418632c3237d8d94fb51bf203af25267a9e29c25e1b8b6f9f1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_512-576_576-640",
+        "sha256": "d8b150629413db33ac1ec1d4d4529d424bfeefd8649d810fae808f9f728bb6a0"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_448-512",
+        "sha256": "4497f8ff59574253a9602deea0e025309d02e44a3e081fff0e0ed0cb00dfa5ee"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_512-576",
+        "sha256": "fbd3bdce9a8aaa81b7c5ae926931c232d14a8e9cccd42bd9871007d817fe3ace"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_576-640",
+        "sha256": "39bb59a7e7e83abede0075ff9a3929290ef758033f63f7b284c5b456c7721d8c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_640-704",
+        "sha256": "b5f763948e63a5d9df9b881a799a7dcfc65c482c43fdbc1808e0df63264489fb"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_512-576_512-576",
+        "sha256": "2663fca999c931342ad36e5321dbf3d9c4b39b6f9a6a5ef2d92ba5b063af6326"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_512-576_576-640",
+        "sha256": "35efe86d162dea888d0fccab03ffb83f4640664264ad1cfce758b0b47cd8d727"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_576-640_512-576",
+        "sha256": "a77f1d968f7d61f8c5e163d72a3baf1d21665d7baa62620a196c54e4bbd1b021"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_576-640_576-640",
+        "sha256": "f9c7d6595eb8dd05cdc47873dcc5b4ef052b4eb15de6d08c0335a1757529f96b"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_576-640_640-704",
+        "sha256": "991e86b74cbb32c9176484cb243a69e0b4855c5a4391f23bc74993d37d93f603"
+      }
+    ],
+    "roi_chunks_missing": [
+      "rois/malecns-subcompartments-v3/256_256_256/1728-1792_320-384_960-1024",
+      "rois/malecns-subcompartments-v3/256_256_256/1728-1792_384-448_960-1024",
+      "rois/malecns-subcompartments-v3/256_256_256/1728-1792_384-448_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_320-384_960-1024",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_384-448_960-1024",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_384-448_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_384-448_1088-1100",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_1088-1100",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_320-384_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_384-448_960-1024",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_384-448_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_384-448_1088-1100",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_1024-1088",
+      "rois/malecns-subcompartments-v3/256_256_256/1856-1920_448-512_1088-1100"
+    ]
+  },
+  "frozen_cohort": [
+    45199,
+    45259,
+    45380,
+    45434,
+    45460,
+    45467,
+    45620,
+    45950,
+    46497,
+    47101,
+    47117,
+    47287,
+    47694,
+    47758,
+    47988,
+    48337,
+    48596,
+    48759,
+    49124,
+    49160,
+    49526,
+    49544,
+    49545,
+    49867,
+    50411,
+    50568,
+    50591,
+    50791,
+    50820,
+    51053,
+    51055,
+    51330
+  ],
+  "frozen_mbon05": 10495,
+  "kc_with_strict_gamma4_kc_to_mbon05_pair": [
+    45199,
+    45259,
+    45380,
+    45434,
+    45460,
+    45467,
+    45620,
+    45950,
+    46497,
+    47101,
+    47117,
+    47287,
+    47694,
+    47758,
+    47988,
+    48337,
+    48596,
+    48759,
+    49124,
+    49160,
+    49526,
+    49544,
+    49545,
+    49867,
+    50411,
+    50568,
+    50591,
+    50791,
+    50820,
+    51053,
+    51055,
+    51330
+  ],
+  "strict_gamma4_kc_to_mbon05_kc_count": 32,
+  "all_annotated_dan_scope": {
+    "candidate_count_with_gamma4_overlap": 72,
+    "maximum_anatomical_coverage_kc_ids": [
+      45199,
+      45259,
+      45380,
+      45434,
+      45460,
+      45467,
+      45620,
+      45950,
+      46497,
+      47101,
+      47117,
+      47287,
+      47694,
+      47758,
+      47988,
+      48337,
+      48596,
+      48759,
+      49124,
+      49160,
+      49526,
+      49544,
+      49545,
+      49867,
+      50411,
+      50568,
+      50591,
+      50791,
+      50820,
+      51053,
+      51055,
+      51330
+    ],
+    "maximum_anatomical_coverage_count": 32,
+    "minimum_cardinality_set_for_maximum_coverage": [
+      {
+        "source_id": 87177,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 20,
+        "gamma4_dan_to_kc_contacts": 30,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          47101,
+          47117,
+          47287,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49544,
+          49867,
+          50411,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 107285,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 26,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45467,
+          47287,
+          47694,
+          48337,
+          48596,
+          49526,
+          49544,
+          49545,
+          49867,
+          50411,
+          50568,
+          50591,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 55210,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 15,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45460,
+          45950,
+          46497,
+          47101,
+          47988,
+          48337,
+          48596,
+          48759,
+          49544,
+          49867,
+          50411,
+          50591,
+          50820
+        ]
+      }
+    ],
+    "candidate_ranking": [
+      {
+        "source_id": 60273,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 21,
+        "gamma4_dan_to_kc_contacts": 36,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          45950,
+          46497,
+          47694,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49526,
+          49867,
+          50568,
+          50591,
+          50791,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 87177,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 20,
+        "gamma4_dan_to_kc_contacts": 30,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          47101,
+          47117,
+          47287,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49544,
+          49867,
+          50411,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 153771,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 19,
+        "gamma4_dan_to_kc_contacts": 31,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45467,
+          46497,
+          47101,
+          47694,
+          47758,
+          47988,
+          48337,
+          48596,
+          49160,
+          49526,
+          49545,
+          49867,
+          50411,
+          50791,
+          50820,
+          51053,
+          51055
+        ]
+      },
+      {
+        "source_id": 86066,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 33,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          45460,
+          45467,
+          45620,
+          45950,
+          47101,
+          47287,
+          47988,
+          48596,
+          49124,
+          49526,
+          49867,
+          50568,
+          50820,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 107285,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 26,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45467,
+          47287,
+          47694,
+          48337,
+          48596,
+          49526,
+          49544,
+          49545,
+          49867,
+          50411,
+          50568,
+          50591,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 131607,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 26,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          47101,
+          47287,
+          47694,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49526,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 90678,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 29,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          45620,
+          45950,
+          47287,
+          47694,
+          47988,
+          48759,
+          49124,
+          49160,
+          49867,
+          50411,
+          50568,
+          50591,
+          50791,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 75922,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          45380,
+          45620,
+          46497,
+          47101,
+          47287,
+          47988,
+          48337,
+          49124,
+          49160,
+          49544,
+          50568,
+          50791,
+          50820,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 117782,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 27,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45467,
+          45620,
+          47101,
+          47758,
+          47988,
+          48596,
+          48759,
+          49124,
+          49160,
+          49544,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 65886,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 16,
+        "gamma4_dan_to_kc_contacts": 29,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          45950,
+          47101,
+          47694,
+          48337,
+          49124,
+          49544,
+          50411,
+          50568,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 86431,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 16,
+        "gamma4_dan_to_kc_contacts": 27,
+        "gamma4_kc_source_ids": [
+          45380,
+          45460,
+          45620,
+          46497,
+          47101,
+          47287,
+          47694,
+          47758,
+          47988,
+          48337,
+          49124,
+          49544,
+          49545,
+          50568,
+          50791,
+          51055
+        ]
+      },
+      {
+        "source_id": 58941,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 16,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45467,
+          47101,
+          47758,
+          47988,
+          48337,
+          48759,
+          49124,
+          49544,
+          50591,
+          50791,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 55210,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 15,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45460,
+          45950,
+          46497,
+          47101,
+          47988,
+          48337,
+          48596,
+          48759,
+          49544,
+          49867,
+          50411,
+          50591,
+          50820
+        ]
+      },
+      {
+        "source_id": 98554,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 15,
+        "gamma4_dan_to_kc_contacts": 23,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45950,
+          46497,
+          47101,
+          47988,
+          48596,
+          48759,
+          49526,
+          50411,
+          50591,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 76362,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45460,
+          45950,
+          47287,
+          47758,
+          49160,
+          49526,
+          49544,
+          49545,
+          50568,
+          50591,
+          50820,
+          51330
+        ]
+      },
+      {
+        "source_id": 69722,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 23,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45620,
+          47101,
+          47988,
+          48596,
+          48759,
+          49124,
+          49160,
+          49545,
+          50591,
+          50791,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 147184,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 23,
+        "gamma4_kc_source_ids": [
+          45434,
+          45460,
+          45467,
+          45950,
+          47101,
+          47117,
+          47287,
+          47694,
+          47758,
+          48759,
+          49124,
+          49160,
+          50568,
+          51055
+        ]
+      },
+      {
+        "source_id": 174672,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 18,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          46497,
+          47287,
+          47758,
+          47988,
+          49544,
+          49545,
+          50568,
+          50591,
+          51055
+        ]
+      },
+      {
+        "source_id": 39617,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 13,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          45620,
+          46497,
+          47101,
+          47758,
+          48337,
+          49160,
+          49867,
+          50568,
+          50591,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 175459,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 13,
+        "gamma4_dan_to_kc_contacts": 21,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45434,
+          45460,
+          45620,
+          45950,
+          47101,
+          47287,
+          48596,
+          49124,
+          49545,
+          49867,
+          50591
+        ]
+      },
+      {
+        "source_id": 162050,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 13,
+        "gamma4_dan_to_kc_contacts": 19,
+        "gamma4_kc_source_ids": [
+          45259,
+          45950,
+          47101,
+          47287,
+          47758,
+          49160,
+          49544,
+          49545,
+          49867,
+          50591,
+          50791,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 65524,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 17,
+        "gamma4_kc_source_ids": [
+          45467,
+          45620,
+          47117,
+          47287,
+          47988,
+          48596,
+          49544,
+          49867,
+          50411,
+          50791,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 158372,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 16,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          45467,
+          47287,
+          47988,
+          49160,
+          49544,
+          50568,
+          50591,
+          50791,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 109624,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 13,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45434,
+          45460,
+          45467,
+          45620,
+          46497,
+          47694,
+          48596,
+          49124,
+          49526,
+          51330
+        ]
+      },
+      {
+        "source_id": 161153,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 11,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          46497,
+          47694,
+          47758,
+          48596,
+          49124,
+          49867,
+          50591,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 95523,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 11,
+        "gamma4_dan_to_kc_contacts": 14,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45460,
+          45467,
+          48759,
+          49526,
+          49544,
+          49867,
+          50568,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 242429,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 10,
+        "gamma4_kc_source_ids": [
+          45380,
+          47694,
+          47988,
+          48337,
+          49526,
+          49867,
+          50568,
+          51055
+        ]
+      },
+      {
+        "source_id": 137595,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 9,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45434,
+          49124,
+          49160,
+          49545,
+          49867,
+          50411
+        ]
+      },
+      {
+        "source_id": 74743,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          46497,
+          47694,
+          47758,
+          49124,
+          49160,
+          50820,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 135578,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          45380,
+          47101,
+          47287,
+          48337,
+          48596,
+          49544,
+          49867,
+          50411
+        ]
+      },
+      {
+        "source_id": 119499,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 10,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          47287,
+          48596,
+          49526,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 152385,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 9,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          47101,
+          48337,
+          49544,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 174862,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          48596,
+          48759,
+          49124,
+          49545,
+          49867,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 157134,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          47694,
+          48337,
+          49160,
+          49544,
+          50791,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 175964,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45380,
+          45460,
+          48759,
+          49160,
+          49545,
+          50411,
+          51055
+        ]
+      },
+      {
+        "source_id": 226708,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 6,
+        "gamma4_dan_to_kc_contacts": 9,
+        "gamma4_kc_source_ids": [
+          45620,
+          47101,
+          47988,
+          48596,
+          50568,
+          51053
+        ]
+      },
+      {
+        "source_id": 152019,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 6,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          45460,
+          47101,
+          49160,
+          50568,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 102936,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 6,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45259,
+          45950,
+          47694,
+          49160,
+          50568,
+          51330
+        ]
+      },
+      {
+        "source_id": 146058,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 6,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45620,
+          47101,
+          48759,
+          49867
+        ]
+      },
+      {
+        "source_id": 212160,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 9,
+        "gamma4_kc_source_ids": [
+          47101,
+          49160,
+          49867,
+          50568,
+          51055
+        ]
+      },
+      {
+        "source_id": 136144,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          48759,
+          49160,
+          49545
+        ]
+      },
+      {
+        "source_id": 114522,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45380,
+          45620,
+          46497,
+          48759,
+          49867
+        ]
+      },
+      {
+        "source_id": 133019,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45259,
+          48596,
+          49545,
+          50568,
+          51055
+        ]
+      },
+      {
+        "source_id": 523942,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          45434,
+          47117,
+          48337,
+          49124,
+          50411
+        ]
+      },
+      {
+        "source_id": 524069,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 7,
+        "gamma4_kc_source_ids": [
+          46497,
+          47758,
+          50568,
+          50591,
+          51055
+        ]
+      },
+      {
+        "source_id": 96497,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 5,
+        "gamma4_dan_to_kc_contacts": 5,
+        "gamma4_kc_source_ids": [
+          47101,
+          49526,
+          49867,
+          50568,
+          51330
+        ]
+      },
+      {
+        "source_id": 120768,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 4,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          47287,
+          47988,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 142538,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 4,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          45460,
+          45620,
+          50411,
+          51330
+        ]
+      },
+      {
+        "source_id": 184778,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 4,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          45950,
+          48596,
+          50591,
+          51055
+        ]
+      },
+      {
+        "source_id": 152044,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 6,
+        "gamma4_kc_source_ids": [
+          48337,
+          48759,
+          51053
+        ]
+      },
+      {
+        "source_id": 47196,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          48337,
+          48596,
+          49545
+        ]
+      },
+      {
+        "source_id": 178101,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          47694,
+          47988,
+          51330
+        ]
+      },
+      {
+        "source_id": 178487,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          45380,
+          46497,
+          49526
+        ]
+      },
+      {
+        "source_id": 129430,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          45620,
+          48596,
+          50820
+        ]
+      },
+      {
+        "source_id": 103255,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          47694,
+          49545
+        ]
+      },
+      {
+        "source_id": 161079,
+        "cell_type": "PAM15",
+        "instance": "PAM15(y5B'2a)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          47758,
+          50820
+        ]
+      },
+      {
+        "source_id": 523382,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          47694,
+          47988
+        ]
+      },
+      {
+        "source_id": 65559,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 2,
+        "gamma4_kc_source_ids": [
+          45259,
+          49526
+        ]
+      },
+      {
+        "source_id": 104713,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 2,
+        "gamma4_kc_source_ids": [
+          47287,
+          47988
+        ]
+      },
+      {
+        "source_id": 122062,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 2,
+        "gamma4_kc_source_ids": [
+          45620,
+          47694
+        ]
+      },
+      {
+        "source_id": 135290,
+        "cell_type": "PAM15",
+        "instance": "PAM15(y5B'2a)_R",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 2,
+        "gamma4_kc_source_ids": [
+          45434,
+          49526
+        ]
+      },
+      {
+        "source_id": 49043,
+        "cell_type": "PAM07",
+        "instance": "PAM07(y4<y1y2)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          47988
+        ]
+      },
+      {
+        "source_id": 86156,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          51330
+        ]
+      },
+      {
+        "source_id": 90902,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          46497
+        ]
+      },
+      {
+        "source_id": 91875,
+        "cell_type": "PAM12",
+        "instance": "PAM12(y3)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          50568
+        ]
+      },
+      {
+        "source_id": 96571,
+        "cell_type": "PAM12",
+        "instance": "PAM12(y3)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          45199
+        ]
+      },
+      {
+        "source_id": 104460,
+        "cell_type": "PAM12",
+        "instance": "PAM12(y3)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          47287
+        ]
+      },
+      {
+        "source_id": 114216,
+        "cell_type": "PAM01",
+        "instance": "PAM01(y5)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          49526
+        ]
+      },
+      {
+        "source_id": 144625,
+        "cell_type": "PAM12",
+        "instance": "PAM12(y3)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          47117
+        ]
+      },
+      {
+        "source_id": 145371,
+        "cell_type": "PAM05",
+        "instance": "PAM05(B'2p)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          47117
+        ]
+      },
+      {
+        "source_id": 148469,
+        "cell_type": "PAM02",
+        "instance": "PAM02(B'2a)_L",
+        "annotation_status": "Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          47694
+        ]
+      },
+      {
+        "source_id": 197920,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_R",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 1,
+        "gamma4_dan_to_kc_contacts": 1,
+        "gamma4_kc_source_ids": [
+          49124
+        ]
+      }
+    ]
+  },
+  "previously_audited_pam08_roster_scope": {
+    "candidate_count_with_gamma4_overlap": 25,
+    "maximum_anatomical_coverage_kc_ids": [
+      45199,
+      45259,
+      45380,
+      45434,
+      45460,
+      45467,
+      45620,
+      45950,
+      46497,
+      47101,
+      47117,
+      47287,
+      47694,
+      47758,
+      47988,
+      48337,
+      48596,
+      48759,
+      49124,
+      49160,
+      49526,
+      49544,
+      49545,
+      49867,
+      50411,
+      50568,
+      50591,
+      50791,
+      50820,
+      51053,
+      51055,
+      51330
+    ],
+    "maximum_anatomical_coverage_count": 32,
+    "minimum_cardinality_set_for_maximum_coverage": [
+      {
+        "source_id": 87177,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 20,
+        "gamma4_dan_to_kc_contacts": 30,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          47101,
+          47117,
+          47287,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49544,
+          49867,
+          50411,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 107285,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 26,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45467,
+          47287,
+          47694,
+          48337,
+          48596,
+          49526,
+          49544,
+          49545,
+          49867,
+          50411,
+          50568,
+          50591,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 55210,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 15,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45460,
+          45950,
+          46497,
+          47101,
+          47988,
+          48337,
+          48596,
+          48759,
+          49544,
+          49867,
+          50411,
+          50591,
+          50820
+        ]
+      }
+    ],
+    "candidate_ranking": [
+      {
+        "source_id": 87177,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 20,
+        "gamma4_dan_to_kc_contacts": 30,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          47101,
+          47117,
+          47287,
+          47758,
+          47988,
+          48337,
+          48596,
+          49124,
+          49160,
+          49544,
+          49867,
+          50411,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 107285,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 18,
+        "gamma4_dan_to_kc_contacts": 26,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45467,
+          47287,
+          47694,
+          48337,
+          48596,
+          49526,
+          49544,
+          49545,
+          49867,
+          50411,
+          50568,
+          50591,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 90678,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 29,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          45620,
+          45950,
+          47287,
+          47694,
+          47988,
+          48759,
+          49124,
+          49160,
+          49867,
+          50411,
+          50568,
+          50591,
+          50791,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 75922,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          45380,
+          45620,
+          46497,
+          47101,
+          47287,
+          47988,
+          48337,
+          49124,
+          49160,
+          49544,
+          50568,
+          50791,
+          50820,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 117782,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 17,
+        "gamma4_dan_to_kc_contacts": 27,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45467,
+          45620,
+          47101,
+          47758,
+          47988,
+          48596,
+          48759,
+          49124,
+          49160,
+          49544,
+          50591,
+          50791,
+          50820
+        ]
+      },
+      {
+        "source_id": 65886,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 16,
+        "gamma4_dan_to_kc_contacts": 29,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          45950,
+          47101,
+          47694,
+          48337,
+          49124,
+          49544,
+          50411,
+          50568,
+          51053,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 58941,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 16,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45467,
+          47101,
+          47758,
+          47988,
+          48337,
+          48759,
+          49124,
+          49544,
+          50591,
+          50791,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 55210,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 15,
+        "gamma4_dan_to_kc_contacts": 28,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45460,
+          45950,
+          46497,
+          47101,
+          47988,
+          48337,
+          48596,
+          48759,
+          49544,
+          49867,
+          50411,
+          50591,
+          50820
+        ]
+      },
+      {
+        "source_id": 76362,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45460,
+          45950,
+          47287,
+          47758,
+          49160,
+          49526,
+          49544,
+          49545,
+          50568,
+          50591,
+          50820,
+          51330
+        ]
+      },
+      {
+        "source_id": 69722,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 23,
+        "gamma4_kc_source_ids": [
+          45199,
+          45434,
+          45620,
+          47101,
+          47988,
+          48596,
+          48759,
+          49124,
+          49160,
+          49545,
+          50591,
+          50791,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 147184,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 23,
+        "gamma4_kc_source_ids": [
+          45434,
+          45460,
+          45467,
+          45950,
+          47101,
+          47117,
+          47287,
+          47694,
+          47758,
+          48759,
+          49124,
+          49160,
+          50568,
+          51055
+        ]
+      },
+      {
+        "source_id": 174672,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 14,
+        "gamma4_dan_to_kc_contacts": 18,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45434,
+          45460,
+          45620,
+          46497,
+          47287,
+          47758,
+          47988,
+          49544,
+          49545,
+          50568,
+          50591,
+          51055
+        ]
+      },
+      {
+        "source_id": 175459,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 13,
+        "gamma4_dan_to_kc_contacts": 21,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45434,
+          45460,
+          45620,
+          45950,
+          47101,
+          47287,
+          48596,
+          49124,
+          49545,
+          49867,
+          50591
+        ]
+      },
+      {
+        "source_id": 162050,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 13,
+        "gamma4_dan_to_kc_contacts": 19,
+        "gamma4_kc_source_ids": [
+          45259,
+          45950,
+          47101,
+          47287,
+          47758,
+          49160,
+          49544,
+          49545,
+          49867,
+          50591,
+          50791,
+          50820,
+          51053
+        ]
+      },
+      {
+        "source_id": 65524,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 17,
+        "gamma4_kc_source_ids": [
+          45467,
+          45620,
+          47117,
+          47287,
+          47988,
+          48596,
+          49544,
+          49867,
+          50411,
+          50791,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 158372,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 16,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          45467,
+          47287,
+          47988,
+          49160,
+          49544,
+          50568,
+          50591,
+          50791,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 109624,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 12,
+        "gamma4_dan_to_kc_contacts": 13,
+        "gamma4_kc_source_ids": [
+          45199,
+          45380,
+          45434,
+          45460,
+          45467,
+          45620,
+          46497,
+          47694,
+          48596,
+          49124,
+          49526,
+          51330
+        ]
+      },
+      {
+        "source_id": 161153,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 11,
+        "gamma4_dan_to_kc_contacts": 24,
+        "gamma4_kc_source_ids": [
+          45199,
+          45259,
+          46497,
+          47694,
+          47758,
+          48596,
+          49124,
+          49867,
+          50591,
+          51053,
+          51330
+        ]
+      },
+      {
+        "source_id": 95523,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 11,
+        "gamma4_dan_to_kc_contacts": 14,
+        "gamma4_kc_source_ids": [
+          45259,
+          45380,
+          45460,
+          45467,
+          48759,
+          49526,
+          49544,
+          49867,
+          50568,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 74743,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          46497,
+          47694,
+          47758,
+          49124,
+          49160,
+          50820,
+          51055,
+          51330
+        ]
+      },
+      {
+        "source_id": 135578,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 8,
+        "gamma4_dan_to_kc_contacts": 8,
+        "gamma4_kc_source_ids": [
+          45380,
+          47101,
+          47287,
+          48337,
+          48596,
+          49544,
+          49867,
+          50411
+        ]
+      },
+      {
+        "source_id": 119499,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 7,
+        "gamma4_dan_to_kc_contacts": 10,
+        "gamma4_kc_source_ids": [
+          45380,
+          45434,
+          47287,
+          48596,
+          49526,
+          50820,
+          51055
+        ]
+      },
+      {
+        "source_id": 178101,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 4,
+        "gamma4_kc_source_ids": [
+          47694,
+          47988,
+          51330
+        ]
+      },
+      {
+        "source_id": 129430,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 3,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          45620,
+          48596,
+          50820
+        ]
+      },
+      {
+        "source_id": 523382,
+        "cell_type": "PAM08",
+        "instance": "PAM08(y4)_L",
+        "annotation_status": "Prelim Roughly traced",
+        "transmitter_consensus": "dopamine",
+        "gamma4_kc_count": 2,
+        "gamma4_dan_to_kc_contacts": 3,
+        "gamma4_kc_source_ids": [
+          47694,
+          47988
+        ]
+      }
+    ]
+  },
+  "unknown_roi_candidate_rows_by_scope": {
+    "all_annotated_dan": 35,
+    "audited_pam08_roster": 0,
+    "frozen_kc_to_mbon05_pairs": 0
+  },
+  "pam08_roster_and_frozen_kc_mbon_roi_complete": true
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "dataset": "MaleCNS",
+  "release": "v1.0",
+  "scope": "official traced-only",
+  "design": "CIRCUIT_V1.md",
+  "parent_sha256": {
+    "neurons.parquet": "7d9a410d61d4caa934fa3639f9d204291ff0d18c445b2384054b95286d6350eb",
+    "connections.parquet": "da21af867d4e8e4c627c9916e55af4332302b611a296de1d0a8bc7dd6ebcff7a"
+  },
+  "selected_source_id_sha256": "86d619b6562a81d7f46222c1c4aba4fffb3d1a89e44f3533e76e6646a1e2b7e9",
+  "roles": [
+    {"name": "visual_input_mevp41", "reason": "Candidate visual projection with direct KCg-d contacts; visual game tuning remains unknown.", "match": {"source_id": 13285, "cell_type": "MeVP41", "instance": "MeVP41_R", "superclass": "visual_projection", "soma_side": "R"}, "expected_count": 1},
+    {"name": "visual_input_lovp97", "reason": "Candidate visual-associated direct KC input; cb_intrinsic superclass discrepancy is retained.", "match": {"source_id": 13707, "cell_type": "LoVP97", "instance": "LoVP97(PLP251)_R", "superclass": "cb_intrinsic", "soma_side": "R"}, "expected_count": 1},
+    {"name": "visual_input_lovp42", "reason": "Candidate visual projection with direct KCg-d contacts; visual game tuning remains unknown.", "match": {"source_id": 13874, "cell_type": "LoVP42", "instance": "LoVP42_R", "superclass": "visual_projection", "soma_side": "R"}, "expected_count": 1},
+    {"name": "visual_kenyon_cells", "reason": "Complete small right KCg-d visual Kenyon-cell class; retain the entire annotated class.", "match": {"cell_type": "KCg-d", "soma_side": "R"}, "expected_count": 107, "source_id_sha256": "7e0a332cde22563a062799d411ed657407e57dcedb53559a6629a513579c7d60"},
+    {"name": "apl_local_feedback", "reason": "Local graded GABAergic feedback onto Kenyon cells; electrical dynamics remain unspecified.", "match": {"source_id": 10540, "cell_type": "APL", "instance": "APL_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "ppl1_gamma1_teaching", "reason": "Candidate aversive gamma1pedc compartment teaching population.", "match": {"source_id": 11327, "cell_type": "PPL101", "instance": "PPL101(y1ped)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "pam_gamma5_teaching_cohort", "reason": "Complete annotated right PAM01 gamma5 cohort; reward-specific subtypes remain unresolved.", "match": {"cell_type": "PAM01", "instance": "PAM01(y5)_R", "soma_side": "R"}, "expected_count": 21, "source_id_sha256": "7a106d41858559820b61b55049c2c595fe6e0bc391f357962fe5efb90abe39d9"},
+    {"name": "mbon11_gamma1_learning_output", "reason": "MVP2 gamma1pedc learning output and feedforward inhibition to M4/6.", "match": {"source_id": 11402, "cell_type": "MBON11", "instance": "MBON11(y1pedc>a/B)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "mbon01_gamma5_learning_output", "reason": "M6 gamma5/beta-prime-2a learning output; glutamatergic target signs remain unknown.", "match": {"source_id": 10013, "cell_type": "MBON01", "instance": "MBON01(y5B'2a)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "mbon26_output_relay", "reason": "Measured route from the learning output to DNa03.", "match": {"source_id": 11176, "cell_type": "MBON26", "instance": "MBON26(b'2d)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "mbon27_visual_output", "reason": "Measured strong visual KC output route to DNa03; potential fixed shortcut.", "match": {"source_id": 515034, "cell_type": "MBON27", "instance": "MBON27(y5d)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "mbon32_competing_output", "reason": "Competing GABA-labeled output branch into DNa03 and DNa02.", "match": {"source_id": 519131, "cell_type": "MBON32", "instance": "MBON32(y2)_R", "soma_side": "R"}, "expected_count": 1},
+    {"name": "dna03_descending_relay", "reason": "Measured descending relay receiving MBON26/27/32 contacts.", "match": {"source_id": 519624, "cell_type": "DNa03", "instance": "DNa03_L", "soma_side": "L"}, "expected_count": 1},
+    {"name": "dna02_action_boundary", "reason": "Descending steering-related output for a future fixed artificial one-lane readout.", "match": {"source_id": 523769, "cell_type": "DNa02", "instance": "DNa02_L", "soma_side": "L"}, "expected_count": 1}
+  ],
+  "plastic_candidates": [
+    {"pre_role": "visual_kenyon_cells", "post_role": "mbon11_gamma1_learning_output", "compartment_candidate": "gamma1pedc", "teaching_role": "ppl1_gamma1_teaching"},
+    {"pre_role": "visual_kenyon_cells", "post_role": "mbon01_gamma5_learning_output", "compartment_candidate": "gamma5", "teaching_role": "pam_gamma5_teaching_cohort"}
+  ]
+}

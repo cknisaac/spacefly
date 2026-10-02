@@ -1,0 +1,1795 @@
+{
+  "groups": {
+    "KC_to_MBON32/direct_3x": {
+      "all_targets": {
+        "anatomical_contact_count": {
+          "max": 1129,
+          "median": 1129.0,
+          "min": 1129,
+          "n": 1,
+          "p25": 1129.0,
+          "p75": 1129.0
+        },
+        "anatomical_pair_count": {
+          "max": 105,
+          "median": 105.0,
+          "min": 105,
+          "n": 1,
+          "p25": 105.0,
+          "p75": 105.0
+        },
+        "arrival_span_us": {
+          "max": 195500,
+          "median": 195500.0,
+          "min": 195500,
+          "n": 1,
+          "p25": 195500.0,
+          "p75": 195500.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.033107533503416324,
+          "median": 0.033107533503416324,
+          "min": 0.033107533503416324,
+          "n": 1,
+          "p25": 0.033107533503416324,
+          "p75": 0.033107533503416324
+        },
+        "critical_multiplier_linear": {
+          "max": 1.7477138762418252,
+          "median": 1.7477138762418252,
+          "min": 1.7477138762418252,
+          "n": 1,
+          "p25": 1.7477138762418252,
+          "p75": 1.7477138762418252
+        },
+        "distinct_arrival_ticks": {
+          "max": 255,
+          "median": 255.0,
+          "min": 255,
+          "n": 1,
+          "p25": 255.0,
+          "p75": 255.0
+        },
+        "event_count": {
+          "max": 3176,
+          "median": 3176.0,
+          "min": 3176,
+          "n": 1,
+          "p25": 3176.0,
+          "p75": 3176.0
+        },
+        "event_impulse_pa": {
+          "max": 341.01,
+          "median": 341.01,
+          "min": 341.01,
+          "n": 1,
+          "p25": 341.01,
+          "p75": 341.01
+        },
+        "fast_charge_fc": {
+          "max": 1705.0500000000013,
+          "median": 1705.0500000000013,
+          "min": 1705.0500000000013,
+          "n": 1,
+          "p25": 1705.0500000000013,
+          "p75": 1705.0500000000013
+        },
+        "leak_charge_fc": {
+          "max": -1705.0499229071117,
+          "median": -1705.0499229071117,
+          "min": -1705.0499229071117,
+          "n": 1,
+          "p25": -1705.0499229071117,
+          "p75": -1705.0499229071117
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 6.417359440862789,
+          "median": 6.417359440862789,
+          "min": 6.417359440862789,
+          "n": 1,
+          "p25": 6.417359440862789,
+          "p75": 6.417359440862789
+        },
+        "peak_depolarization_mv": {
+          "max": 8.58264055913721,
+          "median": 8.58264055913721,
+          "min": 8.58264055913721,
+          "n": 1,
+          "p25": 8.58264055913721,
+          "p75": 8.58264055913721
+        },
+        "peak_fast_current_pa": {
+          "max": 15.263963821616956,
+          "median": 15.263963821616956,
+          "min": 15.263963821616956,
+          "n": 1,
+          "p25": 15.263963821616956,
+          "p75": 15.263963821616956
+        },
+        "peak_voltage_mv": {
+          "max": -49.41735944086279,
+          "median": -49.41735944086279,
+          "min": -49.41735944086279,
+          "n": 1,
+          "p25": -49.41735944086279,
+          "p75": -49.41735944086279
+        }
+      },
+      "contacted_count": 1,
+      "contacted_targets": {
+        "anatomical_contact_count": {
+          "max": 1129,
+          "median": 1129.0,
+          "min": 1129,
+          "n": 1,
+          "p25": 1129.0,
+          "p75": 1129.0
+        },
+        "anatomical_pair_count": {
+          "max": 105,
+          "median": 105.0,
+          "min": 105,
+          "n": 1,
+          "p25": 105.0,
+          "p75": 105.0
+        },
+        "arrival_span_us": {
+          "max": 195500,
+          "median": 195500.0,
+          "min": 195500,
+          "n": 1,
+          "p25": 195500.0,
+          "p75": 195500.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.033107533503416324,
+          "median": 0.033107533503416324,
+          "min": 0.033107533503416324,
+          "n": 1,
+          "p25": 0.033107533503416324,
+          "p75": 0.033107533503416324
+        },
+        "critical_multiplier_linear": {
+          "max": 1.7477138762418252,
+          "median": 1.7477138762418252,
+          "min": 1.7477138762418252,
+          "n": 1,
+          "p25": 1.7477138762418252,
+          "p75": 1.7477138762418252
+        },
+        "distinct_arrival_ticks": {
+          "max": 255,
+          "median": 255.0,
+          "min": 255,
+          "n": 1,
+          "p25": 255.0,
+          "p75": 255.0
+        },
+        "event_count": {
+          "max": 3176,
+          "median": 3176.0,
+          "min": 3176,
+          "n": 1,
+          "p25": 3176.0,
+          "p75": 3176.0
+        },
+        "event_impulse_pa": {
+          "max": 341.01,
+          "median": 341.01,
+          "min": 341.01,
+          "n": 1,
+          "p25": 341.01,
+          "p75": 341.01
+        },
+        "fast_charge_fc": {
+          "max": 1705.0500000000013,
+          "median": 1705.0500000000013,
+          "min": 1705.0500000000013,
+          "n": 1,
+          "p25": 1705.0500000000013,
+          "p75": 1705.0500000000013
+        },
+        "leak_charge_fc": {
+          "max": -1705.0499229071117,
+          "median": -1705.0499229071117,
+          "min": -1705.0499229071117,
+          "n": 1,
+          "p25": -1705.0499229071117,
+          "p75": -1705.0499229071117
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 6.417359440862789,
+          "median": 6.417359440862789,
+          "min": 6.417359440862789,
+          "n": 1,
+          "p25": 6.417359440862789,
+          "p75": 6.417359440862789
+        },
+        "peak_depolarization_mv": {
+          "max": 8.58264055913721,
+          "median": 8.58264055913721,
+          "min": 8.58264055913721,
+          "n": 1,
+          "p25": 8.58264055913721,
+          "p75": 8.58264055913721
+        },
+        "peak_fast_current_pa": {
+          "max": 15.263963821616956,
+          "median": 15.263963821616956,
+          "min": 15.263963821616956,
+          "n": 1,
+          "p25": 15.263963821616956,
+          "p75": 15.263963821616956
+        },
+        "peak_voltage_mv": {
+          "max": -49.41735944086279,
+          "median": -49.41735944086279,
+          "min": -49.41735944086279,
+          "n": 1,
+          "p25": -49.41735944086279,
+          "p75": -49.41735944086279
+        }
+      },
+      "events_per_trial": 3176,
+      "first_panel_multiplier_count": {
+        "2.0": 1
+      },
+      "impulse_pa_per_trial": 341.01,
+      "meaningful_count": 1,
+      "receiving_events_count": 1,
+      "receiving_targets": {
+        "anatomical_contact_count": {
+          "max": 1129,
+          "median": 1129.0,
+          "min": 1129,
+          "n": 1,
+          "p25": 1129.0,
+          "p75": 1129.0
+        },
+        "anatomical_pair_count": {
+          "max": 105,
+          "median": 105.0,
+          "min": 105,
+          "n": 1,
+          "p25": 105.0,
+          "p75": 105.0
+        },
+        "arrival_span_us": {
+          "max": 195500,
+          "median": 195500.0,
+          "min": 195500,
+          "n": 1,
+          "p25": 195500.0,
+          "p75": 195500.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.033107533503416324,
+          "median": 0.033107533503416324,
+          "min": 0.033107533503416324,
+          "n": 1,
+          "p25": 0.033107533503416324,
+          "p75": 0.033107533503416324
+        },
+        "critical_multiplier_linear": {
+          "max": 1.7477138762418252,
+          "median": 1.7477138762418252,
+          "min": 1.7477138762418252,
+          "n": 1,
+          "p25": 1.7477138762418252,
+          "p75": 1.7477138762418252
+        },
+        "distinct_arrival_ticks": {
+          "max": 255,
+          "median": 255.0,
+          "min": 255,
+          "n": 1,
+          "p25": 255.0,
+          "p75": 255.0
+        },
+        "event_count": {
+          "max": 3176,
+          "median": 3176.0,
+          "min": 3176,
+          "n": 1,
+          "p25": 3176.0,
+          "p75": 3176.0
+        },
+        "event_impulse_pa": {
+          "max": 341.01,
+          "median": 341.01,
+          "min": 341.01,
+          "n": 1,
+          "p25": 341.01,
+          "p75": 341.01
+        },
+        "fast_charge_fc": {
+          "max": 1705.0500000000013,
+          "median": 1705.0500000000013,
+          "min": 1705.0500000000013,
+          "n": 1,
+          "p25": 1705.0500000000013,
+          "p75": 1705.0500000000013
+        },
+        "leak_charge_fc": {
+          "max": -1705.0499229071117,
+          "median": -1705.0499229071117,
+          "min": -1705.0499229071117,
+          "n": 1,
+          "p25": -1705.0499229071117,
+          "p75": -1705.0499229071117
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 6.417359440862789,
+          "median": 6.417359440862789,
+          "min": 6.417359440862789,
+          "n": 1,
+          "p25": 6.417359440862789,
+          "p75": 6.417359440862789
+        },
+        "peak_depolarization_mv": {
+          "max": 8.58264055913721,
+          "median": 8.58264055913721,
+          "min": 8.58264055913721,
+          "n": 1,
+          "p25": 8.58264055913721,
+          "p75": 8.58264055913721
+        },
+        "peak_fast_current_pa": {
+          "max": 15.263963821616956,
+          "median": 15.263963821616956,
+          "min": 15.263963821616956,
+          "n": 1,
+          "p25": 15.263963821616956,
+          "p75": 15.263963821616956
+        },
+        "peak_voltage_mv": {
+          "max": -49.41735944086279,
+          "median": -49.41735944086279,
+          "min": -49.41735944086279,
+          "n": 1,
+          "p25": -49.41735944086279,
+          "p75": -49.41735944086279
+        }
+      },
+      "target_count": 1,
+      "threshold_bands": {
+        "critical_2_to_10": 0,
+        "critical_at_least_10": 0,
+        "critical_at_most_2": 1,
+        "no_finite_critical": 0
+      },
+      "timing": {
+        "bin20ms_midpoint": {
+          "critical_multiplier": {
+            "max": 1.5563203937892303,
+            "median": 1.5563203937892303,
+            "min": 1.5563203937892303,
+            "n": 1,
+            "p25": 1.5563203937892303,
+            "p75": 1.5563203937892303
+          },
+          "first_panel_multiplier_count": {
+            "2.0": 1
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.1229782011572838,
+            "median": 1.1229782011572838,
+            "min": 1.1229782011572838,
+            "n": 1,
+            "p25": 1.1229782011572838,
+            "p75": 1.1229782011572838
+          }
+        },
+        "observed": {
+          "critical_multiplier": {
+            "max": 1.7477138762418252,
+            "median": 1.7477138762418252,
+            "min": 1.7477138762418252,
+            "n": 1,
+            "p25": 1.7477138762418252,
+            "p75": 1.7477138762418252
+          },
+          "first_panel_multiplier_count": {
+            "2.0": 1
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "n": 1,
+            "p25": 1.0,
+            "p75": 1.0
+          }
+        },
+        "single_volley_100ms": {
+          "critical_multiplier": {
+            "max": 0.2793833661965671,
+            "median": 0.2793833661965671,
+            "min": 0.2793833661965671,
+            "n": 1,
+            "p25": 0.2793833661965671,
+            "p75": 0.2793833661965671
+          },
+          "first_panel_multiplier_count": {
+            "0.5": 1
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 6.25561177830529,
+            "median": 6.25561177830529,
+            "min": 6.25561177830529,
+            "n": 1,
+            "p25": 6.25561177830529,
+            "p75": 6.25561177830529
+          }
+        }
+      },
+      "total_fast_charge_fc_per_trial": 1705.0500000000013,
+      "trial_count": 30,
+      "variation_across_seed_pulses": {
+        "event_count": 1,
+        "fast_charge_fc": 1,
+        "minimum_threshold_distance_mv": 1,
+        "peak_fast_current_pa": 1,
+        "peak_voltage_mv": 1
+      }
+    },
+    "visual_to_KC/high": {
+      "all_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 2.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 22.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 189000,
+          "median": 189000.0,
+          "min": 189000,
+          "n": 59,
+          "p25": 189000.0,
+          "p75": 189000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.045454545454545456,
+          "median": 0.045454545454545456,
+          "min": 0.04545454545454545,
+          "n": 59,
+          "p25": 0.045454545454545456,
+          "p75": 0.045454545454545456
+        },
+        "critical_multiplier_linear": {
+          "max": 393.7739745785331,
+          "median": 17.89881702629517,
+          "min": 5.1812365076116915,
+          "n": 59,
+          "p25": 12.118990694887259,
+          "p75": 36.095947669694326
+        },
+        "distinct_arrival_ticks": {
+          "max": 22,
+          "median": 22.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 22.0
+        },
+        "event_count": {
+          "max": 66,
+          "median": 22.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 22.0
+        },
+        "event_impulse_pa": {
+          "max": 50.16,
+          "median": 1.3199999999999998,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 14.849999999999998
+        },
+        "fast_charge_fc": {
+          "max": 250.79999999999987,
+          "median": 6.599999999999996,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 74.25
+        },
+        "leak_charge_fc": {
+          "max": 0.0,
+          "median": -6.599999999999641,
+          "min": -250.79999999999717,
+          "n": 107,
+          "p25": -74.24999999999918,
+          "p75": 0.0
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 14.0,
+          "median": 13.928893218425713,
+          "min": 11.297942300176267,
+          "n": 107,
+          "p25": 13.200048707289032,
+          "p75": 14.0
+        },
+        "peak_depolarization_mv": {
+          "max": 2.702057699823733,
+          "median": 0.07110678157428652,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.7999512927109684
+        },
+        "peak_fast_current_pa": {
+          "max": 2.7315166684542125,
+          "median": 0.07188201759090034,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.8086726978976287
+        },
+        "peak_voltage_mv": {
+          "max": -59.29794230017627,
+          "median": -61.92889321842571,
+          "min": -62.0,
+          "n": 107,
+          "p25": -62.0,
+          "p75": -61.20004870728903
+        }
+      },
+      "contacted_count": 59,
+      "contacted_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 22.0,
+          "min": 1,
+          "n": 59,
+          "p25": 11.0,
+          "p75": 32.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 1,
+          "n": 59,
+          "p25": 1.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 189000,
+          "median": 189000.0,
+          "min": 189000,
+          "n": 59,
+          "p25": 189000.0,
+          "p75": 189000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.045454545454545456,
+          "median": 0.045454545454545456,
+          "min": 0.04545454545454545,
+          "n": 59,
+          "p25": 0.045454545454545456,
+          "p75": 0.045454545454545456
+        },
+        "critical_multiplier_linear": {
+          "max": 393.7739745785331,
+          "median": 17.89881702629517,
+          "min": 5.1812365076116915,
+          "n": 59,
+          "p25": 12.118990694887259,
+          "p75": 36.095947669694326
+        },
+        "distinct_arrival_ticks": {
+          "max": 22,
+          "median": 22.0,
+          "min": 22,
+          "n": 59,
+          "p25": 22.0,
+          "p75": 22.0
+        },
+        "event_count": {
+          "max": 66,
+          "median": 22.0,
+          "min": 22,
+          "n": 59,
+          "p25": 22.0,
+          "p75": 22.0
+        },
+        "event_impulse_pa": {
+          "max": 50.16,
+          "median": 14.519999999999998,
+          "min": 0.6599999999999999,
+          "n": 59,
+          "p25": 7.26,
+          "p75": 21.450000000000003
+        },
+        "fast_charge_fc": {
+          "max": 250.79999999999987,
+          "median": 72.59999999999998,
+          "min": 3.299999999999998,
+          "n": 59,
+          "p25": 36.29999999999993,
+          "p75": 107.24999999999994
+        },
+        "leak_charge_fc": {
+          "max": -3.2999999999996428,
+          "median": -72.59999999999917,
+          "min": -250.79999999999717,
+          "n": 59,
+          "p25": -107.24999999999882,
+          "p75": -36.29999999999956
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 13.96444660921285,
+          "median": 13.217825402682614,
+          "min": 11.297942300176267,
+          "n": 59,
+          "p25": 12.844514799417489,
+          "p75": 13.608912701341296
+        },
+        "peak_depolarization_mv": {
+          "max": 2.702057699823733,
+          "median": 0.7821745973173861,
+          "min": 0.03555339078715036,
+          "n": 59,
+          "p25": 0.39108729865870373,
+          "p75": 1.1554852005825111
+        },
+        "peak_fast_current_pa": {
+          "max": 2.7315166684542125,
+          "median": 0.7907021934999037,
+          "min": 0.03594100879545017,
+          "n": 59,
+          "p25": 0.39535109674995184,
+          "p75": 1.1680827858521305
+        },
+        "peak_voltage_mv": {
+          "max": -59.29794230017627,
+          "median": -61.217825402682614,
+          "min": -61.96444660921285,
+          "n": 59,
+          "p25": -61.608912701341296,
+          "p75": -60.84451479941749
+        }
+      },
+      "events_per_trial": 1672,
+      "first_panel_multiplier_count": {
+        "128.0": 3,
+        "16.0": 18,
+        "256.0": 2,
+        "32.0": 15,
+        "512.0": 5,
+        "64.0": 9,
+        "8.0": 7,
+        "None": 48
+      },
+      "impulse_pa_per_trial": 941.8199999999999,
+      "meaningful_count": 32,
+      "receiving_events_count": 59,
+      "receiving_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 22.0,
+          "min": 1,
+          "n": 59,
+          "p25": 11.0,
+          "p75": 32.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 1,
+          "n": 59,
+          "p25": 1.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 189000,
+          "median": 189000.0,
+          "min": 189000,
+          "n": 59,
+          "p25": 189000.0,
+          "p75": 189000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.045454545454545456,
+          "median": 0.045454545454545456,
+          "min": 0.04545454545454545,
+          "n": 59,
+          "p25": 0.045454545454545456,
+          "p75": 0.045454545454545456
+        },
+        "critical_multiplier_linear": {
+          "max": 393.7739745785331,
+          "median": 17.89881702629517,
+          "min": 5.1812365076116915,
+          "n": 59,
+          "p25": 12.118990694887259,
+          "p75": 36.095947669694326
+        },
+        "distinct_arrival_ticks": {
+          "max": 22,
+          "median": 22.0,
+          "min": 22,
+          "n": 59,
+          "p25": 22.0,
+          "p75": 22.0
+        },
+        "event_count": {
+          "max": 66,
+          "median": 22.0,
+          "min": 22,
+          "n": 59,
+          "p25": 22.0,
+          "p75": 22.0
+        },
+        "event_impulse_pa": {
+          "max": 50.16,
+          "median": 14.519999999999998,
+          "min": 0.6599999999999999,
+          "n": 59,
+          "p25": 7.26,
+          "p75": 21.450000000000003
+        },
+        "fast_charge_fc": {
+          "max": 250.79999999999987,
+          "median": 72.59999999999998,
+          "min": 3.299999999999998,
+          "n": 59,
+          "p25": 36.29999999999993,
+          "p75": 107.24999999999994
+        },
+        "leak_charge_fc": {
+          "max": -3.2999999999996428,
+          "median": -72.59999999999917,
+          "min": -250.79999999999717,
+          "n": 59,
+          "p25": -107.24999999999882,
+          "p75": -36.29999999999956
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 13.96444660921285,
+          "median": 13.217825402682614,
+          "min": 11.297942300176267,
+          "n": 59,
+          "p25": 12.844514799417489,
+          "p75": 13.608912701341296
+        },
+        "peak_depolarization_mv": {
+          "max": 2.702057699823733,
+          "median": 0.7821745973173861,
+          "min": 0.03555339078715036,
+          "n": 59,
+          "p25": 0.39108729865870373,
+          "p75": 1.1554852005825111
+        },
+        "peak_fast_current_pa": {
+          "max": 2.7315166684542125,
+          "median": 0.7907021934999037,
+          "min": 0.03594100879545017,
+          "n": 59,
+          "p25": 0.39535109674995184,
+          "p75": 1.1680827858521305
+        },
+        "peak_voltage_mv": {
+          "max": -59.29794230017627,
+          "median": -61.217825402682614,
+          "min": -61.96444660921285,
+          "n": 59,
+          "p25": -61.608912701341296,
+          "p75": -60.84451479941749
+        }
+      },
+      "target_count": 107,
+      "threshold_bands": {
+        "critical_2_to_10": 11,
+        "critical_at_least_10": 48,
+        "critical_at_most_2": 0,
+        "no_finite_critical": 48
+      },
+      "timing": {
+        "bin20ms_midpoint": {
+          "critical_multiplier": {
+            "max": 258.22785291468017,
+            "median": 11.737629677939099,
+            "min": 3.397734906771797,
+            "n": 59,
+            "p25": 7.947353427771175,
+            "p75": 23.670886517176942
+          },
+          "first_panel_multiplier_count": {
+            "128.0": 1,
+            "16.0": 22,
+            "256.0": 2,
+            "32.0": 9,
+            "4.0": 2,
+            "512.0": 5,
+            "64.0": 5,
+            "8.0": 13,
+            "None": 48
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.5249089907770041,
+            "median": 1.5249089907765652,
+            "min": 1.5249089907765245,
+            "n": 59,
+            "p25": 1.5249089907765472,
+            "p75": 1.5249089907765851
+          }
+        },
+        "observed": {
+          "critical_multiplier": {
+            "max": 393.7739745785331,
+            "median": 17.89881702629517,
+            "min": 5.1812365076116915,
+            "n": 59,
+            "p25": 12.118990694887259,
+            "p75": 36.095947669694326
+          },
+          "first_panel_multiplier_count": {
+            "128.0": 3,
+            "16.0": 18,
+            "256.0": 2,
+            "32.0": 15,
+            "512.0": 5,
+            "64.0": 9,
+            "8.0": 7,
+            "None": 48
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "n": 59,
+            "p25": 1.0,
+            "p75": 1.0
+          }
+        },
+        "single_volley_100ms": {
+          "critical_multiplier": {
+            "max": 42.42622120868679,
+            "median": 1.9284646003949373,
+            "min": 0.558239752745904,
+            "n": 59,
+            "p25": 1.3057312398507401,
+            "p75": 3.889070277463124
+          },
+          "first_panel_multiplier_count": {
+            "1.0": 9,
+            "16.0": 1,
+            "2.0": 22,
+            "32.0": 2,
+            "4.0": 13,
+            "64.0": 5,
+            "8.0": 7,
+            "None": 48
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 9.281382205634038,
+            "median": 9.281382205631063,
+            "min": 9.281382205630592,
+            "n": 59,
+            "p25": 9.281382205630962,
+            "p75": 9.281382205631163
+          }
+        }
+      },
+      "total_fast_charge_fc_per_trial": 4709.099999999997,
+      "trial_count": 30,
+      "variation_across_seed_pulses": {
+        "event_count": 1,
+        "fast_charge_fc": 1,
+        "minimum_threshold_distance_mv": 1,
+        "peak_fast_current_pa": 1,
+        "peak_voltage_mv": 1
+      }
+    },
+    "visual_to_KC/low": {
+      "all_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 2.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 22.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "best_5ms_impulse_fraction": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "critical_multiplier_linear": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "distinct_arrival_ticks": {
+          "max": 0,
+          "median": 0.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "event_count": {
+          "max": 0,
+          "median": 0.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "event_impulse_pa": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "fast_charge_fc": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "leak_charge_fc": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 14.0,
+          "median": 14.0,
+          "min": 14.0,
+          "n": 107,
+          "p25": 14.0,
+          "p75": 14.0
+        },
+        "peak_depolarization_mv": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "peak_fast_current_pa": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "peak_voltage_mv": {
+          "max": -62.0,
+          "median": -62.0,
+          "min": -62.0,
+          "n": 107,
+          "p25": -62.0,
+          "p75": -62.0
+        }
+      },
+      "contacted_count": 59,
+      "contacted_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 22.0,
+          "min": 1,
+          "n": 59,
+          "p25": 11.0,
+          "p75": 32.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 1,
+          "n": 59,
+          "p25": 1.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "best_5ms_impulse_fraction": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "critical_multiplier_linear": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "distinct_arrival_ticks": {
+          "max": 0,
+          "median": 0.0,
+          "min": 0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "event_count": {
+          "max": 0,
+          "median": 0.0,
+          "min": 0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "event_impulse_pa": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "fast_charge_fc": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "leak_charge_fc": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 14.0,
+          "median": 14.0,
+          "min": 14.0,
+          "n": 59,
+          "p25": 14.0,
+          "p75": 14.0
+        },
+        "peak_depolarization_mv": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "peak_fast_current_pa": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 59,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "peak_voltage_mv": {
+          "max": -62.0,
+          "median": -62.0,
+          "min": -62.0,
+          "n": 59,
+          "p25": -62.0,
+          "p75": -62.0
+        }
+      },
+      "events_per_trial": 0,
+      "first_panel_multiplier_count": {
+        "None": 107
+      },
+      "impulse_pa_per_trial": 0.0,
+      "meaningful_count": 0,
+      "receiving_events_count": 0,
+      "receiving_targets": {
+        "anatomical_contact_count": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "anatomical_pair_count": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "arrival_span_us": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "best_5ms_impulse_fraction": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "critical_multiplier_linear": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "distinct_arrival_ticks": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "event_count": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "event_impulse_pa": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "fast_charge_fc": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "leak_charge_fc": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "minimum_threshold_distance_mv": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "peak_depolarization_mv": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "peak_fast_current_pa": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        },
+        "peak_voltage_mv": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "p25": null,
+          "p75": null
+        }
+      },
+      "target_count": 107,
+      "threshold_bands": {
+        "critical_2_to_10": 0,
+        "critical_at_least_10": 0,
+        "critical_at_most_2": 0,
+        "no_finite_critical": 107
+      },
+      "timing": {
+        "bin20ms_midpoint": {
+          "critical_multiplier": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          },
+          "first_panel_multiplier_count": {
+            "None": 107
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          }
+        },
+        "observed": {
+          "critical_multiplier": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          },
+          "first_panel_multiplier_count": {
+            "None": 107
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          }
+        },
+        "single_volley_100ms": {
+          "critical_multiplier": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          },
+          "first_panel_multiplier_count": {
+            "None": 107
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "p25": null,
+            "p75": null
+          }
+        }
+      },
+      "total_fast_charge_fc_per_trial": 0.0,
+      "trial_count": 30,
+      "variation_across_seed_pulses": {
+        "event_count": 1,
+        "fast_charge_fc": 1,
+        "minimum_threshold_distance_mv": 1,
+        "peak_fast_current_pa": 1,
+        "peak_voltage_mv": 1
+      }
+    },
+    "visual_to_KC/nominal": {
+      "all_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 2.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 22.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 182000,
+          "median": 182000.0,
+          "min": 182000,
+          "n": 59,
+          "p25": 182000.0,
+          "p75": 182000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.06666666666666668,
+          "median": 0.06666666666666667,
+          "min": 0.06666666666666667,
+          "n": 59,
+          "p25": 0.06666666666666667,
+          "p75": 0.06666666666666667
+        },
+        "critical_multiplier_linear": {
+          "max": 533.5610844627731,
+          "median": 24.252776566485508,
+          "min": 7.020540585035388,
+          "n": 59,
+          "p25": 16.421150800224655,
+          "p75": 48.90976607574513
+        },
+        "distinct_arrival_ticks": {
+          "max": 15,
+          "median": 15.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 15.0
+        },
+        "event_count": {
+          "max": 45,
+          "median": 15.0,
+          "min": 0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 15.0
+        },
+        "event_impulse_pa": {
+          "max": 34.199999999999996,
+          "median": 0.8999999999999999,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 10.125
+        },
+        "fast_charge_fc": {
+          "max": 170.99999999999957,
+          "median": 4.499999999999989,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 50.62499999999996
+        },
+        "leak_charge_fc": {
+          "max": 0.0,
+          "median": -4.499999999999634,
+          "min": -170.99999999999795,
+          "n": 107,
+          "p25": -50.624999999999474,
+          "p75": 0.0
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 14.0,
+          "median": 13.947522409682108,
+          "min": 12.005851567920331,
+          "n": 107,
+          "p25": 13.409627108923775,
+          "p75": 14.0
+        },
+        "peak_depolarization_mv": {
+          "max": 1.994148432079669,
+          "median": 0.05247759031789201,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.5903728910762247
+        },
+        "peak_fast_current_pa": {
+          "max": 2.462930674055978,
+          "median": 0.06481396510673627,
+          "min": 0.0,
+          "n": 107,
+          "p25": 0.0,
+          "p75": 0.729157107450783
+        },
+        "peak_voltage_mv": {
+          "max": -60.00585156792033,
+          "median": -61.94752240968211,
+          "min": -62.0,
+          "n": 107,
+          "p25": -62.0,
+          "p75": -61.40962710892377
+        }
+      },
+      "contacted_count": 59,
+      "contacted_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 22.0,
+          "min": 1,
+          "n": 59,
+          "p25": 11.0,
+          "p75": 32.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 1,
+          "n": 59,
+          "p25": 1.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 182000,
+          "median": 182000.0,
+          "min": 182000,
+          "n": 59,
+          "p25": 182000.0,
+          "p75": 182000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.06666666666666668,
+          "median": 0.06666666666666667,
+          "min": 0.06666666666666667,
+          "n": 59,
+          "p25": 0.06666666666666667,
+          "p75": 0.06666666666666667
+        },
+        "critical_multiplier_linear": {
+          "max": 533.5610844627731,
+          "median": 24.252776566485508,
+          "min": 7.020540585035388,
+          "n": 59,
+          "p25": 16.421150800224655,
+          "p75": 48.90976607574513
+        },
+        "distinct_arrival_ticks": {
+          "max": 15,
+          "median": 15.0,
+          "min": 15,
+          "n": 59,
+          "p25": 15.0,
+          "p75": 15.0
+        },
+        "event_count": {
+          "max": 45,
+          "median": 15.0,
+          "min": 15,
+          "n": 59,
+          "p25": 15.0,
+          "p75": 15.0
+        },
+        "event_impulse_pa": {
+          "max": 34.199999999999996,
+          "median": 9.899999999999999,
+          "min": 0.44999999999999996,
+          "n": 59,
+          "p25": 4.949999999999999,
+          "p75": 14.625
+        },
+        "fast_charge_fc": {
+          "max": 170.99999999999957,
+          "median": 49.499999999999915,
+          "min": 2.2499999999999947,
+          "n": 59,
+          "p25": 24.750000000000018,
+          "p75": 73.12499999999989
+        },
+        "leak_charge_fc": {
+          "max": -2.2499999999996394,
+          "median": -49.49999999999945,
+          "min": -170.99999999999795,
+          "n": 59,
+          "p25": -73.12499999999915,
+          "p75": -24.749999999999662
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 13.973761204841061,
+          "median": 13.422746506503245,
+          "min": 12.005851567920331,
+          "n": 59,
+          "p25": 13.147239157334344,
+          "p75": 13.711373253251619
+        },
+        "peak_depolarization_mv": {
+          "max": 1.994148432079669,
+          "median": 0.5772534934967553,
+          "min": 0.0262387951589389,
+          "n": 59,
+          "p25": 0.2886267467483812,
+          "p75": 0.8527608426656563
+        },
+        "peak_fast_current_pa": {
+          "max": 2.462930674055978,
+          "median": 0.7129536161740989,
+          "min": 0.03240698255336814,
+          "n": 59,
+          "p25": 0.3564768080870495,
+          "p75": 1.0532269329844643
+        },
+        "peak_voltage_mv": {
+          "max": -60.00585156792033,
+          "median": -61.422746506503245,
+          "min": -61.97376120484106,
+          "n": 59,
+          "p25": -61.71137325325162,
+          "p75": -61.14723915733434
+        }
+      },
+      "events_per_trial": 1140,
+      "first_panel_multiplier_count": {
+        "128.0": 5,
+        "16.0": 12,
+        "256.0": 1,
+        "32.0": 23,
+        "512.0": 2,
+        "64.0": 9,
+        "8.0": 2,
+        "None": 53
+      },
+      "impulse_pa_per_trial": 642.15,
+      "meaningful_count": 31,
+      "receiving_events_count": 59,
+      "receiving_targets": {
+        "anatomical_contact_count": {
+          "max": 76,
+          "median": 22.0,
+          "min": 1,
+          "n": 59,
+          "p25": 11.0,
+          "p75": 32.5
+        },
+        "anatomical_pair_count": {
+          "max": 3,
+          "median": 1.0,
+          "min": 1,
+          "n": 59,
+          "p25": 1.0,
+          "p75": 1.0
+        },
+        "arrival_span_us": {
+          "max": 182000,
+          "median": 182000.0,
+          "min": 182000,
+          "n": 59,
+          "p25": 182000.0,
+          "p75": 182000.0
+        },
+        "best_5ms_impulse_fraction": {
+          "max": 0.06666666666666668,
+          "median": 0.06666666666666667,
+          "min": 0.06666666666666667,
+          "n": 59,
+          "p25": 0.06666666666666667,
+          "p75": 0.06666666666666667
+        },
+        "critical_multiplier_linear": {
+          "max": 533.5610844627731,
+          "median": 24.252776566485508,
+          "min": 7.020540585035388,
+          "n": 59,
+          "p25": 16.421150800224655,
+          "p75": 48.90976607574513
+        },
+        "distinct_arrival_ticks": {
+          "max": 15,
+          "median": 15.0,
+          "min": 15,
+          "n": 59,
+          "p25": 15.0,
+          "p75": 15.0
+        },
+        "event_count": {
+          "max": 45,
+          "median": 15.0,
+          "min": 15,
+          "n": 59,
+          "p25": 15.0,
+          "p75": 15.0
+        },
+        "event_impulse_pa": {
+          "max": 34.199999999999996,
+          "median": 9.899999999999999,
+          "min": 0.44999999999999996,
+          "n": 59,
+          "p25": 4.949999999999999,
+          "p75": 14.625
+        },
+        "fast_charge_fc": {
+          "max": 170.99999999999957,
+          "median": 49.499999999999915,
+          "min": 2.2499999999999947,
+          "n": 59,
+          "p25": 24.750000000000018,
+          "p75": 73.12499999999989
+        },
+        "leak_charge_fc": {
+          "max": -2.2499999999996394,
+          "median": -49.49999999999945,
+          "min": -170.99999999999795,
+          "n": 59,
+          "p25": -73.12499999999915,
+          "p75": -24.749999999999662
+        },
+        "minimum_threshold_distance_mv": {
+          "max": 13.973761204841061,
+          "median": 13.422746506503245,
+          "min": 12.005851567920331,
+          "n": 59,
+          "p25": 13.147239157334344,
+          "p75": 13.711373253251619
+        },
+        "peak_depolarization_mv": {
+          "max": 1.994148432079669,
+          "median": 0.5772534934967553,
+          "min": 0.0262387951589389,
+          "n": 59,
+          "p25": 0.2886267467483812,
+          "p75": 0.8527608426656563
+        },
+        "peak_fast_current_pa": {
+          "max": 2.462930674055978,
+          "median": 0.7129536161740989,
+          "min": 0.03240698255336814,
+          "n": 59,
+          "p25": 0.3564768080870495,
+          "p75": 1.0532269329844643
+        },
+        "peak_voltage_mv": {
+          "max": -60.00585156792033,
+          "median": -61.422746506503245,
+          "min": -61.97376120484106,
+          "n": 59,
+          "p25": -61.71137325325162,
+          "p75": -61.14723915733434
+        }
+      },
+      "target_count": 107,
+      "threshold_bands": {
+        "critical_2_to_10": 4,
+        "critical_at_least_10": 55,
+        "critical_at_most_2": 0,
+        "no_finite_critical": 48
+      },
+      "timing": {
+        "bin20ms_midpoint": {
+          "critical_multiplier": {
+            "max": 398.41610449092207,
+            "median": 18.10982293140255,
+            "min": 5.242317164353457,
+            "n": 59,
+            "p25": 12.261859276470748,
+            "p75": 36.52147624499722
+          },
+          "first_panel_multiplier_count": {
+            "128.0": 3,
+            "16.0": 18,
+            "256.0": 2,
+            "32.0": 15,
+            "512.0": 5,
+            "64.0": 9,
+            "8.0": 7,
+            "None": 48
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.3392056155575112,
+            "median": 1.3392056155574537,
+            "min": 1.339205615557348,
+            "n": 59,
+            "p25": 1.3392056155574288,
+            "p75": 1.339205615557461
+          }
+        },
+        "observed": {
+          "critical_multiplier": {
+            "max": 533.5610844627731,
+            "median": 24.252776566485508,
+            "min": 7.020540585035388,
+            "n": 59,
+            "p25": 16.421150800224655,
+            "p75": 48.90976607574513
+          },
+          "first_panel_multiplier_count": {
+            "128.0": 5,
+            "16.0": 12,
+            "256.0": 1,
+            "32.0": 23,
+            "512.0": 2,
+            "64.0": 9,
+            "8.0": 2,
+            "None": 53
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "n": 59,
+            "p25": 1.0,
+            "p75": 1.0
+          }
+        },
+        "single_volley_100ms": {
+          "critical_multiplier": {
+            "max": 62.22512443941114,
+            "median": 2.8284147472459162,
+            "min": 0.8187516373606596,
+            "n": 59,
+            "p25": 1.9150724851144192,
+            "p75": 5.70396974027927
+          },
+          "first_panel_multiplier_count": {
+            "1.0": 3,
+            "16.0": 3,
+            "2.0": 14,
+            "32.0": 2,
+            "4.0": 20,
+            "64.0": 5,
+            "8.0": 12,
+            "None": 48
+          },
+          "observed_to_timing_critical_ratio": {
+            "max": 8.574688910141171,
+            "median": 8.574688910139905,
+            "min": 8.574688910139121,
+            "n": 59,
+            "p25": 8.574688910139809,
+            "p75": 8.574688910140038
+          }
+        }
+      },
+      "total_fast_charge_fc_per_trial": 3210.7499999999973,
+      "trial_count": 30,
+      "variation_across_seed_pulses": {
+        "event_count": 1,
+        "fast_charge_fc": 1,
+        "minimum_threshold_distance_mv": 1,
+        "peak_fast_current_pa": 1,
+        "peak_voltage_mv": 1
+      }
+    }
+  },
+  "protocol_sha256": "0519d206e78c597ae87a563812e51297a1312016e4673ff55bc57dc103f13f7a",
+  "source_result_sha256": "2d7f06d302685224e8f4e4696a44d322ccf0df9db63de884f6e4eb4c218051de"
+}

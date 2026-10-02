@@ -1,0 +1,12 @@
+{
+  "candidate_groups_checked": 7,
+  "candidate_sets_sha256": "768da97b3ef6debc60fb38f10babb0b58fda02f6fd435bbef995d1d87cf2dfa6",
+  "direct_parent_pairs_checked": 19692,
+  "parent_ledger_sha256": "2d00cb8779fd1f5135de54dfb65ce561c74f4d8509ae659c7eb875c7c57ef72d",
+  "partner_roi_summary_sha256": "7776a9186180998cf9431262b4b42af1fb4242ebe7bbbd99d4be262627999491",
+  "protocol_sha256": "f9d0b6bf02247d0cc251bb24071786299e1cc57faf70ea964139a7e88ab8b792",
+  "source_contacts_checked": 60502,
+  "source_partner_contacts_checked": 3183,
+  "status": "pass",
+  "summary_sha256": "a3234b0b570ab19cbf19063ef96092c7a2df517435fe494e32263a65ae07a8ba"
+}

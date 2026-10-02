@@ -1,0 +1,68 @@
+{
+  "experiment_id": "MALECNS-DAN-BRIDGE-LEVEL3B-PAM08-ENSEMBLE-v1",
+  "status": "frozen_before_learning",
+  "pretraining_stimulus_revision": {
+    "reason": "The first 1.2-mV-equivalent, 20-ms Level 3 pulse produced zero DAN spikes in the frozen LIF model; no learning was run. The 2.0-unit, 20-ms PAM pulse was already specified in docs/B2_CANDIDATE1_DESIGN.md, and its LIF threshold-crossing time is approximately 13.9 ms at tau_m=20 ms.",
+    "original_config": "configs/malecns_dan_bridge_level3.json",
+    "original_config_sha256": "e88c14dfcc712be2359099703e87d2da14d502215e28230c006eb2881893cdff",
+    "original_pretraining_receipt": "runs/malecns_dan_bridge_level3/pretraining_v0.json",
+    "original_pretraining_receipt_sha256": "95238dc47331d2d1563e22d3b96a4d7bff708e28606a6ae91a36e3fea5fd87a5",
+    "level2_settings_changed": false,
+    "learning_outcomes_seen": false
+  },
+  "parent_level2_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "parent_level2_config_sha256": "e81a9da42f28be4ad288f8f416a8186b2443230c012d1563bc827c3f0c8b5485",
+  "anatomy_audit": "docs/figures/l3_gamma4_dan_cohort_coverage_audit.json",
+  "anatomy_audit_sha256": "dd92f85ab03d8381860a2c8bf324ced19802e593ca95d6bbae9008b6cb3e9897",
+  "dan_source_id": 87177,
+  "dan_identity": "PAM08(y4)_L; MaleCNS-v1 traced DAN; dopamine consensus",
+  "dan_stimulation": {
+    "onset": "fixed Level 2 teacher event time: observation window plus inherited 1000-us lag",
+    "amplitude_mv_equivalent": 2.0,
+    "duration_us": 20000,
+    "model": "same LIF parameters and dt as the frozen Level 2 circuit; fresh resting DAN state per presentation",
+    "activity_gate": "1.0 if at least one observed DAN spike during the fixed current pulse; otherwise 0.0",
+    "ensemble_policy": "Stimulate all three DAN bodies simultaneously at every scheduled teaching event; each uses its own fresh resting LIF state."
+  },
+  "local_gate": {
+    "anatomical_rule": "A KC→MBON05 weight slot is eligible for DAN-gated LTD only when the KC has local presentation eligibility and at least one DAN in dan_source_ids has a strict same-compartment γ4 contact to that KC and spikes on this presentation. The union of these slots spans the frozen cohort; all 32 weights remain present.",
+    "plasticity_rule": "Level 2 presentation-local eligibility and LTD formula; replace artificial teacher bit by observed DAN spike activity. This is an engineering assumption.",
+    "no_dan_activity": "zero LTD update regardless of eligibility",
+    "dan_to_mbon05_direct_pair": "48 measured contacts are recorded in the audit but no direct electrical effect is added to this reduced readout; its physiological effect is unknown.",
+    "dan_gate": "per KC: local eligibility AND at least one anatomically connected ensemble DAN spike; no connected DAN spike means zero update."
+  },
+  "training": {
+    "schedule": "exact frozen Level 2 v2.5 120-block, 1200-presentation sequence in each arm",
+    "arms": [
+      "target_region",
+      "wrong_region_control",
+      "matched_dan_on_plasticity_off_control"
+    ],
+    "stop_early": false,
+    "evaluation": "frozen teacher/plasticity-off full position grid after each block and at completion",
+    "control": "matched DAN-on/plasticity-off; target schedule and three DAN stimulations run, all KC→MBON05 weights frozen"
+  },
+  "scope": "Level 3B PAM08 ensemble bridge only; same frozen Level 2 electrical model and readout, no visual, motor, decoder, RPE, or osu timing pathway",
+  "dan_source_ids": [
+    87177,
+    107285,
+    55210
+  ],
+  "dan_identities": {
+    "87177": "PAM08 PAM08(y4)_L; MaleCNS-v1 traced DAN; dopamine consensus",
+    "107285": "PAM08 PAM08(y4)_L; MaleCNS-v1 traced DAN; dopamine consensus",
+    "55210": "PAM08 PAM08(y4)_L; MaleCNS-v1 traced DAN; dopamine consensus"
+  },
+  "anatomy_selection": {
+    "method": "Exact minimum-cardinality set cover maximizing strict same-compartment γ4 coverage within the complete, previously audited 25-body PAM08 roster.",
+    "candidate_roster_complete": true,
+    "dan_source_ids": [
+      87177,
+      107285,
+      55210
+    ],
+    "frozen_kc_coverage_count": 32,
+    "global_all_dan_scan_status": "INCONCLUSIVE_MISSING_ROI",
+    "global_all_dan_minimum_claim": "not claimed; broader scan has unresolved ROI chunks"
+  }
+}

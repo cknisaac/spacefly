@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "stage": "A10",
+  "cases": {
+    "372": {
+      "first_crossing_delta_us": 0,
+      "classification": "INCONCLUSIVE",
+      "signed_credit_available": false,
+      "signed_positive_edges": 0,
+      "signed_negative_edges": 0
+    },
+    "373": {
+      "first_crossing_delta_us": 0,
+      "classification": "INCONCLUSIVE",
+      "signed_credit_available": false,
+      "signed_positive_edges": 0,
+      "signed_negative_edges": 0
+    },
+    "377": {
+      "first_crossing_delta_us": 48000,
+      "classification": "PASS",
+      "signed_credit_available": true,
+      "signed_positive_edges": 172,
+      "signed_negative_edges": 308
+    }
+  },
+  "action_trace_replay_matches": 3,
+  "historical_training_events_replayed": 377,
+  "contract_c3": "FAIL",
+  "a10_stage_result": "FAIL",
+  "branches": 9,
+  "frozen_notes_replayed": 288,
+  "down_actions_replayed": 512,
+  "motor_on_rises_recomputed": 1775,
+  "protocol_sha256": "911c59982eb4229f2f6e77e1ffee164355a268e36717d3301a2c830b9e4c1924",
+  "result_sha256": "185d23f5a1d9db7c2d38c0f7a5e9050bcac697516b7829764397e6eacf31c28a"
+}

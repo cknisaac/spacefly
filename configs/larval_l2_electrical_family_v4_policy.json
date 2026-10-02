@@ -1,0 +1,79 @@
+{
+  "policy_id": "larval_l2_engineering_family_v4_2026-10-02",
+  "status": "FROZEN_BEFORE_FAMILY_SIMULATION",
+  "purpose": "Task-independent pre-training controllability family under explicitly authorized engineering assumptions; not quantitative biological calibration.",
+  "frozen_anatomy": {
+    "manifest": "configs/larval_l2_context_subgraph_manifest_v1.json",
+    "sha256": "97560028444a02c8bb0c68c6608fd68dcfc5c103276b67debd30b059d0f6003b"
+  },
+  "parent_context_model": {
+    "path": "configs/larval_l2_electrical_model_v3.json",
+    "sha256": "c5f9adcf02378ded60ad66f11f8e1e03738955b94a1ab0a1089cc99b3033f60e",
+    "status": "Preserved unchanged; family runner reads topology/signs/role boundaries but applies policy values below."
+  },
+  "parameter_axes": {
+    "contact_effect_mV_equivalent_per_contact": {
+      "values": [0.01, 0.05, 0.125, 0.275],
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "A predeclared broad model family spanning the earlier 0.01 and 0.05 mV-equivalent/contact reference scales, a geometric midpoint between 0.05 and 0.275, and 0.275 used as a global model scale in an adult Drosophila connectome SNN. None is claimed to be larval L2 physiology; the broad values are fixed without task or controllability outcomes."
+    },
+    "tau_m_ms": {
+      "values": [10, 20],
+      "capacitance_nF": 1.0,
+      "derived_R_MOhm": [10, 20],
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "The endpoints include the existing 10 ms reference and a 20 ms Drosophila modeling prior; C is held at 1 nF and R is derived as tau/C. This is a model family, not cell-specific physiology."
+    },
+    "threshold_mV_equivalent": {
+      "values": [1, 3, 7],
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "The lower endpoint preserves the earlier normalized 1 mV-equivalent threshold; 7 mV spans the resting-to-threshold difference used in published Drosophila connectome SNN parameterizations; 3 is the fixed interior grid point. Absolute voltages are not transferred as L2 measurements."
+    },
+    "sensory_and_context_pulse_mV_equivalent": {
+      "values": [8, 12, 16],
+      "duration_us": 5000,
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "A symmetric ± one-third family around the previously frozen 12 mV-equivalent, 5 ms pulse. KC and nociceptive-context channels share the same amplitude/duration in this family, so there is no independently tuned context gain."
+    },
+    "tau_syn_ms": {
+      "fixed_value": 5,
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "Held at the previously frozen reference and common Drosophila SNN convention; not treated as L2 measured physiology."
+    },
+    "delay_ms": {
+      "fixed_value": 2,
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "Held at the previously frozen reference, close to 1.8 ms used in published Drosophila connectome SNNs; not L2 measured physiology."
+    },
+    "tonic_background_mV_equivalent": {
+      "fixed_value": 0,
+      "label": "ENGINEERING ASSUMPTION",
+      "rationale": "No tonic-drive measurement for this selected path is available; use zero to keep spontaneous activity/action an explicit neutral test rather than add an ungrounded context current."
+    },
+    "action_threshold_goro_spikes": {
+      "offline_values": [1, 2],
+      "primary_value_for_feasibility": 1,
+      "label": "ENGINEERING OVERLAY",
+      "rationale": "Use the previously precommitted one-Goro-spike event as the primary fixed output; two spikes is an offline robustness check on the same recorded response, not another neural parameter or tuned decoder."
+    }
+  },
+  "family_size": 72,
+  "controllability_protocol": {
+    "kc_to_mbon_d1_multipliers": [0.25, 0.5, 0.75, 1.0],
+    "sensory_states": [0, 1, 2, 3, 4, 5, 6, 7],
+    "replays_per_cell": 2,
+    "plasticity": false,
+    "teaching": false,
+    "exploration": false,
+    "only_network_quantity_varied_within_each_family_member": "selected KC_to_MBON-d1 weights",
+    "rule_direction": "LTD-compatible controllability requires decreasing KC_to_MBON-d1 weights to increase or preserve Goro action-state sets as the MBON-d1 inhibitory gate is relieved."
+  },
+  "robust_feasible_region_criterion": {
+    "per_configuration": "Zero-drive baseline has no action and finite state; all replays are deterministic and finite; under the primary 1-spike output, at least one lower KC-weight factor yields actions for 2-6 of 8 sensory states; action-state sets are nested as KC weights decrease; factor 1.0 is the no-learning reference.",
+    "family": "At least 12 of 72 configurations qualify; qualifying configurations span at least two values on each varied axis (contact effect, tau_m, threshold, pulse amplitude); largest face-connected component in the four-dimensional grid has at least 8 configurations.",
+    "readout_robustness": "At least 6 configurations in that same connected component retain a non-saturated 2-6 state action set at the offline 2-spike threshold with nested LTD-direction sets.",
+    "selection_if_pass": "Select the feasible configuration nearest the coordinate-wise median of the largest qualifying connected component; tie-break by lower contact scale, then lower pulse amplitude, then lexicographic parameter order. Do not use task performance, action accuracy, or eventual learning outcomes.",
+    "if_fail": "Reject L2 under this abstraction and stop before plasticity; preserve all failed and family results."
+  },
+  "biological_scope": "Signs/effect classes are inherited from the evidence ledger; all numeric family values remain engineering assumptions or overlays. A family PASS would establish robust simulator controllability only, not quantitative similarity to a living larva."
+}

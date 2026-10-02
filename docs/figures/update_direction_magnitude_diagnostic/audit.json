@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "cases": 4,
+  "branches": 16,
+  "probe_events": 512,
+  "down_actions": 800,
+  "full_update_clipped_edge_events": 368,
+  "protocol_sha256": "1605e5101e77773793e646b6d2165a113c2b122952f1ebf9b1b2bcdb09fb30b3",
+  "ledger_sha256": "552cb85b25445b00c79b2fe3c0f6833c85b7fa7d9112cf30026bec251ef56d1f",
+  "case_receipts": {
+    "2004:213": {
+      "branch_mean_utility": {
+        "no_update": -0.9609375,
+        "small_positive": -0.9609375,
+        "full_actual": -0.23828125,
+        "small_negative": -1.0
+      },
+      "full_clipped_edges": 0,
+      "full_applied_over_raw_l1": 1.0,
+      "delta_utility_vs_no": {
+        "small_positive": 0.0,
+        "full_actual": 0.72265625,
+        "small_negative": -0.0390625
+      }
+    },
+    "2004:384": {
+      "branch_mean_utility": {
+        "no_update": -1.0,
+        "small_positive": -1.0,
+        "full_actual": -1.0,
+        "small_negative": -1.0
+      },
+      "full_clipped_edges": 79,
+      "full_applied_over_raw_l1": 0.6511623379689514,
+      "delta_utility_vs_no": {
+        "small_positive": 0.0,
+        "full_actual": 0.0,
+        "small_negative": 0.0
+      }
+    },
+    "2002:200": {
+      "branch_mean_utility": {
+        "no_update": 0.328125,
+        "small_positive": 0.328125,
+        "full_actual": 0.59765625,
+        "small_negative": 0.328125
+      },
+      "full_clipped_edges": 0,
+      "full_applied_over_raw_l1": 1.0000000000000002,
+      "delta_utility_vs_no": {
+        "small_positive": 0.0,
+        "full_actual": 0.26953125,
+        "small_negative": 0.0
+      }
+    },
+    "2002:384": {
+      "branch_mean_utility": {
+        "no_update": -0.833984375,
+        "small_positive": -0.9609375,
+        "full_actual": 0.11328125,
+        "small_negative": -0.833984375
+      },
+      "full_clipped_edges": 289,
+      "full_applied_over_raw_l1": 0.4314776683157524,
+      "delta_utility_vs_no": {
+        "small_positive": -0.126953125,
+        "full_actual": 0.947265625,
+        "small_negative": 0.0
+      }
+    }
+  }
+}

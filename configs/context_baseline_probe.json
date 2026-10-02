@@ -1,0 +1,25 @@
+{
+  "study_id": "fixed_weight_context_baseline_v1",
+  "question": "At a fixed failed-policy checkpoint, how much of the proposed three-factor update comes from eligibility-reward covariance versus a stimulus-context reward-mean mismatch in the global baseline?",
+  "source": "Original overnight heldout/on seed 2013, exact replay checkpoint immediately after training outcome 24 and its actual update, before note 25.",
+  "probe_note_index_zero_based": 24,
+  "cue_gains": [0.75, 0.9, 1.0, 1.1, 1.25],
+  "sampling": {
+    "estimation_repeats_per_gain": 32,
+    "evaluation_repeats_per_gain": 32,
+    "independent_stream_seed": "First 8 SHA-256 bytes of UTF-8 study_id|split|gain|repeat as unsigned big-endian integer; split is estimate or evaluate, gain is Python repr of the parsed float, and repeat is 0..31.",
+    "exploration_probability": 0.002,
+    "plasticity_enabled": false,
+    "same_checkpoint_for_all_trials": true,
+    "same_note_time_and_prior_state_for_all_gains": true
+  },
+  "estimator": "For each cue gain, b_context is the mean original game utility in the estimation split. The existing global b is the saved RewardPredictor expected_utility at the checkpoint. No estimation outcome is reused to evaluate proposed updates.",
+  "evaluation": "For each evaluation trial, record all 480 edge eligibilities at its first resolved probe-note judgement and actual game utility u. Within each gain, mean update is eta*mean[e*(u-b)]. Decompose it as eta*Cov(e,u) + eta*mean(e)*(mean(u)-b), using evaluation-split moments. Weight five gain contexts equally, matching the study's uniform cue-gain generator. Report raw proposals and their clipping at the fixed checkpoint, plus action and utility distributions.",
+  "direction_test": "After evaluating the mean global-baseline and context-baseline raw proposals, clip each at the fixed checkpoint's weight bounds. For each applied direction d, test w0, w0+epsilon*d with epsilon=min(1,0.004 mV/max_abs(d)); a zero direction remains unchanged. Use the identical 16-note no-exploration continuation and three matched exploration streams from experiment C. Do not choose directions or epsilon by probe outcome.",
+  "direction_probe_streams": ["noise_off_inherited", "noise_on_inherited", "noise_on_seed_xor_324508639", "noise_on_seed_xor_610839776"],
+  "interpretation": [
+    "A substantial global drift term reduced by the context baseline supports baseline-context mismatch at this checkpoint; it does not alone prove improved policy.",
+    "If small direction probes are reward-silent at 1 ms resolution, report reward-gradient effects unresolved.",
+    "This selected seed and synthetic cue manipulation do not estimate a general learning rate or validate a biological critic."
+  ]
+}

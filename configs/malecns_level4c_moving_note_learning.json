@@ -1,0 +1,83 @@
+{
+  "experiment_id": "MALECNS-LEVEL4C-MOVING-NOTE-LEARNING-v1",
+  "status": "frozen_before_training",
+  "parent_level4_readout_config": "configs/malecns_level4_moving_note_500ms_readout_validity_v1.json",
+  "parent_level4_readout_config_sha256": "c6be64251d0d28d2e51c64dafc41e5b79b1d89819e47cb5ddd3ee6baab6b3131",
+  "parent_level4b_config": "configs/malecns_level4b_moving_output_admission_repair.json",
+  "parent_level4b_config_sha256": "219c204f16d0d2f183e7e3ed2eb961f166c595496152250756889504fd3a782e",
+  "parent_level4b_result": "runs/malecns_level4b_moving_output_admission_repair/result.json",
+  "parent_level4b_result_sha256": "cb781d57e5c7861e94aa6554c7df56b356598db9fab3f2f6f8866ac2b1939586",
+  "parent_speed_config": "configs/malecns_level4_moving_note_admitted_500ms.json",
+  "parent_speed_config_sha256": "95abdc36736bcdb8f890ab2ff48a5e64ba2aefd41f48a920d21c6ac110ba18af",
+  "parent_level3b_config": "configs/malecns_dan_bridge_level3b_ensemble.json",
+  "parent_level3b_config_sha256": "92eefb802c1387a314fe8cc9f1257c8eeb80fc5a49117bc6e8b5641b61e29b0f",
+  "parent_level3b_result": "runs/malecns_dan_bridge_level3b/result.json",
+  "parent_level3b_result_sha256": "3e76b71b893e5ceed41bf25bda707f7393ce70442b9bc6fe688645a84ace7e00",
+  "anatomy_audit": "docs/figures/l3_gamma4_dan_cohort_coverage_audit.json",
+  "anatomy_audit_sha256": "dd92f85ab03d8381860a2c8bf324ced19802e593ca95d6bbae9008b6cb3e9897",
+  "dan_source_ids": [87177, 107285, 55210],
+  "protocol": {
+    "traversal_duration_us": 500000,
+    "dt_us": 1000,
+    "position_bin_width": 0.05,
+    "kc_count": 32,
+    "trajectory": "one note moves linearly x=1.0 to x=0.0; encode current x only at each dt tick",
+    "kc_source_ids": "exact frozen Level 3B cohort of 32",
+    "mbon_source": "MBON05",
+    "encoder": "inherited Gaussian encoder; unchanged",
+    "encoder_sigma": 0.08,
+    "peak_drive_mv_equivalent": 1.2,
+    "lif_contact_model": "inherited Level 3B LIF/contact model; unchanged",
+    "training_duration": {
+      "blocks": 120,
+      "presentations": 1200,
+      "presentations_per_block": 10,
+      "trial_spacing_us": 200000,
+      "stop_early": false,
+      "schedule_source": "exact frozen Level 3B 120-block sequence; class labels are used only to schedule teaching and never enter sensory input"
+    },
+    "dan_stimulation": {
+      "dan_source_ids": [87177, 107285, 55210],
+      "pulse_amplitude_mv_equivalent": 2.0,
+      "pulse_duration_us": 20000,
+      "pulse_onset": "the tick when the moving note reaches its arm-specific trigger position",
+      "model": "same frozen LIF parameters; each DAN starts from fresh resting state",
+      "plasticity_gate": "KC eligibility at the first spike of at least one anatomically connected ensemble DAN"
+    },
+    "teaching_positions": {
+      "target": 0.7,
+      "wrong": 0.2,
+      "target_core": [0.65, 0.75],
+      "wrong_core": [0.15, 0.25]
+    },
+    "arms": [
+      "target teaching: stimulate on target-class scheduled notes at x=0.70; plasticity on",
+      "wrong-region teaching: stimulate on wrong-region scheduled notes at x=0.20; plasticity on",
+      "matched DAN-on/plasticity-off control: stimulate on target-class scheduled notes at x=0.70; plasticity off"
+    ],
+    "eligibility": "reset at the beginning of each note; observe current-note KC spikes through the first connected DAN spike; discard at note end",
+    "learning_rule": "inherited presentation-local LocalLTD; eta and tau unchanged; no updates without positive local eligibility and active anatomically connected DAN",
+    "eta": 0.00005,
+    "eligibility_tau_us": 1000000,
+    "weight_floor_fraction_of_immutable_original": 0.2,
+    "weight_commit": "apply updates at note end; updated weights affect the next note; original run-start weights remain immutable for floor enforcement",
+    "action_validity": "reset disabled at each note; enable on first KC spike of that note; thereafter action iff MBON05 voltage <= inherited fixed threshold",
+    "action_threshold_mv": 0.005572335995331903,
+    "first_action_metric": "earliest enabled dt sample with MBON05 voltage <= the fixed threshold; report its time and current position, or null if none",
+    "position_action_map": "for each inherited 0.05 position bin, action is true if any enabled dt sample in that bin crosses the fixed threshold; bins with no enabled samples are disabled",
+    "post_training_evaluation": "fresh 500-ms note per arm; DAN OFF, plasticity OFF, trained weights retained; same resettable first-KC-spike validity rule",
+    "predeclared_pass_criteria": [
+      "naive baseline has no first action",
+      "target-trained post-training first action is within target core [0.65,0.75]",
+      "wrong-region-trained post-training first action is within wrong core [0.15,0.25]",
+      "matched DAN-on/plasticity-off control has unchanged weights and no first action",
+      "target and wrong first actions persist on fresh evaluation with DAN/plasticity OFF",
+      "no action occurs before the first KC spike in any training or evaluation note",
+      "all weight updates have positive current-note eligibility and an active anatomically connected DAN",
+      "all weights remain at or above 20% of immutable original weights",
+      "all 120 blocks and 1200 presentations complete in all arms"
+    ],
+    "stop_rule": "one run only; no parameter tuning, early stopping, or rerun; stop after Level 4C"
+  },
+  "scope": "moving-note internal-learning experiment only; no osu timing scoring, trained decoder, or biological downstream motor neurons"
+}

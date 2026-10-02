@@ -1,0 +1,1439 @@
+{
+  "study_id": "synthetic_same_network_continuation_v1",
+  "status": "complete",
+  "seed_count": 8,
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+  ],
+  "probe_note_count": 32,
+  "training_outcomes_per_condition": 384,
+  "checkpoints": {
+    "24": {
+      "conditions": {
+        "on": {
+          "mean_good_or_better_percent": 62.5,
+          "mean_non_miss_percent": 77.34375,
+          "mean_utility": 0.15234375,
+          "mean_null_downs_per_probe": 20,
+          "mean_upper_bound_edges": 68.875,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.92578125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 20.21875,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.328125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 52.625,
+              "null_down_count": 32,
+              "upper_bound_edges": 286
+            },
+            "2002": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.625,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 27.28125,
+              "null_down_count": 32,
+              "upper_bound_edges": 265
+            },
+            "2003": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.984375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 8.78125,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.90234375,
+              "non_miss_count": 10,
+              "hit_mean_absolute_error_ms": 121.4,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.765625,
+              "non_miss_count": 24,
+              "hit_mean_absolute_error_ms": 118.41666666666667,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.984375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 8.78125,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.9609375,
+              "non_miss_count": 4,
+              "hit_mean_absolute_error_ms": 117.0,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "off": {
+          "mean_good_or_better_percent": 0.0,
+          "mean_non_miss_percent": 0.0,
+          "mean_utility": -1.0,
+          "mean_null_downs_per_probe": 0,
+          "mean_upper_bound_edges": 0,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "shuffled": {
+          "mean_good_or_better_percent": 0.0,
+          "mean_non_miss_percent": 12.5,
+          "mean_utility": -0.9560546875,
+          "mean_null_downs_per_probe": 4,
+          "mean_upper_bound_edges": 0,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.6484375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 116.625,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            }
+          }
+        }
+      },
+      "paired": {
+        "off": {
+          "mean_good_advantage_percentage_points": 62.5,
+          "strict_good_win_seeds": 5,
+          "tie_seeds": 3,
+          "loss_seeds": 0,
+          "mean_utility_advantage": 1.15234375,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 100.0,
+            "2001": 100.0,
+            "2002": 100.0,
+            "2003": 100.0,
+            "2004": 0.0,
+            "2005": 0.0,
+            "2006": 100.0,
+            "2007": 0.0
+          }
+        },
+        "shuffled": {
+          "mean_good_advantage_percentage_points": 62.5,
+          "strict_good_win_seeds": 5,
+          "tie_seeds": 3,
+          "loss_seeds": 0,
+          "mean_utility_advantage": 1.1083984375,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 100.0,
+            "2001": 100.0,
+            "2002": 100.0,
+            "2003": 100.0,
+            "2004": 0.0,
+            "2005": 0.0,
+            "2006": 100.0,
+            "2007": 0.0
+          }
+        }
+      }
+    },
+    "96": {
+      "conditions": {
+        "on": {
+          "mean_good_or_better_percent": 64.0625,
+          "mean_non_miss_percent": 82.03125,
+          "mean_utility": 0.02490234375,
+          "mean_null_downs_per_probe": 37,
+          "mean_upper_bound_edges": 181.75,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.6484375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 116.625,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.4453125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 47.53125,
+              "null_down_count": 64,
+              "upper_bound_edges": 411
+            },
+            "2002": {
+              "good_or_better_percent": 12.5,
+              "mean_utility": -0.70703125,
+              "non_miss_count": 10,
+              "hit_mean_absolute_error_ms": 90.8,
+              "null_down_count": 32,
+              "upper_bound_edges": 326
+            },
+            "2003": {
+              "good_or_better_percent": 75.0,
+              "mean_utility": 0.09375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 72.46875,
+              "null_down_count": 32,
+              "upper_bound_edges": 315
+            },
+            "2004": {
+              "good_or_better_percent": 25.0,
+              "mean_utility": -0.5,
+              "non_miss_count": 8,
+              "hit_mean_absolute_error_ms": 3.0,
+              "null_down_count": 8,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.7421875,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 25.28125,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.328125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 50.09375,
+              "null_down_count": 64,
+              "upper_bound_edges": 402
+            },
+            "2007": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.4453125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 47.90625,
+              "null_down_count": 64,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "off": {
+          "mean_good_or_better_percent": 0.0,
+          "mean_non_miss_percent": 0.0,
+          "mean_utility": -1.0,
+          "mean_null_downs_per_probe": 0,
+          "mean_upper_bound_edges": 0,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "shuffled": {
+          "mean_good_or_better_percent": 21.875,
+          "mean_non_miss_percent": 50.0,
+          "mean_utility": -0.525634765625,
+          "mean_null_downs_per_probe": 9.875,
+          "mean_upper_bound_edges": 38,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 15,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 75.0,
+              "mean_utility": 0.1875,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 61.0,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 100.0,
+              "mean_utility": 0.77734375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 29.6875,
+              "null_down_count": 32,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 32,
+              "upper_bound_edges": 304
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.521484375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 101.46875,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.6484375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 117.96875,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        }
+      },
+      "paired": {
+        "off": {
+          "mean_good_advantage_percentage_points": 64.0625,
+          "strict_good_win_seeds": 7,
+          "tie_seeds": 1,
+          "loss_seeds": 0,
+          "mean_utility_advantage": 1.02490234375,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 0.0,
+            "2001": 100.0,
+            "2002": 12.5,
+            "2003": 75.0,
+            "2004": 25.0,
+            "2005": 100.0,
+            "2006": 100.0,
+            "2007": 100.0
+          }
+        },
+        "shuffled": {
+          "mean_good_advantage_percentage_points": 42.1875,
+          "strict_good_win_seeds": 6,
+          "tie_seeds": 1,
+          "loss_seeds": 1,
+          "mean_utility_advantage": 0.550537109375,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 0.0,
+            "2001": 25.0,
+            "2002": -87.5,
+            "2003": 75.0,
+            "2004": 25.0,
+            "2005": 100.0,
+            "2006": 100.0,
+            "2007": 100.0
+          }
+        }
+      }
+    },
+    "384": {
+      "conditions": {
+        "on": {
+          "mean_good_or_better_percent": 9.765625,
+          "mean_non_miss_percent": 51.953125,
+          "mean_utility": -0.720458984375,
+          "mean_null_downs_per_probe": 16,
+          "mean_upper_bound_edges": 158.875,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.9609375,
+              "non_miss_count": 4,
+              "hit_mean_absolute_error_ms": 127.0,
+              "null_down_count": 32,
+              "upper_bound_edges": 339
+            },
+            "2001": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.833984375,
+              "non_miss_count": 17,
+              "hit_mean_absolute_error_ms": 120.29411764705883,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 78.125,
+              "mean_utility": 0.11328125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 68.25,
+              "null_down_count": 32,
+              "upper_bound_edges": 289
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.7265625,
+              "non_miss_count": 24,
+              "hit_mean_absolute_error_ms": 114.125,
+              "null_down_count": 32,
+              "upper_bound_edges": 309
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.58984375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 106.15625,
+              "null_down_count": 32,
+              "upper_bound_edges": 334
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.765625,
+              "non_miss_count": 24,
+              "hit_mean_absolute_error_ms": 120.0,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "off": {
+          "mean_good_or_better_percent": 0.0,
+          "mean_non_miss_percent": 0.0,
+          "mean_utility": -1.0,
+          "mean_null_downs_per_probe": 0,
+          "mean_upper_bound_edges": 0,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2002": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        },
+        "shuffled": {
+          "mean_good_or_better_percent": 13.671875,
+          "mean_non_miss_percent": 52.734375,
+          "mean_utility": -0.55810546875,
+          "mean_null_downs_per_probe": 5.375,
+          "mean_upper_bound_edges": 5,
+          "per_seed": {
+            "2000": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2001": {
+              "good_or_better_percent": 87.5,
+              "mean_utility": 0.7578125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 20.71875,
+              "null_down_count": 28,
+              "upper_bound_edges": 1
+            },
+            "2002": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2003": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.453125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 101.65625,
+              "null_down_count": 0,
+              "upper_bound_edges": 35
+            },
+            "2004": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -1.0,
+              "non_miss_count": 0,
+              "hit_mean_absolute_error_ms": null,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2005": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.58984375,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 107.4375,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            },
+            "2006": {
+              "good_or_better_percent": 21.875,
+              "mean_utility": -0.7265625,
+              "non_miss_count": 7,
+              "hit_mean_absolute_error_ms": 62.0,
+              "null_down_count": 15,
+              "upper_bound_edges": 4
+            },
+            "2007": {
+              "good_or_better_percent": 0.0,
+              "mean_utility": -0.453125,
+              "non_miss_count": 32,
+              "hit_mean_absolute_error_ms": 97.625,
+              "null_down_count": 0,
+              "upper_bound_edges": 0
+            }
+          }
+        }
+      },
+      "paired": {
+        "off": {
+          "mean_good_advantage_percentage_points": 9.765625,
+          "strict_good_win_seeds": 1,
+          "tie_seeds": 7,
+          "loss_seeds": 0,
+          "mean_utility_advantage": 0.279541015625,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 0.0,
+            "2001": 0.0,
+            "2002": 78.125,
+            "2003": 0.0,
+            "2004": 0.0,
+            "2005": 0.0,
+            "2006": 0.0,
+            "2007": 0.0
+          }
+        },
+        "shuffled": {
+          "mean_good_advantage_percentage_points": -3.90625,
+          "strict_good_win_seeds": 1,
+          "tie_seeds": 5,
+          "loss_seeds": 2,
+          "mean_utility_advantage": -0.162353515625,
+          "per_seed_good_advantage_percentage_points": {
+            "2000": 0.0,
+            "2001": -87.5,
+            "2002": 78.125,
+            "2003": 0.0,
+            "2004": 0.0,
+            "2005": 0.0,
+            "2006": -21.875,
+            "2007": 0.0
+          }
+        }
+      }
+    }
+  },
+  "seed_trajectories": {
+    "2000": {
+      "on": [
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.92578125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 20.21875,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 116.625,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.9609375,
+          "non_miss_count": 4,
+          "hit_mean_absolute_error_ms": 127.0,
+          "null_down_count": 32,
+          "upper_bound_edges": 339
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 15,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2001": {
+      "on": [
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.328125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 52.625,
+          "null_down_count": 32,
+          "upper_bound_edges": 286
+        },
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.4453125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 47.53125,
+          "null_down_count": 64,
+          "upper_bound_edges": 411
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.833984375,
+          "non_miss_count": 17,
+          "hit_mean_absolute_error_ms": 120.29411764705883,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 75.0,
+          "mean_utility": 0.1875,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 61.0,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 87.5,
+          "mean_utility": 0.7578125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 20.71875,
+          "null_down_count": 28,
+          "upper_bound_edges": 1
+        }
+      ]
+    },
+    "2002": {
+      "on": [
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.625,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 27.28125,
+          "null_down_count": 32,
+          "upper_bound_edges": 265
+        },
+        {
+          "good_or_better_percent": 12.5,
+          "mean_utility": -0.70703125,
+          "non_miss_count": 10,
+          "hit_mean_absolute_error_ms": 90.8,
+          "null_down_count": 32,
+          "upper_bound_edges": 326
+        },
+        {
+          "good_or_better_percent": 78.125,
+          "mean_utility": 0.11328125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 68.25,
+          "null_down_count": 32,
+          "upper_bound_edges": 289
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 116.625,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.77734375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 29.6875,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2003": {
+      "on": [
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.984375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 8.78125,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 75.0,
+          "mean_utility": 0.09375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 72.46875,
+          "null_down_count": 32,
+          "upper_bound_edges": 315
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.7265625,
+          "non_miss_count": 24,
+          "hit_mean_absolute_error_ms": 114.125,
+          "null_down_count": 32,
+          "upper_bound_edges": 309
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 32,
+          "upper_bound_edges": 304
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.453125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 101.65625,
+          "null_down_count": 0,
+          "upper_bound_edges": 35
+        }
+      ]
+    },
+    "2004": {
+      "on": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.90234375,
+          "non_miss_count": 10,
+          "hit_mean_absolute_error_ms": 121.4,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 25.0,
+          "mean_utility": -0.5,
+          "non_miss_count": 8,
+          "hit_mean_absolute_error_ms": 3.0,
+          "null_down_count": 8,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.521484375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 101.46875,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2005": {
+      "on": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.765625,
+          "non_miss_count": 24,
+          "hit_mean_absolute_error_ms": 118.41666666666667,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.7421875,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 25.28125,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.6484375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 117.96875,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.58984375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 107.4375,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    },
+    "2006": {
+      "on": [
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.984375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 8.78125,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.328125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 50.09375,
+          "null_down_count": 64,
+          "upper_bound_edges": 402
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.58984375,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 106.15625,
+          "null_down_count": 32,
+          "upper_bound_edges": 334
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 21.875,
+          "mean_utility": -0.7265625,
+          "non_miss_count": 7,
+          "hit_mean_absolute_error_ms": 62.0,
+          "null_down_count": 15,
+          "upper_bound_edges": 4
+        }
+      ]
+    },
+    "2007": {
+      "on": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.9609375,
+          "non_miss_count": 4,
+          "hit_mean_absolute_error_ms": 117.0,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 100.0,
+          "mean_utility": 0.4453125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 47.90625,
+          "null_down_count": 64,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.765625,
+          "non_miss_count": 24,
+          "hit_mean_absolute_error_ms": 120.0,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "off": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ],
+      "shuffled": [
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 32,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -1.0,
+          "non_miss_count": 0,
+          "hit_mean_absolute_error_ms": null,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        },
+        {
+          "good_or_better_percent": 0.0,
+          "mean_utility": -0.453125,
+          "non_miss_count": 32,
+          "hit_mean_absolute_error_ms": 97.625,
+          "null_down_count": 0,
+          "upper_bound_edges": 0
+        }
+      ]
+    }
+  },
+  "limitations": "Diagnostic selected seeds from prior held-out data; 24 independent condition runs, not a 32-seed confirmatory M2 gate. Frozen clones never affect training."
+}

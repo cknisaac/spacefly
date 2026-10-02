@@ -1,0 +1,13 @@
+tiny_brain:
+  neuron_count: 128
+  note_count: 16
+  training_notes: 8
+  first_note_us: 800000
+  note_interval_us: 1000000
+  dt_us: 1000
+  seed: 1
+  exploration_probability: 0.002
+  plasticity_enabled: true
+  modulation_gain: 1.0
+  plasticity_eta: 0.2
+  max_pending_arrivals: 100000

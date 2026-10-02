@@ -1,0 +1,18 @@
+{
+  "stage_id": "MVP-B3",
+  "candidate_id": "MVP-C1",
+  "design": "configs/b2_1_candidate1_resolved.json",
+  "seeds": [31001, 31002, 31003],
+  "nominal_level": "nominal",
+  "sensitivity_levels": ["low", "high"],
+  "note": {"note_id": "b3-isolated", "visible_from_us": 100000, "hit_us": 900000},
+  "end_us": 1100000,
+  "selected_weight_factors": [0.5, 1.0, 1.5],
+  "nominal_single_mechanism_controls": ["selected_output_off", "mbon05_output_off", "bypass_off", "background_only"],
+  "primary": "At least two of three nominal seeds show strictly increasing DNp42 cue-window spike counts and first DOWN at least 1000 us earlier at 1.5x than 0.5x, with first DOWN present in all three weight arms; all seeds show contact-confined signed temporal pairing updates; no nominal background-only first DOWN during the cue.",
+  "pairing_kc_source_id_rule": "lowest source ID in the B2 selected-contact mask",
+  "pairing_pam_source_id_rule": "lowest B1 PAM08 source ID",
+  "pairing_times_us": [1000, 2000],
+  "no_training": true,
+  "no_gain_or_threshold_search": true
+}

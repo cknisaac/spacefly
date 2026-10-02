@@ -1,0 +1,24 @@
+{
+  "config_sha256": "43d5b05c575d6baa595deadd5e86a21e02e8f4f632f6f1558781101432065c7a",
+  "diagnostic_file_sha256": {
+    "31001": "3e295e90acc60f73bf1aad0d1a2743f6153032ba56d2b5f9c36c420310e8cd51",
+    "31002": "b34a85ed89cbc445361846f08518f8cee7774d76859a7114b225faa85060f2ef",
+    "31003": "312dc89cb8ee70c8553148d343088d72808ffb5f3e881b743a25785c0007a932"
+  },
+  "kc_rows": 3210,
+  "nominal_trials": 30,
+  "numpy": "2.3.5",
+  "protocol_sha256": "2feb02be7e43e04812330ef5c1c41231a43ea903b7bb563f58e6c6e2e6afbe8f",
+  "python": "3.12.14",
+  "runner_sha256": "d0c065b5bdc9e6109ed33b69dda61ca17dd5c85f1945890e89b2af6b4a741109",
+  "seeds": [
+    31001,
+    31002,
+    31003
+  ],
+  "source_parent_hashes": {
+    "connections.parquet": "da21af867d4e8e4c627c9916e55af4332302b611a296de1d0a8bc7dd6ebcff7a",
+    "neurons.parquet": "7d9a410d61d4caa934fa3639f9d204291ff0d18c445b2384054b95286d6350eb"
+  },
+  "stage": "B5.5"
+}

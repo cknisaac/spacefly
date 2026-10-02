@@ -1,0 +1,69 @@
+{
+  "stage_id": "MVP-B6.1",
+  "protocol": "configs/b6_1_pathway_comparison_protocol.json",
+  "source_labels": ["MEASURED", "LITERATURE-CONSTRAINED", "INFERRED", "ENGINEERING ASSUMPTION", "UNKNOWN"],
+  "inspected_sources": [
+    {
+      "id": "MaleCNS-v1.0",
+      "kind": "primary connectome data",
+      "uri": "https://male-cns.janelia.org/download/",
+      "local_manifest": "data/raw/malecns_v1/source_manifest.json",
+      "local_validation": "data/processed/malecns_v1_traced/validation_receipt.json",
+      "claim": "Cell identities and aggregate directed pair/contact counts are MEASURED in one adult male CNS; 38,157 comparison-critical rows match the pinned raw traced-only product.",
+      "limit": "The downloaded aggregate pair graph has no per-contact compartment ROI, receptor-dependent sign, conductance, timing or causal response. The separate syn-partner product advertises primary_post ROI but was not among the pinned five files."
+    },
+    {
+      "id": "Hige-2015",
+      "kind": "primary experiment",
+      "uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4674068/",
+      "accessible_form": "indexed primary full-text excerpts and author-hosted PDF",
+      "claim": "LITERATURE-CONSTRAINED gamma1pedc PPL1 pairing produces odor-specific MBON depression; 1-s odor plus four 1-ms DAN pulses at 2 Hz reduced mean odor-response spikes from 118±8.3 to 24±7.4 in n=7; backward pairing with odor 0.5 s after the last pulse gave no change. Synaptic currents were depressed; postsynaptic spiking was dispensable in the preparation.",
+      "limit": "No measured bidirectional first-action teaching policy, exact PPL101 MaleCNS per-contact assignment, or numerical electrical transfer into the reduced circuit."
+    },
+    {
+      "id": "Berry-2018",
+      "kind": "primary experiment",
+      "uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6239218/",
+      "accessible_form": "indexed primary full-text excerpts",
+      "claim": "LITERATURE-CONSTRAINED gamma2alpha-prime1 MBON response is depressed by paired odor/shock and a previously depressed odor response can recover with subsequent unpaired cognate DAN activation; MBON output is needed for short-term aversive memory retrieval in the tested assay.",
+      "limit": "Restoration is history- and odor-dependent, and not a calibrated positive update for a missed keyboard action; specific MaleCNS PPL103 body efficacy and fast first-action feedback remain INFERRED or UNKNOWN."
+    },
+    {
+      "id": "Handler-2019",
+      "kind": "primary experiment",
+      "uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9012144/",
+      "accessible_form": "indexed primary full-text and Figure S3 excerpts; direct PMC open challenged",
+      "claim": "LITERATURE-CONSTRAINED gamma5 MBON KC-evoked calcium was depressed at KC-before-DAN onset interval +0.5 s (8 MBONs, 7 flies) and potentiated at DAN-before-KC interval -1.2 s (6 MBONs, 6 flies); gamma2 analog used 0 and -1.2 s. Figure S3 uses broad drivers and intervals optimized for robust plasticity.",
+      "limit": "Not a fitted timing kernel, not a PAM01-versus-PAM15 cell-specific effect, not a ±73-ms action correction rule, and not calibrated membrane transfer."
+    },
+    {
+      "id": "Li-2020",
+      "kind": "primary connectome interpretation",
+      "uri": "https://cdn.elifesciences.org/articles/62576/elife-62576-v2.pdf",
+      "accessible_form": "indexed primary article/figure excerpts and PDF",
+      "claim": "LITERATURE-CONSTRAINED mushroom-body compartment and MBON nomenclature, including mixed gamma5/beta-prime2a input to MBON01 and feedforward/feedback MBON networks.",
+      "limit": "Hemibrain anatomy is a separate specimen and does not supply MaleCNS pair efficacy or a fixed action interface."
+    },
+    {
+      "id": "Braun-2024",
+      "kind": "primary descending-neuron experiment",
+      "uri": "https://www.nature.com/articles/s41586-024-07523-9",
+      "accessible_form": "indexed primary abstract and result excerpts; direct page blocked",
+      "claim": "LITERATURE-CONSTRAINED descending network recruitment matters for motor control; DNa02 weakly triggers turning in the tested stimulation context.",
+      "limit": "No evidence that an isolated small MaleCNS MBON12/MBON01 route drives a keyboard-like first action or that DNg63/DNp32 has the required function."
+    },
+    {
+      "id": "Barnstedt-2016",
+      "kind": "primary physiology",
+      "uri": "https://pubmed.ncbi.nlm.nih.gov/26948892/",
+      "accessible_form": "primary abstract",
+      "claim": "LITERATURE-CONSTRAINED KCs can excite MBONs through cholinergic nicotinic signaling.",
+      "limit": "Does not provide a normalized KC-contact effect or target MBON threshold for these candidates."
+    }
+  ],
+  "unavailable_information": [
+    "Per-contact mushroom-body compartment assignment from spatial syn-partner data",
+    "Candidate-specific KC/MBON and relay/DN transfer functions under bounded input and omission conditions",
+    "A causal outcome-to-DAN policy that changes timing in both directions while respecting measured plasticity order and resolved-only feedback"
+  ]
+}

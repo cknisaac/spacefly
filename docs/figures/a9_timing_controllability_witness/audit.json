@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "stage": "A9",
+  "selected_edges": 192,
+  "frozen_notes_rejudged": 32,
+  "down_actions_replayed": 64,
+  "motor_on_rises_recomputed": 140,
+  "first_down_good_plus": 0,
+  "scored_good_plus": 32,
+  "protocol_sha256": "dd554b41a8283e68e88c26cb986ad80046550c0807adc4d093acd8689ac97cb7",
+  "result_sha256": "2b55152db7c7b3f50da600b32219b0c73c20364f80094d584e1b5423dece5902"
+}

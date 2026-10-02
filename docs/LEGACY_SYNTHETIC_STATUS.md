@@ -1,0 +1,11 @@
+# Legacy synthetic learner and diagnostics
+
+**Frozen historical track, 2026-10-01.** The old synthetic learner, original M2 gate, A1–A11.2 diagnostics, reports, configs, exact checkpoints, raw ledgers and audits are preserved. Their PASS/FAIL/INCONCLUSIVE findings remain as recorded. This classification does not retroactively pass M2 or erase negative results.
+
+The A0 preservation inventory is [LEGACY_SYNTHETIC_FREEZE_MANIFEST.json](LEGACY_SYNTHETIC_FREEZE_MANIFEST.json). It records SHA-256 and byte size for each included file so later changes can be detected. The project repository has no commits, so this is a content snapshot rather than a Git revision.
+
+The 16-seed and 192-trial synthetic studies failed their declared reliability/timing gates; the latter recorded 16/32 and 15/32 strict wins against matched controls and 60.6-ms mean hit error versus a 40-ms gate. The [first-action audit](HELDOUT_FIRST_ACTION_AUDIT.md) showed that later scored presses could obscure bad first actions. A10 failed its signed-credit candidate; A11/A11.1/A11.2 remained inconclusive for useful signed timing control. The proposed A11.3 is **not authorized and will not run automatically**.
+
+These results diagnose an engineered `TimeToContactEncoder` → synthetic circuit → fixed readout, not MaleCNS learning. The encoder receives exact future note timestamp in the synthetic runner. Its code remains for reproduction/tests but is outside the new MVP sensory contract. No synthetic performance result is now a scientific prerequisite for Branch B. Reusable simulator mechanisms and tests may be audited under the [new Branch A infrastructure roadmap](BRANCH_A_INFRASTRUCTURE_ROADMAP.md).
+
+Source-of-truth historical material remains in [the old Branch A contract roadmap](BRANCH_A_CONTRACT_ROADMAP.md), [future diagnostic handoff](FUTURE_DIAGNOSTICS.md), [M2 path](M2_PATH_TO_PASS.md), [overnight result](OVERNIGHT_RESULT.md), [A10](A10_SIGNED_FIRST_ACTION_CREDIT_GATE.md), [A11](A11_SIGNED_PERTURBATION_INFORMATION_GATE.md), [A11.1](A11_1_THRESHOLD_MARGIN_IDENTIFIABILITY.md) and [A11.2](A11_2_BIDIRECTIONAL_HEADROOM_GATE.md), with their linked configs, figures, hashes and audits. Old stage numbers are not reused by the new roadmap.

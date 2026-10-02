@@ -1,0 +1,54 @@
+{
+  "A_C_spike_identity_pairs": 9,
+  "limit": "Recomputes saved traces/events; per-cell 500-us voltage counters are internal runtime counters, not independently re-integrated.",
+  "maximum_synaptic_reconstruction_error_pa": 5.329070518200751e-15,
+  "numerical": {
+    "31001": {
+      "max_second_spike_count_difference": 1,
+      "pass": true
+    },
+    "31002": {
+      "max_second_spike_count_difference": 1,
+      "pass": true
+    },
+    "31003": {
+      "max_second_spike_count_difference": 1,
+      "pass": true
+    }
+  },
+  "numerical_refinements": 3,
+  "primary_runs": 24,
+  "raw_files_sha256": {
+    "A_high_31001.json.gz": "800d2c85d76d453da579d580677da36973738bc2d2075a8e52ad3b4942280c7b",
+    "A_high_31002.json.gz": "5f3af70c07af837a150bde1f84305783f871dcd79de3edefd8caccaf09e64f38",
+    "A_high_31003.json.gz": "cf4f2429cf00e7b43740d3ce093c53ce25b906e23999d4d1f2fc79904c7edf8e",
+    "A_low_31001.json.gz": "77230a3fe30e4af75037473746a3d70879d58a861f05cf03bed8aef7244041c5",
+    "A_low_31002.json.gz": "79ba7528017a2a02a1a593e44a7325d19cb39a6539d35b17ef1c9f38a1330ada",
+    "A_low_31003.json.gz": "90fef4e52dc80957d18c58d5fd63c2af4f04c2bc9e131489e713bb165d3adf5c",
+    "A_nominal_31001.json.gz": "d2c34cef6ed5bdb178684f0ac7d312a67149c18649f3b4ae15301814fc8b6271",
+    "A_nominal_31002.json.gz": "deb814d58a4a2d87f7a703e16916100184fdd36b3ffa2d6165f13dc30f1873cc",
+    "A_nominal_31003.json.gz": "a2387c50e7314d1cd89f30b69dc576f9ee797d5a85ae2932e8b7063c530c6f8d",
+    "B_nominal_31001.json.gz": "fb095cabfb894119e43378f389c3bd79efb3bfa8669ff68668eed5ae767012db",
+    "B_nominal_31002.json.gz": "e83bc84fd10c8c83b471f184b87c7037efd5dc890c542101c7316ae3f836f97c",
+    "B_nominal_31003.json.gz": "6cad4dae0f0a3bc318403622d0b551ceb38d7cba060aeaeee575dad0bb4ec3a2",
+    "C_high_31001.json.gz": "b57f9a8eedb25df06b0f96bbee31fb7b9613ab4b8110218d2c9dbfc5d089dbe4",
+    "C_high_31002.json.gz": "f0449297ddfd0468f1a3e3ccd8548d32ffb50b72304da07da24244dd9b43a4eb",
+    "C_high_31003.json.gz": "1b6da1f33c540810b9cb1643e9e2ee50cb6a0c9984e5652e275a89fa3f20fefd",
+    "C_low_31001.json.gz": "2be9a35eee2a93de69489d42c7eb092c5c9695c120ab5e5a24c59640535df1d8",
+    "C_low_31002.json.gz": "f8f8eb3ee15a9b1dd1f893cf36f28f5a94186127ba4720078eeb2ef083c80222",
+    "C_low_31003.json.gz": "66f425bb3b84598198575477984c0206fa359c9b5777c76f55eb51602cc658ba",
+    "C_nominal_31001.json.gz": "9c39e2f1de97ae9abf3c7598288d9131cb9ecd5f4e32c4f16407ee3ada2a380c",
+    "C_nominal_31002.json.gz": "1426fe993bde9221f3692829fc2d8356ca677f85cc28749b68835290e12d4af2",
+    "C_nominal_31003.json.gz": "c8056f82746216512bac98ab482ce42ddcda6ba007e91be984f2fbcbfe2ec537",
+    "D_nominal_31001.json.gz": "4e65a764fee7c069495ba76d112080a60636ebfaefef1cbbba6ca1f310a192c9",
+    "D_nominal_31002.json.gz": "7d602cfe9852606e9ad7518fa9010bdc054a4b5878c1a9d7c89615b768b93cfc",
+    "D_nominal_31003.json.gz": "be48bdc46785b79e84aa99d7d0241715724583d6df9289050bd3c2d30aa486f8",
+    "R_A_nominal_31001_tick250.json.gz": "21ae6c65087d5064f6d2df0d6e46f0d41d741d154e4e5794079f7c1ebb8cd64a",
+    "R_A_nominal_31002_tick250.json.gz": "e21de4ab3f41af921cf487caeb1d0a509cd45294355d41d02cf47b524b43faf8",
+    "R_A_nominal_31003_tick250.json.gz": "c909da477fefa8f31293e49c86b5e33d22f32891221bad5abc6f1e5e95323535"
+  },
+  "raw_spikes_checked": 50036,
+  "result_sha256": "d7b9c9ba96aa85ca5a60774bcbec9c971264a8b15109d1532cd157abad755467",
+  "status": "passed",
+  "trace_samples_checked": 189027
+}

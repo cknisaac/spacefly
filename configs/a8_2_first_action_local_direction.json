@@ -1,0 +1,25 @@
+{
+  "study_id": "synthetic_A8_2_first_action_local_direction_v1",
+  "stage": "A8.2",
+  "seed": 2002,
+  "one_based_outcome": 373,
+  "selection": "A8.1 found a predeclared positive scored RPE versus negative first-null RPE at this previously established harmful 73-ms first-crossing update. No other checkpoint is probed in A8.2.",
+  "first_down_time_us": 371325000,
+  "first_down_disposition": "null_press",
+  "diagnostic_first_action_rpe": -0.8371985125472596,
+  "small_fraction_of_raw_candidate": 0.05,
+  "candidate_raw_delta": "For each of the same 480 selected slots: existing eta 0.2 times eligibility_at(slot, first_DOWN_time_us) times diagnostic_first_action_rpe. Use first-action eligibility snapshot before any later action, then independently clip w_pre_scored + fraction * raw_delta to the existing [0,2] mV bounds.",
+  "branches": ["no_update", "historical_real_full", "first_action_candidate_5_percent", "first_action_candidate_full"],
+  "state_contract": "All branches start from the exact saved A5 seed-2002 outcome-373 pre-scored-dopamine state. Diagnostic candidate branches differ only in selected effective weights. The first-action eligibility is obtained from exact replay of the unchanged historical trajectory, with weights at first DOWN verified equal to pre-scored-update weights.",
+  "probe": "Identical disjoint 32-note A5 panel, plasticity and exploration off, preserving all cloned nonweight state. Existing no/full probes must reproduce byte-for-byte as JSON objects.",
+  "primary_endpoint": "First upward 20-ms motor-window on-threshold crossing and first DOWN time relative to no update. A missing crossing or DOWN is silence and cannot support useful delay.",
+  "secondary_endpoints": ["all DOWN actions", "signed attempt timing", "GOOD+ and utility", "first-action eligibility", "raw/applied L1/L2", "clipping and bound occupancy"],
+  "interpretation_locked_before_probe": {
+    "useful_small_direction": "The fixed 5% candidate step moves first crossing at least one 1-ms tick later than no update without silence.",
+    "magnitude_problem": "The small candidate has useful direction but the full candidate loses that direction, causes worse timing or silence.",
+    "direction_not_supported": "The small candidate advances crossing or is silent.",
+    "inconclusive": "The small candidate changes no first-crossing tick, or replay/state/reference checks fail."
+  },
+  "prohibitions": ["no fraction search", "no edge-mask search", "no learning-rate or threshold change", "no production edit", "no continuing training from the hybrid state", "no claim beyond this one checkpoint"],
+  "stop": "Save exact raw branches and independent audit, report result, and stop before any development cohort."
+}

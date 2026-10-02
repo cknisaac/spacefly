@@ -1,0 +1,24 @@
+{
+  "stage": "B5.6",
+  "audit_scope": "Independent structural/provenance checks; source-content interpretation remains a literature judgment, not machine verification",
+  "protocol_sha256": "ccac42e0f4010b96de0f0d989a9a0d03c76b507e69c2999100ea88783adf1527",
+  "ledger_sha256": "4a47d74a380521ea09ea9d6ea184f6422645763ebba66d411e8e56840eec7a8f",
+  "sources_checked": 5,
+  "checks": {
+    "stage_and_locked_question": true,
+    "pinned_electrical_model_v1.json": true,
+    "pinned_electrical_model_v1_1.json": true,
+    "pinned_B5_3_EXTERNAL_FEEDFORWARD_TRANSFER_CONSTRAINT_AUDIT.md": true,
+    "pinned_B5_5_VISUAL_KC_TRANSFER_DECOMPOSITION.md": true,
+    "pinned_b5_5_audit.json": true,
+    "unique_primary_sources": true,
+    "ledger_fields_complete": true,
+    "primary_citations_present": true,
+    "joint_rule_applied_consistently": true,
+    "decision_matches_ledger": true,
+    "no_unjustified_revision": true,
+    "anatomy_not_miscast_as_physiology": true,
+    "no_diagnostic_number_used_to_calibrate": true
+  },
+  "status": "PASS"
+}

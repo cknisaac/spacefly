@@ -1,0 +1,33 @@
+{
+  "stage": "A10",
+  "study_id": "a10_signed_first_action_credit_gate_v1",
+  "locked_before_candidate_probes": true,
+  "seed": 2002,
+  "one_based_outcomes": [372, 373, 377],
+  "selection_rule": "All three prior A8.1 first-null/RPE-sign-disagreement checkpoints; no new outcome selection.",
+  "branches": ["no_update", "historical_legacy_update", "locked_a10_update"],
+  "candidate": {
+    "name": "first-action centered motor participation",
+    "selected_edges": "all 480 existing relay-to-motor plastic slots",
+    "action_record": "first DOWN associated with current visible note; immutable through note resolution",
+    "eligibility": "existing selected-edge eligibility sampled at first DOWN",
+    "motor_participation": "per-motor spike count in existing 20,000-us readout window at first DOWN",
+    "signed_trace": "z_ij = e_ij(first DOWN) * (c_j - mean_motor_c) / existing_on_threshold",
+    "utility": "first null/early MISS=-1; first valid hit=unchanged centered game utility; no DOWN=-1 with zero update",
+    "rpe": "first-action utility minus predictor expected utility sampled at first DOWN (or expiry for no DOWN)",
+    "update": "at note resolution, once per note, raw=existing_eta * z_ij * first-action_RPE; clip each selected weight to existing [0,2] mV bounds; later scored DOWN never substitutes",
+    "predictor": "commit first-action utility once at note resolution, including no-DOWN expiry; later scored result cannot replace it",
+    "no_new_parameters": true
+  },
+  "matched_state_protocol": "Candidate action tags are replayed on exact historical trajectory. At each exact pre-legacy-dopamine checkpoint, transplant the locked candidate weight vector only. Keep every nonweight field identical for all branches; freeze plasticity/exploration on the existing disjoint 32-note panel. This is a local vector gate, not a full candidate-rule rollout.",
+  "prediction": {
+    "direction_at_each_checkpoint": "later first motor on-threshold rise than no update, because first null has negative RPE and active motor targets receive depression",
+    "meaningful_delay_us": 5000,
+    "pass": "all three candidate first rises delay at least 5000 us relative to no update, with a first DOWN and no silence/extra-action switching on first probe note; C1-C3 audits pass",
+    "fail": "any candidate first rise advances at least 1000 us or first note becomes silent",
+    "inconclusive": "no meaningful movement, mixed delayed/nonmoving cases, or qualitatively nonlinear action switch",
+    "legacy_reference": "must reproduce prior full update probe exactly",
+    "no_reference": "must reproduce prior no-update probe exactly"
+  },
+  "prohibitions": ["no production rule edit", "no development training", "no parameter or mask search", "no ideal press time to sensory/motor", "no changed game/readout", "no second candidate after result"]
+}

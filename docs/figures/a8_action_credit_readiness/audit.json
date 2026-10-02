@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "stage": "A8",
+  "source_ast_checked": 4,
+  "judgement_gated_reward_calls": 1,
+  "single_shared_positive_motor_drive_assignment": true,
+  "historical_first_action_audit_passed": true,
+  "protocol_sha256": "46456e66d500d8531d4782114d16abe50d16334b007b3c8560d563c369591901",
+  "result_sha256": "93681d7888a04d76bd68c998c34d8a7f9e33cbe114a350a078d1637ab139de2b"
+}

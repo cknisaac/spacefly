@@ -1,0 +1,43 @@
+{
+  "stage": "A11",
+  "study_id": "a11_signed_perturbation_information_gate_v1",
+  "locked_before_new_branch_outcomes": true,
+  "question": "Can one fixed independent signed motor perturbation at a known synchronous first-action state provide nondegenerate local action tags and causally alter first motor threshold timing?",
+  "why_next": "A10 centered motor participation vanished when all 32 motors fired once. The original exploration pulse was shared and positive; the missing sign information may be an exploration-design problem rather than absent motor controllability.",
+  "hypotheses": ["H3: sign information unavailable under shared exploration", "H4: motor perturbation tags exist but cannot alter first-action timing"],
+  "state": {
+    "seed": 2002,
+    "one_based_outcome": 373,
+    "pre_pulse_simulator_time_us": 371324000,
+    "historical_exploration_pulse_start_us": 371324000,
+    "historical_first_down_us": 371325000,
+    "selection_rule": "Previously documented global pulse immediately before the A8.2 outcome-373 null first DOWN; no new state selection"
+  },
+  "intervention": {
+    "branches": ["no_pulse", "historical_shared_positive", "locked_signed", "locked_signed_inverse"],
+    "amplitude_mv_equivalent": 20.0,
+    "motor_ids": "unchanged 32-cell synthetic motor population",
+    "sign_stream": "For each motor ID j independently, use low bit of SHA256('A11|2002|373|371324000|' + decimal(j)); 0 maps -1, 1 maps +1. One locked realization, no redraw or selection.",
+    "inverse": "Negate each sign of the one locked realization; antithetic comparison, not a second searched stream.",
+    "no_pulse": "Override only the motor drive on this known exploration tick to zero.",
+    "shared": "Unchanged +20 motor drive on the known exploration tick.",
+    "signed": "Replace only the motor drive on that tick with 20 times the locked sign for each motor ID.",
+    "after_intervention": "Set exploration probability to zero and plasticity_enabled=false identically in all branches; preserve fixed game, encoder, graph and readout. Continue only until outcome 373 resolves. No update or new training."
+  },
+  "local_tag": {
+    "at_pulse": "q_ij(t_pulse)=pre_trace_i(t_pulse)*sign_j for all 480 selected relay-to-motor slots; no-pulse q=0, shared q uses sign_j=+1",
+    "at_first_down": "q_ij(t_first)=q_ij(t_pulse)*exp(-(t_first-t_pulse)/existing_tau_eligibility_us); immutable action record if first DOWN occurs",
+    "causal_boundary": "Only pre-pulse presynaptic state, injected sign and first action time are used. No game target time or future judgement enters the tag. No weights are updated."
+  },
+  "controls": "Exact same pre-pulse checkpoint, RNG, sensory input, topology, weights, neural queues, eligibility, predictor, readout, game and note. All branches consume the same original Bernoulli draw; only motor drive on that tick differs. Post-tick exploration and plasticity are frozen identically.",
+  "primary_endpoints": ["both signs among nonzero action tags in locked_signed and inverse", "signed per-cell motor response contrast within 20 ms", "first motor on-threshold rise in locked_signed versus inverse"],
+  "secondary_endpoints": ["first DOWN time/disposition", "all DOWN/UP actions", "judgement", "signed tag vector", "motor spike batches", "readout window counts", "silence/extra action", "weight/state audit"],
+  "predeclared_interpretation": {
+    "pass": "Both signed branches have a first DOWN; each action-tag vector has both positive and negative nonzero entries; signed 20-ms motor response dot product sum_j sign_j*(count_signed_j-count_inverse_j) is positive; and first on-threshold rise times differ by at least one 1000-us tick without silence.",
+    "fail": "Either signed action-tag vector lacks both signs, or the signed 20-ms motor response dot product is nonpositive despite an auditable pulse.",
+    "inconclusive": "Signs and motor response are present but first threshold times are identical, one branch has no first action/crossing, or a nonlinear action switch prevents timing interpretation.",
+    "scope": "One state and one fixed sign realization; no learning-rule validation, no across-seed claim, no M2 pass."
+  },
+  "prohibitions": ["no production learning-rule edit", "no weight update", "no development training", "no sign seed or amplitude search", "no cue-bin or edge-mask selection", "no changed readout/game", "no ideal press time to neural code", "stop after audit, regression and report"],
+  "output": ["docs/A11_SIGNED_PERTURBATION_INFORMATION_GATE.md", "docs/figures/a11_signed_perturbation_information_gate/result.json", "docs/figures/a11_signed_perturbation_information_gate/audit.json", "CURRENT.md", "docs/FUTURE_DIAGNOSTICS.md", "docs/BRANCH_A_CONTRACT_ROADMAP.md", "docs/M2_PATH_TO_PASS.md"]
+}

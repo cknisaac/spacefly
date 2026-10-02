@@ -1,0 +1,23 @@
+{
+  "study_id": "synthetic_2002_300ms_saturation_contrast_v1",
+  "locked_before_new_probe": "2026-09-30",
+  "source": "Existing deterministic successive-update trajectory for seed 2002 outcomes 368-384, inspected before this protocol. No new probe outcome used for checkpoint selection.",
+  "checkpoint_selection": [
+    {
+      "seed": 2002,
+      "one_based_outcome": 372,
+      "reason": "Earlier positive-RPE update from zero pre-update upper-bound weights; existing frozen trajectory improved from 0 to 17 GOOD+. Applied 300-ms target-97-105 change has 30.179 mV L1 while near-cue bins also change."
+    },
+    {
+      "seed": 2002,
+      "one_based_outcome": 377,
+      "reason": "First later positive-RPE, far-cue-dominant harmful update after the outcome-373 case in the saved short window; 331 upper-bound weights before update, 10 to 0 GOOD+, 18.254 mV applied to 300-ms targets 97-105 and no applied change to 150-ms or nearer bins."
+    }
+  ],
+  "fixed_structural_omission": "At each checkpoint omit only the production-applied update on all 36 edges from 300-ms relay sources 48-51 to motor targets 97-105. Reconstruct IDs from the unchanged synthetic topology. Keep every other applied weight and every nonweight state identical to full. No update rescaling or clipping change.",
+  "branches_per_checkpoint": ["no_update", "real_full", "real_except_300ms_targets_97_105"],
+  "frozen_probe": "The exact existing A3 common 32-note panel at each checkpoint, with plasticity and exploration off. Prior real-full probes must reproduce A3 exactly. No probe result feeds training.",
+  "primary_endpoint": "First motor on-threshold upward crossing in integer microseconds versus no update and real full, or explicitly absent. For outcome 377, a later crossing toward no update after the omission supports recurrence of the outcome-373 cohort mechanism. For outcome 372, report whether omission removes the beneficial full-update timing change; an opposite response would show state dependence. Do not force score or timing attribution if a branch is silent or changes action pattern.",
+  "secondary_endpoints": ["first null and scored DOWN", "20-ms motor spike-window count at threshold", "all DOWN actions and signed errors", "GOOD+", "mean utility", "clipped/applied per-bin update and pre-bound occupancy"],
+  "scope_limit": "Exactly two checkpoints and one fixed structural omission at each. No parameter search, learning-rule edit, other mask, extra training, or claim of held-out generalization."
+}

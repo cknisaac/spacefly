@@ -1,0 +1,111 @@
+{
+  "policy_id": "larval_l1re_electrical_family_v1",
+  "variant": "L1R-E",
+  "status": "FROZEN_BEFORE_SIMULATION",
+  "frozen_date": "2026-10-02",
+  "manifest": {
+    "path": "configs/larval_l1re_manifest_v1.json",
+    "sha256": "58AAE08A16C9CAABB1A987B6FB10B4C81908722ABEEC60182ABF2483B7036A9C"
+  },
+  "scientific_boundary": {
+    "anatomy": "MEASURED KC -> MBON-m1 contact rows",
+    "fast_effect": "ENGINEERING ASSUMPTION: positive current effect proportional to contact count",
+    "teacher": "ENGINEERING ASSUMPTION: inactive throughout this gate; no DAN identity",
+    "action": "ENGINEERING OVERLAY: fixed inverse bilateral MBON-m1 spike-count thresholds",
+    "plasticity": "disabled"
+  },
+  "neuron_model": {
+    "type": "current_based_LIF",
+    "v_rest_mv_equivalent": 0.0,
+    "v_reset_mv_equivalent": 0.0,
+    "tau_m_us": [10000, 20000],
+    "tau_syn_us": 5000,
+    "threshold_above_rest_mv_equivalent": [1.0, 3.0, 7.0],
+    "refractory_us": 2000,
+    "evidence_category": "ENGINEERING ASSUMPTION"
+  },
+  "synapse_model": {
+    "KC_to_MBON-m1_contact_effect_mv_equivalent": [0.01, 0.05, 0.125, 0.275],
+    "delay_us": 2000,
+    "sign": "positive",
+    "evidence_category": "ENGINEERING ASSUMPTION"
+  },
+  "integration": {
+    "dt_us": 1000,
+    "response_window_us": 100000,
+    "zero_tonic_drive": true,
+    "max_queued_events": 1000000,
+    "max_scheduled_events": 5000000,
+    "update_order": [
+      "deliver arrivals at or before tick",
+      "integrate membrane and synaptic state",
+      "test threshold and reset",
+      "schedule outgoing events using emission-time weight"
+    ],
+    "evidence_category": "ENGINEERING ASSUMPTION"
+  },
+  "encoder": {
+    "input": "current_position_bin_only",
+    "state_count": 8,
+    "group_rule": "sort the 88 KC source IDs ascending and partition into eight non-overlapping contiguous groups using quotient/remainder allocation",
+    "pulse_mv_equivalent": [8.0, 12.0, 16.0],
+    "pulse_duration_us": 5000,
+    "forbidden_inputs": [
+      "future_note_time",
+      "time_to_contact",
+      "desired_action_time",
+      "target_identity_during_evaluation",
+      "reward",
+      "held_out_answer",
+      "teaching_event"
+    ],
+    "evidence_category": "ENGINEERING ASSUMPTION"
+  },
+  "controllability_intervention": {
+    "KC_to_MBON-m1_weight_factors": [1.0, 0.8, 0.6, 0.4, 0.2],
+    "only_varied_quantity_within_configuration": "all candidate KC -> MBON-m1 weights multiplied by the declared factor",
+    "deterministic_replays_per_cell": 2
+  },
+  "readout": {
+    "neural_measure": "bilateral MBON-m1 spike count during the fixed response window",
+    "armed_only_by_valid_current_position_cue": true,
+    "action_equation": "armed AND bilateral_MBON-m1_spike_count <= threshold",
+    "thresholds_in_spikes": [0, 1, 2],
+    "trainable": false,
+    "monotonic_direction": "lower MBON-m1 count gives equal or greater action drive",
+    "evidence_category": "ENGINEERING OVERLAY"
+  },
+  "family": {
+    "cartesian_axes": [
+      "synapse_model.KC_to_MBON-m1_contact_effect_mv_equivalent",
+      "neuron_model.tau_m_us",
+      "neuron_model.threshold_above_rest_mv_equivalent",
+      "encoder.pulse_mv_equivalent"
+    ],
+    "configuration_count": 72,
+    "configuration_order": "lexicographic in contact effect, tau_m, threshold, pulse"
+  },
+  "per_configuration_pass_rule": {
+    "zero_drive": "no spikes, interface disarmed, finite state, bounded queues",
+    "replay": "all state/factor replay digests exact",
+    "cue_activation": "all eight cues produce at least one spike in every intended KC",
+    "starting_activity": "factor 1.0 produces at least one bilateral MBON-m1 spike in at least six of eight states",
+    "effect_size": "factor 0.2 reduces bilateral MBON-m1 spike count by at least 30 percent versus factor 1.0 in at least six of eight states",
+    "monotonicity": "responses are non-increasing as weights decrease in at least seven of eight states, with no reversal greater than one spike",
+    "action_transition": "at one frozen threshold, action sets are nested as weights decrease; at least three states change from no action at factor 1.0 to action at a lower factor; the factor 0.2 action set contains two through six states"
+  },
+  "family_pass_rule": {
+    "minimum_qualifying_configurations": 12,
+    "axis_coverage": "qualifiers span at least two values on every varied axis",
+    "face_adjacency": "configurations differ by one adjacent value on exactly one axis",
+    "minimum_largest_face_connected_component": 8,
+    "minimum_component_members_robust_at_adjacent_action_threshold": 6,
+    "nominal_selection": "coordinate-wise median of the largest qualifying component; ties use lower contact scale then lower pulse"
+  },
+  "outcome_policy": {
+    "pass": "write a nominal electrical model and permit the local-plasticity gate",
+    "fail": "retire this frozen L1R-E electrical abstraction before plasticity",
+    "inconclusive": "repair execution only; do not alter parameter values or pass rules"
+  }
+}
+

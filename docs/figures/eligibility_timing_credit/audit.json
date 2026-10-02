@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "branches": 10,
+  "frozen_note_outcomes": 320,
+  "down_actions": 576,
+  "selected_edges": 480,
+  "source_group_counts": {
+    "source_far_500_to_200ms": 192,
+    "source_mid_150_to_75ms": 144,
+    "source_near_50_to_0ms": 144,
+    "full_proposal_clipped_edges": 354,
+    "full_proposal_unclipped_edges": 126
+  },
+  "protocol_sha256": "9ca60b8189290906033d6f05989945663974805dff96ca569ea9ced776e7465a",
+  "result_sha256": "ea1e2b2c48a627188f2751e67ec559baaad01ed92520f299104f1bec161f6e2d"
+}

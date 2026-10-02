@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "dataset": "MaleCNS",
+  "release": "v1.0",
+  "selection_source_id_sha256": "86d619b6562a81d7f46222c1c4aba4fffb3d1a89e44f3533e76e6646a1e2b7e9",
+  "evidence_categories": ["LITERATURE-CONSTRAINED", "INFERRED", "ENGINEERING ASSUMPTION", "UNKNOWN"],
+  "connection_default": {
+    "effect_state": "UNKNOWN",
+    "evidence": "UNKNOWN",
+    "reason": "The source provides a contact count and transmitter annotation, not a receptor-resolved functional effect.",
+    "weight_mv": null
+  },
+  "connection_rules": [
+    {"name": "KC_to_MVP2", "pre_role": "visual_kenyon_cells", "post_role": "mbon11_gamma1_learning_output", "pre_transmitter": "acetylcholine", "effect_state": "EXCITATORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4819445/", "scope_limit": "KC-to-MVP2 cholinergic physiology constrains the class, not the exact MaleCNS conductance.", "weight_mv": null},
+    {"name": "KC_to_M6", "pre_role": "visual_kenyon_cells", "post_role": "mbon01_gamma5_learning_output", "pre_transmitter": "acetylcholine", "effect_state": "EXCITATORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4819445/", "scope_limit": "KC-to-M6 cholinergic physiology constrains the class, not the exact visual KC contact.", "weight_mv": null},
+    {"name": "APL_to_KC", "pre_role": "apl_local_feedback", "post_role": "visual_kenyon_cells", "pre_transmitter": "gaba", "effect_state": "INHIBITORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://elifesciences.org/articles/56954", "scope_limit": "Local graded APL inhibition is supported; one point-spike synaptic weight would be an inappropriate model.", "weight_mv": null},
+    {"name": "MVP2_to_M6", "pre_role": "mbon11_gamma1_learning_output", "post_role": "mbon01_gamma5_learning_output", "pre_transmitter": "gaba", "effect_state": "INHIBITORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4893166/", "scope_limit": "Feedforward class interaction is supported; strength and state dependence in this specimen are unknown.", "weight_mv": null},
+    {"name": "PPL1_to_KC", "pre_role": "ppl1_gamma1_teaching", "post_role": "visual_kenyon_cells", "pre_transmitter": "dopamine", "effect_state": "MODULATORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4674068/", "scope_limit": "Gamma1 dopamine plasticity is supported; direct-contact-specific release and immediate electrical effect are unknown.", "weight_mv": null},
+    {"name": "PPL1_to_MVP2", "pre_role": "ppl1_gamma1_teaching", "post_role": "mbon11_gamma1_learning_output", "pre_transmitter": "dopamine", "effect_state": "MODULATORY", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4674068/", "scope_limit": "Compartmental teaching association; this anatomical contact is not a calibrated fast excitatory synapse.", "weight_mv": null},
+    {"name": "PAM_gamma5_to_KC", "pre_role": "pam_gamma5_teaching_cohort", "post_role": "visual_kenyon_cells", "pre_transmitter": "dopamine", "effect_state": "MODULATORY", "evidence": "INFERRED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7443709/", "scope_limit": "The selected PAM cohort has heterogeneous subtypes; specific reward/release fields are unresolved.", "weight_mv": null},
+    {"name": "PAM_gamma5_to_M6", "pre_role": "pam_gamma5_teaching_cohort", "post_role": "mbon01_gamma5_learning_output", "pre_transmitter": "dopamine", "effect_state": "MODULATORY", "evidence": "INFERRED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7443709/", "scope_limit": "Gamma5 cohort membership does not prove a uniform M6 receptor action.", "weight_mv": null}
+  ],
+  "neuron_parameter_policy": {
+    "families": {
+      "VISUAL_EXTERNAL": {"model_kind": "EXTERNAL_SPIKE_SOURCE_UNSPECIFIED", "evidence": "ENGINEERING ASSUMPTION", "source": "CIRCUIT_V1.md#9-boundary-inputs-this-is-an-open-circuit", "reason": "The game-to-visual input adapter is artificial and not yet specified."},
+      "KC": {"model_kind": "KC_SPIKING_PROXY_UNPARAMETERIZED", "evidence": "INFERRED", "source": "https://elifesciences.org/articles/14009", "reason": "Visual KC spikes are observed; an LIF-style reduced model and all numerical parameters require separate justification."},
+      "APL": {"model_kind": "GRADED_LOCAL_NON_SPIKING_UNPARAMETERIZED", "evidence": "LITERATURE-CONSTRAINED", "source": "https://elifesciences.org/articles/56954", "reason": "APL is non-spiking with spatially localized activity and inhibition; uniform LIF is disallowed."},
+      "DAN": {"model_kind": "DOPAMINERGIC_STATE_UNPARAMETERIZED", "evidence": "LITERATURE-CONSTRAINED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7443709/", "reason": "Dopamine release and receptor action require separate compartmental state; no scalar fast current is assigned."},
+      "MBON": {"model_kind": "MBON_SPIKING_PROXY_UNPARAMETERIZED", "evidence": "INFERRED", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4819445/", "reason": "Output-cell spikes are defensible; parameters from other MBON types are not measurements of these source bodies."},
+      "DN": {"model_kind": "DESCENDING_SPIKING_PROXY_UNPARAMETERIZED", "evidence": "INFERRED", "source": "https://www.nature.com/articles/s41586-024-07039-2", "reason": "Steering-related descending dynamics are class constrained; exact membrane and game-readout parameters are unknown."}
+    },
+    "role_families": {
+      "visual_input_mevp41": "VISUAL_EXTERNAL",
+      "visual_input_lovp97": "VISUAL_EXTERNAL",
+      "visual_input_lovp42": "VISUAL_EXTERNAL",
+      "visual_kenyon_cells": "KC",
+      "apl_local_feedback": "APL",
+      "ppl1_gamma1_teaching": "DAN",
+      "pam_gamma5_teaching_cohort": "DAN",
+      "mbon11_gamma1_learning_output": "MBON",
+      "mbon01_gamma5_learning_output": "MBON",
+      "mbon26_output_relay": "MBON",
+      "mbon27_visual_output": "MBON",
+      "mbon32_competing_output": "MBON",
+      "dna03_descending_relay": "DN",
+      "dna02_action_boundary": "DN"
+    },
+    "numeric_parameters": {"VISUAL_EXTERNAL": null, "KC": null, "APL": null, "DAN": null, "MBON": null, "DN": null}
+  },
+  "delay_policy": {
+    "default": {"delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN", "reason": "Aggregate contacts lack path length, conduction velocity and receptor timing."},
+    "by_presynaptic_family": {
+      "VISUAL_EXTERNAL": {"kind": "CHEMICAL", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"},
+      "KC": {"kind": "CHEMICAL", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"},
+      "APL": {"kind": "GRADED_LOCAL", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"},
+      "DAN": {"kind": "DOPAMINE_RELEASE", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"},
+      "MBON": {"kind": "CHEMICAL", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"},
+      "DN": {"kind": "CHEMICAL", "delay_state": "UNKNOWN", "delay_us": null, "evidence": "UNKNOWN"}
+    }
+  },
+  "boundary_input_policy": {
+    "missing_neural_drive_state": "UNKNOWN",
+    "missing_neural_drive_mv": null,
+    "missing_neural_drive_evidence": "UNKNOWN",
+    "input_roles": ["visual_input_mevp41", "visual_input_lovp97", "visual_input_lovp42"],
+    "teaching_roles": ["ppl1_gamma1_teaching", "pam_gamma5_teaching_cohort"],
+    "action_roles": ["dna02_action_boundary"],
+    "interface_evidence": "ENGINEERING ASSUMPTION",
+    "interface_amplitude_mv": null,
+    "interface_latency_us": null,
+    "reason": "Task input, reward route, readout and omitted-network drive are not MaleCNS synapses; no compensating constant current is assigned."
+  }
+}

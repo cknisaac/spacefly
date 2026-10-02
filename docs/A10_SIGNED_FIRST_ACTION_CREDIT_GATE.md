@@ -1,0 +1,39 @@
+# A10 signed first-action credit gate
+
+**Stage verdict: FAIL at A-C3 (signed credit availability).** The locked local crossing test is mixed: no candidate displacement at outcomes 372/373, and a 48-ms later crossing at 377. This is a diagnostic on the engineered 128-neuron synthetic fixture. It is neither a production learning-rule change nor a development/held-out training result. M2 remains **NO**.
+
+The [Branch A contract roadmap](BRANCH_A_CONTRACT_ROADMAP.md) defines A-C1 action identity → A-C2 action eligibility → A-C3 signed credit → A-C4 local timing control → A-C5 retention → A-C6 development reliability → A-C7 fresh held-out M2. The [locked protocol](../configs/a10_signed_first_action_credit_gate.json) was saved before candidate probes. The machine-readable [raw result](figures/a10_signed_first_action_credit_gate/result.json) includes all 480-slot vectors, clipping, nine checkpoints, complete 32-note branch probes and motor/readout traces. The [independent audit](figures/a10_signed_first_action_credit_gate/audit.json) checks exact historical replay, action traces, update arithmetic, nonweight-state equality, historical references and frozen probes.
+
+## One locked candidate and causal boundary
+
+At the **first DOWN for a visible note**, the diagnostic learning interface records that action's game disposition, the current expected utility, all 480 existing relay→motor eligibilities, and each motor cell's spike count `c_j` in the fixed readout's preceding 20-ms window. It retains this immutable record until that note resolves. Let `c̄` be the mean count across the 32 motor cells and `θ=10` the existing readout on threshold. For selected edge `i→j`, define
+
+`z_ij = e_ij(t_first DOWN) × (c_j − c̄) / θ`.
+
+First-action utility is **−1** for a null DOWN or early MISS; a valid first scored hit uses the existing centered game utility. Its RPE is that utility minus the predictor value captured at the first action. Once at note resolution, the proposed update is `Δw_ij = 0.2 × z_ij × RPE_first`, clipped to the unchanged `[0,2] mV` selected-edge bounds. The first-action utility is committed to the predictor once. A later scored DOWN after a null first DOWN cannot replace either the action record or its reward. If no DOWN occurs, expiry gives first-action utility −1 and a zero weight vector because no action-indexed eligibility exists. Early MISS and valid first hit resolve immediately; a null first DOWN waits for later resolution/expiry. These are an **engineering candidate contract**, not a claim of fly plasticity.
+
+This uses only neural spikes, existing eligibility, readout action, game feedback and baseline available causally by the time the note resolves. Game judgement/visible-note association is feedback at the learning interface; ideal press time is not passed to sensory or motor code. There is no backpropagation, decoder, learned readout, new edge mask or parameter search. The signed term is **relative motor participation**, not a measured causal perturbation derivative; a nonzero sign does not by itself prove that an edge advances or delays a DOWN.
+
+The candidate was calculated by exact replay of the unchanged seed-2002 training trajectory. For the local gate, its vector was transplanted into the same exact **pre-legacy-dopamine** checkpoint as the no-update and historical-legacy branches. Only selected weights differ before the identical disjoint 32-note frozen probe. This fixed-state transplant tests a local vector response; it does **not** simulate a corrected learner updating at the first action and changing the remainder of the training trajectory.
+
+## Predeclared test and observations
+
+Outcomes **372, 373 and 377** were all selected from prior A8.1 first-null, reward-sign-disagreement cases before the A10 probes. The prediction was a **later first motor threshold crossing by at least 5 ms relative to no update at every checkpoint**, with no first-note silence or extra-action switch. Any advance ≥1 ms or silence failed the local direction criterion; zero/smaller/mixed movement was inconclusive. A-C3 independently required a signed vector in the selected action states.
+
+| Seed-2002 outcome | First-action RPE | Signed `z` edges +/− | Candidate raw/applied L1 (mV) | First crossing, no / legacy / candidate (s) | Candidate minus no | Local crossing |
+| --- | ---: | ---: | ---: | --- | ---: | --- |
+| 372 | −0.7080 | 0 / 0 | 0 / 0 | 371.465 / 371.336 / 371.465 | 0 ms | Inconclusive |
+| 373 | −0.8372 | 0 / 0 | 0 / 0 | 372.456 / 372.383 / 372.456 | 0 ms | Inconclusive |
+| 377 | −0.9910 | 172 / 308 | 2.519 / 2.499 | 376.572 / 376.530 / 376.620 | **+48 ms** | Pass at this checkpoint |
+
+At 372 and 373, **all 32 motor cells had exactly one spike in the first-DOWN readout window**. Centering made `c_j−c̄=0` for every target, despite nonzero original eligibility and negative first-action RPE. The candidate therefore proposed and applied exactly zero; its frozen probes matched no update. At 377, only 12 motor spikes occupied the window and participation varied. The candidate had both signs and moved the first crossing/first DOWN 48 ms later. Of 480 raw nonzero changes, 188 positive proposals hit the upper bound, leaving 292 applied nonzero changes. The audit records the raw and applied vectors separately.
+
+The fixed-state historical legacy updates moved crossing **129, 73 and 42 ms earlier** at 372/373/377. Candidate frozen GOOD+ was **0/17/17 of 32**, versus no update **0/17/10** and legacy **17/0/0**. Mean utility candidate was **−0.961/−0.111/−0.033**, versus no update **−0.961/−0.111/−0.248**. The candidate's first note still had an early-MISS first DOWN at 372 and a **null first DOWN at 373 and 377**; at 377 it retained two DOWNs per note. The apparent score gain at 377 is not proof of a correct first-action policy. Full judgement distributions, all DOWNs and threshold windows are in the raw ledger.
+
+## Contract decision and next stage
+
+The action boundary and eligibility snapshot are causally available in deterministic replay (A-C1/A-C2 feasibility at these states). A-C3 **fails in two of three predeclared cases** because the shared/synchronous motor event erases all relative-participation sign. A-C4 is mixed, not a pass across the small cohort. The raw runner calls the local-crossing aggregate `INCONCLUSIVE`; the stage verdict is **FAIL** because A-C3 was a prerequisite and its all-zero cases are a direct failure. Exact state/reference reproduction and the independent audit passed. The production learning rule, game and readout were untouched. The full regression suite passed **115 tests**.
+
+This rules out H1/H2 as *information-access blockers for this diagnostic interface* at these selected actions. It does not show a production action-record implementation, a correct reward gradient, long-run retention, or across-seed reliability. H3 remains the direct blocker: shared motor activity can destroy this candidate's sign. The 377 response demonstrates some selected-weight timing control, but does not settle H4 generally; H5/H6 were not tested.
+
+**One proposed next stage, not run: A11 signed perturbation information gate.** At one predeclared pre-first-action state, replace the shared global motor exploration pulse with one fixed independent zero-mean per-motor signed perturbation stream while freezing learning. Audit whether first-action records then carry nondegenerate signed local tags and whether those tags have a reproducible causal association with earlier versus later threshold crossing under matched randomness. This separates H3 sign-information failure from H4 controllability before any new update or training. Lock the stream and criterion before running it; do not tune amplitude, probability, edge mask or readout. Authorization for A11 is separate.

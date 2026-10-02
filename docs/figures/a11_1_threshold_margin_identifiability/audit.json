@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "stage": "A11.1",
+  "classification": "INCONCLUSIVE",
+  "parent_checkpoint_verified": true,
+  "pre_intervention_readout_count": 5,
+  "branches_replayed": 4,
+  "actions_replayed": 12,
+  "motor_spikes_recounted": 629,
+  "first_rises_us": {
+    "no_pulse_reference": 371391000,
+    "shared_positive_control": 371391000,
+    "locked_signed": 371391000,
+    "locked_signed_inverse": 371391000
+  },
+  "signed_response_dot": 26,
+  "protocol_sha256": "f62f6aa15bb63b18d71370ecc52afee44de35815e6245bf31f60f24aa766de4c",
+  "result_sha256": "1835c2e4d5f6fc1b8d91bedc7f696f831c899dfdf64d298424daea9229525b02"
+}

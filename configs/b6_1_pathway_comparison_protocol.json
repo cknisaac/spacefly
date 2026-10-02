@@ -1,0 +1,43 @@
+{
+  "stage_id": "MVP-B6.1",
+  "protocol_version": "1.0-pre-outcome",
+  "saved_utc": "2026-10-01T12:55:00Z",
+  "question": "Does one bounded alternative pathway and plasticity-rule package have enough independent support to admit a Candidate 2 design without using Candidate 1 outcomes to choose electrical numbers?",
+  "scope": "Read-only primary-literature and pinned MaleCNS v1.0 data comparison. No candidate implementation, simulation, training or electrical parameter selection.",
+  "options": [
+    "gamma2-alpha-prime1: KC to MBON12 with PPL103 modulation",
+    "gamma5-beta-prime2a: KC to MBON01 with relevant PAM modulation",
+    "gamma1pedc: KC to MBON11 with relevant PPL1 modulation"
+  ],
+  "reference_only": "historical gamma2 MBON32/PPL103 route",
+  "criteria_in_order": [
+    "Primary experimental evidence in the named compartment for plasticity direction and timing; no rule transfer hidden as measurement",
+    "Exact pinned MaleCNS identities for sensory population, KCs, DANs, plastic pairs, MBONs, relay and downstream output, including source pair/contact counts and incoming coverage",
+    "Measured anatomical route from plastic MBON to a fly output population usable by a fixed key interface, with effects distinguished from anatomy",
+    "Pre-training causal gate for selected-weight change to MBON/output activity to first action, plus background-only and omission controls",
+    "Causal nonnegative teaching for early, late, too-early null and no-DOWN, without future input or evaluation plasticity",
+    "Independent quantitative constraints versus explicitly labeled unknown/engineering values; feasibility within separate 8-hour Candidate 2 and 24-hour overall caps"
+  ],
+  "outcome_rule": {
+    "PASS": "At most one complete pathway/rule package is admitted for later design only, with exact source identities, independent evidence, bounded unknowns, and falsifiable pre-training gates. No simulation is authorized.",
+    "FAIL_NO_GO": "No reviewed package meets mandatory plasticity, complete measured route, teaching and quantitative-provenance conditions; name exact missing evidence.",
+    "INCONCLUSIVE": "Essential source provenance or active time cannot be audited."
+  },
+  "planned_sources": [
+    "configs/connectome_source.json",
+    "data/raw/malecns_v1/source_manifest.json",
+    "data/processed/malecns_v1_traced/validation_receipt.json",
+    "data/processed/malecns_v1_traced/neurons.parquet and connections.parquet",
+    "docs/figures/b1_mvp_pathway_rule_selection/anatomy_comparison.json and B1 selection report",
+    "Hige et al. 2015 primary gamma1pedc electrophysiology",
+    "Berry et al. 2018 primary gamma2alpha-prime1 plasticity/recovery",
+    "Handler et al. 2019 primary gamma5 temporal pairing",
+    "Li et al. eLife 62576 primary connectome interpretation",
+    "Barnstedt et al. 2016 primary KC-to-MBON transmission",
+    "primary descending-neuron motor evidence if a screened route selects a DN"
+  ],
+  "source_labels": ["MEASURED", "LITERATURE-CONSTRAINED", "INFERRED", "ENGINEERING ASSUMPTION", "UNKNOWN"],
+  "budget": {"candidate_1_recorded_ms_at_prior_cutoff": 11722225, "candidate_1_closeout_reserve_ms": 600000, "candidate_2_cap_ms": 28800000, "overall_cap_ms": 86400000, "candidate_count_max": 3, "accounting": "Charge B6.1 active research from this turn's task_started event to Candidate 2 and overall budget; Candidate 1 unused allowance never transfers."},
+  "controls": ["Preserve all Candidate 1 protocols, failures, raw ledgers, hashes and audits", "A6 independent open status is not pathway evidence", "No ranking by contact count alone"],
+  "stop": "Write source/evidence ledger, comparison, admission decision, budget/status; stop before any further stage."
+}

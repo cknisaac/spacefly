@@ -1,0 +1,2987 @@
+{
+  "experiment_id": "MALECNS-CONTINUOUS-POSITION-LEARNING-v2.1",
+  "status": "frozen_before_v2_1_training",
+  "selection_rule": "Use the 32 next eligible source-order rows [16:48] (zero-based slice) from the pinned B2 KC\u2192MBON05 runtime mask after the original 16 Level 1/replication KCs; preserve all positive-contact rows, with no response-based selection. Map source-order rank linearly to preferred_position=i/(N-1).",
+  "source": {
+    "dataset": "MaleCNS",
+    "release": "v1.0",
+    "traced_only": true,
+    "import_validation_receipt": "data/processed/malecns_v1_traced/validation_receipt.json",
+    "kc_mbon_audit": "configs/b2_candidate1_runtime_mask.json",
+    "kc_mbon_audit_sha256": "aaf33ee3bac9a1774480e59b1dd143fbadec0b24b3a0d9d54dea7bb399383ecc"
+  },
+  "circuit": {
+    "mbon_source_id": 10495,
+    "selected_kcs": [
+      {
+        "source_id": 45199,
+        "plastic_contact_rows": 25,
+        "plastic_contact_row_ids": [
+          1151355,
+          1212183,
+          1257700,
+          1296443,
+          1730337,
+          2028446,
+          2051650,
+          2109131,
+          2151691,
+          2157216,
+          2419636,
+          2918646,
+          3193222,
+          3287301,
+          3538816,
+          3605288,
+          3615180,
+          3629977,
+          3634957,
+          3674835,
+          3729638,
+          3743555,
+          3760431,
+          3784383,
+          3802009
+        ],
+        "preferred_position": 0.0
+      },
+      {
+        "source_id": 45259,
+        "plastic_contact_rows": 13,
+        "plastic_contact_row_ids": [
+          1893055,
+          1987066,
+          2083076,
+          2089611,
+          2277056,
+          2347326,
+          2408529,
+          2445219,
+          2879291,
+          2893491,
+          3052436,
+          3223403,
+          3445100
+        ],
+        "preferred_position": 0.03225806451612903
+      },
+      {
+        "source_id": 45380,
+        "plastic_contact_rows": 28,
+        "plastic_contact_row_ids": [
+          1292261,
+          1299234,
+          1314747,
+          1357059,
+          1361153,
+          1425294,
+          1428006,
+          1461836,
+          1501275,
+          1528123,
+          2299755,
+          2403821,
+          2521580,
+          2764395,
+          3063464,
+          3149293,
+          3277356,
+          3321938,
+          3373147,
+          3404003,
+          3441392,
+          3495584,
+          3877589,
+          4131136,
+          4182205,
+          4605827,
+          4753742,
+          5019529
+        ],
+        "preferred_position": 0.06451612903225806
+      },
+      {
+        "source_id": 45434,
+        "plastic_contact_rows": 25,
+        "plastic_contact_row_ids": [
+          2350721,
+          2361375,
+          2431204,
+          2805449,
+          2855452,
+          2905299,
+          2915925,
+          2957796,
+          3107763,
+          3431763,
+          3484271,
+          3485499,
+          3559812,
+          3573682,
+          3606674,
+          3690750,
+          3724607,
+          3765423,
+          3790699,
+          3809325,
+          3957364,
+          4055457,
+          4065162,
+          4075823,
+          4226678
+        ],
+        "preferred_position": 0.0967741935483871
+      },
+      {
+        "source_id": 45460,
+        "plastic_contact_rows": 26,
+        "plastic_contact_row_ids": [
+          1296485,
+          1610188,
+          1691951,
+          1815783,
+          2067360,
+          2085408,
+          2165952,
+          2280425,
+          2671335,
+          3009445,
+          3295874,
+          3444054,
+          3920675,
+          3944247,
+          4006043,
+          4104080,
+          4106699,
+          4121696,
+          4252608,
+          4254091,
+          4374084,
+          4458189,
+          4475616,
+          4485792,
+          4560657,
+          4693132
+        ],
+        "preferred_position": 0.12903225806451613
+      },
+      {
+        "source_id": 45467,
+        "plastic_contact_rows": 17,
+        "plastic_contact_row_ids": [
+          1401765,
+          1422142,
+          1430967,
+          1522201,
+          1728172,
+          1776280,
+          1821005,
+          1908316,
+          2015338,
+          2107939,
+          2132698,
+          2148341,
+          2314228,
+          2334644,
+          2627106,
+          3072871,
+          3091004
+        ],
+        "preferred_position": 0.16129032258064516
+      },
+      {
+        "source_id": 45620,
+        "plastic_contact_rows": 23,
+        "plastic_contact_row_ids": [
+          1612150,
+          1654670,
+          1665109,
+          1757838,
+          1842307,
+          2093851,
+          2405116,
+          2585922,
+          2624961,
+          2866231,
+          3045077,
+          3265047,
+          3294466,
+          3537558,
+          3569893,
+          3620210,
+          3659862,
+          3663435,
+          3941895,
+          4382663,
+          4533539,
+          4581604,
+          4784952
+        ],
+        "preferred_position": 0.1935483870967742
+      },
+      {
+        "source_id": 45950,
+        "plastic_contact_rows": 12,
+        "plastic_contact_row_ids": [
+          3129469,
+          3197951,
+          3238197,
+          3239528,
+          3314499,
+          3414254,
+          3798295,
+          3924642,
+          3949356,
+          3999650,
+          4116375,
+          4226666
+        ],
+        "preferred_position": 0.22580645161290322
+      },
+      {
+        "source_id": 46497,
+        "plastic_contact_rows": 27,
+        "plastic_contact_row_ids": [
+          878279,
+          1000687,
+          1018281,
+          1157377,
+          1190118,
+          1214267,
+          1217117,
+          1219991,
+          1224881,
+          1268639,
+          1482700,
+          1610020,
+          1619410,
+          1896411,
+          2084071,
+          2084130,
+          2212860,
+          2458176,
+          2950419,
+          3518669,
+          3673455,
+          3686931,
+          3694314,
+          4248373,
+          4255264,
+          4275007,
+          4399574
+        ],
+        "preferred_position": 0.25806451612903225
+      },
+      {
+        "source_id": 47101,
+        "plastic_contact_rows": 18,
+        "plastic_contact_row_ids": [
+          2454858,
+          2481690,
+          2512358,
+          2622498,
+          2637457,
+          2688673,
+          2696965,
+          2749418,
+          2769065,
+          2840779,
+          2848305,
+          2991563,
+          3004784,
+          3159786,
+          3785668,
+          4166003,
+          4250946,
+          4434613
+        ],
+        "preferred_position": 0.2903225806451613
+      },
+      {
+        "source_id": 47117,
+        "plastic_contact_rows": 1,
+        "plastic_contact_row_ids": [
+          3813157
+        ],
+        "preferred_position": 0.3225806451612903
+      },
+      {
+        "source_id": 47287,
+        "plastic_contact_rows": 22,
+        "plastic_contact_row_ids": [
+          1086255,
+          1170252,
+          1194139,
+          1229890,
+          1423120,
+          1604620,
+          1784603,
+          1813723,
+          1985881,
+          2011974,
+          2148175,
+          2293894,
+          2419430,
+          2483908,
+          2662794,
+          3523654,
+          3569832,
+          4016300,
+          4025277,
+          4366886,
+          4393935,
+          5009459
+        ],
+        "preferred_position": 0.3548387096774194
+      },
+      {
+        "source_id": 47694,
+        "plastic_contact_rows": 29,
+        "plastic_contact_row_ids": [
+          2321936,
+          2606452,
+          2643147,
+          2646513,
+          2671369,
+          2678254,
+          2686408,
+          2706602,
+          2755204,
+          2765750,
+          2769321,
+          2772638,
+          2777362,
+          2907873,
+          2992637,
+          3002257,
+          3035166,
+          3051155,
+          3081687,
+          3086667,
+          3088658,
+          3515111,
+          3548644,
+          3633605,
+          3642566,
+          3963891,
+          4155543,
+          4357414,
+          5068320
+        ],
+        "preferred_position": 0.3870967741935484
+      },
+      {
+        "source_id": 47758,
+        "plastic_contact_rows": 16,
+        "plastic_contact_row_ids": [
+          1485933,
+          1758910,
+          1800427,
+          1808783,
+          1819845,
+          1832134,
+          1934239,
+          2318672,
+          2392346,
+          2609772,
+          2657111,
+          2730823,
+          2897967,
+          3387021,
+          3536099,
+          4186601
+        ],
+        "preferred_position": 0.41935483870967744
+      },
+      {
+        "source_id": 47988,
+        "plastic_contact_rows": 20,
+        "plastic_contact_row_ids": [
+          1006179,
+          1039942,
+          1057854,
+          1194071,
+          1632068,
+          1780444,
+          1983791,
+          2334540,
+          2373257,
+          2396016,
+          2425528,
+          2751793,
+          2753972,
+          3016687,
+          3893108,
+          3899855,
+          4092187,
+          4128520,
+          4128538,
+          4142047
+        ],
+        "preferred_position": 0.45161290322580644
+      },
+      {
+        "source_id": 48337,
+        "plastic_contact_rows": 21,
+        "plastic_contact_row_ids": [
+          1839256,
+          1915843,
+          1931004,
+          1966074,
+          1980450,
+          2146071,
+          2152693,
+          2204946,
+          2217612,
+          2914789,
+          2936331,
+          3054722,
+          3156078,
+          3271217,
+          3507598,
+          3743553,
+          3799410,
+          3897214,
+          3924635,
+          3988032,
+          4026746
+        ],
+        "preferred_position": 0.4838709677419355
+      },
+      {
+        "source_id": 48596,
+        "plastic_contact_rows": 33,
+        "plastic_contact_row_ids": [
+          1452095,
+          1547549,
+          1731207,
+          1948019,
+          1952405,
+          2104459,
+          2199148,
+          2233854,
+          2282640,
+          2295161,
+          2304536,
+          2319637,
+          2386892,
+          2578818,
+          2583281,
+          2604011,
+          2659255,
+          2663911,
+          2681532,
+          2842135,
+          2858890,
+          2961264,
+          2969593,
+          3005921,
+          3036363,
+          3166984,
+          3173231,
+          3309101,
+          3378221,
+          3481797,
+          3508954,
+          3620232,
+          3705486
+        ],
+        "preferred_position": 0.5161290322580645
+      },
+      {
+        "source_id": 48759,
+        "plastic_contact_rows": 13,
+        "plastic_contact_row_ids": [
+          2005532,
+          2058366,
+          2157138,
+          2234773,
+          2237241,
+          2250790,
+          2303353,
+          2364891,
+          2376330,
+          2378464,
+          3610253,
+          3929996,
+          3945581
+        ],
+        "preferred_position": 0.5483870967741935
+      },
+      {
+        "source_id": 49124,
+        "plastic_contact_rows": 24,
+        "plastic_contact_row_ids": [
+          960282,
+          1123642,
+          1163474,
+          1322807,
+          1433975,
+          2758383,
+          2974533,
+          3068202,
+          3099545,
+          3190715,
+          3245457,
+          3295867,
+          3309194,
+          3316829,
+          3320782,
+          3395094,
+          3494328,
+          3543457,
+          3661046,
+          3696783,
+          3705388,
+          3714472,
+          3755147,
+          3771530
+        ],
+        "preferred_position": 0.5806451612903226
+      },
+      {
+        "source_id": 49160,
+        "plastic_contact_rows": 22,
+        "plastic_contact_row_ids": [
+          1067339,
+          1131669,
+          1146493,
+          1205364,
+          1252543,
+          1259700,
+          1261634,
+          1456446,
+          1479685,
+          1496170,
+          2111223,
+          2178325,
+          2403942,
+          2512442,
+          2627162,
+          2744998,
+          2960102,
+          3092279,
+          3284734,
+          3341476,
+          3803188,
+          4066571
+        ],
+        "preferred_position": 0.6129032258064516
+      },
+      {
+        "source_id": 49526,
+        "plastic_contact_rows": 19,
+        "plastic_contact_row_ids": [
+          1587854,
+          1824017,
+          1865035,
+          1927794,
+          2112172,
+          2170325,
+          2235710,
+          2248199,
+          2250554,
+          2524166,
+          2528820,
+          2636532,
+          2749389,
+          2789025,
+          2821730,
+          2826423,
+          2834662,
+          2869813,
+          3701967
+        ],
+        "preferred_position": 0.6451612903225806
+      },
+      {
+        "source_id": 49544,
+        "plastic_contact_rows": 18,
+        "plastic_contact_row_ids": [
+          1334165,
+          1934233,
+          2085307,
+          2116808,
+          2122393,
+          2175137,
+          2203728,
+          2231386,
+          2271463,
+          2379590,
+          2393818,
+          2591380,
+          2694593,
+          3013127,
+          3041278,
+          3737017,
+          3998338,
+          4034510
+        ],
+        "preferred_position": 0.6774193548387096
+      },
+      {
+        "source_id": 49545,
+        "plastic_contact_rows": 26,
+        "plastic_contact_row_ids": [
+          2614526,
+          2722758,
+          2805586,
+          2845726,
+          2856689,
+          2856703,
+          2896666,
+          2896724,
+          2901564,
+          2914627,
+          2920889,
+          2922058,
+          2927010,
+          2942259,
+          2994876,
+          3001075,
+          3037624,
+          3041531,
+          3082731,
+          3111206,
+          3143574,
+          3146030,
+          3195489,
+          3217291,
+          3332760,
+          4279163
+        ],
+        "preferred_position": 0.7096774193548387
+      },
+      {
+        "source_id": 49867,
+        "plastic_contact_rows": 20,
+        "plastic_contact_row_ids": [
+          2280242,
+          2320469,
+          2405071,
+          2551828,
+          2559835,
+          2582216,
+          2589230,
+          2590379,
+          2618989,
+          2658156,
+          2714456,
+          2763018,
+          2777227,
+          2867274,
+          2906585,
+          3521167,
+          3800721,
+          4013774,
+          4080106,
+          4096159
+        ],
+        "preferred_position": 0.7419354838709677
+      },
+      {
+        "source_id": 50411,
+        "plastic_contact_rows": 23,
+        "plastic_contact_row_ids": [
+          1711060,
+          2160263,
+          2509068,
+          2522862,
+          2591387,
+          2593573,
+          2595758,
+          2601693,
+          2636273,
+          2678095,
+          2693473,
+          2699366,
+          2736757,
+          2753844,
+          2760825,
+          2774913,
+          2785502,
+          2877049,
+          2935017,
+          2952924,
+          3126950,
+          3508972,
+          3581357
+        ],
+        "preferred_position": 0.7741935483870968
+      },
+      {
+        "source_id": 50568,
+        "plastic_contact_rows": 29,
+        "plastic_contact_row_ids": [
+          2117778,
+          2258436,
+          2284704,
+          2340265,
+          2418147,
+          2474397,
+          2506553,
+          2550729,
+          2625866,
+          2654529,
+          2657032,
+          2760770,
+          2887633,
+          2893528,
+          3102977,
+          3113841,
+          3229708,
+          3284666,
+          3300610,
+          3344157,
+          3426917,
+          3515155,
+          3620332,
+          3657450,
+          3902394,
+          4021541,
+          4086859,
+          4113293,
+          4398313
+        ],
+        "preferred_position": 0.8064516129032258
+      },
+      {
+        "source_id": 50591,
+        "plastic_contact_rows": 21,
+        "plastic_contact_row_ids": [
+          2320582,
+          2615787,
+          2725280,
+          2819552,
+          3027973,
+          3041298,
+          3051246,
+          3092199,
+          3163622,
+          3164611,
+          3171933,
+          3173207,
+          3193152,
+          3243149,
+          3469441,
+          3689628,
+          3776683,
+          3977269,
+          3998370,
+          4189419,
+          4290766
+        ],
+        "preferred_position": 0.8387096774193549
+      },
+      {
+        "source_id": 50791,
+        "plastic_contact_rows": 20,
+        "plastic_contact_row_ids": [
+          1964015,
+          2151416,
+          2162516,
+          2193310,
+          2393537,
+          2584685,
+          2588112,
+          2590440,
+          2591479,
+          2594906,
+          2614474,
+          2626043,
+          2725285,
+          2728760,
+          2757319,
+          2899380,
+          2908751,
+          2955352,
+          2962733,
+          3198068
+        ],
+        "preferred_position": 0.8709677419354839
+      },
+      {
+        "source_id": 50820,
+        "plastic_contact_rows": 36,
+        "plastic_contact_row_ids": [
+          1524171,
+          1747261,
+          1762175,
+          1816717,
+          1838444,
+          1846515,
+          1860609,
+          1863954,
+          1932035,
+          1948149,
+          2090633,
+          2102503,
+          2149417,
+          2153861,
+          2161586,
+          2190167,
+          2210761,
+          2223460,
+          2260649,
+          2332127,
+          2555479,
+          2839764,
+          2847058,
+          3091080,
+          3129434,
+          3184483,
+          3195516,
+          3216228,
+          3222276,
+          3251362,
+          3335418,
+          3557242,
+          3656100,
+          3879044,
+          4789752,
+          4821413
+        ],
+        "preferred_position": 0.9032258064516129
+      },
+      {
+        "source_id": 51053,
+        "plastic_contact_rows": 15,
+        "plastic_contact_row_ids": [
+          1918130,
+          2061691,
+          2125588,
+          2131479,
+          2206339,
+          2304709,
+          2422130,
+          2667522,
+          2751947,
+          2837322,
+          2972181,
+          2998537,
+          3207462,
+          3327887,
+          4283391
+        ],
+        "preferred_position": 0.9354838709677419
+      },
+      {
+        "source_id": 51055,
+        "plastic_contact_rows": 26,
+        "plastic_contact_row_ids": [
+          2792667,
+          2996328,
+          2999933,
+          3062314,
+          3177288,
+          3398776,
+          3636465,
+          3661180,
+          3819454,
+          3915584,
+          3942962,
+          3966543,
+          4021432,
+          4047608,
+          4253931,
+          4267838,
+          4277863,
+          4293518,
+          4371017,
+          4379832,
+          4382630,
+          4384045,
+          4391394,
+          4686856,
+          4743939,
+          4767609
+        ],
+        "preferred_position": 0.967741935483871
+      },
+      {
+        "source_id": 51330,
+        "plastic_contact_rows": 17,
+        "plastic_contact_row_ids": [
+          2728522,
+          2807707,
+          2822741,
+          2857629,
+          2857633,
+          2891224,
+          2951612,
+          2988012,
+          3088737,
+          3155160,
+          3155198,
+          3158513,
+          3208514,
+          3263665,
+          3303089,
+          3428234,
+          3965280
+        ],
+        "preferred_position": 1.0
+      }
+    ],
+    "plastic_edge_count": 32,
+    "plastic_contact_count": 685,
+    "plastic_edge_semantics": "one aggregate KC\u2192MBON05 edge per selected KC, representing only its audited B2 plastic contact rows; all edges in this Level 2 subset are locally plastic; other contacts are omitted"
+  },
+  "encoder": {
+    "input": "current note position x only",
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "tuning": "activation_i(x)=exp(-0.5*((x-mu_i)/sigma)^2)",
+    "sigma": 0.08,
+    "peak_drive_mv": 1.2,
+    "drive_transform": "external KC drive = peak_drive_mv * activation_i(x); no future timestamp, time-to-contact, desired action time, future position, or target-region flag enters the encoder",
+    "status": "fixed engineering overlay; source-order preferred positions; not anatomically measured tuning"
+  },
+  "overlay": {
+    "synaptic_delay_us": 2000,
+    "lif": {
+      "v_rest_mv": 0.0,
+      "v_reset_mv": 0.0,
+      "v_threshold_mv": 1.0,
+      "tau_m_us": 20000,
+      "tau_syn_us": 5000,
+      "refractory_us": 2000,
+      "dt_us": 1000
+    },
+    "observation_window_us": 100000,
+    "mbon_activity": "maximum subthreshold MBON05 membrane voltage during fixed observation window; engineering readout",
+    "rng_seed": 32001,
+    "rng_usage": "no random draws; seed is a deterministic run identifier"
+  },
+  "weight_initialization": {
+    "rule": "KC audited plastic-contact count divided by total audited plastic-contact count across all 32 selected KCs",
+    "units": "mV-equivalent normalized aggregate edge weights",
+    "status": "engineering voltage normalization; anatomy counts only determine relative starting weights"
+  },
+  "evaluation": {
+    "position_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "spacing": 0.05,
+    "action_rule": "ACTION iff maximum MBON05 voltage <= frozen pretraining controllability threshold",
+    "plasticity": "OFF",
+    "teacher": "OFF"
+  },
+  "controllability_probe": {
+    "centers": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "weakened_preferred_position_half_width": 0.1,
+    "local_test_half_width": 0.05,
+    "distant_minimum_separation": 0.2,
+    "weight_multiplier": 0.2,
+    "threshold_selection": "For each frozen probe center, reduce only the weights of KCs whose preferred positions are within \u00b10.10 by fixed factor 0.20. Let L be the maximum MBON05 response over all grid positions within \u00b10.05 of any probe center; let D be the minimum baseline response over grid positions at least 0.20 from their corresponding center. Freeze threshold=(L+D)/2 only if L<D, the full naive grid is no-action, local regions cross ACTION, distant positions stay no-action, and local matched responses fall. No training outcomes enter this rule.",
+    "probe_result": "runs/malecns_continuous_position_learning_v1/controllability.json",
+    "threshold_status": "derived once from PASS probe before training; training runner refuses missing/failed probe"
+  },
+  "target_region": {
+    "primary": [
+      0.65,
+      0.75
+    ],
+    "wrong_control": [
+      0.15,
+      0.25
+    ],
+    "target_positions_per_block": [
+      0.65,
+      0.7,
+      0.75,
+      0.68,
+      0.72
+    ],
+    "wrong_region_positions_per_block": [
+      0.15,
+      0.2,
+      0.25,
+      0.15,
+      0.25
+    ]
+  },
+  "training": {
+    "blocks": 32,
+    "trial_spacing_us": 200000,
+    "teacher_lag_us": 1000,
+    "ltd": {
+      "tau_us": 1000000,
+      "eta": 5e-05,
+      "minimum_fraction": 0.2
+    },
+    "parameter_status": "frozen before training; small fixed LTD decrement chosen to expose blockwise changes, not outcome tuned",
+    "sequence": [
+      {
+        "presentation": 1,
+        "block": 1,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 2,
+        "block": 1,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 3,
+        "block": 1,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 4,
+        "block": 1,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 5,
+        "block": 1,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 6,
+        "block": 1,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 7,
+        "block": 1,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 8,
+        "block": 1,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 9,
+        "block": 1,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 10,
+        "block": 1,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 11,
+        "block": 2,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 12,
+        "block": 2,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 13,
+        "block": 2,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 14,
+        "block": 2,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 15,
+        "block": 2,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 16,
+        "block": 2,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 17,
+        "block": 2,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 18,
+        "block": 2,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 19,
+        "block": 2,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 20,
+        "block": 2,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 21,
+        "block": 3,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 22,
+        "block": 3,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 23,
+        "block": 3,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 24,
+        "block": 3,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 25,
+        "block": 3,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 26,
+        "block": 3,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 27,
+        "block": 3,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 28,
+        "block": 3,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 29,
+        "block": 3,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 30,
+        "block": 3,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 31,
+        "block": 4,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 32,
+        "block": 4,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 33,
+        "block": 4,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 34,
+        "block": 4,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 35,
+        "block": 4,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 36,
+        "block": 4,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 37,
+        "block": 4,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 38,
+        "block": 4,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 39,
+        "block": 4,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 40,
+        "block": 4,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 41,
+        "block": 5,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 42,
+        "block": 5,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 43,
+        "block": 5,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 44,
+        "block": 5,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 45,
+        "block": 5,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 46,
+        "block": 5,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 47,
+        "block": 5,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 48,
+        "block": 5,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 49,
+        "block": 5,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 50,
+        "block": 5,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 51,
+        "block": 6,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 52,
+        "block": 6,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 53,
+        "block": 6,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 54,
+        "block": 6,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 55,
+        "block": 6,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 56,
+        "block": 6,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 57,
+        "block": 6,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 58,
+        "block": 6,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 59,
+        "block": 6,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 60,
+        "block": 6,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 61,
+        "block": 7,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 62,
+        "block": 7,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 63,
+        "block": 7,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 64,
+        "block": 7,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 65,
+        "block": 7,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 66,
+        "block": 7,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 67,
+        "block": 7,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 68,
+        "block": 7,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 69,
+        "block": 7,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 70,
+        "block": 7,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 71,
+        "block": 8,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 72,
+        "block": 8,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 73,
+        "block": 8,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 74,
+        "block": 8,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 75,
+        "block": 8,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 76,
+        "block": 8,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 77,
+        "block": 8,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 78,
+        "block": 8,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 79,
+        "block": 8,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 80,
+        "block": 8,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 81,
+        "block": 9,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 82,
+        "block": 9,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 83,
+        "block": 9,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 84,
+        "block": 9,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 85,
+        "block": 9,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 86,
+        "block": 9,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 87,
+        "block": 9,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 88,
+        "block": 9,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 89,
+        "block": 9,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 90,
+        "block": 9,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 91,
+        "block": 10,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 92,
+        "block": 10,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 93,
+        "block": 10,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 94,
+        "block": 10,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 95,
+        "block": 10,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 96,
+        "block": 10,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 97,
+        "block": 10,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 98,
+        "block": 10,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 99,
+        "block": 10,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 100,
+        "block": 10,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 101,
+        "block": 11,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 102,
+        "block": 11,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 103,
+        "block": 11,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 104,
+        "block": 11,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 105,
+        "block": 11,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 106,
+        "block": 11,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 107,
+        "block": 11,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 108,
+        "block": 11,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 109,
+        "block": 11,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 110,
+        "block": 11,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 111,
+        "block": 12,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 112,
+        "block": 12,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 113,
+        "block": 12,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 114,
+        "block": 12,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 115,
+        "block": 12,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 116,
+        "block": 12,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 117,
+        "block": 12,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 118,
+        "block": 12,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 119,
+        "block": 12,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 120,
+        "block": 12,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 121,
+        "block": 13,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 122,
+        "block": 13,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 123,
+        "block": 13,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 124,
+        "block": 13,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 125,
+        "block": 13,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 126,
+        "block": 13,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 127,
+        "block": 13,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 128,
+        "block": 13,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 129,
+        "block": 13,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 130,
+        "block": 13,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 131,
+        "block": 14,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 132,
+        "block": 14,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 133,
+        "block": 14,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 134,
+        "block": 14,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 135,
+        "block": 14,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 136,
+        "block": 14,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 137,
+        "block": 14,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 138,
+        "block": 14,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 139,
+        "block": 14,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 140,
+        "block": 14,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 141,
+        "block": 15,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 142,
+        "block": 15,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 143,
+        "block": 15,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 144,
+        "block": 15,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 145,
+        "block": 15,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 146,
+        "block": 15,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 147,
+        "block": 15,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 148,
+        "block": 15,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 149,
+        "block": 15,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 150,
+        "block": 15,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 151,
+        "block": 16,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 152,
+        "block": 16,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 153,
+        "block": 16,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 154,
+        "block": 16,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 155,
+        "block": 16,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 156,
+        "block": 16,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 157,
+        "block": 16,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 158,
+        "block": 16,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 159,
+        "block": 16,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 160,
+        "block": 16,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 161,
+        "block": 17,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 162,
+        "block": 17,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 163,
+        "block": 17,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 164,
+        "block": 17,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 165,
+        "block": 17,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 166,
+        "block": 17,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 167,
+        "block": 17,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 168,
+        "block": 17,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 169,
+        "block": 17,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 170,
+        "block": 17,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 171,
+        "block": 18,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 172,
+        "block": 18,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 173,
+        "block": 18,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 174,
+        "block": 18,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 175,
+        "block": 18,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 176,
+        "block": 18,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 177,
+        "block": 18,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 178,
+        "block": 18,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 179,
+        "block": 18,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 180,
+        "block": 18,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 181,
+        "block": 19,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 182,
+        "block": 19,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 183,
+        "block": 19,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 184,
+        "block": 19,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 185,
+        "block": 19,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 186,
+        "block": 19,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 187,
+        "block": 19,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 188,
+        "block": 19,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 189,
+        "block": 19,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 190,
+        "block": 19,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 191,
+        "block": 20,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 192,
+        "block": 20,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 193,
+        "block": 20,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 194,
+        "block": 20,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 195,
+        "block": 20,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 196,
+        "block": 20,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 197,
+        "block": 20,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 198,
+        "block": 20,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 199,
+        "block": 20,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 200,
+        "block": 20,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 201,
+        "block": 21,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 202,
+        "block": 21,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 203,
+        "block": 21,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 204,
+        "block": 21,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 205,
+        "block": 21,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 206,
+        "block": 21,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 207,
+        "block": 21,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 208,
+        "block": 21,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 209,
+        "block": 21,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 210,
+        "block": 21,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 211,
+        "block": 22,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 212,
+        "block": 22,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 213,
+        "block": 22,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 214,
+        "block": 22,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 215,
+        "block": 22,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 216,
+        "block": 22,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 217,
+        "block": 22,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 218,
+        "block": 22,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 219,
+        "block": 22,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 220,
+        "block": 22,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 221,
+        "block": 23,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 222,
+        "block": 23,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 223,
+        "block": 23,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 224,
+        "block": 23,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 225,
+        "block": 23,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 226,
+        "block": 23,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 227,
+        "block": 23,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 228,
+        "block": 23,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 229,
+        "block": 23,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 230,
+        "block": 23,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 231,
+        "block": 24,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 232,
+        "block": 24,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 233,
+        "block": 24,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 234,
+        "block": 24,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 235,
+        "block": 24,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 236,
+        "block": 24,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 237,
+        "block": 24,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 238,
+        "block": 24,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 239,
+        "block": 24,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 240,
+        "block": 24,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 241,
+        "block": 25,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 242,
+        "block": 25,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 243,
+        "block": 25,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 244,
+        "block": 25,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 245,
+        "block": 25,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 246,
+        "block": 25,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 247,
+        "block": 25,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 248,
+        "block": 25,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 249,
+        "block": 25,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 250,
+        "block": 25,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 251,
+        "block": 26,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 252,
+        "block": 26,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 253,
+        "block": 26,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 254,
+        "block": 26,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 255,
+        "block": 26,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 256,
+        "block": 26,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 257,
+        "block": 26,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 258,
+        "block": 26,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 259,
+        "block": 26,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 260,
+        "block": 26,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 261,
+        "block": 27,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 262,
+        "block": 27,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 263,
+        "block": 27,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 264,
+        "block": 27,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 265,
+        "block": 27,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 266,
+        "block": 27,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 267,
+        "block": 27,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 268,
+        "block": 27,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 269,
+        "block": 27,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 270,
+        "block": 27,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 271,
+        "block": 28,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 272,
+        "block": 28,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 273,
+        "block": 28,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 274,
+        "block": 28,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 275,
+        "block": 28,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 276,
+        "block": 28,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 277,
+        "block": 28,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 278,
+        "block": 28,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 279,
+        "block": 28,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 280,
+        "block": 28,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 281,
+        "block": 29,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 282,
+        "block": 29,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 283,
+        "block": 29,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 284,
+        "block": 29,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 285,
+        "block": 29,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 286,
+        "block": 29,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 287,
+        "block": 29,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 288,
+        "block": 29,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 289,
+        "block": 29,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 290,
+        "block": 29,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 291,
+        "block": 30,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 292,
+        "block": 30,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 293,
+        "block": 30,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 294,
+        "block": 30,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 295,
+        "block": 30,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 296,
+        "block": 30,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 297,
+        "block": 30,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 298,
+        "block": 30,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 299,
+        "block": 30,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 300,
+        "block": 30,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 301,
+        "block": 31,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 302,
+        "block": 31,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 303,
+        "block": 31,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 304,
+        "block": 31,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 305,
+        "block": 31,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 306,
+        "block": 31,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 307,
+        "block": 31,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 308,
+        "block": 31,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 309,
+        "block": 31,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 310,
+        "block": 31,
+        "position": 0.72,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 311,
+        "block": 32,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 312,
+        "block": 32,
+        "position": 0.65,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 313,
+        "block": 32,
+        "position": 0.2,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 314,
+        "block": 32,
+        "position": 0.7,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 315,
+        "block": 32,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 316,
+        "block": 32,
+        "position": 0.75,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 317,
+        "block": 32,
+        "position": 0.15,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 318,
+        "block": 32,
+        "position": 0.68,
+        "position_class": "target_region"
+      },
+      {
+        "presentation": 319,
+        "block": 32,
+        "position": 0.25,
+        "position_class": "wrong_region_distractor"
+      },
+      {
+        "presentation": 320,
+        "block": 32,
+        "position": 0.72,
+        "position_class": "target_region"
+      }
+    ],
+    "teacher_policy": {
+      "primary": "target_region",
+      "plasticity_off_control": "off",
+      "wrong_region_control": "wrong_region"
+    },
+    "logging": "per presentation: position, encoder drive, KC spike counts, MBON response, action, eligibility at teacher, teacher indicator, and each weight change; full frozen position map after each block",
+    "teacher_policy_descriptions": {
+      "primary": "teacher only after target_region presentation",
+      "plasticity_off_control": "no teacher; local plasticity disabled",
+      "wrong_region_control": "teacher only after wrong_region_distractor presentation"
+    },
+    "eligibility_reset_scope": "presentation_local: eligibility is initialized at zero at the start of each stimulus presentation, used for that presentation\u2019s teacher pulse, and discarded before the next presentation; weights persist",
+    "duration_status": "fixed at 32 complete blocks; run all blocks without performance-based early stopping"
+  },
+  "continuation": {
+    "version": "v2.1",
+    "only_changes": [
+      "eligibility resets to zero at each stimulus presentation boundary; training duration is 32 blocks"
+    ],
+    "source_config": "configs/malecns_continuous_position_learning_v1.json",
+    "source_config_sha256": "86328197cd9af5e1e0e26c8bf54454f3e9a48aa165f841f3049836807c90779b",
+    "source_probe": "runs/malecns_continuous_position_learning_v1/controllability.json",
+    "source_probe_sha256": "e2c44d14cf21824c9a7ad072d1ad5b902795972c8d3888b30c2fc9d65bea46eb",
+    "frozen_action_threshold_mv": 0.005572335995331903
+  }
+}

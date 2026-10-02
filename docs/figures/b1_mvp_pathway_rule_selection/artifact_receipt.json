@@ -1,0 +1,26 @@
+{
+  "stage_id": "MVP-B1",
+  "status": "PASS_SELECTION_ONLY",
+  "verified_at_utc": "2026-10-01T01:46:17.606053+00:00",
+  "checks": {
+    "raw_source_rows_checked": 8202,
+    "normalized_parent_hashes_match": true,
+    "raw_hash_matches_manifest": true,
+    "selected_roster_unique": true,
+    "local_report_targets_exist": true,
+    "json_artifacts_parse": true
+  },
+  "files": {
+    "configs/b1_mvp_pathway_rule_selection.json": "3a1363b371ed16060f5bd8ae59655c56dd315c369dc1a661b4ed7cc556ac0cdc",
+    "scripts/audit_b1_mvp_anatomy.py": "06095d60d873afe9b4b9464c9e28e6748349fb2a8f112a4344dc6e70ef82fad2",
+    "docs/B1_MVP_PATHWAY_RULE_SELECTION.md": "eb46fd6e976ccd96466758077dea5dff7a9ce8c45270fa522fd3d3fa38a1ae24",
+    "docs/figures/b1_mvp_pathway_rule_selection/anatomy_comparison.json": "d5e5d3de16ba3dab5eedaec83a2e6ed91c6cec5567e48e3f4cf19141d3993710",
+    "docs/figures/b1_mvp_pathway_rule_selection/selected_anatomy.json": "43fe860d8d151b2e0527c60623fc4d0428bef2fbc7660e1be7b6aefe6029c3e4",
+    "docs/figures/b1_mvp_pathway_rule_selection/budget_ledger.json": "36cd9f88123ada531a4f2f39398208198b754edeace11f17308ca9baff2affcd",
+    "CURRENT.md": "fbde1259ebb200949575681f97791904354aa64793abae93f3bb94aa5fb1d139",
+    "ASSUMPTIONS.md": "025acd4a46a287027a39854ebc843a17b61838f7f5464ea99827ca0fd0cc3d29",
+    "MILESTONES.md": "8915b691b1335e557cfa27656129d0bea75ecb18d5a5c488bfba11c7e0c1cd46",
+    "AGENTS.md": "b5834ebe916ad4809abe1aba867934965f9716ad5b2f4667165f43ce3d08463a",
+    "docs/BRANCH_B_FLY_LEARNING_ROADMAP.md": "51cc5ab681f1440f27027bd398ee31c0fbd2bd3dea3044d9ec10d179cffcd30d"
+  }
+}

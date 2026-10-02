@@ -1,0 +1,724 @@
+{
+  "study_id": "synthetic_frozen_exploration_map_factorial_v1",
+  "status": "user_stopped_early",
+  "original_planned_seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+  ],
+  "completed_seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+  ],
+  "unrun_seeds": [
+    2005,
+    2006,
+    2007
+  ],
+  "checkpoints": {
+    "24": {
+      "common": {
+        "off_mean_good_percent": 80.0,
+        "on_mean_good_percent": 73.75,
+        "on_minus_off_mean_good_points": -6.25,
+        "off_mean_utility": 0.3921875,
+        "on_mean_utility": 0.31744791666666666,
+        "on_minus_off_mean_utility": -0.07473958333333333,
+        "off_mean_early_attempted_misses": 4.4,
+        "on_mean_early_attempted_misses": 4.8,
+        "off_mean_down_actions": 57.6,
+        "on_mean_down_actions": 66.53333333333333,
+        "off_mean_null_downs": 25.6,
+        "on_mean_null_downs": 34.53333333333333,
+        "on_mean_exploration_pulses": 26.8,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              87.5,
+              90.625,
+              87.5
+            ],
+            "on_mean_good_percent": 88.54166666666667,
+            "on_minus_off_good_points": -11.458333333333329
+          },
+          "2001": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              93.75,
+              90.625,
+              84.375
+            ],
+            "on_mean_good_percent": 89.58333333333333,
+            "on_minus_off_good_points": -10.416666666666671
+          },
+          "2002": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              87.5,
+              90.625,
+              90.625
+            ],
+            "on_mean_good_percent": 89.58333333333333,
+            "on_minus_off_good_points": -10.416666666666671
+          },
+          "2003": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              84.375,
+              81.25,
+              90.625
+            ],
+            "on_mean_good_percent": 85.41666666666667,
+            "on_minus_off_good_points": -14.583333333333329
+          },
+          "2004": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              12.5,
+              6.25,
+              28.125
+            ],
+            "on_mean_good_percent": 15.625,
+            "on_minus_off_good_points": 15.625
+          }
+        }
+      },
+      "continuation": {
+        "off_mean_good_percent": 80.0,
+        "on_mean_good_percent": 74.79166666666667,
+        "on_minus_off_mean_good_points": -5.208333333333334,
+        "off_mean_utility": 0.40546875,
+        "on_mean_utility": 0.333203125,
+        "on_minus_off_mean_utility": -0.072265625,
+        "off_mean_early_attempted_misses": 4,
+        "on_mean_early_attempted_misses": 4.333333333333333,
+        "off_mean_down_actions": 57.6,
+        "on_mean_down_actions": 66.2,
+        "off_mean_null_downs": 25.6,
+        "on_mean_null_downs": 34.2,
+        "on_mean_exploration_pulses": 26.866666666666667,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              96.875,
+              90.625,
+              93.75
+            ],
+            "on_mean_good_percent": 93.75,
+            "on_minus_off_good_points": -6.25
+          },
+          "2001": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              81.25,
+              90.625,
+              93.75
+            ],
+            "on_mean_good_percent": 88.54166666666667,
+            "on_minus_off_good_points": -11.458333333333329
+          },
+          "2002": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              78.125,
+              87.5,
+              87.5
+            ],
+            "on_mean_good_percent": 84.375,
+            "on_minus_off_good_points": -15.625
+          },
+          "2003": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              90.625,
+              84.375,
+              93.75
+            ],
+            "on_mean_good_percent": 89.58333333333333,
+            "on_minus_off_good_points": -10.416666666666671
+          },
+          "2004": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              18.75,
+              21.875,
+              12.5
+            ],
+            "on_mean_good_percent": 17.708333333333332,
+            "on_minus_off_good_points": 17.708333333333332
+          }
+        }
+      },
+      "map_effect_off_points": 0.0,
+      "map_effect_on_points": 1.0416666666666714
+    },
+    "96": {
+      "common": {
+        "off_mean_good_percent": 42.5,
+        "on_mean_good_percent": 48.333333333333336,
+        "on_minus_off_mean_good_points": 5.833333333333334,
+        "off_mean_utility": -0.26328125,
+        "on_mean_utility": -0.15533854166666666,
+        "on_minus_off_mean_utility": 0.10794270833333333,
+        "off_mean_early_attempted_misses": 9.2,
+        "on_mean_early_attempted_misses": 7.666666666666667,
+        "off_mean_down_actions": 59.2,
+        "on_mean_down_actions": 68.0,
+        "off_mean_null_downs": 27.2,
+        "on_mean_null_downs": 36.0,
+        "on_mean_exploration_pulses": 25.933333333333334,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              15.625,
+              21.875,
+              15.625
+            ],
+            "on_mean_good_percent": 17.708333333333332,
+            "on_minus_off_good_points": 17.708333333333332
+          },
+          "2001": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              96.875,
+              93.75,
+              93.75
+            ],
+            "on_mean_good_percent": 94.79166666666667,
+            "on_minus_off_good_points": -5.208333333333329
+          },
+          "2002": {
+            "off_good_percent": 12.5,
+            "on_good_percent_by_stream": [
+              40.625,
+              18.75,
+              25.0
+            ],
+            "on_mean_good_percent": 28.125,
+            "on_minus_off_good_points": 15.625
+          },
+          "2003": {
+            "off_good_percent": 75.0,
+            "on_good_percent_by_stream": [
+              59.375,
+              68.75,
+              78.125
+            ],
+            "on_mean_good_percent": 68.75,
+            "on_minus_off_good_points": -6.25
+          },
+          "2004": {
+            "off_good_percent": 25.0,
+            "on_good_percent_by_stream": [
+              34.375,
+              31.25,
+              31.25
+            ],
+            "on_mean_good_percent": 32.291666666666664,
+            "on_minus_off_good_points": 7.291666666666664
+          }
+        }
+      },
+      "continuation": {
+        "off_mean_good_percent": 43.75,
+        "on_mean_good_percent": 49.375,
+        "on_minus_off_mean_good_points": 5.625,
+        "off_mean_utility": -0.243359375,
+        "on_mean_utility": -0.14427083333333335,
+        "on_minus_off_mean_utility": 0.09908854166666667,
+        "off_mean_early_attempted_misses": 8.4,
+        "on_mean_early_attempted_misses": 7.133333333333333,
+        "off_mean_down_actions": 58.8,
+        "on_mean_down_actions": 67.6,
+        "off_mean_null_downs": 26.8,
+        "on_mean_null_downs": 35.6,
+        "on_mean_exploration_pulses": 25.0,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              18.75,
+              12.5,
+              12.5
+            ],
+            "on_mean_good_percent": 14.583333333333334,
+            "on_minus_off_good_points": 14.583333333333334
+          },
+          "2001": {
+            "off_good_percent": 100.0,
+            "on_good_percent_by_stream": [
+              96.875,
+              96.875,
+              100.0
+            ],
+            "on_mean_good_percent": 97.91666666666667,
+            "on_minus_off_good_points": -2.0833333333333286
+          },
+          "2002": {
+            "off_good_percent": 21.875,
+            "on_good_percent_by_stream": [
+              37.5,
+              37.5,
+              34.375
+            ],
+            "on_mean_good_percent": 36.458333333333336,
+            "on_minus_off_good_points": 14.583333333333336
+          },
+          "2003": {
+            "off_good_percent": 78.125,
+            "on_good_percent_by_stream": [
+              71.875,
+              65.625,
+              75.0
+            ],
+            "on_mean_good_percent": 70.83333333333333,
+            "on_minus_off_good_points": -7.291666666666671
+          },
+          "2004": {
+            "off_good_percent": 18.75,
+            "on_good_percent_by_stream": [
+              28.125,
+              25.0,
+              28.125
+            ],
+            "on_mean_good_percent": 27.083333333333332,
+            "on_minus_off_good_points": 8.333333333333332
+          }
+        }
+      },
+      "map_effect_off_points": 1.25,
+      "map_effect_on_points": 1.0416666666666643
+    },
+    "384": {
+      "common": {
+        "off_mean_good_percent": 15.625,
+        "on_mean_good_percent": 25.833333333333332,
+        "on_minus_off_mean_good_points": 10.208333333333334,
+        "off_mean_utility": -0.681640625,
+        "on_mean_utility": -0.47695312500000003,
+        "on_minus_off_mean_utility": 0.20468749999999997,
+        "off_mean_early_attempted_misses": 16.6,
+        "on_mean_early_attempted_misses": 13.799999999999999,
+        "off_mean_down_actions": 51.2,
+        "on_mean_down_actions": 62.4,
+        "off_mean_null_downs": 19.2,
+        "on_mean_null_downs": 30.4,
+        "on_mean_exploration_pulses": 25.266666666666666,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              15.625,
+              18.75,
+              6.25
+            ],
+            "on_mean_good_percent": 13.541666666666666,
+            "on_minus_off_good_points": 13.541666666666666
+          },
+          "2001": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              12.5,
+              12.5,
+              21.875
+            ],
+            "on_mean_good_percent": 15.625,
+            "on_minus_off_good_points": 15.625
+          },
+          "2002": {
+            "off_good_percent": 78.125,
+            "on_good_percent_by_stream": [
+              62.5,
+              65.625,
+              78.125
+            ],
+            "on_mean_good_percent": 68.75,
+            "on_minus_off_good_points": -9.375
+          },
+          "2003": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              15.625,
+              12.5,
+              15.625
+            ],
+            "on_mean_good_percent": 14.583333333333334,
+            "on_minus_off_good_points": 14.583333333333334
+          },
+          "2004": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              18.75,
+              9.375,
+              21.875
+            ],
+            "on_mean_good_percent": 16.666666666666668,
+            "on_minus_off_good_points": 16.666666666666668
+          }
+        }
+      },
+      "continuation": {
+        "off_mean_good_percent": 16.875,
+        "on_mean_good_percent": 30.0,
+        "on_minus_off_mean_good_points": 13.125,
+        "off_mean_utility": -0.65234375,
+        "on_mean_utility": -0.420703125,
+        "on_minus_off_mean_utility": 0.23164062500000002,
+        "off_mean_early_attempted_misses": 14.8,
+        "on_mean_early_attempted_misses": 12.200000000000001,
+        "off_mean_down_actions": 51.2,
+        "on_mean_down_actions": 62.13333333333333,
+        "off_mean_null_downs": 19.2,
+        "on_mean_null_downs": 30.133333333333333,
+        "on_mean_exploration_pulses": 24.4,
+        "per_seed": {
+          "2000": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              25.0,
+              25.0,
+              12.5
+            ],
+            "on_mean_good_percent": 20.833333333333332,
+            "on_minus_off_good_points": 20.833333333333332
+          },
+          "2001": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              9.375,
+              12.5,
+              18.75
+            ],
+            "on_mean_good_percent": 13.541666666666666,
+            "on_minus_off_good_points": 13.541666666666666
+          },
+          "2002": {
+            "off_good_percent": 84.375,
+            "on_good_percent_by_stream": [
+              62.5,
+              68.75,
+              84.375
+            ],
+            "on_mean_good_percent": 71.875,
+            "on_minus_off_good_points": -12.5
+          },
+          "2003": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              21.875,
+              25.0,
+              21.875
+            ],
+            "on_mean_good_percent": 22.916666666666668,
+            "on_minus_off_good_points": 22.916666666666668
+          },
+          "2004": {
+            "off_good_percent": 0.0,
+            "on_good_percent_by_stream": [
+              18.75,
+              18.75,
+              25.0
+            ],
+            "on_mean_good_percent": 20.833333333333332,
+            "on_minus_off_good_points": 20.833333333333332
+          }
+        }
+      },
+      "map_effect_off_points": 1.25,
+      "map_effect_on_points": 4.166666666666668
+    }
+  },
+  "per_seed": {
+    "2000": {
+      "24": {
+        "common": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            87.5,
+            90.625,
+            87.5
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            96.875,
+            90.625,
+            93.75
+          ]
+        }
+      },
+      "96": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            15.625,
+            21.875,
+            15.625
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            18.75,
+            12.5,
+            12.5
+          ]
+        }
+      },
+      "384": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            15.625,
+            18.75,
+            6.25
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            25.0,
+            25.0,
+            12.5
+          ]
+        }
+      }
+    },
+    "2001": {
+      "24": {
+        "common": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            93.75,
+            90.625,
+            84.375
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            81.25,
+            90.625,
+            93.75
+          ]
+        }
+      },
+      "96": {
+        "common": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            96.875,
+            93.75,
+            93.75
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            96.875,
+            96.875,
+            100.0
+          ]
+        }
+      },
+      "384": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            12.5,
+            12.5,
+            21.875
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            9.375,
+            12.5,
+            18.75
+          ]
+        }
+      }
+    },
+    "2002": {
+      "24": {
+        "common": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            87.5,
+            90.625,
+            90.625
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            78.125,
+            87.5,
+            87.5
+          ]
+        }
+      },
+      "96": {
+        "common": {
+          "off_good_percent": 12.5,
+          "on_good_percent_by_stream": [
+            40.625,
+            18.75,
+            25.0
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 21.875,
+          "on_good_percent_by_stream": [
+            37.5,
+            37.5,
+            34.375
+          ]
+        }
+      },
+      "384": {
+        "common": {
+          "off_good_percent": 78.125,
+          "on_good_percent_by_stream": [
+            62.5,
+            65.625,
+            78.125
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 84.375,
+          "on_good_percent_by_stream": [
+            62.5,
+            68.75,
+            84.375
+          ]
+        }
+      }
+    },
+    "2003": {
+      "24": {
+        "common": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            84.375,
+            81.25,
+            90.625
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 100.0,
+          "on_good_percent_by_stream": [
+            90.625,
+            84.375,
+            93.75
+          ]
+        }
+      },
+      "96": {
+        "common": {
+          "off_good_percent": 75.0,
+          "on_good_percent_by_stream": [
+            59.375,
+            68.75,
+            78.125
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 78.125,
+          "on_good_percent_by_stream": [
+            71.875,
+            65.625,
+            75.0
+          ]
+        }
+      },
+      "384": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            15.625,
+            12.5,
+            15.625
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            21.875,
+            25.0,
+            21.875
+          ]
+        }
+      }
+    },
+    "2004": {
+      "24": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            12.5,
+            6.25,
+            28.125
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            18.75,
+            21.875,
+            12.5
+          ]
+        }
+      },
+      "96": {
+        "common": {
+          "off_good_percent": 25.0,
+          "on_good_percent_by_stream": [
+            34.375,
+            31.25,
+            31.25
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 18.75,
+          "on_good_percent_by_stream": [
+            28.125,
+            25.0,
+            28.125
+          ]
+        }
+      },
+      "384": {
+        "common": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            18.75,
+            9.375,
+            21.875
+          ]
+        },
+        "continuation": {
+          "off_good_percent": 0.0,
+          "on_good_percent_by_stream": [
+            18.75,
+            18.75,
+            25.0
+          ]
+        }
+      }
+    }
+  }
+}

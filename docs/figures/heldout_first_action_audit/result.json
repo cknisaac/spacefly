@@ -1,0 +1,219 @@
+{
+  "status": "complete",
+  "study_id": "synthetic_original_heldout_first_action_audit_v1",
+  "protocol_sha256": "a2e134d4ef12b5d3574c84c6fc904adac038eeef29715e5340c374f2e3168bdd",
+  "ledger_sha256": "15895ab4ad350dc3f46f4698ee7e2c180f4398ad420fa7d00d6e3b0d2ab0ebc0",
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "aggregate": {
+    "frozen_note_count": 512,
+    "frozen_good_plus_count": 236,
+    "good_plus_after_same_note_null_count": 233,
+    "good_plus_after_same_note_null_fraction": 0.9872881355932204,
+    "good_plus_on_first_down_count": 3,
+    "frozen_null_down_count": 304,
+    "frozen_early_miss_down_count": 143,
+    "frozen_silent_note_count": 0,
+    "first_down_disposition_counts": {
+      "null_press": 288,
+      "early_miss": 95,
+      "hit": 129,
+      "null": 0
+    },
+    "per_seed": {
+      "2000": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2001": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2002": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2003": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2004": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2005": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2006": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2007": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2008": {
+        "good_plus": 11,
+        "good_plus_after_null": 11,
+        "good_plus_on_first_down": 0
+      },
+      "2009": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2010": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2011": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2012": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2013": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2014": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2015": {
+        "good_plus": 3,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 3
+      },
+      "2016": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2017": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2018": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2019": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2020": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2021": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2022": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2023": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2024": {
+        "good_plus": 14,
+        "good_plus_after_null": 14,
+        "good_plus_on_first_down": 0
+      },
+      "2025": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2026": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2027": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2028": {
+        "good_plus": 16,
+        "good_plus_after_null": 16,
+        "good_plus_on_first_down": 0
+      },
+      "2029": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2030": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      },
+      "2031": {
+        "good_plus": 0,
+        "good_plus_after_null": 0,
+        "good_plus_on_first_down": 0
+      }
+    }
+  },
+  "completed_utc": "2026-09-30T10:08:17.576967+00:00"
+}

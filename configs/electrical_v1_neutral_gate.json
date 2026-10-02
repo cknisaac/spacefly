@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "protocol_id": "electrical-v1-neutral-gate-fixed-2026-09-30",
+  "model_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "settling_us": 10000000,
+  "observation_us": 60000000,
+  "trace_interval_us": 10000,
+  "seeds": [31001, 31002, 31003],
+  "conditions": [
+    {"name": "A", "levels": ["low", "nominal", "high"]},
+    {"name": "B", "levels": ["nominal"]},
+    {"name": "C", "levels": ["low", "nominal", "high"]},
+    {"name": "D", "levels": ["nominal"]}
+  ],
+  "criteria": {
+    "minimum_bounded_voltage_fraction_per_cell": 0.999,
+    "outer_normalized_voltage_abs": 2.0,
+    "absolute_normalized_voltage_limit": 4.0,
+    "maximum_dn_rate_hz": 100.0,
+    "maximum_dn_refractory_occupancy": 0.25,
+    "maximum_full_second_refractory_occupancy": 0.5,
+    "nominal_A_C_minimum_dn_spikes": 60,
+    "nominal_A_C_maximum_silent_gap_us": 30000000
+  },
+  "numerical_refinement": {
+    "condition": "A",
+    "level": "nominal",
+    "seeds": [31001, 31002, 31003],
+    "coarse_tick_us": 500,
+    "fine_tick_us": 250,
+    "duration_us": 70000000,
+    "maximum_observation_rate_relative_difference": 0.05,
+    "maximum_observation_rate_absolute_difference_hz": 1.0,
+    "maximum_per_second_dn_spike_count_difference": 2,
+    "maximum_observation_outer_fraction_difference": 0.001
+  },
+  "interpretation": "Prospective engineering gate only; retain all 24 results, no parameter selection or tuning. A/C nominal active criterion; B/low/D silence permitted. Numerical refinement compares the whole frozen horizon."
+}

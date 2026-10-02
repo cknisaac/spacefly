@@ -1,0 +1,10 @@
+{
+  "notes": [
+    {"kind": "tap", "id": "lane-1", "lane": 0, "time_us": 1000000},
+    {"kind": "tap", "id": "lane-4", "lane": 3, "time_us": 1000000}
+  ],
+  "actions": [
+    {"time_us": 1000000, "lane": 0, "kind": "down"},
+    {"time_us": 1000000, "lane": 3, "kind": "down"}
+  ]
+}

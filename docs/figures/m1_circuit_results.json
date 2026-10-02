@@ -1,0 +1,316 @@
+{
+  "chain_a_to_b_to_c": {
+    "a_spikes_us": [
+      1000
+    ],
+    "arrivals": [
+      {
+        "post": 1,
+        "pre": 0,
+        "time_us": 3000
+      },
+      {
+        "post": 2,
+        "pre": 1,
+        "time_us": 7000
+      }
+    ],
+    "b_spikes_us": [
+      5000
+    ],
+    "c_spikes_us": [
+      9000
+    ]
+  },
+  "config": {
+    "circuits": {
+      "a_drive_mv": 20.0,
+      "b_baseline_drive_mv": 2.0,
+      "delay_us": 2000,
+      "excitatory_weight_mv": 8.0,
+      "inhibitory_weight_mv": -6.0,
+      "off_grid_delay_us": 1250,
+      "refractory_us": 100000
+    },
+    "model": {
+      "tau_m_us": 10000,
+      "tau_syn_us": 5000,
+      "v_reset_mv": 0.0,
+      "v_rest_mv": 0.0,
+      "v_threshold_mv": 1.0
+    },
+    "simulation": {
+      "circuit_end_us": 40000,
+      "dt_us": 1000,
+      "off_grid_end_us": 10000,
+      "single_end_us": 30000
+    },
+    "single_neuron": {
+      "external_drive_mv": 2.0,
+      "refractory_us": 3000
+    }
+  },
+  "excitation_a_to_b": {
+    "a_spikes_us": [
+      1000
+    ],
+    "arrivals": [
+      {
+        "post": 1,
+        "pre": 0,
+        "time_us": 3000
+      }
+    ],
+    "b_spikes_us": [
+      5000
+    ]
+  },
+  "inhibition_a_to_b": {
+    "a_spikes_us": [
+      1000
+    ],
+    "arrivals": [
+      {
+        "post": 1,
+        "pre": 0,
+        "time_us": 3000
+      }
+    ],
+    "b_with_inhibition_us": [
+      22000
+    ],
+    "b_without_inhibition_us": [
+      7000
+    ]
+  },
+  "off_grid_delay": {
+    "a_spikes_us": [
+      1000
+    ],
+    "arrivals": [
+      {
+        "post": 1,
+        "pre": 0,
+        "time_us": 2250
+      }
+    ],
+    "b_spikes_us": [
+      4000
+    ]
+  },
+  "single_neuron": {
+    "spike_times_us": [
+      7000,
+      17000,
+      27000
+    ],
+    "threshold_crossing_and_reset": [
+      {
+        "refractory_until_us": 10000,
+        "time_us": 7000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      },
+      {
+        "refractory_until_us": 20000,
+        "time_us": 17000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      },
+      {
+        "refractory_until_us": 30000,
+        "time_us": 27000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      }
+    ],
+    "trace": [
+      {
+        "spiked": false,
+        "time_us": 0,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 1000,
+        "voltage_after_reset_mv": 0.19032516392808085,
+        "voltage_before_reset_mv": 0.19032516392808085
+      },
+      {
+        "spiked": false,
+        "time_us": 2000,
+        "voltage_after_reset_mv": 0.36253849384403625,
+        "voltage_before_reset_mv": 0.36253849384403625
+      },
+      {
+        "spiked": false,
+        "time_us": 3000,
+        "voltage_after_reset_mv": 0.5183635586365642,
+        "voltage_before_reset_mv": 0.5183635586365642
+      },
+      {
+        "spiked": false,
+        "time_us": 4000,
+        "voltage_after_reset_mv": 0.6593599079287213,
+        "voltage_before_reset_mv": 0.6593599079287213
+      },
+      {
+        "spiked": false,
+        "time_us": 5000,
+        "voltage_after_reset_mv": 0.786938680574733,
+        "voltage_before_reset_mv": 0.786938680574733
+      },
+      {
+        "spiked": false,
+        "time_us": 6000,
+        "voltage_after_reset_mv": 0.902376727811947,
+        "voltage_before_reset_mv": 0.902376727811947
+      },
+      {
+        "spiked": true,
+        "time_us": 7000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      },
+      {
+        "spiked": false,
+        "time_us": 8000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 9000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 10000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 11000,
+        "voltage_after_reset_mv": 0.19032516392808085,
+        "voltage_before_reset_mv": 0.19032516392808085
+      },
+      {
+        "spiked": false,
+        "time_us": 12000,
+        "voltage_after_reset_mv": 0.36253849384403625,
+        "voltage_before_reset_mv": 0.36253849384403625
+      },
+      {
+        "spiked": false,
+        "time_us": 13000,
+        "voltage_after_reset_mv": 0.5183635586365642,
+        "voltage_before_reset_mv": 0.5183635586365642
+      },
+      {
+        "spiked": false,
+        "time_us": 14000,
+        "voltage_after_reset_mv": 0.6593599079287213,
+        "voltage_before_reset_mv": 0.6593599079287213
+      },
+      {
+        "spiked": false,
+        "time_us": 15000,
+        "voltage_after_reset_mv": 0.786938680574733,
+        "voltage_before_reset_mv": 0.786938680574733
+      },
+      {
+        "spiked": false,
+        "time_us": 16000,
+        "voltage_after_reset_mv": 0.902376727811947,
+        "voltage_before_reset_mv": 0.902376727811947
+      },
+      {
+        "spiked": true,
+        "time_us": 17000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      },
+      {
+        "spiked": false,
+        "time_us": 18000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 19000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 20000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 21000,
+        "voltage_after_reset_mv": 0.19032516392808085,
+        "voltage_before_reset_mv": 0.19032516392808085
+      },
+      {
+        "spiked": false,
+        "time_us": 22000,
+        "voltage_after_reset_mv": 0.36253849384403625,
+        "voltage_before_reset_mv": 0.36253849384403625
+      },
+      {
+        "spiked": false,
+        "time_us": 23000,
+        "voltage_after_reset_mv": 0.5183635586365642,
+        "voltage_before_reset_mv": 0.5183635586365642
+      },
+      {
+        "spiked": false,
+        "time_us": 24000,
+        "voltage_after_reset_mv": 0.6593599079287213,
+        "voltage_before_reset_mv": 0.6593599079287213
+      },
+      {
+        "spiked": false,
+        "time_us": 25000,
+        "voltage_after_reset_mv": 0.786938680574733,
+        "voltage_before_reset_mv": 0.786938680574733
+      },
+      {
+        "spiked": false,
+        "time_us": 26000,
+        "voltage_after_reset_mv": 0.902376727811947,
+        "voltage_before_reset_mv": 0.902376727811947
+      },
+      {
+        "spiked": true,
+        "time_us": 27000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 1.0068293924171807
+      },
+      {
+        "spiked": false,
+        "time_us": 28000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 29000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      },
+      {
+        "spiked": false,
+        "time_us": 30000,
+        "voltage_after_reset_mv": 0.0,
+        "voltage_before_reset_mv": 0.0
+      }
+    ]
+  }
+}

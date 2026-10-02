@@ -1,0 +1,431 @@
+{
+  "status": "PASS",
+  "audit_scope": "Read-only; compares the 25 PAM08 bodies in the existing B1/B2 roster against the exact frozen Level 2 v2.5 32-KC cohort. It is not a census of every MaleCNS DAN.",
+  "source": {
+    "dataset": "MaleCNS v1.0 traced-only minconf-0.5",
+    "syn_partner_sha256": "3db100d3b4c7cfdc9b34506b3eb8b5ead2d9760b38952e5656285bb362327efc",
+    "syn_partner_rows_scanned": 124025046,
+    "roi_volume": "rois/malecns-subcompartments-v3",
+    "coordinate_conversion": "floor(source_xyz_8nm / 32)",
+    "roi_chunks_used": [
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_384-448",
+        "sha256": "6a0c5a95666fd08428cff2589838417c36ffd03de00fd576c8b1bf16d3725967"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_448-512",
+        "sha256": "e32b01bc64b70bf94b849e97d0665004507d519a0c50104589f981723961d391"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_448-512_512-576",
+        "sha256": "b3d926d16eac4a21df0601f03e0e698257835e6311fe8ca8897e356b8937b97c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_384-448",
+        "sha256": "256ef0aec38f06dab9756ecb17bb35c9c442f0b99f94660b247fad614758105d"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_448-512",
+        "sha256": "18943ff2023e9bd64010cea4fe427dfe61988fed412ca91dd590fb77f8fc988c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_512-576_512-576",
+        "sha256": "31dbcc0367065eeb4bf58220963a1b450d236e19f4cc213dfe2718f9bb7cffdd"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1536-1600_576-640_384-448",
+        "sha256": "7f5b8ca7ed44616f25b14142614c41889d51a34646cdd3767e7129731d465d47"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_384-448",
+        "sha256": "66ede0b699b54887b9983a5f757d47496f123738e4ab4e7f01b111520e95972b"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_448-512",
+        "sha256": "76055e664692de610a7e8b201e045b154992e6c0263e95a202c0728ddf2be440"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_448-512_512-576",
+        "sha256": "ece88c7ec6855cb547bf1e0eeec8bcc6a3c4b93780a79b9de4ad44ffb1387fe1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_384-448",
+        "sha256": "ff14d85bbdaedf9008d8314a0956a1c3744d4e4d0f385a32f46a11d342d2f377"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_448-512",
+        "sha256": "3deddb2afed2f888ff39a4808dd628be87b8b17f4d0e0551080ab0585f2d6a8a"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_512-576_512-576",
+        "sha256": "5786154521fe39c0b4b8c3d69aad06074b2e7df84d1e9b929eb2f8a58068f704"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1600-1664_576-640_448-512",
+        "sha256": "db9075db71fe651545e8e793790a4a1649390d2ae1c6ec7a7a7e5687bf25ae74"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_448-512_448-512",
+        "sha256": "2c13f384aca6b7a939d988e5909988be5375687d61f9c2a1120f98ba36e02f76"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_512-576_384-448",
+        "sha256": "5798b914e172f98b915b06ea7456df0a1be8c908ec41a959086e997bc04276c1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_512-576_448-512",
+        "sha256": "780da5e519150120d66206fed6db80546d38dfcb445785989695609b4c47c5be"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1664-1728_576-640_384-448",
+        "sha256": "5b4a10c60d690b2bb0ac84e4c78f4ea9627f66833811f0072034f31073978ef8"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_384-448",
+        "sha256": "5dad54c8f9bd349bca4225c0163ca9d4ead3f4f97cb2b66f9aa5b053caa2d873"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_448-512_448-512",
+        "sha256": "69dd6ac0b95a117943c9a8de6f115fd67cb0c3e733e2d4f887d681538c9281fc"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_384-448",
+        "sha256": "351351f41a6b9e1e7e06613c9d97b70b2f604492c1cb20b4899a66421b553fb2"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1728-1792_512-576_448-512",
+        "sha256": "4cd29789ac8662902b97ff6eb89273def44411d86487179c502e7365cb54c8c1"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_448-512_384-448",
+        "sha256": "3b0adbf2c648d81f151e75cd3f0622ac724d7e417c6e8ef526c57554fd06f7ec"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_384-448",
+        "sha256": "0ae5a4b9650c56729e992529d12ce1a59e58c98107e8bf09e5c7405fe2a878d7"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_512-576_448-512",
+        "sha256": "2081d12c322ea2a3bd8034f5612f3e331b28ebbd6215d77776a80a7d9ecfbbcc"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_384-448",
+        "sha256": "64f31276f96244a0fc8277ce2351b6139476359dfcf54f1cb542bdb3e623189f"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1792-1856_576-640_448-512",
+        "sha256": "9d4ce2b872f04ffde772e9ac609eea0a3bcdcf6f5c250de8bbdd10a4862dc573"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_512-576",
+        "sha256": "fbd3bdce9a8aaa81b7c5ae926931c232d14a8e9cccd42bd9871007d817fe3ace"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_576-640",
+        "sha256": "39bb59a7e7e83abede0075ff9a3929290ef758033f63f7b284c5b456c7721d8c"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1856-1920_576-640_640-704",
+        "sha256": "b5f763948e63a5d9df9b881a799a7dcfc65c482c43fdbc1808e0df63264489fb"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_576-640_512-576",
+        "sha256": "a77f1d968f7d61f8c5e163d72a3baf1d21665d7baa62620a196c54e4bbd1b021"
+      },
+      {
+        "name": "rois/malecns-subcompartments-v3/256_256_256/1920-1984_576-640_576-640",
+        "sha256": "f9c7d6595eb8dd05cdc47873dcc5b4ef052b4eb15de6d08c0335a1757529f96b"
+      }
+    ],
+    "roi_chunks_missing": []
+  },
+  "level2_status_record": {
+    "cohort_1_v2_5": "PASS",
+    "fresh_cohort_2_level2r": "FAIL strict 3/3 target-core replication; partial learning effect replicated",
+    "level2_tuning": "none further authorized or performed",
+    "artifacts_modified": false
+  },
+  "fixed_cohort": {
+    "parent_config": "configs/malecns_continuous_position_learning_v2_5.json",
+    "parent_config_sha256": "e81a9da42f28be4ad288f8f416a8186b2443230c012d1563bc827c3f0c8b5485",
+    "mbon_source_id": 10495,
+    "kc_source_ids": [
+      45199,
+      45259,
+      45380,
+      45434,
+      45460,
+      45467,
+      45620,
+      45950,
+      46497,
+      47101,
+      47117,
+      47287,
+      47694,
+      47758,
+      47988,
+      48337,
+      48596,
+      48759,
+      49124,
+      49160,
+      49526,
+      49544,
+      49545,
+      49867,
+      50411,
+      50568,
+      50591,
+      50791,
+      50820,
+      51053,
+      51055,
+      51330
+    ],
+    "kc_to_mbon05_same_g4_pairs": 32,
+    "kc_to_mbon05_same_g4_contacts": 685
+  },
+  "candidate_ranking_within_audited_pam08_roster": [
+    {
+      "source_id": 87177,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 20,
+      "same_g4_dan_to_kc_contacts": 30,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 430
+    },
+    {
+      "source_id": 107285,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 18,
+      "same_g4_dan_to_kc_contacts": 26,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 402
+    },
+    {
+      "source_id": 90678,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 17,
+      "same_g4_dan_to_kc_contacts": 29,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 382
+    },
+    {
+      "source_id": 75922,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 17,
+      "same_g4_dan_to_kc_contacts": 28,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 378
+    },
+    {
+      "source_id": 117782,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 17,
+      "same_g4_dan_to_kc_contacts": 27,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 373
+    },
+    {
+      "source_id": 65886,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 16,
+      "same_g4_dan_to_kc_contacts": 29,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 347
+    },
+    {
+      "source_id": 58941,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 16,
+      "same_g4_dan_to_kc_contacts": 24,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 323
+    },
+    {
+      "source_id": 55210,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 15,
+      "same_g4_dan_to_kc_contacts": 28,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 338
+    },
+    {
+      "source_id": 76362,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 14,
+      "same_g4_dan_to_kc_contacts": 24,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 317
+    },
+    {
+      "source_id": 69722,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 14,
+      "same_g4_dan_to_kc_contacts": 23,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 302
+    },
+    {
+      "source_id": 147184,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 14,
+      "same_g4_dan_to_kc_contacts": 23,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 280
+    },
+    {
+      "source_id": 174672,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 14,
+      "same_g4_dan_to_kc_contacts": 18,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 320
+    },
+    {
+      "source_id": 175459,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 13,
+      "same_g4_dan_to_kc_contacts": 21,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 303
+    },
+    {
+      "source_id": 162050,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 13,
+      "same_g4_dan_to_kc_contacts": 19,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 259
+    },
+    {
+      "source_id": 65524,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 12,
+      "same_g4_dan_to_kc_contacts": 17,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 259
+    },
+    {
+      "source_id": 158372,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 12,
+      "same_g4_dan_to_kc_contacts": 16,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 265
+    },
+    {
+      "source_id": 109624,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 12,
+      "same_g4_dan_to_kc_contacts": 13,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 293
+    },
+    {
+      "source_id": 161153,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 11,
+      "same_g4_dan_to_kc_contacts": 24,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 240
+    },
+    {
+      "source_id": 95523,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 11,
+      "same_g4_dan_to_kc_contacts": 14,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 245
+    },
+    {
+      "source_id": 74743,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 8,
+      "same_g4_dan_to_kc_contacts": 8,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 197
+    },
+    {
+      "source_id": 135578,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 8,
+      "same_g4_dan_to_kc_contacts": 8,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 183
+    },
+    {
+      "source_id": 119499,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 7,
+      "same_g4_dan_to_kc_contacts": 10,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 189
+    },
+    {
+      "source_id": 178101,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 3,
+      "same_g4_dan_to_kc_contacts": 4,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 66
+    },
+    {
+      "source_id": 129430,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 3,
+      "same_g4_dan_to_kc_contacts": 3,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 92
+    },
+    {
+      "source_id": 523382,
+      "cell_type": "PAM08",
+      "instance": "PAM08(y4)_L",
+      "same_g4_kc_count": 2,
+      "same_g4_dan_to_kc_contacts": 3,
+      "same_g4_kc_to_mbon05_contacts_on_those_kcs": 49
+    }
+  ],
+  "selected_dan": {
+    "source_id": 87177,
+    "cell_class": "DAN",
+    "cell_type": "PAM08",
+    "instance": "PAM08(y4)_L",
+    "annotation_status": "Prelim Roughly traced",
+    "transmitter_consensus": "dopamine",
+    "transmitter_confidence": 0.8552653301886793,
+    "whole_cohort_direct_dan_to_kc_graph_pairs": 21,
+    "whole_cohort_direct_dan_to_kc_contacts": 32,
+    "same_g4_dan_to_kc_pairs": 20,
+    "same_g4_dan_to_kc_contacts": 30,
+    "same_g4_overlap_kc_source_ids": [
+      45259,
+      45380,
+      45434,
+      45460,
+      45620,
+      47101,
+      47117,
+      47287,
+      47758,
+      47988,
+      48337,
+      48596,
+      49124,
+      49160,
+      49544,
+      49867,
+      50411,
+      50591,
+      50791,
+      50820
+    ],
+    "same_g4_overlap_count": 20,
+    "direct_dan_to_mbon05_graph_contacts": 48,
+    "direct_dan_to_mbon05_synaptic_current_modeled": false,
+    "direct_dan_to_mbon05_exclusion_reason": "The minimal bridge uses DAN activity only at the local teaching gate; pair-specific physiological effect is unknown and was not added to Level 2 electrical readout."
+  },
+  "evidence_limit": "Same-KC and same-g4 structural overlap supports an anatomical association only. Dopamine release at individual terminals, receptor action, functional modulation and the local LTD rule remain unverified; the LTD gate is an engineering assumption."
+}

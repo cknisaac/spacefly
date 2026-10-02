@@ -1,0 +1,33 @@
+{
+  "stage": "A5",
+  "scope": "infrastructure fixture only; no B3, B4, learning, or mechanism claim",
+  "selection": {
+    "schema": "A5-horizon-rule-v1",
+    "tick_us": 1000,
+    "fractions": {"early": [1, 4], "middle": [1, 2], "late": [3, 4]},
+    "rounding": "floor to committed tick; reject colliding or endpoint indices",
+    "include": "all declared run IDs and all three phases, regardless of activity or outcome"
+  },
+  "fixture": {
+    "horizon_us": 400000,
+    "runs": [{"run_id": "fixture-11", "seed": 11}, {"run_id": "fixture-12", "seed": 12}],
+    "notes": [{"note_id": "fixture-note", "visible_from_us": 100000, "hit_us": 900000}]
+  },
+  "panel": {
+    "schema": "A5-frozen-panel-v1",
+    "seed": 31,
+    "notes": [{"note_id": "panel-note", "visible_from_us": 100000, "hit_us": 900000}],
+    "end_us": 220000,
+    "arms": ["captured_selected_policy", "initial_selected_policy"],
+    "observations": ["spike_total", "motor_events", "first_action_outcomes", "pending_event_counts", "selected_weight_state", "activity_flags"],
+    "intervention": "replace all selected plastic weights with the same initial policy; start both arms from fresh zero state with teaching and updates disabled",
+    "silent_if_total_spikes_zero": true,
+    "saturated_if": "any selected weight is at its configured upper or lower bound",
+    "failed_if": "checkpoint, replay, frozen reset, panel execution or invariant check raises"
+  },
+  "gates": {
+    "A5.1": "deterministic complete unique selections for any valid predeclared horizon and run set; invalid horizons rejected",
+    "A5.2": "every selected fixture state saved with identity and reason, then exact restored continuation to the fixture horizon",
+    "A5.3": "same frozen panel and declared intervention run or explicit failure row for every selected state; no omitted silent or saturated states"
+  }
+}

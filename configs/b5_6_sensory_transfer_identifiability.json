@@ -1,0 +1,36 @@
+{
+  "stage_id": "B5.6",
+  "name": "Independent visual-to-KC transfer identifiability gate",
+  "question": "Can independent adult visual KC-gamma-d input-response and intrinsic measurements jointly bound a numerical sensory-entry hypothesis without using B5/B5.5 spike thresholds?",
+  "locked_evidence_sha256": {
+    "electrical_model_v1.json": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+    "electrical_model_v1_1.json": "43d5b05c575d6baa595deadd5e86a21e02e8f4f632f6f1558781101432065c7a",
+    "B5_3_EXTERNAL_FEEDFORWARD_TRANSFER_CONSTRAINT_AUDIT.md": "3be51b4ca9c81572519837cc68ae98570642b4f3abf85516a847a1cdf521ad54",
+    "B5_5_VISUAL_KC_TRANSFER_DECOMPOSITION.md": "8b01f0b8773141e6d1e07fa1f9054ed2323d819fe27c4c80b203c8b59baf3804",
+    "b5_5_audit.json": "3c658a4be3feae8deb4373920f6a4c04cb280d19f2d90782ee1887ff2a11567a"
+  },
+  "search_scope": [
+    "adult Drosophila visual KC gamma-d whole-cell visual evoked voltage/current with identified visual input or aMe12 perturbation",
+    "adult visual KC gamma-d input resistance capacitance rheobase threshold and stimulus protocol",
+    "direct accessory medulla aMe12 to ventral accessory calyx KC functional optogenetic or patch-clamp measurements",
+    "primary-source supplements or public datasets with per-cell electrophysiology and source-cell identity"
+  ],
+  "inclusion": [
+    "primary experimental paper, primary dataset, or experimentally constrained model with inspectable underlying measurements",
+    "explicit adult KC gamma-d or clearly identified visual-KC subtype, or aMe12 direct input test",
+    "measured unit, preparation, stimulus/presynaptic protocol, postsynaptic response, cell count and uncertainty where reported"
+  ],
+  "transfer_test": [
+    "match species/development/preparation and KC subtype",
+    "identify source pathway and its spike or stimulation protocol",
+    "separate natural visual-response amplitude from per-aMe12-spike or per-contact efficacy",
+    "require intrinsic excitability in the matched subtype or a justified linked measurement",
+    "test whether uncertainty is narrow enough to choose a falsifiable model value without B5/B5.5 outcome fitting"
+  ],
+  "primary_pass": "At least one independent, class-relevant measured or constrained joint transfer envelope covers visual input and KC intrinsic response with units and uncertainty and a defensible mapping to the selected MaleCNS source class; no diagnostic spike threshold or performance fit is used.",
+  "primary_fail": "No reviewed independent evidence permits that joint numerical mapping; record each missing term and declare sensory entry numerically unidentifiable under the available evidence.",
+  "inconclusive": "Relevant primary source or dataset is identified but inaccessible or reporting is too incomplete to decide whether the transfer envelope exists.",
+  "do_not": ["simulate", "edit V1 or V1.1", "select a current or threshold", "diagnose KC-to-MBON32", "alter source IDs", "use game performance", "train", "create V1.2"],
+  "output": ["source-by-source evidence ledger", "independent citation and criteria audit", "B5.6 report", "CURRENT.md", "Branch B milestone status"],
+  "stop": "Report the evidence decision and exactly one next Branch B stage, then stop before any electrical revision."
+}

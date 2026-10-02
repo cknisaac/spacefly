@@ -1,0 +1,39 @@
+{
+  "stage": "A11.2",
+  "study_id": "a11_2_bidirectional_headroom_gate_v1",
+  "locked_before_branch_outcomes": true,
+  "question": "At one checkpoint with temporal headroom, do the existing signed motor pulse and its inverse move the first threshold crossing to opposite sides of the matched no-pulse crossing?",
+  "why_next": "A11.1 found signed motor responses but intervened only one tick before the natural crossing; both patterns exceeded the 10-spike readout threshold immediately.",
+  "state": {
+    "seed": 2002,
+    "one_based_outcome": 373,
+    "parent_branch": "A11 no_pulse",
+    "parent_checkpoint": "docs/figures/a11_signed_perturbation_information_gate/no_pulse_post_pulse_checkpoint.pkl",
+    "selection_rule": "On the already saved A11 no-pulse trajectory, use the one 1-ms-grid checkpoint 11 ms before its 371391000-us first natural crossing; this is 371380000 us. No signed result was inspected at this time before locking.",
+    "pre_intervention_time_us": 371380000,
+    "expected_no_pulse_first_crossing_us": 371391000,
+    "expected_readout_count": 5,
+    "fixed_on_threshold": 10,
+    "expected_key_down": false
+  },
+  "analytic_audit": "Before interpreting continuation, independently calculate each motor cell's no-drive next-tick pre-reset voltage from saved membrane, synaptic, refractory and queued-arrival state using the unchanged LIF equation. Derive its exact next-tick external-drive threshold and predict spike/readout counts for 0 and the two locked sign patterns. This is not an amplitude or timing search.",
+  "intervention": {
+    "branches": ["no_pulse_reference", "locked_signed", "locked_signed_inverse"],
+    "amplitude_mv_equivalent": 20.0,
+    "sign_stream": "Reuse exact A11 per-motor vector: 22 positive and 10 negative. Inverse negates each sign.",
+    "duration": "one 1000-us integration interval only",
+    "continuation": "Continue only through outcome 373 resolution with synaptic plasticity and exploration disabled."
+  },
+  "matched_controls": "Byte-identical pre-intervention checkpoint, RNG, weights, neuron/queue/eligibility, predictor, game, fixed readout, sensory input and note. Only one-tick external drive to the 32 motor cells differs. No future note or outcome selects the intervention.",
+  "primary_endpoint": "First motor readout on-threshold rise versus no pulse on the 1000-us grid",
+  "secondary_endpoints": ["predicted versus actual immediate motor spikes/readout count", "all motor spikes and readout ticks", "first DOWN", "all key actions", "outcome-373 judgement", "weight and exploration invariance"],
+  "predeclared_interpretation": {
+    "pass": "Both pulse branches retain first DOWNs and one has first threshold rise at least one tick earlier than no pulse while the other rises at least one tick later, with no extra first-action regime switch. This establishes local bidirectional control at this checkpoint only.",
+    "one_sided": "Only one pulse branch moves across no pulse; signed local effects exist but bidirectionality is unproved.",
+    "saturated_or_inconclusive": "Both pulses cross on the same early tick, both move on the same side, neither moves, or a branch is silent or qualitatively changes action regime. Do not select another time or amplitude after seeing this.",
+    "audit_failure": "Any checkpoint mismatch, analytic one-tick prediction mismatch, no-pulse reference mismatch, altered weight, exploration pulse, or replay mismatch invalidates the inference.",
+    "scope": "A pulse-control witness does not validate signed eligibility, a plastic weight update, learning, or M2."
+  },
+  "do_not": ["no amplitude, time, seed or sign-stream search", "no production learning-rule or readout change", "no weight update or training", "no retest after outcome", "stop after this stage, audit, regression and handoff"],
+  "outputs": ["docs/A11_2_BIDIRECTIONAL_HEADROOM_GATE.md", "docs/figures/a11_2_bidirectional_headroom_gate/result.json", "docs/figures/a11_2_bidirectional_headroom_gate/audit.json", "CURRENT.md", "docs/FUTURE_DIAGNOSTICS.md"]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "stage": "A8",
+  "design_readiness": "FAIL_CURRENT_SIGNAL_PATH",
+  "protocol_sha256": "46456e66d500d8531d4782114d16abe50d16334b007b3c8560d563c369591901",
+  "historical_first_action_result_sha256": "aba98a75b3a5d22cfca7bd5f0807bcd922b28c267589342039de4c3f2ce1757d",
+  "source_sha256": {
+    "src\\project_b\\experiments\\tiny_brain.py": "a87895cbdfd794262971611d68ccc2b52fdc6b3e5c630058fac928991418affd",
+    "src\\project_b\\plasticity\\eligibility.py": "03c11cc84eb2dc5489a928779385f1be987df6a22a6e1fb94acf2923d5cc7e27",
+    "src\\project_b\\motor\\fixed_readout.py": "68ed53947e821c7d11fe9571c7ce4fd711fc04e37c0894a6311224c86324c79b",
+    "src\\project_b\\neuromodulation\\reward.py": "bbb43b1a760a25514aab2eaf05398745f0a4a63e3f57dc26e8fe73ba5d65c105"
+  },
+  "facts": {
+    "exploration_is_one_shared_positive_motor_pulse": {
+      "source": "src\\project_b\\experiments\\tiny_brain.py",
+      "rng_draw_line": 255,
+      "all_motor_loop_line": 258,
+      "positive_drive_line": 259,
+      "independent_signed_per_motor_perturbation_present": false
+    },
+    "feedback_is_generated_from_new_judgements_only": {
+      "source": "src\\project_b\\experiments\\tiny_brain.py",
+      "action_line": 274,
+      "judgement_slice_line": 275,
+      "reward_loop_line": 276,
+      "reward_call_line": 281,
+      "null_down_reward_call_present": false
+    },
+    "plasticity_has_nonnegative_pairs_and_scalar_modulator": {
+      "source": "src\\project_b\\plasticity\\eligibility.py",
+      "pre_increment_line": 123,
+      "eligibility_increment_line": 115,
+      "scalar_update_line": 156,
+      "action_identity_in_plasticity_state": false
+    },
+    "reward_translates_resolved_judgement": {
+      "source": "src\\project_b\\neuromodulation\\reward.py",
+      "translator_line": 143
+    }
+  },
+  "historical_frozen_good_plus": 236,
+  "historical_good_plus_after_null": 233,
+  "interfaces_missing_for_the_proposed_signed_first_action_rule": [
+    "causal first-action feedback boundary, including null DOWN",
+    "signed local causal perturbation or eligibility term that can attribute earlier/later motor effects"
+  ],
+  "scope": "source and historical-data audit only; no new training, probe or corrected-rule result",
+  "completed_utc": "2026-09-30T10:58:41.211938+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "model_id": "larval_l3_c1_electrical_v1",
+  "status": "FROZEN_BEFORE_NEUTRAL_OR_CONTROLLABILITY",
+  "manifest_id": "larval_l3_dan-c1_mbon-c1_v1",
+  "manifest_sha256": "b54a8a7ec9e3b18f21f8df91584c33f875c3302c8e534b6020dec7290f004895",
+  "evidence_notice": "No biological conductance, unitary effect, or delay is measured by this model. Every electrical number/effect below is an ENGINEERING ASSUMPTION, predeclared before simulation; this is a falsifiable engineering reference, not a literal larval circuit.",
+  "neuron_model": {
+    "class": "current_based_LIF",
+    "C_nF": 1.0,
+    "R_MOhm": 10.0,
+    "tau_m_us": 10000,
+    "tau_syn_us": 5000,
+    "rest_mV_equivalent": 0.0,
+    "reset_mV_equivalent": 0.0,
+    "threshold_mV_equivalent": 1.0,
+    "refractory_us": 2000,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "integration": {
+    "dt_us": 1000,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "chemical_effects": {
+    "included_directions": [
+      "KC_to_MBON-c1",
+      "MBON-c1_to_DN-VNC-CN28-PL17"
+    ],
+    "signs": {
+      "KC_to_MBON-c1": "positive",
+      "MBON-c1_to_DN-VNC-CN28-PL17": "positive"
+    },
+    "weight_transform": "0.05 mV-equivalent per measured contact count",
+    "weight_mV_per_contact": 0.05,
+    "delay_us": 2000,
+    "tau_syn_us": 5000,
+    "category": "ENGINEERING ASSUMPTION",
+    "basis": "Fixed scale chosen before circuit simulation: 20 contacts correspond to 1 mV-equivalent, equal to the generic LIF threshold. This is a transparent scale convention, not observed efficacy."
+  },
+  "modulation": {
+    "DAN-c1_to_MBON-c1": "not an ordinary fast current synapse; DAN-c1 activity will be a separate local teaching signal if the candidate reaches learning phase",
+    "category": "INFERRED representation"
+  },
+  "plasticity": {
+    "enabled": false,
+    "candidate_mask": "all measured KC\u2192MBON-c1 partner pairs",
+    "status": "INFERRED; exact storage locus unmeasured; no rule implemented"
+  },
+  "sensory_boundary": {
+    "input": "current visible position bin only",
+    "codebook": "sort KC source IDs ascending and split into 8 contiguous groups as evenly as possible; activate one group",
+    "drive_target": "KCs only",
+    "drive_mV_equivalent": 12.0,
+    "pulse_duration_us": 5000,
+    "future_note_time_access": false,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "background": {
+    "drive_mV_equivalent": 0.0,
+    "category": "ENGINEERING ASSUMPTION"
+  },
+  "action_boundary": {
+    "readout_nodes": [
+      10411574,
+      17379420
+    ],
+    "readout_identity": "direct MBON-c1 outputs annotated DN-VNC CN-28/PL-17",
+    "rule": "at least one selected DN-VNC spike within 100ms yields one fixed KEY_DOWN",
+    "category": "ENGINEERING OVERLAY",
+    "action_threshold": "1 spike; fixed before any circuit response"
+  },
+  "precommitment": "No outcome-based changes. If this reference fails control, stop and retain failure; any next version must be independently justified and separately frozen."
+}

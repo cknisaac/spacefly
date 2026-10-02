@@ -1,0 +1,29 @@
+{
+  "stage_id": "A3",
+  "contract_id": "MVP-C1-first-action-v1",
+  "purpose": "audit previously saved A2 raw game/action ledgers without a new neural run",
+  "success_window_us_inclusive": 73000,
+  "cases": [
+    {
+      "case_id": "A2-untrained-replay",
+      "raw_ledger": "docs/figures/a2_mvp_coupled/uninterrupted_ledger.json",
+      "raw_ledger_sha256": "6444c264d17c65896f5e6d5692fe09f52e9855d99604399b4eb3c08244a77434",
+      "audit_end_us": 1100000,
+      "teaching_enabled": true,
+      "notes": [
+        {"note_id": "replay-1", "visible_from_us": 100000, "hit_us": 900000}
+      ]
+    },
+    {
+      "case_id": "A2-controlled-policy-frozen-fresh",
+      "raw_ledger": "docs/figures/a2_mvp_coupled/fresh_frozen_ledger.json",
+      "raw_ledger_sha256": "716d58325cd7c6c454b19b0bffb25c39f9908fd06aa51e912ce67827d92edbb0",
+      "audit_end_us": 2200000,
+      "teaching_enabled": false,
+      "notes": [
+        {"note_id": "fresh-1", "visible_from_us": 100000, "hit_us": 900000},
+        {"note_id": "fresh-2", "visible_from_us": 1300000, "hit_us": 2100000}
+      ]
+    }
+  ]
+}

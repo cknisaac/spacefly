@@ -1,0 +1,11 @@
+{
+  "protocol_id": "larval_l2_context_probe_v3_protocol",
+  "status": "FROZEN_BEFORE_SIMULATION",
+  "manifest_sha256": "97560028444a02c8bb0c68c6608fd68dcfc5c103276b67debd30b059d0f6003b",
+  "model_sha256": "c5f9adcf02378ded60ad66f11f8e1e03738955b94a1ab0a1089cc99b3033f60e",
+  "independent_context_gate": "docs/LARVAL_L2_CONTEXT_INPUT_GATE.md; measured S1 noci-2nd-order-PN→Ipsigoro contacts and primary third-instar net effect evidence",
+  "sweep": {"kc_to_mbon_d1_factors": [0, 0.25, 0.5, 1, 2, 4], "states": [0, 1, 2, 3, 4, 5, 6, 7], "replays_per_cell": 2},
+  "fixed": {"context": "noci-2nd-order-PN population receives fixed 12 mV-equivalent 5-ms pulse concurrently with KC position code", "context_scale_basis": "reuse frozen KC sensory pulse amplitude/duration; no behavioral result used, magnitude remains engineering assumption", "chemical_contact_scale": "0.01 mV-equivalent/contact unchanged from L2 v1", "plasticity": false, "teaching": false, "exploration": false, "response_window_us": 100000, "action_rule": "at least one Goro spike"},
+  "decision": {"pass": "finite deterministic replay, no baseline spontaneous action, and at least one non-saturated KC→MBON-d1 factor yields Goro actions in more than one but fewer than eight states", "otherwise": "FAIL for this frozen v3 model; no tuning or learning"},
+  "limits": "Exact PN→Ipsigoro unitary effects, developmental transfer, and context pulse gain remain unknown; any PASS means simulator controllability only."
+}

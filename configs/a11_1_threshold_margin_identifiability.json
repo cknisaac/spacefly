@@ -1,0 +1,40 @@
+{
+  "stage": "A11.1",
+  "study_id": "a11_1_threshold_margin_identifiability_v1",
+  "locked_before_new_branch_outcomes": true,
+  "question": "At the fixed no-pulse A11 trajectory's last tick before natural first crossing, do the same signed motor perturbation and its inverse make the first threshold crossing occur on different ticks?",
+  "why_next": "A11 gave 22 versus 10 perturbed motor spikes, yet both pulse branches crossed the fixed 10-spike threshold on the same tick. A nearby state with a verified pre-intervention window count of 5 tests whether the earlier result was specific to the pulse state/readout margin.",
+  "hypotheses": ["H3: exogenous signed tags exist but may not track action time", "H4: the readout may collapse different signed motor responses into the same crossing"],
+  "state": {
+    "seed": 2002,
+    "one_based_outcome": 373,
+    "parent_branch": "A11 no_pulse, plasticity and subsequent exploration disabled",
+    "parent_checkpoint": "docs/figures/a11_signed_perturbation_information_gate/no_pulse_post_pulse_checkpoint.pkl",
+    "pre_intervention_time_us": 371390000,
+    "pre_intervention_readout_count": 5,
+    "fixed_on_threshold": 10,
+    "key_down": false,
+    "historical_no_pulse_first_crossing_us": 371391000,
+    "selection_rule": "Exactly one neural tick before A11 no-pulse branch's already observed first natural crossing; no search over ticks or states"
+  },
+  "intervention": {
+    "branches": ["no_pulse_reference", "shared_positive_control", "locked_signed", "locked_signed_inverse"],
+    "amplitude_mv_equivalent": 20.0,
+    "motor_ids": "the same 32 synthetic motor IDs as A11",
+    "sign_stream": "Reuse A11's exact saved per-motor sign vector (22 positive, 10 negative); inverse negates each sign. No redraw or seed choice.",
+    "injection": "At the single pre-intervention tick only, replace the motor components of the already-computed external drive with 0, +20, 20*sign_j, or -20*sign_j. This is a diagnostic exogenous pulse, not a Bernoulli exploration event.",
+    "continuation": "After that tick, continue the same note only until outcome 373 resolves with exploration_probability=0 and plasticity_enabled=false; preserve fixed game/readout/encoder/topology/weights."
+  },
+  "local_tag": "Use the same A11 causal presynaptic trace at the pulse times each injected motor sign, decayed with existing tau_eligibility to the first DOWN; no update is applied.",
+  "controls": "All four branches share byte-identical pre-intervention checkpoint, RNG, weights, neuron/queue state, eligibility, predictor, game and readout. Only one-tick motor drive differs. Compare no-pulse branch exactly with A11's saved no-pulse continuation.",
+  "primary_endpoint": "First motor on-threshold rise time in locked_signed versus locked_signed_inverse, on the 1000-us neural tick grid",
+  "secondary_endpoints": ["per-cell motor spikes and 20-ms signed response contrast", "readout count around crossing", "signed first-action tags", "first DOWN time/disposition", "all key actions", "judgement", "silence/extra action", "weight and predictor provenance"],
+  "predeclared_interpretation": {
+    "pass": "Both signed branches retain first actions and both tag signs; signed 20-ms per-cell response contrast is positive; first on-threshold rises differ by at least 1000 us without silence.",
+    "fail": "Either signed branch lacks both tag signs or the signed motor response contrast is nonpositive despite an audited intervention.",
+    "inconclusive": "Both branches have signed tags and differential motor response but the first crossing remains on the same tick, or an action/silence switch makes signed timing incomparable.",
+    "scope": "One state, one fixed sign vector and mirror. A pass shows timing identifiability here only, not a useful weight update, learning or M2."
+  },
+  "do_not": ["no new sign streams", "no amplitude/probability/threshold search", "no readout/game change", "no production learning-rule edit", "no weight update or development training", "no ideal press time to neural code", "stop after this stage's result, audit and regression"],
+  "outputs": ["docs/A11_1_THRESHOLD_MARGIN_IDENTIFIABILITY.md", "docs/figures/a11_1_threshold_margin_identifiability/result.json", "docs/figures/a11_1_threshold_margin_identifiability/audit.json", "CURRENT.md", "docs/FUTURE_DIAGNOSTICS.md", "docs/BRANCH_A_CONTRACT_ROADMAP.md", "docs/M2_PATH_TO_PASS.md"]
+}

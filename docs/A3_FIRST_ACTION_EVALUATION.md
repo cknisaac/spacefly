@@ -1,0 +1,27 @@
+# A3 — first-action evaluation infrastructure
+
+**2026-10-01 · A3.1 PASS; A3.2 PASS; A3.3 PASS.** The primary metric is pinned in [MVP-C1-first-action-v1](../configs/a3_first_action_metric_contract.json). The [independent auditor](../src/project_b/mvp_c1/first_action_audit.py) reads immutable note windows and raw game/key events; it never assigns an action by the game’s judged `note_id`. This stage audited already saved A2 data and small deterministic task fixtures. No neural run, training, B3 intervention or performance tuning occurred.
+
+## Steps and readiness decisions
+
+| Step | Evidence | Review |
+| --- | --- | --- |
+| **A3.1 — action identity** | A cue owns the first fresh lane-zero DOWN from its visible onset through the instant before the next visible onset, even if the game has consumed or expired the note. A DOWN exactly at an onset belongs to the new cue; at expiry, game expiry precedes action but the cue scope persists. Raw same-time event order breaks action ties; a repeat DOWN is not a new press. A pre-onset DOWN is background. Simultaneous/overlapping cues are rejected under Candidate 1's isolated-note contract. Signed error is first DOWN time minus immutable hit time; null presses retain this error. A premature no-DOWN claim for the last note is rejected until its game expiry. | **PASS; ready for per-note reconstruction.** |
+| **A3.2 — per-note ledger** | [A3 audit inputs](../configs/a3_first_action_audit_inputs.json) pinned the A2 raw-ledger hashes and note schedules before audit. The [audit script](../scripts/audit_a3_first_action.py) checked those hashes against the A2 receipt, the replay checkpoint and B2's 800-ms visible lead. It emitted [per-note rows](figures/a3_first_action/A2-untrained-replay_per_note.json) and [frozen rows](figures/a3_first_action/A2-controlled-policy-frozen-fresh_per_note.json) containing first DOWN, signed error, disposition, category, all scoped actions, later actions, extra fresh DOWNs and game judgements. Independently replaying raw key actions through the task/game owner reproduced every raw game event and all finalized first-action owner outcomes exactly. | **PASS; every audited note has a reconstructable record.** |
+| **A3.3 — primary summaries** | The denominator is every visible eligible note, including no-DOWN; success requires the **first** DOWN within inclusive ±73,000 µs. Saved A2 cases yield **0/1** and **0/2** primary success. Their first actions are all too-early nulls, with signed errors −710,000 µs and, in the frozen case, −788,000 µs. The game nevertheless records **1/1** and **2/2** later positive `MEH_50` judgements. A deterministic fixture has a null first press, a later good press and a second note with no DOWN; its primary result remains **0/2**, with one missing action in the denominator. Boundary tests pass at ±73,000 µs and fail outside. | **PASS; secondary score cannot rescue the first-action metric.** |
+
+The final [A3 receipt](figures/a3_first_action/receipt_v2.json) includes source hashes, per-note and summary hashes, exact game replay and owner agreement. A first receipt was written before the last-note closure guard was added; `receipt_v2.json` is authoritative for the final contract, and the prior receipt remains as process history. [Seven focused tests](../tests/test_a3_first_action_audit.py) and the full repository suite passed **148/148**.
+
+## Correction and limits
+
+The earlier [A2 report](A2_2_A2_3_COUPLED_RESULT.md) called the later −107-ms judged DOWN a “game MISS.” The raw judgement is **`MEH_50`**, as confirmed by the saved raw ledger and independent game replay. That wording was a reporting error; A2's replay equality and A3's first-action failure are unchanged. A null press is not an osu MISS.
+
+The two saved cases are infrastructure examples from an untrained run and a controlled noninitial-weight frozen run. Their 0% primary rates do not estimate learning or retention. A3 audits the isolated lane-zero tap-note MVP; simultaneous/overlapping cues are outside this Candidate 1 contract and fail closed. The last note's no-DOWN result requires a declared final audit horizon at or after game expiry.
+
+## Gate and sole next stage
+
+**A3 exit: PASS.** Every audited note has a raw-event-derived first-action record, and the primary summary is independent of later judgements.
+
+**Next proposed: A4.1 — matched-condition manifest (GPT-6.1 Sol / Medium).** Question: can every future intervention/control run prove it began from the same saved causal state, note sequence, source graph and fixed interfaces, with only declared switches different? A2 supplies exact checkpoints and A3 supplies the primary metric, so this is the smallest remaining comparison-integrity gate before control runs.
+
+Hypothesis and outcomes: PASS if a manifest validator accepts a matched pair and rejects each undeclared difference; FAIL if a mismatch survives validation; INCONCLUSIVE if an owner or seed stream lacks an identity field. Intervention: define the comparison manifest, allowed-difference list and static validator, then test matched and deliberately mismatched fixtures. Controls: keep source/config checksums, initial checkpoint, notes, encoder, motor, ruleset, metric contract and seed streams fixed. Primary endpoint: zero false accepts among targeted undeclared differences. Secondary endpoint: a readable per-field difference audit. Do not run A4.2 switches, B3, training, score-based tuning or a seed sweep. Save manifest/schema/test evidence and update the roadmap, then stop before A4.2.

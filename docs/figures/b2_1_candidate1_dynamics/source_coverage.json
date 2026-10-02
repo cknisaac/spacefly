@@ -1,0 +1,53 @@
+{
+  "active_electrical_contacts": 308475,
+  "active_electrical_pairs": 138982,
+  "categories": {
+    "APL_to_measured_targets_graded_output": {
+      "contacts": 40739,
+      "pairs": 702
+    },
+    "KC_to_APL_graded_input": {
+      "contacts": 37593,
+      "pairs": 689
+    },
+    "KC_to_KC": {
+      "contacts": 211797,
+      "pairs": 136314
+    },
+    "KC_to_MBON05": {
+      "contacts": 16398,
+      "pairs": 689
+    },
+    "KC_to_MBON20": {
+      "contacts": 1588,
+      "pairs": 586
+    },
+    "MBON05_to_MBON20": {
+      "contacts": 169,
+      "pairs": 1
+    },
+    "MBON20_to_DNp42": {
+      "contacts": 191,
+      "pairs": 1
+    },
+    "PAM08_modulatory_anatomy": {
+      "contacts": 11783,
+      "pairs": 7079
+    },
+    "UNKNOWN_QUARANTINED_NO_CURRENT": {
+      "contacts": 13122,
+      "pairs": 7793
+    }
+  },
+  "classification": "source anatomy plus explicit engineering effect policy",
+  "induced_contacts": 333380,
+  "induced_pairs": 153854,
+  "modulatory_pairs": 7079,
+  "quarantined_pairs": 7793,
+  "roster_cells": 718,
+  "source_classification_complete": true,
+  "source_connections_sha256": "da21af867d4e8e4c627c9916e55af4332302b611a296de1d0a8bc7dd6ebcff7a",
+  "source_neurons_sha256": "7d9a410d61d4caa934fa3639f9d204291ff0d18c445b2384054b95286d6350eb",
+  "spiking_cells": 717,
+  "stage_id": "MVP-B2.1"
+}

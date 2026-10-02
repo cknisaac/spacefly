@@ -1,0 +1,27 @@
+{
+  "experiment_id": "MALECNS-LEVEL4-MOVING-NOTE-500MS-READOUT-VALIDITY-v1",
+  "status": "frozen_after_level4b_pass_no_learning_authorized",
+  "parent_speed_config": "configs/malecns_level4_moving_note_admitted_500ms.json",
+  "parent_speed_config_sha256": "95abdc36736bcdb8f890ab2ff48a5e64ba2aefd41f48a920d21c6ac110ba18af",
+  "level4b_protocol_config": "configs/malecns_level4b_moving_output_admission_repair.json",
+  "level4b_protocol_config_sha256": "219c204f16d0d2f183e7e3ed2eb961f166c595496152250756889504fd3a782e",
+  "level4b_result_receipt": "runs/malecns_level4b_moving_output_admission_repair/result.json",
+  "level4b_result_receipt_sha256": "cb781d57e5c7861e94aa6554c7df56b356598db9fab3f2f6f8866ac2b1939586",
+  "readout_validity": {
+    "rule": "At the start of each moving note, action output is disabled. Enable it at the first KC spike of that note. At and after that spike, action is exactly MBON05 maximum voltage <= the inherited fixed threshold.",
+    "trainable": false,
+    "threshold_mv": 0.005572335995331903,
+    "reset_each_note": true
+  },
+  "inherited_settings_unchanged": {
+    "traversal_duration_ms": 500,
+    "kc_count": 32,
+    "mbon": "MBON05",
+    "encoder": "same Gaussian encoder and amplitude",
+    "lif_contact_model": "unchanged",
+    "dan_ensemble": [87177, 107285, 55210],
+    "eta_and_floor": "unchanged",
+    "learning_rule": "unchanged; learning not run in Level 4B"
+  },
+  "scope": "freeze the Level 4B output-validity admission rule for the 500-ms moving note; this record does not authorize a learning run"
+}

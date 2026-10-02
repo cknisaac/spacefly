@@ -1,0 +1,16 @@
+{
+  "study_id": "synthetic_null_press_trace_boundary_dev_v1",
+  "protocol_sha256": "42e4ff2c639f735c6afe7dbefa83b572c380c7c149c9eea798e5dd0ea7a26b51",
+  "overnight_config_sha256": "14d245d36b117a0416706fe6bfaee9b3007e43b9263d79d3a400cefe80ac6040",
+  "python": "3.12.14",
+  "source_sha256": {
+    "src/project_b/experiments/tiny_brain.py": "a87895cbdfd794262971611d68ccc2b52fdc6b3e5c630058fac928991418affd",
+    "src/project_b/plasticity/eligibility.py": "03c11cc84eb2dc5489a928779385f1be987df6a22a6e1fb94acf2923d5cc7e27",
+    "src/project_b/neuromodulation/reward.py": "bbb43b1a760a25514aab2eaf05398745f0a4a63e3f57dc26e8fe73ba5d65c105",
+    "src/project_b/motor/fixed_readout.py": "68ed53947e821c7d11fe9571c7ce4fd711fc04e37c0894a6311224c86324c79b",
+    "src/project_b/osu/environment.py": "da40f760b155328d0b24629754c0539c04c01fa27efbd1a4b7bdc190bef1d998",
+    "scripts/null_press_action_cost_development.py": "f54fd2cedb3d7ca8d50dffe8b081da1dff9bfda388a3573baf6011e75b1f349e",
+    "scripts/null_press_trace_boundary_development.py": "62e8f98c175852ed1c162fc63655cd6ad0c743e4eee0d2ffd210812c7a704207"
+  },
+  "synthetic_topology": "build_tiny_brain; no imported connectome"
+}

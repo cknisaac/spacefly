@@ -1,0 +1,43 @@
+# Synthetic M2 timing and credit diagnosis
+
+**Status:** causal failure mechanism confirmed in selected checkpoints and prevalent in the original 32-seed held-out policy; **no learning-rule correction has passed development or M2**. Updated 2026-09-30. This is about the engineered 128-neuron synthetic lane-one fixture, not MaleCNS biology. Read the [original overnight gate](OVERNIGHT_RESULT.md), [first-action audit](HELDOUT_FIRST_ACTION_AUDIT.md), [outcome-373 cohort test](CUE_300MS_COMPLEMENT_THRESHOLD_DIAGNOSTIC.md), [two-checkpoint contrast](CUE_300MS_SATURATION_CONTRAST_DIAGNOSTIC.md) and the three failed method reports before changing learning.
+
+## What the original result actually measures
+
+The original 32 held-out seeds produced **236/512 frozen GOOD+** note judgements (46.1%). An unchanged, exact replay of every plasticity-on seed saved all game actions. **233/236 GOOD+ notes (98.73%) had an earlier same-note null DOWN**, and only **3/236** scored GOOD+ on the first DOWN. Across 512 notes there were **304** null DOWN actions, **143** early-MISS DOWN actions, and zero notes without a DOWN; the first DOWN was null on **288** notes, early MISS on **95**, and a judged hit on **129**. The three first-DOWN GOOD+ notes were all in seed 2015. The [raw action ledger](figures/heldout_first_action_audit/runs.jsonl) and [independent audit](figures/heldout_first_action_audit/audit.json) reproduce every original summary and game action. This does not make the game judgements invalid: the game deliberately ignores a press outside its judgement window. It does mean GOOD+ mostly measures a **repeated-press policy** in this fixture, not accurate first motor-command timing.
+
+The fixed readout emits DOWN when at least 10 motor spikes lie in a 20-ms window. If motor activity continues, it can press again after its 200-ms cooldown. An early first DOWN outside the note window is a `null_press`, which does not resolve the note. The later DOWN can score. Moving the first threshold crossing earlier can initially improve GOOD+ by turning an early scored MISS into an ignored null followed by a scored press, then harm GOOD+ after the second press also becomes too early. The reward is attached to the scored judgement, while the current eligibility rule has no notion of the earlier action boundary.
+
+## Causal evidence for the path
+
+At exact seed-2002 outcome **372**, a positive-RPE full update advanced the first motor crossing **129 ms** (371.465→371.336 s). Its first action changed from an early scored MISS to an even earlier **null** press; the second press 200 ms later scored GOOD, raising frozen GOOD+ **0→17/32**. At outcome **373**, another positive-RPE update advanced first crossing **73 ms** (372.456→372.383 s), causing a **17→0/32** GOOD+ fall because the scored second press became too early. At **377**, another positive-RPE update advanced first crossing **42 ms** (376.572→376.530 s), causing **10→0/32** GOOD+. These are exact cloned-state comparisons, not cross-run correlations.
+
+The 48-edge 300-ms cue bin is a major necessary contributor to the outcome-373 shift. Its structurally defined **36-edge** subset from relay IDs 48–51 to motor IDs 97–105 is necessary as a cohort for the first threshold advance at 373: omitting its applied change returns the first crossing exactly to no-update time. The same fixed omission delays first crossing **18 ms at 372** and **58 ms at 377** relative to each full update. It improves outcome-372 frozen GOOD+ **17→32/32**, but only partially rescues outcome 377 **0→4/32**. This demonstrates a repeated upstream timing effect in one seed, not a production mask or a population prevalence estimate.
+
+## Why the current learning representation is vulnerable
+
+**Mathematical:** Every selected-edge eligibility starts at zero and receives only a nonnegative decayed presynaptic trace on a pre-before-post pair. It remains nonnegative. At reward time every raw update is `η × e_ij × D` with a **single scalar D**. Thus all nonzero raw changes from one event have the sign of D; clipping can zero a component but cannot make an opposing component. A positive RPE cannot, in the same event, depress an early cue synapse while potentiating a later cue synapse. The current rule also does not mark which of two DOWN actions a pre/post pair helped cause. This is a representational and credit-assignment limitation, independent of the value of η.
+
+**Dynamics and bounds:** In seed 2002, outcome 372's positive update took upper-bound occupancy from **0 to 309/480** selected edges. The next positive outcome 373 had 309 already at the upper bound; the 150-ms and nearer cue bins made **zero applied change**, leaving the effective positive update concentrated in far cues, including 300 ms. Outcome 377 similarly began with **331** upper-bound weights and had no applied 150-ms-or-nearer change. The motor spike-window and cooldown turn these changes into discrete first/second action shifts. These observations support saturation as an amplifier, not proof that clipping alone explains all failing seeds.
+
+**Conceptual:** The game validly treats a null press as no note judgement, while the synthetic reward path delivers utility only on resolved note judgements. The M2 gate's GOOD+ metric therefore misses the cost and timing of an earlier unscored action. A policy can look precise by scoring on a cooldown-timed second DOWN. Future evaluation must report the first DOWN and extra DOWNs alongside judgement tiers; a pass based only on GOOD+ and hit MAE would misdescribe this fixture's behavior.
+
+**Software:** Exact historical training-event replay, saved full/no probes, game action replay, sparse update arithmetic and regression tests have passed. The known cross-process pickle-byte mismatch is a serialization comparison issue; it is preserved in the two-checkpoint audit and does not explain the measured action sequence. No software bug has been shown to cause this learning failure.
+
+## Corrections tested and rejected
+
+Three single-rule diagnostic interventions were locked before development evaluation on seeds 1000–1007, with unchanged on, plasticity-off and shuffled-reward controls:
+
+| Method | Mean frozen GOOD+ versus 57.03% legacy | Pooled hit MAE versus 59.43 ms legacy | Strict wins over legacy | Why it failed |
+| --- | ---: | ---: | ---: | --- |
+| Immediate −1 null-action modulation | **44.53%** | **72.16 ms** | **1/8** | Broad negative modulation shifted some null actions into early hits/misses, harmed strong seeds, and a favorable seed still used null-first scoring. [Full result](NULL_PRESS_ACTION_COST_DEVELOPMENT.md). |
+| Reset all pre/eligibility traces after null DOWN | **47.66%** | **67.11 ms** | **1/8** | Blanket erasure discarded useful credit and did not prevent null-first gains in some seeds. [Full result](NULL_PRESS_TRACE_BOUNDARY_DEVELOPMENT.md). |
+| Require motor quiet before readout rearm | **7.03%** | **97.87 ms** | **0/8** | Removed all null and extra DOWNs in the true-reward branch, but 36/128 notes became silent and accurate first actions did not emerge. [Full result](QUIET_REARM_READOUT_DEVELOPMENT.md). |
+
+None of these rules is a validated fix. Their failures make a narrow parameter adjustment or a post hoc 36-edge mask unjustified. They also show that suppressing null presses alone can lower the game score by moving the first press into a low-tier or early-MISS window, or by silencing it; the learning system must gain **correct first-action timing**, not merely eliminate a disposition.
+
+## Next falsifiable mechanism test
+
+Before another training sweep, define a **signed, action-specific credit signal** that distinguishes a perturbation that makes the *first* motor action earlier from one that makes it later. It must state how the signal is computed from causal neural/action events, how it avoids revealing the ideal press time to sensory or motor code, which local synapses receive it, and what the expected response is at the three exact seed-2002 checkpoints. Test that response first in identical cloned states with all actions and clipping logged. If it survives, use a small development cohort with zero-cost on, plasticity-off and shuffled-reward controls and first-action metrics. Only then lock a **fresh** held-out M2 gate on new seeds. The original seeds 2000–2031 have now been used for diagnosis and cannot serve as untouched confirmation.
+
+The intended correction is not yet known to work. The diagnosis is strong about the failure mechanism and the missing type of credit information; it is not evidence that a particular biological or engineering learning rule will clear M2. The [conditional stage timeline](M2_PATH_TO_PASS.md) records the remaining gates.

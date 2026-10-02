@@ -1,0 +1,19 @@
+{
+  "study_id": "synthetic_A8_3_far_cue_first_action_component_v1",
+  "stage": "A8.3",
+  "seed": 2002,
+  "one_based_outcome": 373,
+  "source": "Use A8.2's exact no-update checkpoint, predeclared first-action negative raw vector and frozen 32-note panel.",
+  "one_structural_mask": "Selected relay-to-motor edges whose source's encoder preferred time-to-contact is exactly 500000 or 400000 microseconds; all such edges and no others.",
+  "intervention": "Apply the unscaled full A8.2 first-action negative raw change only on this fixed mask. Clip retained components independently to the existing 0–2 mV bounds. Leave every other selected weight at no-update value. No redistribution or renormalization.",
+  "comparators": ["A8.2 no_update", "A8.2 first_action_candidate_full"],
+  "primary_endpoint": "First upward on-threshold crossing of the 20-ms motor spike window, relative to no update and full candidate.",
+  "secondary_endpoints": ["first DOWN and scored DOWN", "all motor spikes/actions", "GOOD+ and utility", "raw/applied update geometry", "bound hits"],
+  "interpretation_locked_before_probe": {
+    "useful_far_direction": "Far-cue-only component moves first crossing at least one 1-ms tick later than no update without silence.",
+    "opposing_far_direction": "Far-cue-only component moves crossing earlier than no update.",
+    "inconclusive": "Crossing is unchanged or absent, or exact state/reference reproduction fails."
+  },
+  "prohibitions": ["no other mask", "no fraction or rate search", "no different checkpoint", "no production learning edit", "no training continuation", "no M2 claim from one state"],
+  "stop": "Save one branch, exact comparison, independent audit and report; stop before a new candidate-rule stage."
+}

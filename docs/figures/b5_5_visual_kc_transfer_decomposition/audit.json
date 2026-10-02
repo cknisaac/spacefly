@@ -1,0 +1,2794 @@
+{
+  "all_checkpoint_counts": [
+    {
+      "onset_us": 11000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 13000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 15000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 17000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 19000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 21000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 23000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 25000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 27000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 29000000,
+      "seed": 31001,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 11000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 13000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 15000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 17000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 19000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 21000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 23000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 25000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 27000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 29000000,
+      "seed": 31002,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 11000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 13000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 15000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 17000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 19000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 21000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 23000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 25000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 27000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    },
+    {
+      "onset_us": 29000000,
+      "seed": 31003,
+      "spiking_by_amplitude_and_cohort": {
+        "1": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 3
+        },
+        "16": {
+          "new_20": 2,
+          "none_28": 0,
+          "old_59": 17
+        },
+        "32": {
+          "new_20": 6,
+          "none_28": 0,
+          "old_59": 44
+        },
+        "64": {
+          "new_20": 13,
+          "none_28": 0,
+          "old_59": 51
+        },
+        "128": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 54
+        },
+        "256": {
+          "new_20": 17,
+          "none_28": 0,
+          "old_59": 56
+        },
+        "512": {
+          "new_20": 18,
+          "none_28": 0,
+          "old_59": 57
+        }
+      },
+      "spiking_by_family_and_cohort": {
+        "compression_16": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 2
+        },
+        "compression_2": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_4": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "compression_8": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "observed": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 0
+        },
+        "synchronous": {
+          "new_20": 0,
+          "none_28": 0,
+          "old_59": 5
+        }
+      }
+    }
+  ],
+  "classification": "AMPLITUDE-LIMITED / GROSSLY UNDERPOWERED IN THE FROZEN SURROGATE",
+  "critical_amplitude_distribution_by_cohort": {
+    "new_20": {
+      "max": 533.5610844627731,
+      "median": 44.77435673812704,
+      "min": 11.115855926306017,
+      "n": 600,
+      "p25": 28.082162340141952,
+      "p75": 88.92684741044613
+    },
+    "old_59": {
+      "max": 533.5610844627731,
+      "median": 21.342443378507458,
+      "min": 7.020540585035388,
+      "n": 1770,
+      "p25": 13.681053447761228,
+      "p75": 38.11150603305006
+    }
+  },
+  "critical_amplitude_distribution_contacted_79": {
+    "max": 533.5610844627731,
+    "median": 24.252776566485508,
+    "min": 7.020540585035388,
+    "n": 2370,
+    "p25": 16.16851771099047,
+    "p75": 44.463423705223065
+  },
+  "event_terms_checked": 334800,
+  "finite_compression_max_contacted_spiking": 2,
+  "first_finite_compression_histogram_by_cohort": {
+    "new_20": {
+      "None": 600
+    },
+    "old_59": {
+      "16": 60,
+      "None": 1710
+    }
+  },
+  "first_tested_amplitude_histogram_by_cohort": {
+    "new_20": {
+      "128": 120,
+      "16": 60,
+      "32": 120,
+      "512": 30,
+      "64": 210,
+      "None": 60
+    },
+    "old_59": {
+      "128": 90,
+      "16": 420,
+      "256": 60,
+      "32": 810,
+      "512": 30,
+      "64": 210,
+      "8": 90,
+      "None": 60
+    }
+  },
+  "fixed_nominal_checkpoint_signature_count": 1,
+  "independent_scalar_cell_families_checked": 2568,
+  "kc_rows_checked": 3210,
+  "protocol_sha256": "2feb02be7e43e04812330ef5c1c41231a43ea903b7bb563f58e6c6e2e6afbe8f",
+  "representative_spiking_by_amplitude_and_cohort": {
+    "1": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "2": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "4": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "8": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 3
+    },
+    "16": {
+      "new_20": 2,
+      "none_28": 0,
+      "old_59": 17
+    },
+    "32": {
+      "new_20": 6,
+      "none_28": 0,
+      "old_59": 44
+    },
+    "64": {
+      "new_20": 13,
+      "none_28": 0,
+      "old_59": 51
+    },
+    "128": {
+      "new_20": 17,
+      "none_28": 0,
+      "old_59": 54
+    },
+    "256": {
+      "new_20": 17,
+      "none_28": 0,
+      "old_59": 56
+    },
+    "512": {
+      "new_20": 18,
+      "none_28": 0,
+      "old_59": 57
+    }
+  },
+  "representative_spiking_by_family_and_cohort": {
+    "compression_16": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 2
+    },
+    "compression_2": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "compression_4": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "compression_8": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "observed": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 0
+    },
+    "synchronous": {
+      "new_20": 0,
+      "none_28": 0,
+      "old_59": 5
+    }
+  },
+  "stage": "B5.5",
+  "status": "pass",
+  "synchronous_contacted_spiking": 5,
+  "trials_checked": 30
+}

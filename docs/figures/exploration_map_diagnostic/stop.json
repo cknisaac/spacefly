@@ -1,0 +1,11 @@
+{
+  "study_id": "synthetic_frozen_exploration_map_factorial_v1",
+  "stop_kind": "user_directed_early_stop",
+  "original_planned_seeds": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+  "completed_seeds": [2000, 2001, 2002, 2003, 2004],
+  "unrun_seeds": [2005, 2006, 2007],
+  "completed_checkpoint_rows": 15,
+  "planned_checkpoint_rows": 24,
+  "stopped_utc": "2026-09-29T05:41:34+00:00",
+  "analysis_policy": "Five-seed post hoc subset is diagnostic only. Do not claim the predeclared eight-seed protocol finished or use the reduced cohort as a confirmatory reliability gate."
+}

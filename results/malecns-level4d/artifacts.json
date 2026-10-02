@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source_receipt": {
+    "path": "runs/malecns_level4d_final_moving_note_repair/result.json",
+    "bytes": 43056488,
+    "sha256": "a1868987301ed16ad468ad48cbffdadc68107eabfa335d2e07e0dfcbacb22556",
+    "git_storage": "excluded; local full run"
+  },
+  "frozen_config": {
+    "path": "configs/malecns_level4d_final_moving_note_repair.json",
+    "bytes": 6180,
+    "sha256": "f81785d3a186b545cdbbda3c5a2145a6515bef98ae90b4e55bb2238c4cf4acbe",
+    "git_storage": "included"
+  },
+  "runner": {
+    "path": "src/project_b/malecns_continuous_position_learning/experiment_level4d_final_moving_note_repair.py",
+    "bytes": 26518,
+    "sha256": "cb3107b0937e5c12b9060013449b8ad231e6378221a6c431f7e0677fce6b8169",
+    "git_storage": "included"
+  },
+  "playback": {
+    "path": "visualization/malecns-level4d-playback.html",
+    "bytes": 697583,
+    "sha256": "2073a9c48e7d9a6bee4b5b20410e51a5ef5ae9e0fd35c4f1e9d59e11bdd7e9f8",
+    "git_storage": "included; standalone offline HTML"
+  },
+  "playback_source": {
+    "path": "visualization/malecns-level4d-source.html",
+    "bytes": 586479,
+    "sha256": "c7768f38c7b5dc5b8d247edb34b922ad227c8f7c83c1d659ea3dcaf82ebfe333",
+    "git_storage": "included; editable inline fragment"
+  }
+}

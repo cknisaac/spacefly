@@ -1,0 +1,451 @@
+{
+  "purpose": "data-only route closure",
+  "parent_sha256": {
+    "neurons.parquet": "7d9a410d61d4caa934fa3639f9d204291ff0d18c445b2384054b95286d6350eb",
+    "connections.parquet": "da21af867d4e8e4c627c9916e55af4332302b611a296de1d0a8bc7dd6ebcff7a"
+  },
+  "candidates": {
+    "classification": "INFERRED anatomical candidacy, not measured plasticity or an active mask",
+    "rule": "KC->519131 both endpoints g2(R), and 14182->same KC has >=1 both-endpoints g2(R) contact",
+    "all_contacts": 1129,
+    "both_gamma2_contacts": 808,
+    "both_gamma2_kc_ids": [
+      19102,
+      30397,
+      35180,
+      36723,
+      38657,
+      39316,
+      39771,
+      41134,
+      42370,
+      42969,
+      43867,
+      44485,
+      44948,
+      46196,
+      47354,
+      47847,
+      48147,
+      48438,
+      48533,
+      48632,
+      48641,
+      48978,
+      49052,
+      49345,
+      49709,
+      49710,
+      50582,
+      51679,
+      51998,
+      52594,
+      52751,
+      52907,
+      53217,
+      53505,
+      56284,
+      57302,
+      57413,
+      57460,
+      57545,
+      57550,
+      58501,
+      58524,
+      58782,
+      60344,
+      60708,
+      60829,
+      61056,
+      62076,
+      62274,
+      63543,
+      64302,
+      64310,
+      66973,
+      67355,
+      67853,
+      67984,
+      71486,
+      71688,
+      72230,
+      72512,
+      73227,
+      74094,
+      74269,
+      74542,
+      76023,
+      78768,
+      81056,
+      81177,
+      81656,
+      83584,
+      84011,
+      84628,
+      85349,
+      85851,
+      85923,
+      86183,
+      86909,
+      87387,
+      89327,
+      91244,
+      96304,
+      99391,
+      102283,
+      103663,
+      106301,
+      111744,
+      120949,
+      127046,
+      128925,
+      135421,
+      144220,
+      150014,
+      153545,
+      157325,
+      159580,
+      520204,
+      520206,
+      526900,
+      531428,
+      533220,
+      533345,
+      534786,
+      535720,
+      536363
+    ],
+    "candidate_contacts": 796,
+    "candidate_kc_ids": [
+      19102,
+      30397,
+      35180,
+      36723,
+      38657,
+      39771,
+      41134,
+      42370,
+      42969,
+      43867,
+      44485,
+      44948,
+      46196,
+      47354,
+      47847,
+      48147,
+      48438,
+      48533,
+      48632,
+      48641,
+      48978,
+      49052,
+      49345,
+      49710,
+      50582,
+      51679,
+      51998,
+      52594,
+      52751,
+      52907,
+      53217,
+      53505,
+      56284,
+      57302,
+      57413,
+      57460,
+      57545,
+      57550,
+      58501,
+      58524,
+      58782,
+      60344,
+      60708,
+      60829,
+      61056,
+      62076,
+      63543,
+      64302,
+      64310,
+      66973,
+      67355,
+      67853,
+      67984,
+      71486,
+      71688,
+      72230,
+      72512,
+      73227,
+      74094,
+      74269,
+      74542,
+      76023,
+      81056,
+      81177,
+      81656,
+      83584,
+      84011,
+      84628,
+      85349,
+      85851,
+      85923,
+      86183,
+      86909,
+      87387,
+      89327,
+      91244,
+      96304,
+      99391,
+      102283,
+      103663,
+      106301,
+      111744,
+      120949,
+      127046,
+      128925,
+      135421,
+      144220,
+      150014,
+      153545,
+      157325,
+      159580,
+      520204,
+      520206,
+      526900,
+      531428,
+      533220,
+      533345,
+      534786,
+      535720,
+      536363
+    ],
+    "excluded_contacts": 333,
+    "gamma2_kcs_without_strict_same_kc_dan_contact": [
+      39316,
+      49709,
+      62274,
+      78768
+    ],
+    "joint_roi_counts": {
+      "<unspecified> -> <unspecified>": 282,
+      "g3(R) -> g3(R)": 8,
+      "<unspecified> -> g2(R)": 15,
+      "g2(R) -> g2(R)": 808,
+      "g2(R) -> <unspecified>": 16
+    },
+    "output_sha256": "5a0a8d4c9806afb0f1dc4a744526aade4c198df6905138e19ea6e3c2ab8930af"
+  },
+  "descending_inputs": {
+    "519624": {
+      "parent_pairs": 716,
+      "parent_contacts": 17716,
+      "retained_pairs": 2,
+      "retained_contacts": 42,
+      "retained_sources": [
+        {
+          "pre": 519131,
+          "cell_type": "MBON32",
+          "instance": "MBON32(y2)_R",
+          "nt": "gaba",
+          "contacts": 38,
+          "source_row": 371057,
+          "retained": true
+        },
+        {
+          "pre": 523769,
+          "cell_type": "DNa02",
+          "instance": "DNa02_L",
+          "nt": "acetylcholine",
+          "contacts": 4,
+          "source_row": 7495884,
+          "retained": true
+        }
+      ],
+      "missing_pairs": 714,
+      "missing_contacts": 17674,
+      "missing_percent_contacts": 99.76292616843531,
+      "missing_contacts_by_consensus_transmitter": {
+        "glutamate": 3648,
+        "acetylcholine": 10369,
+        "gaba": 3504,
+        "dopamine": 49,
+        "unclear": 66,
+        "octopamine": 36,
+        "histamine": 1,
+        "serotonin": 1
+      },
+      "top_missing_types": [
+        [
+          "PFL2",
+          830
+        ],
+        [
+          "LAL112",
+          577
+        ],
+        [
+          "LAL051",
+          495
+        ],
+        [
+          "LAL014",
+          484
+        ],
+        [
+          "LAL122",
+          432
+        ],
+        [
+          "LAL144",
+          432
+        ],
+        [
+          "LAL121",
+          406
+        ],
+        [
+          "LC33",
+          381
+        ],
+        [
+          "PVLP138",
+          357
+        ],
+        [
+          "LAL171",
+          288
+        ],
+        [
+          "VES041",
+          264
+        ],
+        [
+          "PFL3",
+          251
+        ]
+      ],
+      "PFL2_PFL3_additional_contacts": 1081,
+      "retained_percent_after_hypothetical_PFL_expansion": 6.338902686836758
+    },
+    "523769": {
+      "parent_pairs": 1138,
+      "parent_contacts": 23957,
+      "retained_pairs": 2,
+      "retained_contacts": 310,
+      "retained_sources": [
+        {
+          "pre": 519624,
+          "cell_type": "DNa03",
+          "instance": "DNa03_L",
+          "nt": "acetylcholine",
+          "contacts": 255,
+          "source_row": 4834,
+          "retained": true
+        },
+        {
+          "pre": 519131,
+          "cell_type": "MBON32",
+          "instance": "MBON32(y2)_R",
+          "nt": "gaba",
+          "contacts": 55,
+          "source_row": 185086,
+          "retained": true
+        }
+      ],
+      "missing_pairs": 1136,
+      "missing_contacts": 23647,
+      "missing_percent_contacts": 98.70601494344034,
+      "missing_contacts_by_consensus_transmitter": {
+        "acetylcholine": 15642,
+        "gaba": 4328,
+        "glutamate": 3470,
+        "unclear": 104,
+        "octopamine": 76,
+        "dopamine": 23,
+        "histamine": 4
+      },
+      "top_missing_types": [
+        [
+          "AN03A008",
+          741
+        ],
+        [
+          "PS049",
+          492
+        ],
+        [
+          "PS059",
+          476
+        ],
+        [
+          "AN04B003",
+          425
+        ],
+        [
+          "PFL3",
+          356
+        ],
+        [
+          "LAL126",
+          318
+        ],
+        [
+          "LAL083",
+          312
+        ],
+        [
+          "GNG521",
+          311
+        ],
+        [
+          "VES052",
+          308
+        ],
+        [
+          "AOTU019",
+          297
+        ],
+        [
+          "LAL179",
+          295
+        ],
+        [
+          "DNae005",
+          293
+        ]
+      ],
+      "PFL2_PFL3_additional_contacts": 356,
+      "retained_percent_after_hypothetical_PFL_expansion": 2.779980798931419
+    }
+  },
+  "distinct_missing_presynaptic_bodies": 1420,
+  "hypothetical_PFL_expansion_ids": [
+    11557,
+    11673,
+    13031,
+    13490,
+    14729,
+    18327,
+    18803,
+    18851,
+    19009,
+    19715,
+    23159,
+    26488,
+    27492,
+    35322,
+    79549,
+    511842,
+    513034,
+    513266,
+    518375,
+    518378,
+    520573,
+    520811,
+    522853,
+    567101
+  ],
+  "source_data_sha256": {
+    "critical_partners.parquet": "95c942ba0ab5e68baf166205f81c4ac912949751b2fb873adb93d47419d59a57",
+    "compartment_contacts.parquet": "0ff1f842e4797a1c13ae25419db4035f42617f2a053d7d09cb22eff81ed3ab1c"
+  }
+}

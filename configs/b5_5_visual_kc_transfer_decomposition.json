@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "stage_id": "B5.5",
+  "question": "Under the frozen five-source V1.1 event trains, can amplitude versus charge-preserving timing compression explain absent KC spikes?",
+  "v1_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "v1_1_config_sha256": "43d5b05c575d6baa595deadd5e86a21e02e8f4f632f6f1558781101432065c7a",
+  "b5_4_protocol_sha256": "1aba6197243b158f02b77b497462470192973a5ab4b8b3a21770260aa44af67b",
+  "observed_before_probe_sha256": {
+    "observed_meta.json": "d21e53963357592107e369779cafd6888d08ad7488bb001dc718713a04dac57e",
+    "observed_summary.json": "3151902d1128bbbb903cbc907d87b8e2a315b648cb102eb99d1dc1716ec63e44",
+    "observed_seed_31001.json.gz": "82ba8fcd5644ffeef117977cb9ec9a53ddab04990d8acb075b2bd389f0f2f40e",
+    "observed_seed_31002.json.gz": "52cb0d235f90d75085c12afcf9f4384a6ed29ba434dd608645bf5a62ef96659d",
+    "observed_seed_31003.json.gz": "c828b822074fca5496e3f63159f6acb495b8a56cc886b6ce4ed698ce2c274dce"
+  },
+  "seeds": [31001, 31002, 31003],
+  "nominal_onsets_us": [11000000, 13000000, 15000000, 17000000, 19000000, 21000000, 23000000, 25000000, 27000000, 29000000],
+  "observation_window_us": 500000,
+  "integration_tick_us": 500,
+  "cohorts": {
+    "new_20": "manifest.newly_contacted_KC_ids, not response-selected",
+    "old_59": "all KCs with direct pair from 13285/13707/13874",
+    "none_28": "the remaining selected KCs, retained in the full-107 summary"
+  },
+  "families": {
+    "observed": {"amplitude_multiplier": 1, "timing": "exact saved B5.4 arrivals"},
+    "amplitude": {"multipliers": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512], "timing": "exact saved B5.4 arrivals"},
+    "compression": {"factors": [2, 4, 8, 16], "amplitude_multiplier": 1, "center": "per-KC midpoint of first and last observed visual arrival", "timestamp_rule": "center + (event_time-center)/factor, rounded half-even to nearest 500-us tick"},
+    "synchrony_upper_bound": {"amplitude_multiplier": 1, "timing": "all existing per-KC visual events at the nearest 500-us tick to its original first/last midpoint"}
+  },
+  "charge_contract": "Keep every source row, event count and event amplitude in timing families. Infinite-horizon delivered charge is 5 ms times summed event-step pA. Finite 500-ms charge is also reported and must agree within numerical tolerance because the last observed arrival is before 200 ms.",
+  "first_spike_policy": "Analytical frozen passive LIF trajectory until first threshold crossing; scan the frozen 500-us threshold ticks in the half-open 500-ms post window. If threshold is crossed, report first spike only; do not infer network feedback or later spikes.",
+  "full_model_confirmation": "Reproduce observed B5.4 KC peak voltage/current/charge at every one of 30 nominal checkpoints and perform independent scalar audit of counterfactual first-spike arithmetic; no production simulation parameters change.",
+  "primary_endpoint": "Per-KC first spike at exact 1x current for observed, four compression factors and synchronous upper bound; first tested multiplier in the complete amplitude ladder at observed timing.",
+  "classification_predeclared": {
+    "material_fixed_charge_rescue_count_of_79": 8,
+    "majority_count_of_79": 40,
+    "gross_observed_median_critical_multiplier": 10,
+    "amplitude_limited": "Fewer than 8 of 79 contacted KCs spike at 1x under every finite compression through 16x, fewer than 40 spike even under perfect synchrony, and the median observed critical amplitude multiplier is at least 10x; amplitude-ladder spikes must exist. This is an effective-drive classification within the surrogate, not identification of synaptic efficacy versus intrinsic excitability.",
+    "temporal_integration_limited": "At least 40 of 79 contacted KCs spike at 1x under at least one finite compression factor through 16x, with little or no amplitude scaling required in that timing family.",
+    "mixed": "Between 8 and 39 of 79 spike at 1x under a finite compression factor and the contacted-population median critical amplitude multiplier falls by at least twofold relative to observed timing; otherwise timing evidence may be weak.",
+    "unresolved": "Any pattern that does not meet the preceding mutually ordered criteria, any invalid charge/state replay, or evidence that the local passive model no longer applies. Report cohort-specific exceptions even when the overall label is amplitude-limited."
+  },
+  "do_not": ["edit V1 or V1.1", "choose a winning multiplier", "convert a diagnostic threshold into production weight", "touch KC-to-MBON32", "diagnose downstream route", "use game, motor, reward, plasticity or training"],
+  "stop": "Report B5.5 and one next Branch B stage; do not create V1.2."
+}

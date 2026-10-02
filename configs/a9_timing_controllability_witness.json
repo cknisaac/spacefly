@@ -1,0 +1,18 @@
+{
+  "study_id": "synthetic_A9_one_structural_timing_controllability_witness_v1",
+  "stage": "A9",
+  "seed": 2002,
+  "one_based_outcome": 373,
+  "one_constructed_weight_pattern": "From the exact A8.2 no-update checkpoint, set all selected relay-to-motor edges whose source preferred time-to-contact is 500000, 400000, 300000 or 200000 microseconds to the existing 0-mV lower bound. Keep all 150000/100000/75000/50000/25000/0-microsecond selected edges and every unselected edge unchanged.",
+  "probe": "The identical frozen 32-note A5 panel with unchanged motor readout, game, neuron and queue state, cue gains, RNG state, topology, and no exploration or plasticity.",
+  "comparator": "A8.2 no_update checkpoint and saved frozen probe",
+  "primary_endpoint": "Number of probe notes with GOOD+ on their first DOWN and no earlier same-note null DOWN; report first-DOWN signed offsets and silent-note count.",
+  "secondary_endpoints": ["first motor threshold crossing", "all actions and judgements", "GOOD+ and mean utility", "motor spikes", "weight displacement and bounds"],
+  "interpretation_locked_before_probe": {
+    "narrow_existence_witness": "At least one note has first-DOWN GOOD+ without an earlier same-note null DOWN. This proves only that the fixed architecture can express that behavior in at least one frozen context.",
+    "witness_failed": "No note meets the first-DOWN GOOD+ criterion; report whether it is early, late or silent. This does not prove all weight vectors fail.",
+    "inconclusive": "State, mask, comparator or probe replay cannot be verified."
+  },
+  "prohibitions": ["no second pattern", "no cue cutoff search", "no weight-level search", "no training", "no production edit", "no claim of a learned or biological policy"],
+  "stop": "Save one branch, raw actions and motor trace, independent audit and report; stop before another mechanism or training stage."
+}

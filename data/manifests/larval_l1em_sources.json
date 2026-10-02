@@ -1,0 +1,29 @@
+{
+  "dataset": "L1 Larval CNS connectome",
+  "paper": "Winding et al. (2023), The connectome of an insect brain, Science 379, eadd9330",
+  "authoritative_paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7614541/",
+  "authoritative_dataset_statement": "Paper links raw EM/reconstructions to L1 Larval CNS CATMAID and identifies Supplementary Data S1 as connectome tables.",
+  "supplement": "Supplementary Data S1",
+  "authoritative_supplement_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7614541/bin/EMS175448-supplement-Supplementary_Data_S1.zip",
+  "retrieved_copy_url": "https://github.com/brain-networks/larval-drosophila-connectome/blob/main/Supplementary-Data-S1.zip",
+  "retrieved_copy_note": "Public mirror of Winding et al. (2023) Supplementary Data S1; source claims checked against the paper data-availability section. Mirror archive retained compressed; full connectivity matrices are not extracted into the repository.",
+  "retrieved_date": "2026-10-02",
+  "file": "supplementary_data_s1.zip",
+  "bytes": 1107380,
+  "sha256": "8C1F43809ED5D527BA61B154E377CC21DA26383A75EDA8AAB85CE05607A72A4C",
+  "catmaid_live_audit": {
+    "instance": "L1EM",
+    "project_id": 1,
+    "api_root": "https://v3-cached.virtualflybrain.org/catmaid/l1em/",
+    "api_documentation": "https://kbw.virtualflybrain.org/hosted/l1em-catmaid/",
+    "retrieved_date": "2026-10-02",
+    "artifact": "catmaid_route_audit.json",
+    "artifact_sha256": "F0E6056A037D2D560C3784EC149F61E1D50C04C3F72B7CD88CF9DE501FB276D4",
+    "query_scope": "Direct downstream contacts for MBON-m1→Basin-4 and MBON-d1→Ipsigoro→Goro candidate edges; no multihop Basin search is represented."
+  },
+  "inspected_members": [
+    "Supplementary-Data-S1/annotations.csv",
+    "Supplementary-Data-S1/ad_connectivity_matrix.csv"
+  ],
+  "source_scope_warning": "The matrix covers 2,952 neurons. It lacks the two VFB Goro IDs checked for this audit and the annotation table does not label Basin-4; it cannot alone establish the downstream route to those cells or prove their absence from the full CATMAID CNS project."
+}

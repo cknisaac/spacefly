@@ -1,0 +1,35 @@
+{
+  "stage_id": "MVP-B2.1",
+  "status": "PASS_DESIGN_ONLY",
+  "verified_at_utc": "2026-10-01T07:10:47.454978+00:00",
+  "checks": {
+    "historical_B2_design_hash_unchanged": true,
+    "normalized_source_hashes_match_B1": true,
+    "B1_B2_mask_and_partner_rows_match": true,
+    "source_pair_coverage_complete": true,
+    "future_event_owners": 12,
+    "tau_syn_us": 5000,
+    "boundary_wait_fixture_us": 69315,
+    "apl_input_pairs": 689,
+    "apl_output_pairs": 702,
+    "no_neural_or_task_run": true,
+    "local_report_links_exist": true
+  },
+  "resolved_config_sha256": "814992cbdf4c359d3ace376aedeb7126c1a3184adfe6088ee54153d9c8ab3403",
+  "files": {
+    "configs/b2_1_candidate1_dynamics_addendum.json": "e292bac91211427ccf36e5adbb92f79357b81de85d530efc5b86ffe58406889c",
+    "configs/b2_1_candidate1_resolved.json": "814992cbdf4c359d3ace376aedeb7126c1a3184adfe6088ee54153d9c8ab3403",
+    "scripts/resolve_b2_1_candidate1.py": "8da37adefe5e0337f05d4926da0cb351c2f1246e2905376bdc55947017d0b99e",
+    "docs/B2_1_CANDIDATE1_EXECUTABLE_DYNAMICS.md": "2b3e7d537f7cf6aa75144ca86a986ece7e8dde5b6a84654651d211dbab47004d",
+    "docs/figures/b2_1_candidate1_dynamics/source_coverage.json": "008cfabed799f005cddc3b4d728dd006a0f219ea25035c602d2e28ed460ac33b",
+    "docs/figures/b2_1_candidate1_dynamics/budget_ledger.json": "4c707b4e64adffea192a4cef7792a12c5d47db709121f1b5bea2388920ebbdbd",
+    "CURRENT.md": "040d61df749ffd2fa8daa61f2c6e38c1d538bcabb9fd1755b8b72347aab40f00",
+    "ASSUMPTIONS.md": "926a40244c0dcae04dd424b58a6688414cdde43c1cf179120e468ad41bf661c3",
+    "MILESTONES.md": "83ff3ffb135c023947a1b87ef3b06c163d9bd6ae11613c4ae5423eac97099823",
+    "AGENTS.md": "34a06a1a8f128bbc359a2d4c38f676e5d193cba43c1102ed753a868348802064",
+    "docs/MODEL.md": "9efc6415af8adc435ccc106302399474b7a9aaa3a174939a5bccf353e1f9c307",
+    "docs/BIOLOGY.md": "73a65d0062c07d4cbcfb171f764421d9b93129f2f3d8ade8ec91d699bb9d4681",
+    "docs/BRANCH_A_INFRASTRUCTURE_ROADMAP.md": "0142b1e3dfb2c0b589b6cd06729f0861aa48953436e21e0412292167cf4d8aac",
+    "docs/BRANCH_B_FLY_LEARNING_ROADMAP.md": "1fcc51ef2a68c702167a4906f1435f9b2f3c29e1e8ff058a4deb3f89f8373782"
+  }
+}

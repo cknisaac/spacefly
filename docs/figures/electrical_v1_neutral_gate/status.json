@@ -1,0 +1,33 @@
+{
+  "complete": [
+    "A_high_31001",
+    "A_high_31002",
+    "A_high_31003",
+    "A_low_31001",
+    "A_low_31002",
+    "A_low_31003",
+    "A_nominal_31001",
+    "A_nominal_31002",
+    "A_nominal_31003",
+    "B_nominal_31001",
+    "B_nominal_31002",
+    "B_nominal_31003",
+    "C_high_31001",
+    "C_high_31002",
+    "C_high_31003",
+    "C_low_31001",
+    "C_low_31002",
+    "C_low_31003",
+    "C_nominal_31001",
+    "C_nominal_31002",
+    "C_nominal_31003",
+    "D_nominal_31001",
+    "D_nominal_31002",
+    "D_nominal_31003",
+    "R_A_nominal_31001_tick250",
+    "R_A_nominal_31002_tick250",
+    "R_A_nominal_31003_tick250"
+  ],
+  "errors": {},
+  "protocol_sha256": "d582854d419d77f23b530e41c8211345ca906031e6643d9c6136bfa626eff0c6"
+}

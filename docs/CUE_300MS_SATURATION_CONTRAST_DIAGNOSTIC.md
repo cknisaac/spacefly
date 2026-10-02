@@ -1,0 +1,32 @@
+# Two positive-RPE contrasts for 300-ms motor timing
+
+**Status:** complete, 2026-09-30. Synthetic Branch A only. Two checkpoints were locked from the already saved seed-2002 trajectory before any new probe: outcome **372**, positive RPE from an unsaturated state and a prior 0→17 GOOD+ change; and outcome **377**, positive RPE after 331 upper-bound weights and a prior 10→0 GOOD+ change. At each exact pre-update state, the same structural cohort of **36 edges** from 300-ms relay IDs 48–51 to motor IDs 97–105 was omitted from the otherwise real update. The [protocol](../configs/cue_300ms_saturation_contrast_diagnostic.json), [raw branch ledger and spike/readout traces](figures/cue_300ms_saturation_contrast/result.json), saved checkpoints and [independent audit](figures/cue_300ms_saturation_contrast/audit.json) are available. No new training, parameter search, other mask or production edit was made.
+
+## Mechanism tested
+
+The [outcome-373 complement test](CUE_300MS_COMPLEMENT_THRESHOLD_DIAGNOSTIC.md) found that this cohort was necessary as a group for that update's 73-ms advance of the first motor threshold crossing. The present contrast asks whether the **same cohort accelerates the first crossing in two other positive-RPE states**, and whether that acceleration always improves the actual action sequence. The no-update, real-full and one-omission branches at each checkpoint share identical neuron, queue, eligibility, baseline, RNG, readout and game state before the frozen 32-note common probe. The real full probes exactly reproduce the older A3 trajectory. The primary endpoint is the first motor on-threshold rise. Full-panel score is downstream and descriptive.
+
+| Outcome and pre-update state | Branch | First rise / first DOWN (s) | First DOWN disposition | First scored DOWN (s) | GOOD+ /32 | Mean utility |
+| --- | --- | ---: | --- | ---: | ---: | ---: |
+| 372; **0/480** at upper bound, RPE +1.292 | No update | 371.465 | early MISS | 371.465 | 0 | −0.960938 |
+|  | Real full | **371.336** | null press | 371.536 | 17 | −0.111328 |
+|  | Full except 36 edges | **371.354** | null press | 371.554 | **32** | **+0.328125** |
+| 377; **331/480** at upper bound, RPE +0.884 | No update | 376.572 | null press | 376.772 | 10 | −0.248047 |
+|  | Real full | **376.530** | null press | 376.730 | 0 | −0.960938 |
+|  | Full except 36 edges | **376.588** | null press | 376.788 | 4 | −0.365234 |
+
+At outcome 372 the real positive update advanced the first motor crossing by **129 ms** relative to no update; omitting the cohort delayed it **18 ms** relative to full. The full update changed the first action from an early scored MISS to an even earlier **null** press, which did not resolve the note. The fixed readout then pressed again 200 ms later for a GOOD judgement. The omission kept this two-press pattern but improved its timing further: 32/32 GOOD+ versus 17/32 full. Thus the earlier motor command can appear to improve score **because the game ignores the null press** and the cooldown places a second press in the judgement window. The frozen panel changed from 32 DOWN actions without the update to 64 with either updated branch.
+
+At outcome 377 the real update advanced first crossing **42 ms** from no update, moved the first scored DOWN from −99 to −141 ms relative to note time, and reduced GOOD+ from 10 to 0. Omitting the same cohort delayed crossing **58 ms** relative to full, 16 ms *later* than no update, and recovered 4 GOOD+. It did not fully restore no-update utility or GOOD+. All three branches had 64 DOWN actions. The omission removed **30.179 mV applied L1** at outcome 372 and **18.254 mV** at 377; it retained 255.035 and 10.060 mV respectively. At 377 the 150-ms and nearer source bins made **zero** applied change due to upper-bound saturation, whereas at 372 those bins changed extensively. This difference is an exact update-vector observation, not proof that clipping alone causes the score change.
+
+## Diagnosis supported and remaining test
+
+Across the exact outcomes **372, 373 and 377**, this 300-ms cohort causally advances the first motor threshold crossing. The resulting score effect depends on whether that first press falls into the ignored-null, early-MISS, or later scored-press regime. Positive reward at the scored press can therefore reinforce synapses involved in an earlier null command. Upper-bound saturation can leave the far cue as the main remaining channel for a positive update, as at 373 and 377. The fixed 200-ms cooldown then transfers first-press phase into scored timing. This is a concrete **temporal credit and action-boundary problem**, with clipping as an amplifier. It is a diagnostic conclusion for one synthetic seed, not a validated correction or an M2 pass.
+
+The next useful method test should address the **unpenalized null action** or reward attribution across that action boundary by one declared rule, then evaluate paired development seeds and later fresh held-out controls. A targeted 36-edge production mask would be selected from these outcomes and is not justified. The already used seed-2002 probes must not become a held-out success claim.
+
+## Audit and process record
+
+The runner replayed all seed-2002 training events through outcome 377 against the saved ledger, captured exact pre-dopamine states, verified every weight, eligibility and raw proposed update against the saved A3 geometry, and reproduced both historical real-full 32-note probes exactly. The independent auditor reloaded all pre/post checkpoints, verified that only the selected 36 applied weights differ from full, reran all six frozen probes, and independently reconstructed motor threshold rises and readout actions. It passed **2 cases, 6 branches, 192 frozen note outcomes, 352 DOWN actions and 1,193 upward threshold rises**.
+
+The first replay attempt stopped before any new probe because whole-object pickle bytes did not match the older A3 canonical hash. As in prior diagnostics, pickle memoization varies with in-memory versus loaded object traversal. The verifier was repaired to retain the hash as an explicit **mismatch at both outcomes** while requiring exact event replay, all 480 pre-update geometry fields and old full-probe reproduction. The protocol, selected cases, intervention and outcome rules did not change. This mismatch is not presented as byte-identical historical state; the component-level and behavioral checks are the evidence for state reconstruction.

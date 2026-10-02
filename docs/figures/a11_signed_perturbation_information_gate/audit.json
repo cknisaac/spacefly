@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "stage": "A11",
+  "classification": "INCONCLUSIVE",
+  "historical_events_verified": 372,
+  "branches_replayed": 4,
+  "actions_replayed": 18,
+  "motor_spikes_recounted": 1221,
+  "signed_response_dot": 32,
+  "signed_first_rise_delta_us": 0,
+  "protocol_sha256": "87c2d7de6b81d66e44c15f389da0d5df804d796201a37135314280940405cfa9",
+  "result_sha256": "dadf9b57267ccefd86b6ac6c3d9f8716841e18b6e61e1385b69feed885abb097"
+}

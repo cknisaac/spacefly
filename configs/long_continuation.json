@@ -1,0 +1,46 @@
+{
+  "study_id": "synthetic_same_network_continuation_v1",
+  "purpose": "Test whether retaining each synthetic network and its weights through a fixed longer training horizon improves frozen timing on an independent common probe panel.",
+  "selection": "The first eight original held-out seeds by numeric order, 2000 through 2007. These outcomes have already been inspected in earlier work; this is a mechanistic diagnostic cohort, not untouched confirmation.",
+  "seeds": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+  "conditions": ["on", "off", "shuffled"],
+  "training_outcomes": 384,
+  "checkpoints": [24, 96, 384],
+  "unchanged_model_settings": {
+    "neuron_count": 128,
+    "dt_us": 1000,
+    "readout_on_threshold": 10,
+    "exploration_probability": 0.002,
+    "plasticity_eta": 0.2,
+    "weight_bounds_mv": [0.0, 2.0],
+    "plasticity_enabled_for_on_and_shuffled": true
+  },
+  "training_map": {
+    "prefix": "Copy all first 40 note times and cue gains exactly from each seed's original held-out/on resolved configuration; training notes 1-24 must reproduce the original on/off/shuffled training outcomes.",
+    "extension": "For notes 41-384, use a separate Random(seed XOR 1179794261). At each note draw one interval and one gain from the original uniform choice lists; same extended map for all three conditions of a seed.",
+    "extension_seed_xor": 1179794261,
+    "note_interval_ms_choices": [800, 900, 1000, 1100, 1200],
+    "cue_gain_choices": [0.75, 0.9, 1.0, 1.1, 1.25]
+  },
+  "reward_controls": {
+    "off": "Identical initial topology/weights/map/RNG seed, with plasticity disabled throughout training.",
+    "shuffled": "Offline yoked schedule from the on run's actual game utilities. Use existing shuffled_utilities within blocks 1-24, 25-96, 97-384, preserving each block's multiset but changing its order. The first block uses the original seed; later blocks use seed XOR the block's zero-based start index. Actual judgements and their original utilities remain separately logged."
+  },
+  "probe_panel": {
+    "note_count": 32,
+    "first_note_after_checkpoint_us": 1000000,
+    "seed": 732084167,
+    "generation": "A separate Random(probe seed) draws intervals and gains from the same fixed choice lists. The same relative note-time offsets and gain list are translated to each checkpoint time for every seed and condition.",
+    "game_state": "Replace the clone's future training notes with a fresh probe-only game at checkpoint time, preserving the cloned neural, synaptic, eligibility, reward-predictor, readout and RNG state; synchronize the new game's key state with the cloned readout.",
+    "freeze": "Set training_notes=0 and plasticity_enabled=false only in the probe clone. Thus exploration and weight updates are disabled on the probe, while the original training session continues unchanged. Probe results never enter training or settings selection."
+  },
+  "metrics": [
+    "All training judgements, actual utility, learning utility, predicted utility and RPE by note",
+    "Per-outcome raw and applied weight-update L1/L2/max, proposed bound clipping counts, and bound occupancy",
+    "Training and probe DOWN dispositions, null presses, early attempted MISS counts, and exploration-pulse counts",
+    "Frozen GOOD-or-better, non-MISS, mean utility, signed/absolute timing error on hits, and all per-note outcomes",
+    "Per-seed paired on/off/shuffled comparisons at each checkpoint and within-seed changes from 24 to 96 to 384"
+  ],
+  "interpretation": "Report all eight seeds and every checkpoint. Consistent on-condition frozen gains with retained weights, beyond paired off/shuffled controls, support insufficient exposure in the original 24-outcome study. Flat or worsening frozen curves with clipping, oscillation or baseline error argue against more practice alone. This selected cohort cannot satisfy the original 32-seed M2 reliability gate.",
+  "execution": "Separate durable JSONL ledger under docs/figures/long_continuation, one completed condition per row, resumable at row boundaries. Fixed settings and probe panel are never selected using outcomes. Six-hour wall budget with status recording if exhausted."
+}

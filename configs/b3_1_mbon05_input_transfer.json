@@ -1,0 +1,20 @@
+{
+  "stage_id": "MVP-B3.1",
+  "candidate_id": "MVP-C1",
+  "source_stage": "MVP-B3",
+  "seed": 31001,
+  "boundary_level": "nominal",
+  "note": {"note_id": "b3-isolated", "visible_from_us": 100000, "hit_us": 900000},
+  "parent_committed_cut_us": 1000,
+  "end_us": 1100000,
+  "target_source_id": 10495,
+  "arms": ["baseline", "apl_to_mbon05_off"],
+  "intervention": "In the second arm only, omit the declared continuous graded APL current to MBON05; retain APL state, arrivals, and every other APL target.",
+  "primary_endpoint": "MBON05 threshold crossing and spike before cue end in each matched arm",
+  "pass_condition": "baseline silent and APL-off MBON05 spikes before cue end, with exact start and current-balance attribution",
+  "fail_condition": "both arms remain MBON05-silent with valid matched start and trace attribution",
+  "inconclusive_condition": "start, source, event, or selective current-balance attribution mismatch",
+  "trace_sampling": "Every integer-millisecond integration endpoint through cue end, plus maxima and exact accumulated interval contributions",
+  "no_training": true,
+  "no_parameter_search": true
+}

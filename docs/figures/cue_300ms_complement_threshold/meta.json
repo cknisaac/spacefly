@@ -1,0 +1,13 @@
+{
+  "study_id": "synthetic_2002_373_300ms_complement_threshold_v1",
+  "protocol_sha256": "3f0460f60214e77264eb3b6c03715b6b2ff03176ccba02a83438deb39fccfd7e",
+  "a5_result_sha256": "b7d184737cd25da6b3a40d3130c6918ce4fb1266aa9af50930128bcd4df48f71",
+  "a7_result_sha256": "6908888fbe3a27b6be38a9b2dc6c4d7e422b57db6c1490a38ebf3d41041bd7cc",
+  "a5_pre_checkpoint_sha256": "291130f7874829e30d14292b2bf9b313f7daad243fb9f8ea1293c5c9f21ebb71",
+  "checkpoint_sha256": {
+    "no_update": "9891379a99ba7baa8c98c7f01f6eece65a0e86dc36c7c933f41650dc34c8e1c5",
+    "real_full": "38cb8d3a23db7b4451f0808720ff3619d1167068cc91a69877161ae108135c36",
+    "real_except_300ms_targets_97_105": "fee417f49dbef9954e1fe200b8e3d068f97d3b6b44cb6884d116556fb0e91466"
+  },
+  "synthetic_topology": "build_tiny_brain; no imported connectome"
+}

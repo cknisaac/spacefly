@@ -1,0 +1,26 @@
+{
+  "status": "superseded_reference_not_selected",
+  "superseded_by": "configs/connectome_source.json",
+  "dataset": "BANC",
+  "materialization": "v888",
+  "specimen": "adult female brain and ventral nerve cord",
+  "archive_doi": "10.7910/DVN/7WTH1N",
+  "metadata_product": "banc_888_meta.feather",
+  "edge_product_candidate": "banc_888_edgelist_simple_v2.feather",
+  "transmitter_product": "banc_888_neurotransmitter_prediction_v2.csv",
+  "edge_product_filter_warning": "The v2 simple edgelist derives from synapse detections with size >=5; no additional pair count threshold was imposed here. Do not treat excluded contacts as absent biology.",
+  "source_files_downloaded": true,
+  "source_checksums_sha256": {
+    "banc_888_meta.feather": "86ccf5df0c67419f8c5f43e93a7ed38d23a080e9f7fde26737290252f3780098",
+    "banc_888_edgelist_simple_v2.feather": "363fdef3813b72a5e45a42f17034cd5a544b654c838929cecf6e1ce5f60625cb",
+    "banc_888_neurotransmitter_prediction_v2.csv": "bb0f4afa48a05d90008c6d801e053ff2667fb1ba68e29501c92f49514540da1d"
+  },
+  "import_report": "data/processed/banc_v888_v2/import_report.json",
+  "validation_receipt": "data/processed/banc_v888_v2/validation_receipt.json",
+  "selected_neuron_ids": [],
+  "plastic_edge_ids": [],
+  "dan_ids": [],
+  "sensory_overlay_manifest": null,
+  "motor_overlay_manifest": null,
+  "route_audited": false
+}

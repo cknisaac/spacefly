@@ -1,0 +1,291 @@
+{
+  "schema_version": 2,
+  "model_id": "male-cns-circuit-117-electrical-v1.1",
+  "boundary_contract_id": "dn-boundary-v1",
+  "source_id_sha256": "b994b0886787435a66e9e057a741255ce7b1f1ab55145eaca6a97219e7753804",
+  "parent_neurons_sha256": "7d9a410d61d4caa934fa3639f9d204291ff0d18c445b2384054b95286d6350eb",
+  "parent_connections_sha256": "da21af867d4e8e4c627c9916e55af4332302b611a296de1d0a8bc7dd6ebcff7a",
+  "plastic_candidates_sha256": "5a0a8d4c9806afb0f1dc4a744526aade4c198df6905138e19ea6e3c2ab8930af",
+  "timing": {
+    "integration_tick_us": {
+      "value": 500,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: fixed submillisecond threshold grid, subject to later convergence gate"
+    },
+    "chemical_delay_us": {
+      "value": 1000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: one millisecond strictly causal placeholder, independent of failed 2-ms scale overlay"
+    },
+    "synaptic_decay_us": {
+      "value": 5000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: generic fast-current kernel for named active chemical hypotheses"
+    },
+    "max_queued_events": {
+      "value": 100000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: finite safety stop, not biological capacity"
+    }
+  },
+  "spiking_classes": {
+    "sensory": {
+      "capacitance_pf": {
+        "value": 10.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory capacitance_pf; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "leak_ns": {
+        "value": 1.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory leak_ns; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "rest_mv": {
+        "value": -60.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory rest_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "onset_mv": {
+        "value": -45.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory onset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "reset_mv": {
+        "value": -61.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory reset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "refractory_us": {
+        "value": 1500,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen sensory refractory_us; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      }
+    },
+    "KC": {
+      "capacitance_pf": {
+        "value": 5.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC capacitance_pf; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "leak_ns": {
+        "value": 0.5,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC leak_ns; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "rest_mv": {
+        "value": -62.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC rest_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "onset_mv": {
+        "value": -48.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC onset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "reset_mv": {
+        "value": -63.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC reset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "refractory_us": {
+        "value": 2000,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen KC refractory_us; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      }
+    },
+    "MBON32": {
+      "capacitance_pf": {
+        "value": 20.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 capacitance_pf; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "leak_ns": {
+        "value": 1.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 leak_ns; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "rest_mv": {
+        "value": -58.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 rest_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "onset_mv": {
+        "value": -43.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 onset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "reset_mv": {
+        "value": -59.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 reset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "refractory_us": {
+        "value": 2000,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen MBON32 refractory_us; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      }
+    },
+    "DNa03": {
+      "capacitance_pf": {
+        "value": 30.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 capacitance_pf; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "leak_ns": {
+        "value": 1.5,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 leak_ns; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "rest_mv": {
+        "value": -60.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 rest_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "onset_mv": {
+        "value": -45.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 onset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "reset_mv": {
+        "value": -61.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 reset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "refractory_us": {
+        "value": 2500,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa03 refractory_us; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      }
+    },
+    "DNa02": {
+      "capacitance_pf": {
+        "value": 40.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 capacitance_pf; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "leak_ns": {
+        "value": 2.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 leak_ns; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "rest_mv": {
+        "value": -60.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 rest_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "onset_mv": {
+        "value": -45.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 onset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "reset_mv": {
+        "value": -61.0,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 reset_mv; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      },
+      "refractory_us": {
+        "value": 2500,
+        "evidence": "ENGINEERING ASSUMPTION",
+        "source": "Electrical Model V1 frozen DNa02 refractory_us; class role literature constrains model family, not this exact-body value; chosen before any neutral or task results"
+      }
+    }
+  },
+  "spiking_parameter_provenance": {
+    "evidence": "ENGINEERING ASSUMPTION",
+    "source": "Electrical Model V1 frozen passive spiking approximations; no exact-body MaleCNS membrane measurements or task/dynamics-based fitting",
+    "literature_scope": "KC spiking and MBON cholinergic response: Vogt 2016, Barnstedt 2016; DN steering and state dependence: Westeinde 2024, Rayshubskiy 2025. These sources constrain class roles, not the numbers."
+  },
+  "graded_APL": {
+    "local_decay_us": {
+      "value": 50000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: one independent graded microdomain per selected KC, no measured branch constant"
+    },
+    "calyx_decay_us": {
+      "value": 20000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: separate unused calyx state so gamma2 activity is not global APL activity"
+    },
+    "kc_to_local_increment_per_contact": {
+      "value": 0.002,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: KC-spike-to-local-APL graded event scale, not measured release"
+    },
+    "local_to_kc_current_pa_per_contact_per_unit": {
+      "value": -0.02,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: bounded local inhibitory coupling from source APL-to-KC contacts"
+    }
+  },
+  "dopamine_state": {
+    "decay_us": {
+      "value": 200000,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1: explicit separate inactive DAN state; no teaching event in neutral mode"
+    }
+  },
+  "effect_hypotheses": {
+    "sensory_to_KC_pa_per_contact": {
+      "value": 0.03,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1 fixed magnitude for Circuit V1 INFERRED sensory-to-KC positive response hypothesis"
+    },
+    "KC_to_MBON32_pa_per_contact": {
+      "value": 0.01,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1 fixed magnitude; Barnstedt et al. 2016 constrains the KC-to-MBON excitatory class"
+    },
+    "MBON32_to_DNa03_pa_per_contact": {
+      "value": -0.1,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1 fixed magnitude for route-closure INFERRED MBON32 suppressive hypothesis"
+    },
+    "MBON32_to_DNa02_pa_per_contact": {
+      "value": -0.1,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1 fixed magnitude for route-closure INFERRED direct MBON32 suppressive hypothesis"
+    },
+    "DNa03_to_DNa02_pa_per_contact": {
+      "value": 0.04,
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "Electrical Model V1 fixed magnitude for route-closure INFERRED DNa03 promoting hypothesis"
+    }
+  },
+  "unknown_edge_policy": "RETAIN_ANATOMY_INACTIVE",
+  "plasticity_enabled": false,
+  "neutral_sensory_current_pa": {
+    "value": 0.0,
+    "evidence": "ENGINEERING ASSUMPTION",
+    "source": "Electrical Model V1 fixed neutral condition: no task-linked visual input or artificial sensory baseline"
+  },
+  "boundary": {
+    "seed_ids": [
+      31001,
+      31002,
+      31003
+    ],
+    "strengths": {
+      "low": 0.5,
+      "nominal": 1.0,
+      "high": 1.5
+    },
+    "common_coefficient": 0.2,
+    "private_coefficient": 0.2,
+    "mean_flip_interval_us": 100000,
+    "provenance": {
+      "evidence": "ENGINEERING ASSUMPTION",
+      "source": "docs/DN_BOUNDARY_OPERATING_STATE_CONTRACT.md; fixed before any neutral or task outcome"
+    }
+  },
+  "base_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "added_visual_source_ids": [
+    12740,
+    13190
+  ],
+  "visual_boundary_hypothesis": {
+    "effect_evidence": "INFERRED",
+    "magnitude_evidence": "ENGINEERING ASSUMPTION",
+    "exact_pair_biology": "UNKNOWN",
+    "source": "docs/ELECTRICAL_MODEL_V1_1_READINESS.md"
+  }
+}

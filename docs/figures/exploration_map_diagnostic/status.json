@@ -1,0 +1,9 @@
+{
+  "status": "user_stopped_early",
+  "completed": 15,
+  "planned": 24,
+  "completed_seeds": [2000, 2001, 2002, 2003, 2004],
+  "unrun_seeds": [2005, 2006, 2007],
+  "stopped_utc": "2026-09-29T05:41:34+00:00",
+  "reason": "User preferred fewer seeds and more targeted methods after the first five complete seed triplets. The original eight-seed protocol remains unchanged and must not be represented as complete."
+}

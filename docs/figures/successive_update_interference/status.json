@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "completed_seeds": [
+    2001,
+    2002
+  ],
+  "candidate": [
+    2002,
+    373
+  ],
+  "ledger_sha256": "a24b74d59cd67d47b5383c4cd0c3962586e1b4b3ec26ca9346dfe2bc1f79abf3",
+  "counterfactual_sha256": "8879babbc5a37329ba070da39096f6ce178dacaee7b2955ff2147ddace833097"
+}

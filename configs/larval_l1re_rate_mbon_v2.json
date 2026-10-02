@@ -1,0 +1,36 @@
+{
+  "model_id": "larval_l1re_rate_mbon_v1",
+  "status": "FROZEN_AFTER_RATE_CONTROLLABILITY_PASS",
+  "variant": "L1R-E-option3",
+  "manifest_sha256": "58AAE08A16C9CAABB1A987B6FB10B4C81908722ABEEC60182ABF2483B7036A9C",
+  "policy_sha256": "FAFF370A2EF7F87586F72EC407949B24E6E0119E83E1C5206F1456B876CF9ACA",
+  "result_sha256": "07D15F22B1EDD1A2B8BA66452E8A307973076B4C6495D746847CAB3E8AFE158A",
+  "rate_equation": {
+    "kc_state": "binary rate activity x_i=1 for KCs in the current-position group, else 0",
+    "mbon_rate_equation": "r_j = gain * sum_i(contact_count_ij ^ alpha * x_i * weight_factor) / max_s(sum_j sum_i(contact_count_ij ^ alpha * x_i))",
+    "bilateral_readout": "sum_j r_j over the two measured MBON-m1 cells",
+    "contact_exponent_alpha": [
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "rate_gain": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "state_grouping": "sort 88 measured KC IDs ascending and divide into eight non-overlapping groups of eleven",
+    "normalization": "for each alpha, divide by the maximum bilateral anatomical drive across the eight frozen groups; no response data enter the denominator",
+    "time_dynamics": "none in the MBON units; these are continuous rate variables, not spikes",
+    "all_values_category": "ENGINEERING ASSUMPTION"
+  },
+  "action_interface": {
+    "armed_only_by_valid_current_position_state": true,
+    "direction": "lower bilateral MBON rate means greater action drive",
+    "fixed_cutoff_derivation": "For each alpha/gain configuration, set two non-trainable cutoffs to 0.2 times the second-smallest and sixth-smallest bilateral full-weight rate among the eight anatomy-defined states. These are calculated from pinned contact rows before running any response table.",
+    "category": "ENGINEERING OVERLAY",
+    "trainable": false
+  },
+  "interpretation_limit": "engineering rate model; MBON activity is not represented as spikes"
+}

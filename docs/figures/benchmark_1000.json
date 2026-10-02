@@ -1,0 +1,16 @@
+{
+  "neuron_count": 1000,
+  "edge_count": 8000,
+  "ticks": 50,
+  "dt_us": 1000,
+  "simulated_seconds": 0.05,
+  "graph_build_wall_seconds": 0.010128800000529736,
+  "simulation_wall_seconds": 0.07378909998806193,
+  "simulation_wall_per_simulated_second": 1.4757819997612387,
+  "rss_before_mib": 23.45703125,
+  "rss_after_graph_mib": 24.97265625,
+  "rss_after_simulation_mib": 24.984375,
+  "peak_queued_arrivals": 80,
+  "total_spikes": 40,
+  "notes": "Synthetic ring; fixed mV-effect edges and 1% driven neurons. Snapshot construction at each tick is included; this is an upper-level reference benchmark, not a full connectome prediction."
+}

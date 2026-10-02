@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "protocol_id": "male-cns-115-b5-1-feedforward-drive-adequacy-v1",
+  "electrical_model_config_sha256": "fe7e0c488e5ce1beb3642cd003a19198e4f1d0758c6e6dd7ecb6c714bb935d0c",
+  "b5_protocol_sha256": "04e0d9c098fcd4acfd28b4d7cd441609032dd4a44663c2e97a3020b8ee53289b",
+  "source_conditions": {
+    "visual_to_KC": {"B5_arm": "A", "levels": ["low", "nominal", "high"], "seeds": [31001, 31002, 31003], "pulse_indices": [0,1,2,3,4,5,6,7,8,9]},
+    "KC_to_MBON32": {"B5_arm": "E", "level": "direct_3x", "seeds": [31001, 31002, 31003], "pulse_indices": [0,1,2,3,4,5,6,7,8,9]}
+  },
+  "operating_condition": "B5 nominal shared dn-boundary-v1, unchanged",
+  "measurement_window_us": 500000,
+  "tick_us": 500,
+  "fast_current_integral_units": "pA*ms = fC; exact exponential integral per event segment",
+  "leak_integral_method": "charge balance C*(V_end-V_start) minus integrated fast/APL/external current; only for postsynaptic cells with no spikes",
+  "meaningful_drive_definition": "at least one delivered FAST source event and peak fast current at least 0.10 times the cell's frozen I_ref",
+  "transfer_function": {
+    "input_multiplier_panel": [0,0.5,1,2,4,8,16,32,64,128,256,512],
+    "timing_regimes": ["observed", "bin20ms_midpoint", "single_volley_100ms"],
+    "bin20ms_rule": "For each arrival in the 500-ms post window, replace its time by onset + 20-ms floor-bin midpoint. Preserve source row, amplitude, event count and total event impulse; align to 500-us tick.",
+    "single_volley_rule": "Place all existing post-window arrivals at onset+100 ms, preserving source row, amplitude, event count and total event impulse. This is an extreme synchrony bound, not a proposed biological timing pattern.",
+    "output": "first postsynaptic spike within the 500-ms post window; first tested multiplier and bracketing prior panel value, plus linear first-spike critical multiplier for frozen presynaptic events",
+    "scope": "single-cell local replay of saved B5 delivered events, frozen C/g/rest/onset/reset/refractory/synaptic decay and 500-us tick; observed APL current included for original stage (zero before its first KC spike); no network feedback from a diagnostic postsynaptic spike"
+  },
+  "interpretation_thresholds": {
+    "near_threshold_critical_multiplier_at_most": 2.0,
+    "grossly_underpowered_critical_multiplier_at_least": 10.0,
+    "timing_material_if_20ms_alignment_reduces_critical_multiplier_by_factor_at_least": 2.0,
+    "classification_choices": ["A_CONNECTION_EFFECT_SCALE_MISMATCH", "B_POSTSYNAPTIC_EXCITABILITY_MODEL_MISMATCH", "C_TEMPORAL_INTEGRATION_SYNCHRONY_MISMATCH", "D_INSUFFICIENT_ANATOMICAL_ROUTE", "E_UNRESOLVED_OR_COMBINATION"]
+  },
+  "no_production_change": true,
+  "prohibited": ["motor_readout", "osu", "reward", "exploration", "plasticity", "PPL103_teaching", "production_parameter_selection"]
+}

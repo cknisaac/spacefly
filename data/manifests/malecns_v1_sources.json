@@ -1,0 +1,47 @@
+{
+  "dataset": "MaleCNS",
+  "release": "v1.0",
+  "source": "official public GCS object generations",
+  "objects": [
+    {
+      "name": "body-annotations-male-cns-v1.0-minconf-0.5.feather",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-annotations-male-cns-v1.0-minconf-0.5.feather?generation=1780494878811468",
+      "generation": "1780494878811468",
+      "bytes": 14483314,
+      "md5_base64": "UKdxh3DFciDxYLpPQxq4ng==",
+      "sha256": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2"
+    },
+    {
+      "name": "body-neurotransmitters-male-cns-v1.0.feather",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-neurotransmitters-male-cns-v1.0.feather?generation=1780894899156750",
+      "generation": "1780894899156750",
+      "bytes": 43282834,
+      "md5_base64": "PYQrEv5cSe763lKNfdJKHw==",
+      "sha256": "95c9289220663abeb3409f3ad9e5a7f8a53f8093f5139d15502cd08da8879621"
+    },
+    {
+      "name": "body-stats-male-cns-v1.0-minconf-0.5.feather",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-stats-male-cns-v1.0-minconf-0.5.feather?generation=1780494888472305",
+      "generation": "1780494888472305",
+      "bytes": 778062826,
+      "md5_base64": "QEwzScKFgBSOFoFeuZ84Kg==",
+      "sha256": "ca5dc83a26382ae70c8d8f42fc09ce2dbc1af7c03f3a001a1936b5e142540647"
+    },
+    {
+      "name": "connectome-weights-male-cns-v1.0-minconf-0.5.feather",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/connectome-weights-male-cns-v1.0-minconf-0.5.feather?generation=1780494887545976",
+      "generation": "1780494887545976",
+      "bytes": 1051241946,
+      "md5_base64": "8w6dzKJc/QIb8eez2XVZng==",
+      "sha256": "e35da783d1c686b2b58b3b87cd6a403ae43bfcfba8bff28e08ef752c1a56afc1"
+    },
+    {
+      "name": "connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather",
+      "url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather?generation=1780494884279095",
+      "generation": "1780494884279095",
+      "bytes": 508025642,
+      "md5_base64": "ZgHUrQr6mf0D6wh5Ze8kIw==",
+      "sha256": "9b3beab17bad5f618be3f2c02d3139a8d07b822565919c013f1e5506d93e604b"
+    }
+  ]
+}

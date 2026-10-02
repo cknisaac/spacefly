@@ -1,0 +1,11 @@
+{
+  "protocol_id": "larval_l2_signed_effect_probe_v2_protocol",
+  "status": "FROZEN_BEFORE_SIMULATION",
+  "manifest_sha256": "84fb7af5160a405a072170466ea19e134cd12bc61ed1a7c565f301972da07c89",
+  "model_sha256": "9b017e0df5a3d9e71e6224ba1c2c35343dee67cbf50a45fff62ab0ae88c1301c",
+  "only_model_change_vs_v1": "Replace uniform-positive chemical effects with fixed direction-specific effects: KC_to_MBON-d1 positive engineering assumption; MBON-d1_to_Ipsigoro negative and Ipsigoro_to_Goro positive simplified signs constrained by third-instar functional effect classes. Preserve all numerical values, topology, sensory code, action threshold, and time window.",
+  "sweep": {"kc_to_mbon_d1_factors": [0, 0.25, 0.5, 1, 2, 4], "states": [0, 1, 2, 3, 4, 5, 6, 7], "replays_per_cell": 2},
+  "fixed": {"plasticity": false, "teaching": false, "exploration": false, "sensory_pulse_us": 5000, "response_window_us": 100000, "action_rule": "at least one Goro spike", "neuron_parameters_and_contact_scale": "unchanged from L2 v1"},
+  "decision": {"engineering_controllability_pass": "deterministic finite replay and at least one non-saturated multiplier activates Goro in more than one but fewer than eight states; factor 1 is the frozen sensory-response reference in this panel", "otherwise": "FAIL for this frozen signed-effect model; do not tune"},
+  "evidence_limit": "A PASS would establish only model controllability under the frozen signed effect classes; it would not measure L1 efficacy, exact local plasticity, or prove task learning."
+}
