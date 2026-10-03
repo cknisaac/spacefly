@@ -90,9 +90,44 @@ class JudgementRecord:
     note_id: str
     lane: int
     note_time_us: int
-    event_time_us: int
+    logical_event_time_us: int
     judgement: ManiaJudgement
     hit_error_us: int | None  # None means automatic expiry, not an attempted hit.
+    ruleset: str = "stable_native"
+    observed_game_time_us: int | None = None
+
+    def __post_init__(self) -> None:
+        require_lane(self.lane)
+        require_time_us(self.note_time_us, "note_time_us")
+        require_time_us(self.logical_event_time_us, "logical_event_time_us")
+        if self.observed_game_time_us is not None:
+            require_time_us(self.observed_game_time_us, "observed_game_time_us")
+
+    @property
+    def event_time_us(self) -> int:
+        """Backward-compatible name for deterministic logical event time."""
+        return self.logical_event_time_us
+
+    @property
+    def result_name(self) -> str:
+        """Return the game's result label for this timing profile."""
+        if self.ruleset == "lazer":
+            return {
+                ManiaJudgement.MAX_320: "PERFECT",
+                ManiaJudgement.GREAT_300: "GREAT",
+                ManiaJudgement.GOOD_200: "GOOD",
+                ManiaJudgement.OK_100: "OK",
+                ManiaJudgement.MEH_50: "MEH",
+                ManiaJudgement.MISS: "MISS",
+            }[self.judgement]
+        return self.judgement.name
+
+    @property
+    def base_accuracy_value(self) -> int:
+        """Return the per-result accuracy weight, not total score."""
+        if self.ruleset == "lazer" and self.judgement is ManiaJudgement.MAX_320:
+            return 305
+        return int(self.judgement)
 
 
 @dataclass(frozen=True, slots=True)

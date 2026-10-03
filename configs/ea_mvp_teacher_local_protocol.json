@@ -1,0 +1,33 @@
+{
+  "protocol_id": "EA-MVP-EA4-TEACHER-LOCAL-v1",
+  "status": "frozen_before_one_pulse_fixture",
+  "scope": "one-pulse teacher and local-rule sanity; no multi-note training",
+  "engineering_assumptions": {
+    "EA-05": "label-only artificial feedback: MISS stimulates selected PAM08 DANs; PERFECT/GREAT/GOOD/OK/MEH are silent; no action copy or signed error",
+    "EA-06": "cue-local 150 ms hard eligibility window, 1 s exponential decay, eta 0.00005, immutable 20% original-weight floor"
+  },
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_lf_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "source_config_legacy_crlf_sha256": "e81a9da42f28be4ad288f8f416a8186b2443230c012d1563bc827c3f0c8b5485",
+  "anatomy_audit": "docs/figures/l3_gamma4_dan_cohort_coverage_audit.json",
+  "anatomy_audit_lf_sha256": "f976eaaf2e8d6d9221fa949824ad1def05fc273f6f469ec4fa483609d43388d7",
+  "anatomy_audit_legacy_crlf_sha256": "dd92f85ab03d8381860a2c8bf324ced19802e593ca95d6bbae9008b6cb3e9897",
+  "dan_source_ids": [87177, 107285, 55210],
+  "dt_us": 1000,
+  "dan_pulse": {"amplitude_mv_equivalent": 2.0, "duration_us": 20000},
+  "judgement_to_dan": {
+    "PERFECT": "silent",
+    "GREAT": "silent",
+    "GOOD": "silent",
+    "OK": "silent",
+    "MEH": "silent",
+    "MISS": "pulse"
+  },
+  "teacher_timing": "onset at first 1-ms tick at or after observed result time; never before available_at_us",
+  "ltd": {"window_us": 150000, "tau_us": 1000000, "eta": 0.00005, "minimum_fraction": 0.2},
+  "selection_rationale": "2.0 mV-equivalent/20 ms previously passed task-free DAN spike threshold; 150 ms includes immediately preceding visible cue activity despite the game's 127.5 ms automatic-MISS delay; tau/eta/floor inherited from pretraining-frozen local-rule fixture; no value chosen from final EA task score",
+  "fixture_note": {"lane": 0, "time_us": 500000, "visible_lead_us": 500000, "od": 8},
+  "arms": ["miss_dan_on", "miss_dan_off", "miss_plasticity_off", "miss_eligibility_off", "late_unpaired_miss", "good_no_pulse", "no_result"],
+  "primary_gate": "MISS pulse is not emitted before its observed/available time; all three selected DANs spike; at least one selected eligible KC-to-MBON05 slot changes only in miss_dan_on; all six negative arms leave weights unchanged; every changed slot is covered by an active DAN and stays above 20% original; two exact replays",
+  "do_not": ["task training", "game-score optimization", "target timestamp in sensory input", "external trained decoder", "strict biology artifact edit"]
+}

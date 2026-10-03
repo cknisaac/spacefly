@@ -34,11 +34,26 @@ class WindowTests(unittest.TestCase):
         self.assertEqual((w.max_ms, w.great_ms, w.good_ms, w.ok_ms,
                           w.meh_ms, w.miss_ms), (16, 34, 67, 97, 121, 158))
 
+    def test_lazer_od8_windows_are_half_millisecond_values(self) -> None:
+        w = ManiaHitWindows.from_od(8, "lazer")
+        self.assertEqual((w.max_ms, w.great_ms, w.good_ms, w.ok_ms,
+                          w.meh_ms, w.miss_ms),
+                         tuple(Decimal(value) for value in
+                               ("16.5", "40.5", "73.5", "103.5", "127.5", "164.5")))
+        self.assertEqual(w.expiry_offset_us, 127_501)
+
+    def test_lazer_fractional_od_uses_piecewise_difficulty_interpolation(self) -> None:
+        w = ManiaHitWindows.from_od("8.25", "lazer")
+        self.assertEqual((w.max_ms, w.great_ms, w.good_ms, w.ok_ms,
+                          w.meh_ms, w.miss_ms),
+                         tuple(Decimal(value) for value in
+                               ("15.5", "39.5", "72.5", "102.5", "126.5", "163.5")))
+
     def test_invalid_profiles_and_od(self) -> None:
         for od in (-1, 11, "NaN", "Infinity", "text"):
             with self.subTest(od=od), self.assertRaises(ValueError):
                 ManiaHitWindows.from_od(od)
-        for ruleset in ("lazer", "stable_scorev2", "unknown"):
+        for ruleset in ("stable_scorev2", "unknown"):
             with self.subTest(ruleset=ruleset), self.assertRaises(ValueError):
                 ManiaHitWindows.from_od(8, ruleset)
         with self.assertRaises(ValueError):
@@ -82,6 +97,26 @@ class WindowTests(unittest.TestCase):
                                             (first_outside_us, expected_outside)):
                     with self.subTest(threshold=threshold, sign=sign, magnitude=magnitude):
                         self.assertEqual(w.press_judgement(sign * magnitude), expected)
+
+    def test_lazer_windows_compare_fractional_millisecond_boundaries_directly(self) -> None:
+        w = ManiaHitWindows.from_od(8, "lazer")
+        boundaries = (
+            (w.max_ms, ManiaJudgement.MAX_320, ManiaJudgement.GREAT_300),
+            (w.great_ms, ManiaJudgement.GREAT_300, ManiaJudgement.GOOD_200),
+            (w.good_ms, ManiaJudgement.GOOD_200, ManiaJudgement.OK_100),
+            (w.ok_ms, ManiaJudgement.OK_100, ManiaJudgement.MEH_50),
+            (w.meh_ms, ManiaJudgement.MEH_50, ManiaJudgement.MISS),
+            (w.miss_ms, ManiaJudgement.MISS, None),
+        )
+        for window_ms, at_boundary, after_boundary in boundaries:
+            boundary_us = int(Decimal(window_ms) * 1000)
+            for sign in (-1, 1):
+                with self.subTest(window_ms=window_ms, sign=sign):
+                    self.assertEqual(w.press_judgement(sign * boundary_us), at_boundary)
+                    self.assertEqual(w.press_judgement(sign * (boundary_us + 1)),
+                                     after_boundary)
+        self.assertEqual(w.press_judgement(73_500), ManiaJudgement.GOOD_200)
+        self.assertEqual(w.press_judgement(73_501), ManiaJudgement.OK_100)
 
     def test_early_meh_and_miss_boundaries_microseconds(self) -> None:
         w = ManiaHitWindows.from_od(8)
@@ -132,6 +167,23 @@ class WindowTests(unittest.TestCase):
                         self.assertEqual(w.press_judgement(-first_outside), outside)
                 self.assertLessEqual(rounded_abs_error_ms(w.expiry_offset_us - 1), w.ok_ms)
                 self.assertGreater(rounded_abs_error_ms(w.expiry_offset_us), w.ok_ms)
+
+    def test_lazer_window_edges_for_every_integer_od(self) -> None:
+        for od in range(11):
+            w = ManiaHitWindows.from_od(od, "lazer")
+            expected = (
+                (w.max_ms, ManiaJudgement.MAX_320, ManiaJudgement.GREAT_300),
+                (w.great_ms, ManiaJudgement.GREAT_300, ManiaJudgement.GOOD_200),
+                (w.good_ms, ManiaJudgement.GOOD_200, ManiaJudgement.OK_100),
+                (w.ok_ms, ManiaJudgement.OK_100, ManiaJudgement.MEH_50),
+                (w.meh_ms, ManiaJudgement.MEH_50, ManiaJudgement.MISS),
+                (w.miss_ms, ManiaJudgement.MISS, None),
+            )
+            for window_ms, at_boundary, after_boundary in expected:
+                boundary_us = int(Decimal(window_ms) * 1000)
+                with self.subTest(od=od, window_ms=window_ms):
+                    self.assertEqual(w.press_judgement(boundary_us), at_boundary)
+                    self.assertEqual(w.press_judgement(boundary_us + 1), after_boundary)
 
     def test_rounding_against_independent_decimal_oracle_at_every_microsecond(self) -> None:
         w = ManiaHitWindows.from_od(8)

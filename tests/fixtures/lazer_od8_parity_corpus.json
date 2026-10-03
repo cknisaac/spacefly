@@ -1,0 +1,587 @@
+{
+  "schema_version": 2,
+  "reference": {
+    "repository": "https://github.com/ppy/osu",
+    "release": "2026.1001.0-tachyon",
+    "commit": "da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9",
+    "ruleset": "osu!mania",
+    "od": 8,
+    "mods": [],
+    "rate": 1.0
+  },
+  "judgement_vectors": [
+    {
+      "id": "perfect_early_edge",
+      "offset_us": -16500,
+      "expected": "PERFECT"
+    },
+    {
+      "id": "perfect_early_outside",
+      "offset_us": -16501,
+      "expected": "GREAT"
+    },
+    {
+      "id": "perfect_late_edge",
+      "offset_us": 16500,
+      "expected": "PERFECT"
+    },
+    {
+      "id": "perfect_late_outside",
+      "offset_us": 16501,
+      "expected": "GREAT"
+    },
+    {
+      "id": "great_early_edge",
+      "offset_us": -40500,
+      "expected": "GREAT"
+    },
+    {
+      "id": "great_early_outside",
+      "offset_us": -40501,
+      "expected": "GOOD"
+    },
+    {
+      "id": "great_late_edge",
+      "offset_us": 40500,
+      "expected": "GREAT"
+    },
+    {
+      "id": "great_late_outside",
+      "offset_us": 40501,
+      "expected": "GOOD"
+    },
+    {
+      "id": "good_early_edge",
+      "offset_us": -73500,
+      "expected": "GOOD"
+    },
+    {
+      "id": "good_early_outside",
+      "offset_us": -73501,
+      "expected": "OK"
+    },
+    {
+      "id": "good_late_edge",
+      "offset_us": 73500,
+      "expected": "GOOD"
+    },
+    {
+      "id": "good_late_outside",
+      "offset_us": 73501,
+      "expected": "OK"
+    },
+    {
+      "id": "ok_early_edge",
+      "offset_us": -103500,
+      "expected": "OK"
+    },
+    {
+      "id": "ok_early_outside",
+      "offset_us": -103501,
+      "expected": "MEH"
+    },
+    {
+      "id": "ok_late_edge",
+      "offset_us": 103500,
+      "expected": "OK"
+    },
+    {
+      "id": "ok_late_outside",
+      "offset_us": 103501,
+      "expected": "MEH"
+    },
+    {
+      "id": "meh_early_edge",
+      "offset_us": -127500,
+      "expected": "MEH"
+    },
+    {
+      "id": "meh_early_outside",
+      "offset_us": -127501,
+      "expected": "MISS"
+    },
+    {
+      "id": "meh_late_edge",
+      "offset_us": 127500,
+      "expected": "MEH"
+    },
+    {
+      "id": "meh_late_outside",
+      "offset_us": 127501,
+      "expected": "MISS"
+    },
+    {
+      "id": "miss_early_edge",
+      "offset_us": -164500,
+      "expected": "MISS"
+    },
+    {
+      "id": "miss_early_outside",
+      "offset_us": -164501,
+      "expected": "NO_PRESS_JUDGEMENT"
+    },
+    {
+      "id": "miss_late_edge",
+      "offset_us": 164500,
+      "expected": "MISS"
+    },
+    {
+      "id": "miss_late_outside",
+      "offset_us": 164501,
+      "expected": "NO_PRESS_JUDGEMENT"
+    }
+  ],
+  "source_policy_vectors": [
+    {
+      "id": "same_lane_lock_boundary",
+      "notes": [
+        {
+          "id": "old",
+          "start_time_us": 1000000,
+          "end_time_us": 1000000
+        },
+        {
+          "id": "new",
+          "start_time_us": 1050000,
+          "end_time_us": 1050000
+        }
+      ],
+      "probe_before_next_start_us": 1049999,
+      "probe_at_next_start_us": 1050000,
+      "expected": {
+        "old_hittable_before": true,
+        "old_hittable_at": false,
+        "new_hittable_at": true,
+        "old_result_before": "GOOD",
+        "new_result_at": "PERFECT",
+        "force_missed_ids_after_new_hit": [
+          "old"
+        ]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "early_judged_miss",
+      "notes": [
+        {
+          "id": "n",
+          "lane": 0,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 850000,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "n",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MISS",
+          "hit_error_us": -150000,
+          "logical_event_time_us": 850000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 850000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "early_miss",
+          "note_id": "n"
+        }
+      ]
+    },
+    {
+      "id": "too_early_null_then_automatic_miss",
+      "notes": [
+        {
+          "id": "n",
+          "lane": 0,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 835000,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "action",
+          "event_time_us": 835000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "null_press",
+          "note_id": null
+        },
+        {
+          "kind": "judgement",
+          "note_id": "n",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MISS",
+          "hit_error_us": null,
+          "logical_event_time_us": 1127501,
+          "observed_game_time_us": null
+        }
+      ]
+    },
+    {
+      "id": "late_meh_at_last_successful_microsecond",
+      "notes": [
+        {
+          "id": "n",
+          "lane": 0,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 1127500,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "n",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MEH",
+          "hit_error_us": 127500,
+          "logical_event_time_us": 1127500,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1127500,
+          "lane": 0,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "n"
+        }
+      ]
+    },
+    {
+      "id": "expiry_precedes_action_at_expiry_timestamp",
+      "notes": [
+        {
+          "id": "n",
+          "lane": 0,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 1127501,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "n",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MISS",
+          "hit_error_us": null,
+          "logical_event_time_us": 1127501,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1127501,
+          "lane": 0,
+          "action": "down",
+          "disposition": "null_press",
+          "note_id": null
+        }
+      ]
+    },
+    {
+      "id": "no_press_automatic_miss",
+      "notes": [
+        {
+          "id": "n",
+          "lane": 0,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "n",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MISS",
+          "hit_error_us": null,
+          "logical_event_time_us": 1127501,
+          "observed_game_time_us": null
+        }
+      ]
+    },
+    {
+      "id": "same_lane_earliest_note_and_key_transition_order",
+      "notes": [
+        {
+          "id": "old",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "id": "new",
+          "lane": 0,
+          "time_us": 1050000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 1025000,
+          "lane": 0,
+          "kind": "down"
+        },
+        {
+          "time_us": 1025000,
+          "lane": 0,
+          "kind": "up"
+        },
+        {
+          "time_us": 1025000,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "old",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "GREAT",
+          "hit_error_us": 25000,
+          "logical_event_time_us": 1025000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1025000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "old"
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1025000,
+          "lane": 0,
+          "action": "up",
+          "disposition": "release",
+          "note_id": null
+        },
+        {
+          "kind": "judgement",
+          "note_id": "new",
+          "lane": 0,
+          "note_time_us": 1050000,
+          "result": "GREAT",
+          "hit_error_us": -25000,
+          "logical_event_time_us": 1025000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1025000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "new"
+        }
+      ]
+    },
+    {
+      "id": "same_lane_note_lock_at_next_note_start",
+      "notes": [
+        {
+          "id": "old",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "id": "new",
+          "lane": 0,
+          "time_us": 1050000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 1050000,
+          "lane": 0,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "new",
+          "lane": 0,
+          "note_time_us": 1050000,
+          "result": "PERFECT",
+          "hit_error_us": 0,
+          "logical_event_time_us": 1050000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "judgement",
+          "note_id": "old",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "MISS",
+          "hit_error_us": null,
+          "logical_event_time_us": 1050000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1050000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "new"
+        }
+      ]
+    },
+    {
+      "id": "simultaneous_four_lane_chord",
+      "notes": [
+        {
+          "id": "n0",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "id": "n1",
+          "lane": 1,
+          "time_us": 1000000
+        },
+        {
+          "id": "n2",
+          "lane": 2,
+          "time_us": 1000000
+        },
+        {
+          "id": "n3",
+          "lane": 3,
+          "time_us": 1000000
+        }
+      ],
+      "actions": [
+        {
+          "time_us": 1000000,
+          "lane": 3,
+          "kind": "down"
+        },
+        {
+          "time_us": 1000000,
+          "lane": 0,
+          "kind": "down"
+        },
+        {
+          "time_us": 1000000,
+          "lane": 2,
+          "kind": "down"
+        },
+        {
+          "time_us": 1000000,
+          "lane": 1,
+          "kind": "down"
+        }
+      ],
+      "expected_events": [
+        {
+          "kind": "judgement",
+          "note_id": "n3",
+          "lane": 3,
+          "note_time_us": 1000000,
+          "result": "PERFECT",
+          "hit_error_us": 0,
+          "logical_event_time_us": 1000000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1000000,
+          "lane": 3,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "n3"
+        },
+        {
+          "kind": "judgement",
+          "note_id": "n0",
+          "lane": 0,
+          "note_time_us": 1000000,
+          "result": "PERFECT",
+          "hit_error_us": 0,
+          "logical_event_time_us": 1000000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1000000,
+          "lane": 0,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "n0"
+        },
+        {
+          "kind": "judgement",
+          "note_id": "n2",
+          "lane": 2,
+          "note_time_us": 1000000,
+          "result": "PERFECT",
+          "hit_error_us": 0,
+          "logical_event_time_us": 1000000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1000000,
+          "lane": 2,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "n2"
+        },
+        {
+          "kind": "judgement",
+          "note_id": "n1",
+          "lane": 1,
+          "note_time_us": 1000000,
+          "result": "PERFECT",
+          "hit_error_us": 0,
+          "logical_event_time_us": 1000000,
+          "observed_game_time_us": null
+        },
+        {
+          "kind": "action",
+          "event_time_us": 1000000,
+          "lane": 1,
+          "action": "down",
+          "disposition": "hit",
+          "note_id": "n1"
+        }
+      ]
+    }
+  ]
+}

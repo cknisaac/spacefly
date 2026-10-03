@@ -50,9 +50,10 @@ def run_scenario(config_path: str | Path, scenario_path: str | Path) -> dict[str
         if isinstance(event, JudgementRecord):
             events.append({"type": "judgement", "note_id": event.note_id,
                            "lane": event.lane, "note_time_us": event.note_time_us,
-                           "event_time_us": event.event_time_us,
-                           "judgement": event.judgement.name,
-                           "hit_value": int(event.judgement),
+                           "logical_event_time_us": event.logical_event_time_us,
+                           "observed_game_time_us": event.observed_game_time_us,
+                           "judgement": event.result_name,
+                           "hit_value": event.base_accuracy_value,
                            "hit_error_us": event.hit_error_us})
         elif isinstance(event, ActionRecord):
             events.append({"type": "action", "time_us": event.action.time_us,

@@ -74,7 +74,7 @@ class FirstActionAuditTests(unittest.TestCase):
         audit, owner = checked_task(NOTES, [(expiry_us, "down"),
                                             (expiry_us + 1_000, "up")], 2_250_000)
         self.assertEqual(owner.game.state()["events"][0]["kind"], "judgement")
-        self.assertEqual(owner.game.state()["events"][0]["record"]["event_time_us"],
+        self.assertEqual(owner.game.state()["events"][0]["record"]["logical_event_time_us"],
                          expiry_us)
         self.assertEqual((audit.rows[0].first_down_us, audit.rows[0].category,
                           audit.rows[0].first_disposition),

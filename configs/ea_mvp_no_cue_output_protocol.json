@@ -1,0 +1,14 @@
+{
+  "protocol_id": "EA-MVP-EA3.1-NO-CUE-OUTPUT-v1",
+  "status": "frozen_before_probe",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "positions": "x = 1 - t/500000 for t=0..500000 us in 1000 us steps",
+  "local_center": 0.5,
+  "local_half_width": 0.1,
+  "local_weight_multiplier": 0.2,
+  "arms": ["no_cue", "initial_cue", "local_cue", "local_cue_mbon_output_off"],
+  "repeat_count": 2,
+  "primary_gate": "no_cue has zero spikes and no MBON response; initial_cue has no DOWN; local_cue reduces MBON 0.5-bin voltage and first DOWN lies within 0.10 of 0.5; local_cue_mbon_output_off has no DOWN; exact repeat per arm",
+  "excluded": ["game", "DAN", "teaching", "plasticity", "training", "score selection"]
+}

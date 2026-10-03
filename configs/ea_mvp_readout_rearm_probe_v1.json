@@ -1,0 +1,22 @@
+{
+  "blank_gap_us": 250000,
+  "blank_tail_us": 20000,
+  "continuous_policy": "src/project_b/ea_mvp/continuous_v2.py",
+  "continuous_policy_sha256": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+  "control_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_untrained.json.gz",
+  "control_receipt_sha256": "e0737bd4a96de955e32557ab5d2c0d7e49aa2ad85d52783fd2e5172e0b67b58f",
+  "dt_us": 1000,
+  "engineering_assumption": "ENGINEERING ASSUMPTION: after each blank-to-visible note transition, do not enable the position readout until a KC spike occurs after that cue began; this excludes subthreshold voltage left from the prior cue.",
+  "learned_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "learned_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "pass_rule": "No game or judgements: learned retained weights emit exactly one DOWN per identical current-position sweep at the same sweep-relative tick on all three sweeps; initial weights emit zero DOWN; readout starts for sweeps 2/3 occur only after a post-onset KC spike; one neural simulator remains initialized; exact two-run replay.",
+  "protocol_id": "EA-MVP-EA7-READOUT-REARM-PROBE-v1",
+  "runner": "scripts/run_ea_mvp_readout_rearm_probe.py",
+  "runner_sha256": "840a093bfeea6ca1e3ee6ad03b9173624757b055ef4d42638dbb4536ea2198f8",
+  "scope": "Task-free temporal/readout controllability only; no training and no judgement-based tuning",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "status": "frozen_before_task_free_probe",
+  "sweeps": 3,
+  "visible_lead_us": 500000
+}

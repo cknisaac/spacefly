@@ -108,11 +108,19 @@ def reconstruct_first_actions(notes: tuple[NoteWindow, ...], raw_game_events: Se
         if not isinstance(record, dict):
             raise ValueError("invalid game record")
         if kind == "judgement":
-            required = {"note_id", "lane", "note_time_us", "event_time_us",
-                        "judgement", "hit_error_us"}
-            if set(record) != required or record["note_id"] not in by_id:
+            required = {"note_id", "lane", "note_time_us", "judgement", "hit_error_us"}
+            time_keys = {"logical_event_time_us", "event_time_us"}
+            allowed = required | time_keys | {"observed_game_time_us", "ruleset"}
+            if (not required <= set(record) or set(record) - allowed
+                    or not (time_keys & set(record))
+                    or (time_keys <= set(record)
+                        and record["logical_event_time_us"] != record["event_time_us"])
+                    or (record.get("observed_game_time_us") is not None
+                        and type(record["observed_game_time_us"]) is not int)
+                    or record["note_id"] not in by_id):
                 raise ValueError("invalid judgement record")
-            at, note_id = record["event_time_us"], record["note_id"]
+            at = record.get("logical_event_time_us", record.get("event_time_us"))
+            note_id = record["note_id"]
             note = by_id[note_id]
             judgement = _value(record["judgement"])
             if (type(at) is not int or not previous_time <= at <= audit_end_us or

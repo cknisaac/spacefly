@@ -34,6 +34,21 @@ class CliTests(unittest.TestCase):
         self.assertEqual(output_a, output_b)
         self.assertEqual(json.loads(output_a), first)
 
+    def test_lazer_mvp_single_note_cli_is_deterministic(self) -> None:
+        config = ROOT / "configs" / "lazer_mvp.yaml"
+        scenario = ROOT / "tests" / "fixtures" / "lazer_mvp_single_note.json"
+        first = run_scenario(config, scenario)
+        second = run_scenario(config, scenario)
+        self.assertEqual(first, second)
+        self.assertEqual(first["config"]["osu"],
+                         {"keys": 4, "od": "8", "ruleset": "lazer"})
+        judgements = [event for event in first["events"]
+                      if event["type"] == "judgement"]
+        self.assertEqual(len(judgements), 1)
+        self.assertEqual(judgements[0]["judgement"], "GOOD")
+        self.assertEqual(judgements[0]["hit_error_us"], -50_000)
+        self.assertEqual(judgements[0]["hit_value"], 200)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -136,15 +136,15 @@ class ReinforcementPipeline:
                           learning_utility: float | None = None) -> ReinforcementEvent:
         if type(record) is not JudgementRecord:
             raise TypeError("expected a resolved JudgementRecord")
-        require_time_us(record.event_time_us, "event_time_us")
+        require_time_us(record.logical_event_time_us, "logical_event_time_us")
         if (self._last_event_time_us is not None
-                and record.event_time_us < self._last_event_time_us):
+                and record.logical_event_time_us < self._last_event_time_us):
             raise ValueError("judgements must be processed chronologically")
         translated = self.utility.translate(record.judgement)
         delivered = (translated.utility if learning_utility is None
                      else _unit_utility(learning_utility, "learning_utility"))
         prediction = self.predictor.preview(delivered)
-        signal = self.modulator.emit(record.event_time_us, prediction)
+        signal = self.modulator.emit(record.logical_event_time_us, prediction)
         self.predictor.commit(prediction)
-        self._last_event_time_us = record.event_time_us
+        self._last_event_time_us = record.logical_event_time_us
         return ReinforcementEvent(record, translated, delivered, prediction, signal)

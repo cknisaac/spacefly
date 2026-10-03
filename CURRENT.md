@@ -1,5 +1,22 @@
 # Project B current state
 
+## Active priority — playable osu!mania recreation first — 2026-10-03
+
+The user redirected the next work after L0.11: finish the osu!mania
+recreation for selected no-mod, normal-rate 4K maps, report the playable
+result, and stop for review before any fly or policy work. These maps are
+tap-dominant, often with roughly 2,000 taps per long note. That ratio is
+descriptive; long-note support must work for however many appear in each
+selected map. The active build order and
+completion criterion are in [the recreation-first plan](docs/OSU_MANIA_RECREATION_FIRST_PLAN.md).
+L0.11's small tap corpus remains PASS within its scope. `HoldNote` is still
+rejected; real map loading, audio, rendering, live input, and full-map play are
+not complete. L0.12's policy adapter plan is deferred before verification,
+with no PASS claimed. Source checks and game parity comparisons may proceed
+as recreation verification. Fly and policy experiments are outside this plan
+and require a later user direction. The historical L0.12 proposal below
+records the earlier sequence and is superseded as the next-work recommendation.
+
 ## User-selected adult MaleCNS-v1 return — 2026-10-02
 
 The user returned focus to adult MaleCNS v1 and authorized the isolated minimal internal-learning experiment and, later, one outcome-blind replication. **Original run PASS**: 8 audited KCs, MBON05 (10495), 8 plastic aggregate KC→MBON pairs/164 audited plastic contact rows. **Replication PASS** on the next eight source-order KCs, with 159 audited plastic contacts and the original frozen threshold. Both runs passed the frozen controllability, selective learning, plasticity-off, and wrong-state-teacher criteria. The existing MaleCNS loader, sparse LIF simulator, checkpoint/replay, logger, and tests were reused. Evidence: [original report](docs/MALECNS_MINIMAL_INTERNAL_LEARNING.md) and [replication report](docs/MALECNS_MINIMAL_INTERNAL_LEARNING_REPLICATION.md). Historical Branch A/B stage reports remain preserved and unchanged. These engineering fixtures support no biological behavior claim. No alternate partition, tuning, or broader circuit work was run.
@@ -1155,3 +1172,683 @@ The user authorized v2.1 with exactly two changes to the frozen Level 2 design: 
 2. Extracted a compact Level 4D metric record and all 84 frozen position-map rows from the existing full receipt; recorded hashes for that receipt, frozen config, runner, and standalone offline playback. The 43 MB raw receipt remains local under `runs/`. Source manifests were copied byte-for-byte from the local MaleCNS and larval data directories. The original result is still strict **FAIL** and the branch classification remains **Mechanistic success / behavioral robustness incomplete**.
 3. Added a generated catalog and publication check scripts. Git ignores full runs, source tables, and 193 large or machine-specific historical diagnostic files; their local paths, sizes, and hashes are listed in `results/local-artifact-manifest.csv`. The proposed Git tree has 749 files totaling about 33.2 MB. Two machine-specific path strings in this log were generalized for public presentation without changing their recorded outcomes, and two historical budget-audit helpers now use the current user's home directory.
 4. Verification: `python scripts/build_docs_catalog.py --check`, Python compilation of the new check scripts, `python scripts/check_publication.py`, source-manifest byte comparison, and Git ignore checks passed. The full unit suite was not run because this change is documentation and packaging work and some tests invoke learning experiments. No GitHub remote or upload was performed. Public author name and software license remain unset at the user's request.
+
+
+### One-lane osu!lazer integration foundation — 2026-10-03
+
+This is a separate headless game-integration path. It does not reopen or change
+the historical Level 4D FAIL or the retired Branch B Candidate 1 decision.
+
+| Gate | Status | Evidence |
+|---|---|---|
+| L0.1 source-derived lazer OD8 timing | **PASS for source-derived Python profile** | Added a separate `lazer` profile and integer/fractional OD window and boundary tests. This is not C# runtime parity. |
+| L0.2 one-note headless scenario | **PASS** | Added a deterministic lane-0 tap fixture; a −50-ms press produces lazer GOOD and base accuracy value 200. |
+| L0.3 causal streaming policy adapter | **PASS for integration** | Input contains only visibility, lane and present position; causal position-bin, MBON-validity, key-hold, deterministic replay and batch-neural-trace equality tests pass. A causal decision can lag its final bin sample by one 1-ms tick. |
+| L0.4 moving-note controllability | **PASS for engineering controllability only** | One frozen four-condition panel, each replayed twice. Five target-position weights at the inherited 20% floor produced one DOWN at 488 ms (−12 ms), judged PERFECT. Initial and plasticity-off controls stayed silent; a matched out-of-window intervention produced a too-early null press. All criteria passed. |
+| L0.5 causal feedback-event contract | **PASS for event-contract engineering only** | `GameFeedbackEvent` exposes only judgement label and availability time through a causal cursor; separate evaluator audit covers early/late judged presses, too-early null, retry, no-press expiry, and exact-expiry ordering. No teacher polarity, weight updates or training. |
+
+The initial-weight baseline emitted no DOWN and received automatic MISS. The
+L0.4 target condition directly set five weights to their inherited floor; it
+did not learn them. No teacher events or training ran. The raw receipt is
+`runs/lazer_mvp_capacity/result.json` (SHA-256
+`7ec737260c1bd98492e8e05e1a1b0cfe14996d9b1ab1c41b6cd2e926de78cc96`); see
+[`L0.4 capacity result`](docs/LAZER_MVP_L0_4_CAPACITY_RESULT.md) and the
+[staged MVP plan](docs/LAZER_MINIMUM_MVP_PLAN.md). Level 4D and the retired
+Branch B Candidate 1 decision remain unchanged. The pinned game profile is
+still source-derived because this environment has no .NET SDK and cannot
+fetch GitHub for a C# reference run.
+
+
+### One-lane osu!lazer integration L0.5 — 2026-10-03
+
+1. Implemented a causal game-feedback projection with a two-field
+   `GameFeedbackEvent` (`available_at_us`, `judgement_label`) and a
+   `GameFeedbackCursor` that releases each label only when the game clock
+   reaches it. This is a separate reinforcement-facing interface; it is not
+   included in the fly policy's position-only sensory observation.
+2. Added an evaluator-only first-action audit that retains note identity and
+   hidden scheduled timing. Frozen cases cover an early judged MISS, a late
+   judged OK, a too-early null followed by an on-time retry, no press, null
+   followed by expiry, and a DOWN exactly at expiry. The two-field feedback
+   view cannot distinguish no press from too-early-null followed by expiry;
+   only the hidden evaluation record can.
+3. During fixture authoring, a +50-ms press was initially expected to be a
+   late result, but OD8 lazer Good includes it. Changed the case to +90 ms,
+   still inside the OK window, and it correctly yields OK while remaining
+   outside the ±73.5-ms Good window. This was a test-fixture correction; no
+   game or biological rule changed.
+4. **PASS for event-contract engineering only.** All 68 focused tests across
+   game timing/environment, policy adapter, capacity contract and feedback
+   contract passed. No teacher rule, reward polarity, weight update, or
+   training was implemented or run. Report: [L0.5 feedback contract](docs/LAZER_MVP_L0_5_FEEDBACK_CONTRACT_RESULT.md).
+5. Sole next proposed stage is L0.6, a read-only primary-literature audit for
+   whether outcome- and timing-specific teaching is supported in the frozen
+   circuit. No L0.6 research audit was run here; stop before any teacher
+   implementation or learning experiment.
+
+
+### One-lane osu!lazer integration L0.6 — 2026-10-03
+
+1. Completed the read-only L0.6 evidence audit specified by the one-lane MVP
+   plan. Read primary studies on γ4 KC/DAN temporal-order plasticity (Handler
+   et al., 2019), visual MB learning (Vogt et al., 2014), action-contingent
+   operant learning (Wiggin et al., 2021), fly DAN responses in trace
+   conditioning (Dylla et al., 2017), learned shock-omission signaling
+   (Senapati et al., 2021), and β′2/γ4 PAM reward effects (Hattori et al.,
+   2023). Findings and DOI/primary links are in
+   [the L0.6 evidence report](docs/LAZER_MVP_L0_6_FEEDBACK_TEACHING_EVIDENCE.md).
+2. Handler et al. support temporal-order-dependent plasticity in a broad
+   γ4–5 DAN / γ4 MBON preparation for odor associations. Their tested
+   significant pairings include -1.2 s, 0 s, and +0.5 s. This does not
+   calibrate the task's ±73.5-ms Good window, identify the selected MaleCNS
+   PAM08 subset as sufficient, or map game outcomes to a teaching signal.
+   Visual and operant fly-learning studies support general learning abilities
+   but do not identify this exact circuit's first-action rule. Evidence on
+   omission is specific to previously learned shock expectation and another
+   circuit. The tested simulation exposes no score/HUD teaching cue to its
+   sensory policy.
+3. **INCONCLUSIVE; NO-GO for biological training under the frozen task
+   contract.** The task-specific observable outcome, valence, first-action
+   credit, and timing-to-plasticity mapping are unsupported. No teacher,
+   DAN event, weight update, simulation, or training was performed. Updated
+   [the L0 plan](docs/LAZER_MINIMUM_MVP_PLAN.md) and
+   [assumption ledger](ASSUMPTIONS.md). This does not revise Branch B B6 or
+   B6.1 and does not start separately proposed B6.2.
+4. One inspection command used the PowerShell-unexpanded `docs/B6*` glob with
+   `rg` and returned a path error. The relevant B6/B6.1 records were then read
+   by explicit filenames; no source or project data was changed by the failed
+   inspection.
+5. Documentation verification: docs catalog `--check`, publication check
+   (765 Git candidate files), and `git diff --check` passed. `dotnet` is not
+   installed in the local environment. No unit suite was rerun because L0.6
+   changed only research/status documentation; the prior L0.5 focused code
+   suite remains 68/68 passing.
+6. Sole next proposed stage is **L0.9a — pinned osu!lazer runtime parity
+   corpus**, an independent software track. Require zero event/judgement
+   mismatches against a C# runner pinned to `2026.1001.0-tachyon`. The local
+   `dotnet` prerequisite must be resolved before execution. This proposal
+   does not authorize teacher implementation, biological training, or Branch
+   B B6.2.
+
+
+### Least-MVP implementation roadmap — 2026-10-03
+
+1. Expanded `docs/LAZER_MINIMUM_MVP_PLAN.md` into an ordered, testable path
+   from the current one-note headless integration to a four-lane readiness
+   check. It distinguishes the headless integration MVP from the separate
+   fly-learning MVP and defines the minimum one-lane policy/game boundary,
+   input restrictions, first-action metric, tests, and pass/stop criteria for
+   each gate.
+2. L0.1–L0.5 remain engineering/interface evidence only; L0.4's direct
+   weight intervention is not learning. L0.6 remains **INCONCLUSIVE / NO-GO**
+   for a biological teaching rule, so the teacher and training steps are
+   conditional on new evidence or an explicit revision of the project claim.
+3. Sole next proposed stage remains **L0.9a pinned lazer runtime parity**.
+   The frozen corpus covers timing edges, early MISS versus null, expiry and
+   action ordering, retry/key transitions, same-lane priority, and
+   cross-lane simultaneity; acceptance requires zero event/judgement
+   mismatches against the pinned C# reference. The local C# runner prerequisite
+   remains unresolved. No parity comparison, teacher experiment, training run,
+   or code test was executed while writing this roadmap.
+
+
+### L0.9a parity-corpus preflight — 2026-10-03
+
+1. Added `tests/fixtures/lazer_od8_parity_corpus.json`, pinned to lazer
+   `2026.1001.0-tachyon` / commit
+   `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9`. It contains 24 signed
+   judgement-boundary vectors (exact edges and adjacent microseconds) plus
+   seven ordered game scenarios for early judged MISS, too-early null,
+   last-successful MEH, exact expiry/action tie, no press, same-lane priority,
+   and a simultaneous four-lane chord.
+2. Added `scripts/compare_lazer_reference.py`. It exports canonical
+   source-derived Python results, checks those results against the frozen
+   corpus, and can compare a future normalized C# output JSON against them.
+   The command to produce a local expected-output file is
+   `python scripts/compare_lazer_reference.py --python-output <path>`; this is
+   only a local regression baseline. The differential command is
+   `python scripts/compare_lazer_reference.py --reference-output <csharp.json>`.
+3. Added `tests/test_lazer_parity_corpus.py`. Focused verification passed:
+   `PYTHONPATH=src python -m unittest discover -s tests -p
+   'test_lazer_parity_corpus.py'` (4 tests); the exporter verified all
+   fixture expectations and wrote the Python baseline. These checks validate
+   the Python model/corpus and comparator shape, not C# parity.
+4. Rechecked tooling: `where.exe dotnet` found no SDK; the Windows App Installer
+   package is present, but both the `winget` alias and its package executable
+   exited 1 without output. A pinned-source `git ls-remote` attempt in the
+   preceding L0.9a preflight failed at the configured proxy, and direct raw
+   pinned GitHub fetches still return cache misses. Search results only
+   exposed current `master`, which is not an admissible substitute for the
+   frozen release. Therefore the actual C# comparison remains **not run**;
+   the Python profile remains source-derived and runtime parity is unverified.
+5. The next required action within L0.9a is to obtain a working .NET SDK and
+   pinned source (or an equivalent execution host), generate the C# result
+   with the frozen corpus, and run the differential command. Do not start
+   L0.9b, implement a teacher, or train until the parity gate and the separate
+   L0.6 biology gate are resolved.
+
+
+### L0.9a pinned timing-window subgate — 2026-10-03
+
+1. Installed the official .NET 10 SDK 10.0.401 after confirming the pinned
+   source's `global.json` requests 10.0.100 with `latestFeature` roll-forward.
+   Fetched and checked out osu!lazer commit
+   `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9` in a temporary sparse checkout
+   under `work/osu_lazer_reference`.
+2. Added `scripts/lazer_csharp_windows/`, which links the exact pinned
+   `ManiaHitWindows.cs`, `HitWindows.cs`, and `IBeatmapDifficultyInfo.cs` into
+   a small standalone C# runner. The only compatibility stubs are the ordered
+   first seven `HitResult` enum members, copied in pinned numeric order, and
+   an empty `HitObject` namespace used only by XML documentation. Added
+   `scripts/run_lazer_csharp_windows.py` to validate the source commit and run
+   the harness; added `--windows-reference-output` to the Python comparator.
+3. **PASS for the timing-window source subgate only:** exact pinned C# methods
+   `ManiaHitWindows.SetDifficulty(8)` and `HitWindows.ResultFor()` matched all
+   24 signed OD8 boundary vectors with zero differences. The raw C# output is
+   `runs/lazer_mvp_l0_9a/csharp_hit_windows.json` (SHA-256
+   `2efbb0721ecfde1cce2642fc33fbe3c4633a6d47d83e4454d473bee4d4611bba`).
+   Report: [L0.9a timing subgate](docs/LAZER_MVP_L0_9A_TIMING_SUBGATE_RESULT.md).
+4. Failure/fix notes: `winget --scope user` had no applicable installer, so
+   the SDK was installed using its supported machine installer. After install,
+   this shell's `PATH` was stale; the runner now resolves the standard SDK
+   executable path. The first .NET invocation also attempted to write CLI and
+   NuGet configuration under protected profile paths; the runner now directs
+   `DOTNET_CLI_HOME`, `APPDATA`, and package cache into workspace `work/` and
+   uses an empty package-source config. A first Git fetch command omitted the
+   repository working directory and failed without changing source; retried
+   successfully. Partial clone lazy reads needed network-enabled Git access;
+   the exact files were then retrieved.
+5. Focused verification: all eight relevant Python suites passed (**61
+   tests** across timing, environment, CLI, policy, capacity, feedback, and
+   parity corpus). `python scripts/build_docs_catalog.py --check` reported
+   the catalog current before the timing report was added; refresh it and run
+   `--check` again after this log update. The full game-event parity scenarios
+   were **not** run against the osu!mania playfield runtime; full L0.9a remains
+   incomplete. Score-total accumulation and biological learning are also not
+   validated. L0.6 remains **INCONCLUSIVE / NO-GO** for a biological teaching
+   rule. Do not start L0.9b, L0.7, or L0.8 from this partial result.
+
+
+### L0.9a pinned same-lane note-lock subgate — 2026-10-03
+
+1. Inspected exact pinned `DrawableNote`, `Column`, `HitObjectContainer`, and
+   `OrderedHitPolicy` source. This exposed a headless mismatch: M0 gave every
+   fresh DOWN to the earliest unresolved note, while pinned `OrderedHitPolicy`
+   locks an earlier object when the next note's start time is reached and
+   force-misses earlier unresolved objects after a newer note is successfully
+   hit.
+2. Corrected the lazer `GameEnvironment` profile to evaluate same-lane notes
+   in timestamp order under the strict `time < next.StartTime` lock, continue
+   to later objects when an earlier object returns no judgement, and force-
+   miss earlier unresolved taps after a successful newer hit. Stable profiles
+   retain their earlier M0 oldest-unresolved-note approximation. Added an
+   exact-onset test and a corpus scenario expecting `new PERFECT`, `old MISS`,
+   then the action record.
+3. Extended the linked-source C# harness to execute the exact pinned
+   `OrderedHitPolicy.cs` method with minimal shims for its ordered object list
+   and miss sink. The combined C# source-subset comparison passed the 24
+   timing vectors and the note-lock vector with zero mismatches. Artifact:
+   `runs/lazer_mvp_l0_9a/csharp_source_subset.json` (SHA-256
+   `df5d737a2c5548e22b47e21bbde947fb236d40d0ceec17ca595d02493bd90859`).
+   Report: [L0.9a note-lock subgate](docs/LAZER_MVP_L0_9A_NOTE_LOCK_SUBGATE_RESULT.md).
+4. Verification after the model correction: eight relevant Python suites
+   passed (**63 tests** at that point): timing, game environment, CLI, position policy,
+   readout, capacity, feedback, and corpus. The C# policy harness does not run
+   the full `Column` key-binding propagation or score processor; game-event
+   ordering for the eight scenarios remains unverified against the full
+   playfield runtime. L0.9a is still incomplete and cannot be reported as
+   runtime parity.
+5. No teacher, learning signal, weight update, or training run followed. L0.6
+   remains **INCONCLUSIVE / NO-GO**. Sole next proposed gate is the full pinned
+   osu!mania event comparison, with zero mismatches for all eight frozen game
+   scenarios; stop before teacher/training work.
+
+
+### Least-MVP roadmap refinement — 2026-10-03
+
+1. Refined [the lazer MVP plan](docs/LAZER_MINIMUM_MVP_PLAN.md) into ordered
+   software and learning gates. The least headless MVP is a reproducible
+   one-lane tap loop with position-only policy input, timestamped key actions,
+   pinned judgements and an auditable first-action record.
+2. Added the required tests and acceptance criteria for full pinned-runtime
+   parity, headless adapter conformance, tap score/accuracy parity, conditional
+   learning-rule admission, one-note frozen retention, 4K tap readiness and an
+   eventual in-process Lazer adapter.
+3. The C# timing and note-lock checks remain source-subset passes; full
+   playfield event parity is still open. Score-total parity is unimplemented.
+   L0.6 remains **INCONCLUSIVE / NO-GO**, so no biological teacher or training
+   run is authorized by this roadmap. No tests or experiments were run while
+   documenting this plan.
+
+### L0.9a pinned replay-host probe — 2026-10-03
+
+1. The attached Windows dialog names the exploratory `LazerRuntimeReference.exe`,
+   not the pinned Lazer game. Rebuilt and launched that current console probe
+   directly and through `dotnet`; both returned exit code 0. No matching
+   Application log entry was found. The pictured failure is not reproduced and
+   has no established root cause. The standalone probe bypasses Lazer's object
+   lifetime and is not used as runtime evidence.
+2. Built the pinned production `osu.Game.Rulesets.Mania` project with zero
+   warnings/errors. Ran the upstream
+   `TestSceneOutOfOrderHits.TestPreviousHitWindowDoesNotExtendPastNextObject`
+   through the project's headless NUnit adapter; it passed.
+3. Added `scripts/lazer_runtime_probe/L0ParityProbe.cs` and
+   `scripts/run_lazer_runtime_probe.py`. The probe runs the frozen corpus
+   through the pinned `ReplayPlayer`, playfield, key binding and
+   `ScoreProcessor.NewJudgement`. `python scripts/run_lazer_runtime_probe.py`
+   passed the C# test constructor and both probe tests (3/3 NUnit tests).
+4. All eight scenario traces matched expected judged note identity, lane,
+   result order, and direct-action offsets. The 24 classifier vectors match
+   the pinned linked `HitWindows` methods. The full playfield boundary test
+   also passed all 24 reachable-action outcomes and their direct offsets.
+   Four inputs do not directly judge a note: the early press outside MISS and
+   late presses at/after the +127.501-ms automatic expiry. The Python headless
+   expiry-before-action model returned the same reachable action outcomes.
+5. The first boundary probe incorrectly expected a direct `MISS` at the
+   method-level +164.500-ms late edge. The full playfield expires the note
+   after the last successful MEH window (+127.500 ms), so that later press
+   cannot reach the classifier. The probe now tests method-level windows
+   separately from playable note lifetime. A first asynchronous test version
+   also retained disposed `JsonElement` values; it was fixed by materializing
+   vector fields before adding delayed test steps. An initial comparison
+   labeled the automatic expiry MISS at +127.501 ms as action-caused because
+   the timestamps tied; comparison now distinguishes the no-hit-error expiry
+   record from a direct pressed MISS.
+6. **L0.9a remains INCONCLUSIVE for full exact event-time parity.** Automatic
+   `JudgementResult.TimeAbsolute` is set on a game update, and its value varied
+   between repeated test-host runs: the null-press automatic MISS was observed
+   at +127.922 ms and +142.968 ms; the too-early/null case at +128.680 ms and
+   +130.632 ms. The Python model records the logical expiry at +127.501 ms.
+   Judgement labels/order and direct-input offsets match, but one timestamp
+   cannot encode both logical expiry and frame observation. The full test host
+   also does not yet expose a standalone action-event recorder. Raw output:
+   `work/lazer_runtime_reference_probe.jsonl` (ignored; SHA-256
+   `3f75670e19d31495323102cdad0aebb01cfd7bf50233c55657211461d8cb8ed4`).
+7. Updated [the least-MVP plan](docs/LAZER_MINIMUM_MVP_PLAN.md),
+   [the osu environment contract](docs/OSU_ENVIRONMENT.md), and
+   [the assumption ledger](ASSUMPTIONS.md). No Python game semantics, score
+   calculation, teacher, learning signal, weight, or training run changed.
+   L0.6 remains **INCONCLUSIVE / NO-GO** for biological training.
+8. Sole next proposed stage: **L0.9a.1 — logical and observed event-time
+   contract**. Add separate deterministic logical and raw observed timestamps,
+   capture each DOWN/UP transition, and require exact parity of the normalized
+   ordered trace across repeated runs. Retain raw frame-time differences for
+   diagnosis. Do not start L0.9b, score-total implementation, teacher design,
+   or training until this gate is reviewed; stop here.
+9. After the report was drafted, the tracked runtime probe was strengthened to
+   assert note identity/lane, direct-action offsets and direct-action timestamps
+   in addition to judgement order. Re-ran `python
+   scripts/run_lazer_runtime_probe.py` from a clean injected-source state; all
+   three discovered NUnit tests passed and the helper removed its temporary C#
+   file. The final ignored artifact is
+   `work/lazer_runtime_reference_probe.jsonl` (SHA-256
+   `b09d15bfe4a14aba733dde7f9c80f7055ff2aa3e15ed646459a7a8420636f4d8`).
+   Removed the superseded standalone console harness after confirming it was
+   not the pinned game path and its screenshot error could not be reproduced.
+
+### One-lane Lazer MVP L0.9a.1 dual-time/action trace — 2026-10-03
+
+1. Implemented canonical `logical_event_time_us` and optional
+   `observed_game_time_us` on `JudgementRecord`; `event_time_us` remains a
+   compatibility alias. Python-only game results leave observed time unset.
+   Checkpoint output uses the new fields and restore accepts the old
+   `event_time_us` row format. Feedback and reward continue to consume logical
+   time only; observed frame time is not exposed to the policy.
+2. Bumped the frozen parity corpus to schema version 2. Extended the pinned
+   `ReplayPlayer` probe to capture actual DOWN/UP key-binding callbacks at
+   replay-frame timestamps and retain raw `JudgementResult.TimeAbsolute` for
+   every judgement. The runtime helper now runs twice, compares normalized
+   results, verifies each transition against the frozen action list, and
+   compares normalized eight-scenario event traces to the frozen headless
+   corpus.
+3. The first C# recorder compile failed because the probe omitted the input
+   event namespace and `Component` base required by Lazer's key-binding
+   interface. Added those framework types. A first repeated-run comparison
+   also sampled `GameplayClockContainer.CurrentTime`, which varies with host
+   updates; the recorder now reads the active `ReplayInputHandler.CurrentFrame`
+   timestamp. The repeat gate then passed. The normalizer retains raw update
+   timestamps but assigns automatic MISS at the first invalid OD8 microsecond
+   (+127,501 µs) and force-MISS at the newer hit's logical time.
+4. **PASS for normalized event/action parity:** both runtime runs passed all
+   three NUnit probe tests. All eight scenario traces, all 24 classifier
+   vectors, all 24 playable boundary outcomes, and all DOWN/UP transitions
+   matched the frozen contract. Automatic-MISS observations varied by frame;
+   latest raw no-press values were +138.313 and +143.991 ms after note time,
+   while logical expiry remained +127.501 ms. They remain in the raw records.
+   Run summary and artifact hashes are in
+   [L0.9a.1 result](docs/LAZER_MVP_L0_9A_1_DUAL_TIME_ACTION_TRACE.md).
+5. Focused Python regressions passed **58 tests** across environment, frozen
+   parity corpus, feedback, CLI, neuromodulation, and six first-action-audit
+   cases. A3 review caught and fixed the state parser's rejection of the new
+   optional time fields. Its seventh historical audit test could not run
+   because the ignored fixture `docs/figures/a2_mvp_coupled/uninterrupted_ledger.json`
+   is absent. `python scripts/build_docs_catalog.py --check` and
+   `git diff --check` both passed; Git printed only its CRLF normalization
+   warnings for three documentation files.
+6. Score/accuracy/combo totals are still unimplemented. L0.6 remains
+   **INCONCLUSIVE / NO-GO** for biological teacher design and training.
+   **Sole next proposed stage:** L0.9b one-lane headless vertical slice and
+   adapter conformance. Stop before starting it; do not begin score parity or
+   learning work in this stage.
+
+### One-lane Lazer MVP L0.9b headless adapter — 2026-10-03
+
+1. Resumed L0.9b under the user's explicit authorization to implement the
+   least MVP. Added a shared `PositionObservation`, episode-relative
+   `PolicyKeyTransition`, position-only policy protocol, and
+   `HeadlessManiaTapAdapter`. The online fly policy no longer accepts absolute
+   game timestamps in `begin()` or `step()`; it advances its own integer
+   microsecond clock and emits relative transitions. Config and weight hashes,
+   source IDs and policy timing parameters are saved as metadata.
+2. The adapter anchors those transitions to the game episode start, passes
+   only current `{visible, lane, position}` samples into policy methods, and
+   waits until policy completion before scoring or first-action auditing. The
+   capacity harness now uses the same adapter. The adapter is intentionally
+   limited to one tap note.
+3. The initial targeted command
+   `python -m unittest tests.test_lazer_adapter tests.test_online_position_policy`
+   failed at import because `src` was not in `PYTHONPATH`; this was an
+   invocation issue, not a code failure. Re-running with `PYTHONPATH=src`
+   passed six tests. The expanded focused run passed 52 tests across the
+   adapter, online policy/readout, capacity contracts, feedback, frozen Lazer
+   corpus, and game environment.
+4. The scripted adapter trace observed only position samples. Its relative
+   DOWN/UP at 450,000/451,000 µs became game actions at 550,000/551,000 µs
+   from a 100,000 µs episode origin. The first DOWN was 50,000 µs early but
+   within the OD8 Good-or-better window. Repeated normalized episode traces
+   matched. The real online policy's 500-ms note continued to produce no key
+   press and its automatic MISS remained deterministic.
+5. Updated the adapter result, environment contract, least-MVP plan, and
+   document catalog. L0.6 remains **INCONCLUSIVE / NO-GO** for teaching and
+   biological training. Score/accuracy/combo totals, native map loading,
+   multi-lane input, and the in-process Lazer adapter remain unimplemented.
+6. **L0.9b PASS** for the one-note headless policy/game boundary.
+   **Sole next proposed stage:** L0.10 tap score, accuracy and combo parity
+   against the pinned Lazer runtime. Stop before starting that stage.
+
+### One-note Lazer MVP L0.10 no-mod tap score parity — 2026-10-03
+
+1. Continued the user-authorized MVP implementation from L0.9b. Inspected the
+   pinned `ScoreProcessor`, `ManiaScoreProcessor`, and `HitResult` sources at
+   osu! commit `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9`. Implemented the
+   completed-tap, no-mod Score V2 calculation in `project_b.osu.scoring` and
+   attached its per-judgement snapshots to the post-run headless episode. The
+   score object is produced only after policy execution and game judging.
+2. Added a pinned C# NUnit probe and score fixture for all six tap results,
+   mixed results with a combo break and recovery, accuracy numerator and
+   denominator, per-note score deltas, maximum score/combo, and processor
+   reset. The C# runner produced the same eight scenario outputs on two runs
+   and matched `tests/fixtures/lazer_score_v2_vectors.json`.
+3. The first expanded Python run failed one adapter assertion because the test
+   expected GREAT at −50,000 µs. The pinned OD8 window classifies it GOOD; the
+   correct single-note no-mod score is 310,148. Updated that expectation and
+   the score numerator (200/305). The subsequent focused run passed **56
+   tests** across score parity, adapter, policy/readout, capacity contracts,
+   feedback, frozen event corpus, and environment.
+4. Reset behavior is episode-scoped: a fresh score calculation begins with
+   combo 0 and an empty accuracy numerator. The pinned processor's transient
+   post-reset `TotalScoreWithoutMods=1,000,000` while `TotalScore=0` is recorded
+   in the C# fixture but is not exposed by this completed-episode interface.
+5. Updated [the L0.10 result](docs/LAZER_MVP_L0_10_SCORE_PARITY_RESULT.md),
+   the least-MVP plan, the environment contract, the assumption ledger, and
+   the document catalog. `git diff --check` and
+   `python scripts/build_docs_catalog.py --check` pass. Holds, score mods,
+   Classic/Score V1, map parsing, cross-runtime 4K score parity, and the
+   in-process adapter remain unimplemented. L0.6 remains **INCONCLUSIVE /
+   NO-GO** for biological teaching and training.
+6. **L0.10 PASS** for complete no-mod lazer tap scoring.
+   **Sole next proposed stage:** L0.11 — verify event and score parity across
+   a frozen 4K tap corpus with chords, misses, retries, and same-lane overlap.
+
+
+### One-lane osu!lazer MVP L0.11 — frozen 4K tap event and score parity — 2026-10-03
+
+1. Continued the user-authorized least-MVP route after L0.10. Added an isolated
+   C# `ReplayPlayer` probe at pinned osu! commit
+   `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9`, an input corpus, a frozen
+   runtime reference fixture, and a runner that records actual key transitions
+   and `ScoreProcessor.NewJudgement` snapshots.
+2. The two frozen cases cover four lanes with mixed grades and an automatic
+   miss; a too-early null press and retry; same-lane note lock and force-Miss;
+   a simultaneous cross-lane chord; and combo break/recovery. The comparison
+   keeps deterministic logical event time separate from frame-observed
+   automatic-MISS time.
+3. Initial C# compilation failed because the probe lacked
+   `osu.Framework.Screens`, which provides the `IsCurrentScreen()` extension.
+   Added the missing namespace. The next pinned NUnit run passed; the probe was
+   then run twice and repeated normalized event, action, and score output.
+4. `python scripts/run_lazer_4k_probe.py --write-fixture` froze the pinned
+   output after the two identical C# runs. The normal runner then passed and
+   matched that fixture. `tests.test_lazer_4k_score` passed all three tests.
+   The focused regression command covering 4K score, single-note score,
+   adapter, policy/readout, capacity, feedback, event corpus, environment, and
+   timing windows passed **73 tests**.
+5. Reran `python scripts/run_lazer_runtime_probe.py` after keeping the new
+   probe out of its original C# test class. All three NUnit tests passed on
+   both runs; nine normalized event traces and every captured DOWN/UP matched
+   the prior L0.9 corpus.
+6. Updated the least-MVP plan, M0 environment contract, assumption ledger,
+   result report and document catalog. This pass covers only the frozen
+   two-scenario no-mod tap corpus. Holds, mods, rate changes, arbitrary-map
+   parity, raw automatic-MISS observed-time parity, score restoration, and
+   in-process Lazer integration remain open. The Python policy adapter still
+   accepts one tap note, and the current fly policy still produces no DOWN on
+   the one-note 500-ms case. L0.6 remains **INCONCLUSIVE / NO-GO** for
+   biological teaching and training.
+7. **L0.11 PASS** for normalized event and Score V2 parity on the frozen 4K
+   tap corpus. **Sole next proposed stage:** L0.12 — generalize the
+   position-only adapter to 4K episodes and route identical frozen
+   observations/actions through the headless game and an in-process osu!lazer
+   test host. Compare normalized actions, events and score. Stop before
+   starting L0.12.
+8. Final documentation checks passed: `python scripts/build_docs_catalog.py
+   --check` confirmed the catalog is current, and `git diff --check` exited 0.
+   Git emitted only its existing CRLF-to-LF normalization warnings for
+   `CURRENT.md`, `docs/OSU_ENVIRONMENT.md`, and `docs/catalog.md`.
+
+### Playable native 4K osu!mania recreation — 2026-10-03
+
+1. The user prioritized finishing a playable recreation and stopping before
+   any fly or policy work. The user deferred choosing specific maps and asked
+   for broad native 4K tap and hold support. No osu! client was installed, so
+   comparison used the pinned open-source osu!lazer checkout and its
+   executable `ReplayPlayer` test host.
+2. Added a strict native `.osu` parser, safe `.osz` extraction, a general
+   four-lane tap/long-note game, Pygame music and playfield, keyboard input,
+   pause/restart, simple hitsounds, and results. `pyproject.toml` now exposes
+   the optional `mania` dependency and `spacefly-mania` command. A Windows
+   launcher was provided in this task's outputs folder.
+3. The initial hold implementation needed event-order and exact tail-window
+   corrections. After those fixes, `python scripts/run_lazer_hold_probe.py`
+   passed against pinned commit `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9`:
+   all events, combo, accuracy and per-event Score V2 snapshots matched for
+   six correct, missed, broken, repressed and late-release scenarios. The
+   prior frozen four-lane tap corpus still matched.
+4. Source inspection found that osu!lazer weights the common beat length by
+   tempo duration, not point count. Corrected scroll normalization and added
+   a distinguishing regression case. Parser/package tests cover native taps,
+   holds, timing changes, negative timing offsets and traversal rejection.
+5. Focused Python tests passed (13), and a Pygame dummy audio/video smoke
+   completed a synthetic map from selection through results at full score.
+   `git diff --check` and Python compilation passed. The actual user maps
+   remain unspecified, so full-map replay parity, physical audio latency and
+   live-device sync are unresolved. The build and comparison report records
+   these limits. No fly or policy integration was started.
+
+### Freedom Dive 4K Normal map-level recreation check — 2026-10-03
+
+1. The user selected xi — FREEDOM DiVE, mapped by razlteh, 4K Normal
+   (2.00 stars in the installed client). The running osu!lazer editor exported
+   `xi - FREEDOM DiVE (razlteh).osz`; no game files or client database were
+   edited. The exported difficulty SHA-256 is
+   `ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9`.
+2. The recreation loaded the package and its MP3. The selected chart has
+   1,220 taps, 90 holds, 29 timing points and no same-lane hold overlaps.
+   Added native-4K filtering and a difficulty selector to make the mixed-key
+   package usable from the client; supplied a chart-specific Windows launcher.
+3. `python scripts/run_lazer_freedom_dive_probe.py` passed at pinned commit
+   `da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9`: all 1,310 object
+   types, lanes, start/end times and OD matched the osu!lazer decoder. A
+   full-chart ideal replay matched 1,000,000 score, 100% accuracy, 1,400
+   combo, 1,400 Perfect results and 180 ignored hold results. The test host
+   virtual track ran at 20× without mods to shorten the run.
+4. The real MP3, playfield and result screen passed a Pygame dummy-device
+   smoke. A shell-launched interactive process did not expose a targetable
+   desktop window, so physical recreation audio latency was not measured.
+   The installed lazer chart was viewed in the editor and playtest. Input was
+   detected in that window, so further UI control stopped. The installed
+   binary is `2026.921.0-lazer+aaa75b7c0a9f21d558ce84cd0ffac6c739bad8e7`,
+   older than the pinned source host. Exact replay parity with that installed
+   binary is still unverified.
+5. The focused Python tests passed (10); `git diff --check` and the document
+   catalog check passed. This closes the selected map's ideal replay check.
+   Full manual play and device sync remain known limits. No fly or policy
+   work was started.
+
+### EA-MVP engineering-assumption branch/spec — 2026-10-03
+
+1. At the user's direction, created Git branch
+   `ea-mvp-engineering-assumption-fly-learner` from the current main commit.
+   The existing dirty worktree carried through the switch; no existing
+   recreation, strict biology result, raw receipt, or game file was edited
+   for EA-MVP. The branch pointer is new, not a committed clean snapshot.
+2. Added [EA-MVP spec](docs/EA_MVP_SPEC.md) with architecture, assumption
+   registry, biological/engineered boundary, one-lane headless protocol,
+   proposed confirmation criteria and bounded claims. Added the separate
+   [EA-MVP roadmap](docs/EA_MVP_ROADMAP.md). **EA-0 PASS for read-only seam
+   inventory/documentation only.** The existing position adapter judges
+   after policy completion; the incremental `ManiaGame` can support a future
+   streaming orchestrator, but none was implemented or run here.
+3. **EA-1 NEXT PROPOSED, awaiting user approval of exact engineering
+   assumptions.** Existing strict B3/B3.1, B6/B6.1, L0.6, Level 4D and
+   larval outcomes retain their statuses. No EA neural run, training,
+   confirmation, or parameter selection by game score occurred.
+
+### EA-MVP approved assumptions and first non-learning gates — 2026-10-03
+
+1. The user explicitly approved all listed EA-MVP engineering-assumption
+   categories. This supersedes EA-1's pending-approval state above but does
+   not authorize training, which the user explicitly prohibited. Exact
+   EA-01/02/03/04/07 values for the first task-free probe were frozen in
+   `configs/ea_mvp_task_free_admission.json` before it ran; exact EA-05/06
+   teaching/learning values remain open.
+2. Added a separate streaming one-lane bridge under `src/project_b/ea_mvp/`.
+   It advances the existing incremental `ManiaGame`, passes only present
+   position to policy, and publishes stripped, resolved result labels on or
+   after their availability time. The first implementation called `step`
+   on the initial observation, causing a one-tick phase mismatch with the
+   frozen online fly policy; changed the bridge to call `begin` at that
+   observation and first `step` one tick later. No game source was edited.
+3. Focused bridge/frozen-fly checks passed **5/5**. A fixed trigger at
+   450,000 µs received GOOD on the next tick; an early null received no
+   immediate teaching label and later MISS; no-DOWN also yielded label-only
+   MISS. Baseline frozen fly weights stayed unchanged and no-DOWN; a local
+   fixed-weight probe emitted DOWN at 388,000 µs and received MEH, with no
+   weight change. **EA-2 PASS for this focused one-lane tap contract.**
+4. Ran only the predeclared non-learning task-free panel: initial weights
+   emitted no DOWN; local 0.2/0.5/0.8 interventions emitted first DOWN at
+   positions 0.22/0.47/0.77; exact repeated traces matched. The frozen
+   primary subgate **PASSed 3/3**, with raw result and hash in
+   [EA-MVP non-learning report](docs/EA_MVP_NONLEARNING_RESULT.md). This is
+   direct fixed-weight capacity, not learned behavior. Full EA-3 remains
+   INCOMPLETE pending no-cue, MBON-voltage attribution and output-off checks.
+5. Sole next proposed stage: **EA-3.1 no-cue/output attribution**, specified
+   in the [EA-MVP roadmap](docs/EA_MVP_ROADMAP.md). Stop before EA-4,
+   teaching, local updates, development learning or confirmation. Strict
+   biological and Level 4D statuses remain unchanged.
+
+### EA-MVP EA-3.1 no-cue/output attribution — 2026-10-03
+
+1. Froze `configs/ea_mvp_no_cue_output_protocol.json` before probing the
+   same reduced 32-KC→MBON05 engineering model. Ran no-cue, initial-cue,
+   local-0.5 fixed-weight and local-0.5 MBON-output-off arms, each twice.
+   All six primary checks passed: no-cue zero spikes/voltage, initial no
+   DOWN, local MBON 0.5-bin voltage **0.0120813378→0.0033568773** and DOWN
+   at **263,000 µs**, output-off no DOWN, exact repeats.
+2. The first receipt lacked complete source-tagged raw trace fields. Added
+   only trace/action serialization, reran the unchanged protocol and
+   simulation, and retained identical primary endpoints. The independent
+   audit reconstructed first DOWN and checked every spike/arrival source ID.
+   Final raw result SHA-256
+   `84a742a6f3da618f41d79d8a278011e0f7745193ceb2b647b107c9c2d9f95288`.
+   [EA-3.1 report](docs/EA_MVP_NO_CUE_OUTPUT_RESULT.md) records scope and
+   limits. **EA-3.1 PASS; EA-3 reduced-circuit non-learning admission PASS.**
+3. No DAN stimulation, teaching, plasticity update, training, game score
+   selection or confirmation was run. The strict biological NO-GO/FAIL
+   results remain unchanged. Sole next proposed stage: **EA-4 fixed teacher
+   contract and local-rule sanity** (no task training), specified in the
+   [EA-MVP roadmap](docs/EA_MVP_ROADMAP.md). Stop before that stage under
+   the project stage protocol; EA-5 training remains disallowed by the user.
+
+## 2026-10-03 EA-MVP EA-4 / EA-5 v1
+EA-4 one-pulse engineering teacher/local-LTD fixture PASS with six unchanged negative controls and exact replay. EA-5 v1 frozen 500-note development FAIL: no first DOWN in learning-on or matched DAN/plasticity-off controls; one source-identified KC45199 edge changed. The 150-ms window admits only the terminal 500-ms KC spike after a delayed MISS, while the fixed x=0-bin voltage maximum was already set at 489 ms. See docs/EA_MVP_EA4_EA5_RESULT.md. EA-6 confirmation not run; next EA-5.1 task-independent temporal-credit/controllability probe must be frozen before any v2 assumption.
+
+## 2026-10-03 EA-MVP EA-5.1 / EA-5 v2
+A frozen no-game temporal-credit probe selected the 250-ms EA-06 eligibility window (shortest candidate meeting the predeclared KC-count and fixed-readout controllability gate). The separately frozen v2 development run acquired first DOWN at trial 364; 137/500 learning-on episodes were Good-or-better and the final press was +1 ms PERFECT, with DAN-off/plasticity-off controls silent. Frozen-weight time-shift checks retained PERFECT. Exploratory 400/450-ms approach speeds failed, so EA-6 confirmation remains open. See docs/EA_MVP_EA5_V2_RESULT.md.
+
+
+## 2026-10-03 EA-MVP EA-6 v2 confirmation
+The frozen eight-seed, five-arm, 40-fresh-note confirmation finished with FAIL, 0/8 passing runs. Each learning-on arm scored 13/40 Good-or-better first DOWN on unseen 380–614-ms leads; shuffled teaching also 13/40; DAN-off, plasticity-off and untrained each 0/40. Independent raw-receipt audit found zero violations, with local weight changes restricted to seven KC→MBON05 slots. Source/code pins and exact fresh replay passed. This fails both the 32/40 score and eight-note margin versus shuffled teaching. See docs/EA_MVP_EA6_V2_CONFIRMATION_RESULT.md. Sole next stage is EA-6.1 mixed-speed training under the existing position-only encoder after no-game controllability and trial-relative/absolute clock checks. No later confirmation was run.
+
+
+## 2026-10-03 EA-MVP fixed-speed and continuous-map update
+User clarified the target visual speed is selected before a map and fixed during that map. The variable-speed EA-6 v2 FAIL remains preserved but does not define the current map-level target. User capped fixed-speed confirmation at three seeds: independently audited, all 3/3 achieved 40/40 learning-on, with 0/40 DAN-off/plasticity-off/untrained and 40/40 shuffled teaching; this is not the original 6/8 formal gate. EA-7 continuous-map v1 failed because tiny residual MBON voltage rearmed the readout at top bins. A task-free fresh-KC-spike readout gate passed, then v2 continuous three-note lane-0 map passed: all 3 notes PERFECT with one continuous neural simulator; initial-weight control silent. Next: EA-8 lane-mapping admission design; no four-lane/hold training yet. See docs/EA_MVP_EA7_CONTINUOUS_RESULT.md.
+
+
+## 2026-10-03 EA-MVP EA-8 / EA-9
+EA-8 froze an explicit **ENGINEERING ASSUMPTION**: current visible lane 0–3 is passed to the fixed key readout unchanged; MBON05 supplies timing only. The no-game lane sweep passed for all four lanes with identical retained timing weights. EA-9 v1 produced four correct PERFECT lane taps but failed the rearm-count integrity check because the lane-specific readout override did not increment its counter. Preserved that FAIL; fixed the bookkeeping in a versioned EA-9 v2 and reran. v2 PASS: four sequential taps all PERFECT, one neural initialization, four readout rearms, initial weights silent/four MISSes, fixed weights, exact replay. Weights were trained on lane-0 isolated notes only; no four-lane learning, overlap/chords, holds or live-client test. Next EA-10 is task-free overlapping-cue/readout admission before a chord map. See docs/EA_MVP_EA8_LANE_MAPPING_RESULT.md, docs/EA_MVP_EA9_FOUR_LANE_TAPS_RESULT.md and docs/EA_MVP_ROADMAP.md.
+
+## 2026-10-03 EA-MVP EA-10 / EA-11 / EA-12
+EA-10 task-free lane-set admission and two sequential equal-time chords PASS: four lane-specific PERFECTs; matched initial weights silent and all MISS. Fixed lane-set fanout is an **ENGINEERING ASSUMPTION**; staggered overlaps are untested. EA-11 hold admission v1 FAIL preserved: persistent head visibility prevented the strike bin from closing. Versioned head/tail visibility v2 passed no-game admission (300 ms, 1 s, 3.5 s across lanes), then three sequential holds passed with all heads/tails PERFECT and no body combo breaks; tail-position release is an **ENGINEERING ASSUMPTION**. EA-12 matched three EA-11-generated short/medium/long hold action traces against pinned osu!lazer ReplayPlayer judgements/scores, and the separate four-key adapter episodes passed twice. This was in-process source-runtime validation, not the desktop client or OS key injection. Next is EA-13 broad evaluation after freezing fresh patterns and controls. Strict biology results and the saved recreation remain unchanged. See docs/EA_MVP_EA10_CHORDS_RESULT.md, docs/EA_MVP_EA11_HOLDS_RESULT.md, docs/EA_MVP_EA12_LAZER_ADAPTER_RESULT.md and docs/EA_MVP_ROADMAP.md.
+
+## 2026-10-03 EA-MVP EA-13
+Frozen EA-13 tested 3 existing weight seeds on fresh dense lane-switch taps, new two-lane chord pairs plus a four-lane chord, and three unseen sequential hold durations; the approach remained fixed at 500 ms. Learning-on passed all 9 seed-by-pattern cases with 66/66 objects PERFECT; shuffled-teaching matched actions/results exactly; untrained controls were silent and missed all 66 objects. Every repeated replay matched exactly. No training or tuning occurred. Therefore EA-13 supports narrow fixed-speed pattern transfer of retained weights, but it does not identify correct feedback pairing as causal and does not complete the original 8-seed confirmation. Mixed/overlapping patterns, variable speed, and desktop osu!lazer remain untested. Strict biology statuses and the saved recreation remain unchanged. See `docs/EA_MVP_EA13_BROAD_EVALUATION_RESULT.md`, `configs/ea_mvp_broad_eval_v1.json`, `scripts/run_ea_mvp_broad_eval.py`, and `runs/ea_mvp/broad_eval_v1.json`.
+
+## 2026-10-03 — Freedom Dive EA-MVP continuation (user-authorized)
+
+The user asked to complete the Freedom Dive replay roadmap. The saved Pygame recreation remains unchanged; this work is a separate EA-MVP track. FD-1 completed: 1-ms frame stream, exact chart hash, pixel spot-check within 0.5 px, 14 simultaneous visible heads, and up to two active holds. FD-2 froze a boundary-only position reversal and probed the unchanged EA13 weights on ramps spanning FD-1's 1.281/1.499/1.786-s visible lead range. **FD-2 FAIL:** 0/18 trained-weight trials produced the expected DOWN; repeats matched, untrained was silent, and weights stayed unchanged. No game episode, score, training, FD-3, or chart playback ran. This is an input-transfer failure and does not revise strict biology results.
+
+Runner setup log: first invocation lacked `PYTHONPATH=src`; second call omitted the required project-root argument to `load_position_config`; both were corrected before simulation. The first successful result serialization exposed a criteria-field set instead of a JSON scalar; the saved receipt's human-readable criteria field and runner were corrected without rerunning or changing experiment outcomes. Validate the final JSON with `python -m json.tool runs/ea_mvp/fd2_sensory_probe_v1.json`.
+
+Artifacts: `docs/EA_MVP_FD2_SENSORY_MAPPING_PROBE_RESULT.md`, `runs/ea_mvp/fd2_sensory_probe_v1.json`, and `scripts/run_ea_mvp_fd2_sensory_probe.py`. The proposed new **ENGINEERING ASSUMPTION** is a fixed visual time-to-contact estimator using only recent screen-position history, candidate 50-ms velocity window, with a yet-to-be-frozen no-motion rule. It is **not approved/admitted**. Stop before FD-3 pending the user's approval; no score-based tuning or further neural run.
+
+
+### 2026-10-03 — FD-2 visual time-to-contact sweep
+
+Following the user's approval to test the time-to-contact encoder, froze a 50-ms past-position window and ran task-free stationary/constant-speed/step controls plus the existing EA13 learning-on weights at five pre-map speed factors. **FD-2 FAIL:** frozen weights passed 12/12 repeated trials at 0.75× and 1.0×, passed 0/6 at 0.5× and 1.25× (517 ms and 474 ms early), and 2/6 at 1.5× (four silent). Untrained stayed silent; repeated traces matched; weights unchanged. The encoder stayed bounded and blank on stationary input, but pixel quantization caused non-monotone 1-ms steps. The abrupt-speed control generator had a discontinuous position jump in three of four combinations; preserve those values as INCONCLUSIVE and do not interpret or rerun them. The first boundary-reversal probe remains preserved as 0/18.
+
+No training, game scoring, full-map neural episode, FD-3, lazer replay, or replay UI occurred. Strict biology results and the saved Pygame recreation remain unchanged. Corrected runner setup issues before valid execution (missing `PYTHONPATH`, missing loader root argument); fixed receipt serialization without rerunning. Current stop proposal: add blank input while TTC is >500 ms, then start countdown at 1 inside the existing trained horizon. This is **ENGINEERING ASSUMPTION FD2-A7**, not approved/admitted. Await user approval before implementing/testing; proceed to FD-3 only if the fixed-policy gate passes. Result: `docs/EA_MVP_FD2_TTC_VALIDATION_RESULT.md`; receipt: `runs/ea_mvp/fd2_ttc_validation_v1.json`.
+
+### 2026-10-03 — Freedom Dive FD-2 fixed-speed follow-up
+
+1. Preserved the original FD-2 FAIL and added versioned probes for corrected speed-step geometry, a 500-ms cue gate, cue latching, and monotone TTC. Corrected speed-step controls are continuous; two abrupt within-map speed switches exceed the predeclared 55-ms TTC bound. This remains unsupported under the user's fixed-speed-per-map contract.
+2. Frozen policy tests without filtering and with cue latching alone both FAIL across 0.5×–1.5×; both are preserved. The final task-independent rule **FD2-A8** latches cue visibility and clips any upward countdown bump to the previous valid countdown. With unchanged EA13 learning-on receipts (seeds 907/1009/1103), all 30 constant-speed traces passed: exactly one lane-0 DOWN at +1 ms, one UP +10 ms later, exact repeated traces, unchanged weights. Matched untrained control stayed silent. No training or game/score selection occurred.
+3. Fixed-speed one-note FD-2 admission is **PASS under FD2-A8**. Multiple simultaneous heads, lane fanout, hold identity/tails, full-map scoring, and mid-map speed changes remain untested. Next stage is FD-3 task-free multi-cue admission. See `docs/EA_MVP_FD2_FIXED_SPEED_FOLLOWUP_RESULT.md`, frozen config/runner, and raw receipt. Strict biology and the saved Pygame recreation remain unchanged.
+
+### FD-5 harness iterations and verification availability
+
+- The first single-episode ReplayPlayer test compiled after fixing init-only capture fields but timed out waiting for replay completion at the 261-second map. Kept as a documented host limitation.
+- First segmented capture grouped transitions that shared a timestamp into one held-key frame; this collapsed legitimate within-frame transitions. It also allowed adjacent segment action windows to overlap. These traces were not accepted.
+- The next capture retained one replay frame per key transition, but its segment end was extended without adding notes that started in the extension. Six expected late-segment transitions were therefore absent from the ReplayPlayer capture. The following input builder fixed disjoint windows and includes every note represented by its transitions; final audit confirms all 2,618 transitions exactly.
+- Runs that started a segment at chart time zero showed callback order races for the first miss/hit. The final harness adds a fixed one-second neutral lead-in while maintaining exact chart-relative transition times. Per-object labels and non-miss offsets then matched across the full chart.
+- Segment ReplayPlayer totals still varied because callbacks for misses and hits can be ordered differently in this accelerated test host. This is the remaining FD-5 partial gate, not a change to the policy.
+- The parity runner initially referenced an undefined normalization helper after the two .NET runs. Added the helper, reran the fixed runner end-to-end; both ReplayPlayer runs passed and normalized events/action transitions repeated exactly. Final separate audit is `runs/ea_mvp/fd5_lazer_parity_v5.json`.
+- `pytest` was not installed as a command or Python module (`pytest` and `python -m pytest` unavailable). The FD-6 validator and Pygame dummy-device smoke run passed directly.
+
+## 2026-10-04 — EA-MVP training explainer and recorded playback
+
+Created `docs/EA_MVP_FLY_TRAINING_EXPLAINER.md` and the self-contained `work/fly_training_playback.html` from the saved seed-907 fixed-speed training receipt and EA-13 broad-evaluation receipt. The viewer plays all 500 actual repeated lane-0 training trials, then three clearly labeled frozen test patterns (lane switches, chords, holds), with learned, shuffled-teaching, and initial-weight test arms. It shows saved key events, judgements, artificial DAN events, and the seven recorded KC→MBON weight histories. No neural run, training, map-score tuning, assumption change, or strict-biology reinterpretation occurred.
+
+Verification: the builder checked 500 trials, first press at trial 359, 358 MISS/142 PERFECT, seven changed slots, and 8/8/3 later test notes. A separate data check verified weight continuity across all training trials; `node --check` passed the embedded JavaScript, and an offline interaction harness passed the MISS update, first press, chord/hold stage, and untrained-arm controls. Browser Use rejected direct opening of the local `file://` HTML under its URL policy, so visual browser QA was unavailable. The deliverable remains a local standalone HTML file for the user to open; no project stage status changed.
+
+## 2026-10-04 — FD-4 same-lane repeat observation added to explainer
+
+The user identified a `11`/`1111` weakness despite `121`-like returns working. Audited the existing frozen FD-4 chart input, actions and judgements without rerunning or changing the model. For consecutive same-lane taps 250–300 ms apart, direct repeats with no strictly intermediate other-lane note had 53 MISS/158 second notes; returns after another-lane note had 0 MISS/27. One direct repeat pressed 166 ms early and was logged as `null_press`; only one DOWN attempt in the whole chart was suppressed for an already-held key. This points toward engineered cue selection/TTC/readout rearming rather than simply key release, but is an observational inference, not a proven cause. Added the reproducible tally at `work/analyze_fd4_lane_repeats.py`, a dedicated limitation section to the report, and a visible caveat to the HTML viewer. No training, simulation, assumption change, or strict-biology reinterpretation occurred.
+
+## 2026-10-04 — iteration-one documentation and release handoff
+
+The user declared Spacefly iteration 1 complete and requested a tidy public record and GitHub commit. Added `docs/EA_MVP_ITERATION_1_SUMMARY.md` as the concise endpoint, updated README/status/index/result navigation, and marked the EA and FD roadmaps as completed while retaining their original gates and historical failure text. Added the post-EA-13 FD-3/FD-4 engineered boundary and dense same-lane observation to `ASSUMPTIONS.md`. Copied the self-contained training viewer and editable template into `visualization/`, its rebuild/check tools and the repeat tally into `scripts/`, and made `work/` plus .NET `bin/`/`obj/` local-only to avoid publishing scratch data or a third-party lazer source clone. The original `work/` copies remain local, preserving the prior log's paths. The raw `runs/` receipts and imported music remain local; the HTML embeds the compact recorded playback. No neural retraining, model parameter change, game-score tuning, or strict-biology reinterpretation occurred in this documentation handoff.
+
+Release verification: an initial `python -m unittest discover -s tests` from system Python failed imports because `src` was not on `PYTHONPATH` and also encountered missing local historical files. With `PYTHONPATH=src`, the broad historical suite entered intensive older simulations and was stopped rather than represented as a pass. Focused EA-MVP (7), lazer (31), playable game (10), online position (8), environment (24), windows (14), and CLI (3) suites passed: **97/97**. The separate legacy first-action file ran six passes and one missing-local-ledger error (`docs/figures/a2_mvp_coupled/uninterrupted_ledger.json`). The viewer builder, offline Node interaction check, direct-repeat tally, and docs catalog check passed. `git diff --check` flags intentional Markdown hard-line-break spaces in historical reports and blank EOF lines in source files whose pinned SHA-256 hashes must not be rewritten as cosmetic cleanup.
+
+Staged-byte audit: Git's Windows text conversion initially changed the final CRLF byte of `src/project_b/ea_mvp/screen_ttc.py`, breaking the source SHA-256 pinned in the FD-4 protocol despite unchanged working-tree content. Added a narrow `.gitattributes` `-text` rule for that frozen file and reindexed it with `git add --renormalize`; the staged and working SHA-256 now both match `0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a`. No model semantics or protocol values changed.

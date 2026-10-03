@@ -1,0 +1,13 @@
+{
+  "protocol_id": "EA-MVP-EA5.1-TEMPORAL-CREDIT-v1",
+  "status": "frozen_before_task_independent_probe",
+  "engineering_assumption": "EA-06 candidate hard eligibility windows are artificial timescales because the exact KC-to-MBON timing rule is unavailable for this reduced simulator",
+  "source_teacher_protocol": "configs/ea_mvp_teacher_local_protocol.json",
+  "position_traversal_us": 500000,
+  "hypothetical_dan_gate_us": 642000,
+  "candidate_windows_us": [150000, 250000, 500000],
+  "local_intervention_fraction": 0.2,
+  "decision_rule": "Select the shortest candidate admitting at least three distinct audited KC source IDs whose simultaneous bounded 20%-weight intervention produces a first DOWN on a position-only traversal; otherwise no candidate. Do not use a game, note judgement, signed error, or final task score in selection.",
+  "replays_per_candidate": 2,
+  "scope": "Task-independent controllability only; a PASS does not imply learning or authorize altering the EA-5 v1 receipt"
+}

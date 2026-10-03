@@ -1,0 +1,57 @@
+{
+  "protocol_id": "EA-MVP-FD3-MULTICUE-TASK-FREE-v2",
+  "status": "frozen_before_run",
+  "basis": "FD3 v1 did not correctly audit lane-stable UP events and its one-frame blank was shorter than the fixed 10-ms key-down duration.",
+  "engineering_assumptions": {
+    "input_capacity": "At most 14 current head positions and two current hold tails (FD-1 maxima).",
+    "nearest_head": "Choose maximum normalized screen position from current frame only.",
+    "tie_rule": "Exact rendered-position ties share one timing event, fanned out to their distinct current lanes.",
+    "head_kind": "Current rendered head shape labels tap versus hold; no note ID or schedule is exposed.",
+    "hold_state": "Track at most two held lanes; suppress tap UP for a held lane; emit UP only when that lane's visible tail reaches position 0.",
+    "readout_rearm": "Require 11 consecutive 1-ms blank frames after cue end: the fixed 10-ms key hold plus one frame for release/rearm before the next cue.",
+    "key_pairing": "Every UP is routed to the lane set retained from its matching DOWN, independent of the current cue lane."
+  },
+  "timing_input": "Frozen FD2-A8 monotone TTC transform; 50-ms window; fixed 500-ms horizon.",
+  "task_free_cases": {
+    "head_counts": [
+      0,
+      1,
+      2,
+      6,
+      14
+    ],
+    "tie_lane_sets": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "active_holds": 2,
+    "cue_classes": [
+      "full single",
+      "full next cue after rearm",
+      "partially observed cue",
+      "full same-position two-lane cue",
+      "two independent hold-tail releases"
+    ]
+  },
+  "frozen_policy": {
+    "receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+    "weights_unchanged": true,
+    "no_training": true,
+    "no_game_or_score": true,
+    "repeat_count": 2
+  },
+  "pass": "Capacity/selection exact and deterministic; first and second full cues each issue a matching lane DOWN/UP; a partial cue may be silent but cannot issue another lane; chord issues both tied lanes and no others; every UP matches its original DOWN; two hold states release independently; MBON voltage finite and below threshold; weights unchanged; exact repeats.",
+  "frozen_code_sha256": {
+    "runner": "3f10989d271e9cac96350fb408b4f8dcf9b198eb7a71d25c2ea3304420ce69d6",
+    "adapter": "d9341ce72e4fde02427bdf5bf5d5faca3b3b5f21f4c6996111b2a68aba41884a",
+    "screen_ttc_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

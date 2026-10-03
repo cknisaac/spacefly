@@ -1,0 +1,30 @@
+{
+  "protocol_id": "EA-MVP-FD4-CHART-PLAYBACK-v4",
+  "status": "frozen_before_run",
+  "basis": "FD4 v3 was deterministic and achieved all 1,310 object head/tap judgements but contained one redundant DOWN while the key was already held; the game ignored it as repeat_down. This version adds a fixed output key-state guard, not a timing or score change.",
+  "chart": "xi - FREEDOM DiVE (razlteh), FREEDOM DiVE 4K Normal",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "source_frame_sha256": "660115c62d0656780742c838c7f6f201084e0dd1720bf5ed4fb270c183b30ba7",
+  "engineering_assumptions": [
+    "Use v3's frozen per-lane visual histories, selected-head policy, coordinate crop/inversion, renderer-visible head kinds and hold-tail release.",
+    "Keep a fixed set of currently pressed output lanes. Suppress a duplicate DOWN on a lane already held; preserve the original key state until its matching UP.",
+    "One continuous connectome-derived timing circuit, EA13 seed 907 weights, 11-ms blank rearm, and no game feedback remain unchanged."
+  ],
+  "task_free_control": "Fixed key router receives DOWN, duplicate DOWN, UP on the same lane; must deliver one DOWN/UP pair, suppress exactly the duplicate, and end released.",
+  "repeats": 2,
+  "no_training": true,
+  "no_game_feedback": true,
+  "no_score_tuning": true,
+  "pass": "Exact chart/hash and object counts; task-free key guard passes; deterministic full replay; one neural initialization; unchanged weights; all 1,310 objects receive a final head/tap judgement; delivered DOWN/UP counts match; no stuck output/game keys.",
+  "frozen_code_sha256": {
+    "beatmap_parser": "95a80ec78e693fd678afb0663ef2a9ace00c731aec7f17e3352ad6ed22b1fbf5",
+    "typed_builder": "e18952f752b73c95a36d0563bf8fe94a548f06b7ef06045ab529e2fe2677eb3b",
+    "scroll_map": "4bfbfbb6097feaec9bcbd9b97c924e4ef24503bb9e464cb85a8fba0daa43a742",
+    "spiking_simulator": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "runner": "51d7e246e9280da201a5154204d1975ea2588a4abb7c1afcf46f54a30b5b3398",
+    "game_engine": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "adapter": "83f97376870b0826c37978b1bb7de09522a980712dd2b4bcb538d369f4050992",
+    "policy_source": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "fd2_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

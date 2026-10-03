@@ -1,0 +1,28 @@
+{
+  "protocol_id": "EA-MVP-FD4-TYPED-RENDERER-STREAM-v1",
+  "status": "frozen_before_run",
+  "claim_boundary": "Generate current visible render tuples from the pinned chart and existing ScrollMap for a later fly run; no fly, game, score, or learning is executed here.",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "engineering_assumption": "A visible long-note body/head is a rendered shape feature; encode the current head kind (tap or hold) from the shape the existing renderer draws. The fly stream includes only lane, current normalized screen position, head/tail part, and visible head shape; no note ID, start/end time, judgement, or future schedule.",
+  "viewport": {
+    "width": 1050,
+    "height": 760,
+    "top_px": 75,
+    "strike_line_y_px": 635,
+    "playfield_height_px": 560,
+    "scroll_range_us": 1435625.0
+  },
+  "bounds": {
+    "head_top_overdraw_px": 24,
+    "head_bottom_overdraw_px": 35,
+    "tail_top_overdraw_px": 22,
+    "tail_bottom_overdraw_px": 30
+  },
+  "no_training": true,
+  "no_game_or_score": true,
+  "frozen_code_sha256": {
+    "runner": "e18952f752b73c95a36d0563bf8fe94a548f06b7ef06045ab529e2fe2677eb3b",
+    "playable_scroll_map": "4bfbfbb6097feaec9bcbd9b97c924e4ef24503bb9e464cb85a8fba0daa43a742",
+    "beatmap_parser": "95a80ec78e693fd678afb0663ef2a9ace00c731aec7f17e3352ad6ed22b1fbf5"
+  }
+}

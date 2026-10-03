@@ -1,0 +1,231 @@
+{
+  "protocol_id": "EA-MVP-EA13-BROAD-TRANSFER-v1",
+  "status": "frozen_before_run",
+  "purpose": "Evaluate retained lane-0 timing weights on fresh four-lane taps, fresh chord lane sets, and fresh sequential hold durations. No training or assumption changes.",
+  "claim_boundary": "ENGINEERING ASSUMPTIONS retained: fixed 500-ms sensory approach, fixed lane selector, equal-time visible-lane-set chord fanout, fixed tail-position hold release. Results are headless engineering transfer checks, not biological evidence or desktop osu!lazer play.",
+  "fixed_conditions": {
+    "od": 8,
+    "ruleset": "lazer",
+    "visible_lead_us": 500000,
+    "dt_us": 1000,
+    "seeds": [
+      907,
+      1009,
+      1103
+    ],
+    "arms": [
+      "learning_on",
+      "shuffled_teaching",
+      "untrained"
+    ],
+    "replays_per_case": 2,
+    "plasticity_during_evaluation": false,
+    "teaching_during_evaluation": false,
+    "training_during_evaluation": false
+  },
+  "fresh_patterns": {
+    "dense_lane_switch_taps": {
+      "note_interval_us": 550000,
+      "notes": [
+        {
+          "note_id": "ea13-t0",
+          "lane": 2,
+          "time_us": 500000
+        },
+        {
+          "note_id": "ea13-t1",
+          "lane": 0,
+          "time_us": 1050000
+        },
+        {
+          "note_id": "ea13-t2",
+          "lane": 3,
+          "time_us": 1600000
+        },
+        {
+          "note_id": "ea13-t3",
+          "lane": 1,
+          "time_us": 2150000
+        },
+        {
+          "note_id": "ea13-t4",
+          "lane": 2,
+          "time_us": 2700000
+        },
+        {
+          "note_id": "ea13-t5",
+          "lane": 1,
+          "time_us": 3250000
+        },
+        {
+          "note_id": "ea13-t6",
+          "lane": 0,
+          "time_us": 3800000
+        },
+        {
+          "note_id": "ea13-t7",
+          "lane": 3,
+          "time_us": 4350000
+        }
+      ],
+      "pass_criteria": [
+        "one DOWN and one UP per note, on the correct lane",
+        "each DOWN within the frozen OD8 Good-or-better window, +/-73500us",
+        "all eight judgements Good or better",
+        "untrained control has no key actions and misses all notes"
+      ]
+    },
+    "new_chord_lane_sets": {
+      "chords": [
+        [
+          {
+            "note_id": "ea13-c0-l0",
+            "lane": 0,
+            "time_us": 500000
+          },
+          {
+            "note_id": "ea13-c0-l2",
+            "lane": 2,
+            "time_us": 500000
+          }
+        ],
+        [
+          {
+            "note_id": "ea13-c1-l1",
+            "lane": 1,
+            "time_us": 1050000
+          },
+          {
+            "note_id": "ea13-c1-l3",
+            "lane": 3,
+            "time_us": 1050000
+          }
+        ],
+        [
+          {
+            "note_id": "ea13-c2-l0",
+            "lane": 0,
+            "time_us": 1600000
+          },
+          {
+            "note_id": "ea13-c2-l1",
+            "lane": 1,
+            "time_us": 1600000
+          },
+          {
+            "note_id": "ea13-c2-l2",
+            "lane": 2,
+            "time_us": 1600000
+          },
+          {
+            "note_id": "ea13-c2-l3",
+            "lane": 3,
+            "time_us": 1600000
+          }
+        ]
+      ],
+      "pass_criteria": [
+        "one DOWN and one UP per note on the correct lane",
+        "all eight note judgements Good or better",
+        "untrained control has no key actions and misses all notes"
+      ]
+    },
+    "new_sequential_hold_lengths": {
+      "notes": [
+        {
+          "note_id": "ea13-h0",
+          "lane": 2,
+          "time_us": 500000,
+          "end_time_us": 1100000
+        },
+        {
+          "note_id": "ea13-h1",
+          "lane": 0,
+          "time_us": 1650000,
+          "end_time_us": 3350000
+        },
+        {
+          "note_id": "ea13-h2",
+          "lane": 1,
+          "time_us": 3900000,
+          "end_time_us": 6700000
+        }
+      ],
+      "pass_criteria": [
+        "one DOWN at each head + 1000us and one UP exactly at each tail on the correct lane",
+        "all six head/tail judgements PERFECT with no body combo break",
+        "untrained control has no key actions and misses all six heads/tails"
+      ]
+    }
+  },
+  "interpretation": {
+    "overall_pass": "All trained-weight cases pass their per-pattern action and judgement criteria for all three pre-existing seeds; all untrained controls remain silent/miss; every repeated trace matches exactly.",
+    "shuffled_teaching": "Diagnostic comparison only. Report all performance; equal shuffled performance does not support contingency-specific learning.",
+    "stop_rule": "Preserve and report any failure. Do not change parameters, patterns, code, or assumptions and do not rerun an amended protocol as EA13 v1. Any new or revised assumption must be presented before continuing."
+  },
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "weight_receipts": {
+    "907": {
+      "learning_on": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+        "sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f"
+      },
+      "shuffled_teaching": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_shuffled_teaching.json.gz",
+        "sha256": "0c8ae2ee84b4931735f426114211b54113ac072ed49c14153074bc8e49a45a2d"
+      },
+      "untrained": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_untrained.json.gz",
+        "sha256": "e0737bd4a96de955e32557ab5d2c0d7e49aa2ad85d52783fd2e5172e0b67b58f"
+      }
+    },
+    "1009": {
+      "learning_on": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_learning_on.json.gz",
+        "sha256": "cf38df054196d21574c93729cc4598029a4efbd8afb7c64ddf9bc1d3384e35bd"
+      },
+      "shuffled_teaching": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_shuffled_teaching.json.gz",
+        "sha256": "28bf3ea4c38ecb610121180925dd9cd3fd403e259c50d200c8d7e17b222433e9"
+      },
+      "untrained": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_untrained.json.gz",
+        "sha256": "9f92437eec8ec1796028f54b87be2ab608e92869e7ef3abba5d66d31e0f1f5b8"
+      }
+    },
+    "1103": {
+      "learning_on": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_learning_on.json.gz",
+        "sha256": "8c6644bcc0aa6334ffd599e408a0483b551af9f7d983bc53cfeec50bebe44e9b"
+      },
+      "shuffled_teaching": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_shuffled_teaching.json.gz",
+        "sha256": "1c84a4bd2f819825baf737fd1b54fb809c676789615a01d86ce429d6051c3f7e"
+      },
+      "untrained": {
+        "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_untrained.json.gz",
+        "sha256": "a030a951db04f24fa69ee7d2afb931b005ba3f19c36420b376d9436a4df15434"
+      }
+    }
+  },
+  "code_sha256": {
+    "scripts/run_ea_mvp_broad_eval.py": "d456c7aa410dd835e9120feb6553078184760d94fc7c9c109d7e3f9a04d161c2",
+    "src/project_b/ea_mvp/continuous_chords.py": "39d83ccf4d31c6e41403dbbe4be6e1e00d807b1e1775f059b5ce8f542128a52a",
+    "src/project_b/ea_mvp/continuous_holds.py": "1ce903ff8948d4ddd17762c8059fdb393cb7f8ddc2f447fb245b0958a524ed22",
+    "src/project_b/ea_mvp/continuous_multilane.py": "42341749d8e621ea5f196428afae25ad2c5104102972b28f66e5b81e38e0b610",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_policy.py": "f57884b8a720784f75ee57b40301fdf6325521abb6a410b7510d27e7eec2f94f",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/malecns_continuous_position_learning/encoder.py": "38e148c3afae0a5d6709eb65a195695dbeb1dc12bd9dd3e0d448a1dab69a0d37",
+    "src/project_b/malecns_continuous_position_learning/probe.py": "45964f6856d22209039ecc2c0ad2a15dbd3532bf605e87e522fa33d449ad5ee9",
+    "src/project_b/simulation/spiking.py": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "src/project_b/synapses/graph.py": "6c1fd00108ec2b16286b3a9e0afe950cb23823a2158e798ab1be0d8cc9c20663",
+    "src/project_b/osu/adapter.py": "257c9f782a08d1b8a1c04cf420813f7bf8212b59e15023964ee07bdfb0be0124",
+    "src/project_b/osu/mania_game.py": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "src/project_b/osu/scoring.py": "525681ec92e4917e8bc354a6ab3dd2977c012c2edb720b481762eaa3451c8173",
+    "src/project_b/osu/windows.py": "77f982572cebe93a098303eb2ce191e26c5d52f1e01ac1fa433efc9157df8e2d",
+    "src/project_b/osu/types.py": "121894dcec703a0c39fd5d954ddb568d6a1cc0ab0522c4da7d78d0326cb1be81",
+    "src/project_b/osu/config.py": "0aae969ceacf809e5c744145415b06ca114d43ac174ae006730ed43da79a9adc"
+  }
+}

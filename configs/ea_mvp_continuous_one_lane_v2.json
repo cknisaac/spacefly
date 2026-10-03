@@ -1,0 +1,46 @@
+{
+  "arms": [
+    "retained_learned_weights",
+    "matched_initial_weights"
+  ],
+  "claim_boundary": "ENGINEERING ASSUMPTION fixed-speed, one-lane tap playback with retained fly weights; no within-map learning, other lanes or holds",
+  "code_sha256": {
+    "scripts/run_ea_mvp_continuous_one_lane_v2.py": "86ddb8bfe7882c7910178f62f5498cde8c0bdc7d7c76c08176e031eaec35b176",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/osu/mania_game.py": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6"
+  },
+  "dt_us": 1000,
+  "engineering_assumption": "ENGINEERING ASSUMPTION: after each blank-to-visible transition, rearm the fixed readout only after a KC spike from the newly visible cue. Preserve one neural simulator and all fly weights continuously across the map. The cue-local rearm rule passed the frozen task-free probe before this game run.",
+  "learned_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "learned_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "limitations": "Three separated taps only. This is continuous neural playback, not training inside a map, four-key play, chords, holds or live osu!lazer.",
+  "notes": [
+    {
+      "lane": 0,
+      "note_id": "continuous-1",
+      "time_us": 500000
+    },
+    {
+      "lane": 0,
+      "note_id": "continuous-2",
+      "time_us": 1250000
+    },
+    {
+      "lane": 0,
+      "note_id": "continuous-3",
+      "time_us": 2000000
+    }
+  ],
+  "od": 8,
+  "primary_gate": "Learned arm: exactly three first DOWNs, one per note, all within \u00b173500us; exactly three UPs, no extras; all three headless tap judgements Good-or-better; one neural initialization and three cue-local readout rearms; exact two-run replay. Matched initial weights: no DOWN and three MISS. Weights immutable throughout playback. Feedback labels delivered only when available.",
+  "protocol_id": "EA-MVP-EA7-CONTINUOUS-ONE-LANE-v2",
+  "readout_probe_receipt": "runs/ea_mvp/readout_rearm_probe_v1.json",
+  "readout_probe_receipt_sha256": "ca61c0841e32ae62d27b9ad903e9254ca36592bf0f7ee54246ef29edf26c9836",
+  "replays_per_arm": 2,
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "status": "frozen_before_continuous_map_v2",
+  "visible_lead_us": 500000,
+  "weight_selection": "Use the first completed seed in the predeclared fixed-speed list (907), before observing this three-note map. Keep its final retained weights fixed. Matched initial weights from the same receipt are the no-learning control."
+}

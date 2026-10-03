@@ -5,8 +5,11 @@ __pycache__/
 .coverage
 .venv/
 runs/
+/work/
 data/raw/
 data/processed/
+**/bin/
+**/obj/
 
 # Public source tree: retain small summary figures, leave bulk diagnostic records local.
 /docs/figures/**/*.pkl

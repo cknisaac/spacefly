@@ -2,6 +2,7 @@
 
 from .config import OsuConfig, load_config
 from .environment import GameEnvironment, play
+from .scoring import ManiaTapScore, TapScoreEvent, calculate_tap_score
 from .types import (
     ActionDisposition,
     ActionRecord,
@@ -26,8 +27,11 @@ __all__ = [
     "KeyActionKind",
     "ManiaHitWindows",
     "ManiaJudgement",
+    "ManiaTapScore",
     "OsuConfig",
     "TapNote",
+    "TapScoreEvent",
+    "calculate_tap_score",
     "load_config",
     "play",
 ]

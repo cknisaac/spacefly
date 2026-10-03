@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EA-MVP fly learner — recorded training and frozen tests</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, Segoe UI, sans-serif; background: #0b1220; color: #eef3fc; }
+    * { box-sizing: border-box; }
+    body { max-width: 1180px; margin: 0 auto; padding: 24px 18px 40px; }
+    h1 { font-size: clamp(1.45rem, 2.6vw, 2rem); margin: 0 0 6px; font-weight: 650; }
+    h2 { font-size: 1.05rem; margin: 0 0 12px; font-weight: 600; }
+    p { margin: 0; line-height: 1.5; }
+    .subhead, .muted { color: #aabbd0; }
+    .subhead { max-width: 850px; margin-bottom: 20px; }
+    .boundary { color: #ffe4a5; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 16px; background: #15243a; border: 1px solid #304159; border-radius: 12px; margin-bottom: 18px; }
+    .toolbar label { display: grid; gap: 4px; color: #c1d0e1; font-size: .84rem; }
+    button, select, input { font: inherit; }
+    button, select { color: #eef3fc; background: #243a55; border: 1px solid #4b6685; border-radius: 8px; padding: 8px 11px; min-height: 39px; }
+    button:hover, select:hover { background: #31506f; }
+    button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid #9fdaff; outline-offset: 2px; }
+    #play { background: #4c8bd0; border-color: #71aff2; color: #08111d; font-weight: 650; min-width: 88px; }
+    #play:hover { background: #78b5f1; }
+    .range-box { display: flex; align-items: end; gap: 8px; flex: 1 1 285px; }
+    .range-box label { flex: 1; }
+    .range-box input { width: 100%; accent-color: #79b8ee; }
+    .layout { display: grid; grid-template-columns: minmax(290px, 440px) minmax(320px, 1fr); gap: 18px; align-items: start; }
+    .panel { background: #122035; border: 1px solid #2d415a; border-radius: 12px; padding: 16px; }
+    .scene-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+    .clock { font-variant-numeric: tabular-nums; color: #aad2f2; }
+    #field { display: block; width: 100%; height: 435px; border-radius: 8px; background: #0c1525; }
+    .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 11px; color: #adbed1; font-size: .83rem; }
+    .swatch { width: 10px; height: 10px; display: inline-block; border-radius: 2px; margin-right: 5px; }
+    .swatch.note { background: #79b9fa; } .swatch.hold { background: #e29ad2; } .swatch.press { background: #f9d079; }
+    .headline { font-size: 1.2rem; font-weight: 650; margin-bottom: 4px; }
+    .status-line { min-height: 3em; color: #c4d3e5; margin-bottom: 14px; }
+    .readouts { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 16px; }
+    .readout { background: #1a2c44; border-radius: 8px; padding: 10px 12px; min-height: 65px; }
+    .readout span { display: block; color: #aabbd0; font-size: .78rem; }
+    .readout strong { display: block; margin-top: 3px; font-size: 1rem; font-variant-numeric: tabular-nums; }
+    #weightChart { width: 100%; height: 150px; display: block; background: #0e1b2d; border-radius: 8px; }
+    .chart-label { display: flex; justify-content: space-between; color: #aabbd0; font-size: .78rem; margin: 5px 0 12px; }
+    .weight-row { display: grid; grid-template-columns: 82px minmax(0,1fr) 50px; gap: 8px; align-items: center; margin: 6px 0; color: #c6d7e8; font-size: .83rem; font-variant-numeric: tabular-nums; }
+    .weight-track { height: 9px; background: #2b4059; border-radius: 4px; overflow: hidden; }
+    .weight-fill { height: 100%; background: #80baf0; }
+    .receipt { margin-top: 15px; color: #9baec4; font-size: .79rem; overflow-wrap: anywhere; }
+    .footnote { margin-top: 18px; color: #b9c8d8; font-size: .88rem; line-height: 1.55; }
+    @media (max-width: 780px) { .layout { grid-template-columns: 1fr; } #field { height: 380px; } }
+    @media (max-width: 410px) { body { padding: 16px 10px 28px; } .panel { padding: 12px; } .readouts { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <h1>Watch the EA-MVP fly learner</h1>
+  <p class="subhead">Silent playback of recorded simulation events. <span class="boundary">Only the 500 single-note trials are training.</span> Lane switches, chords, and holds are later tests with the weights frozen. This page does not rerun neurons or contain a full voltage trace.</p>
+
+  <div class="toolbar" aria-label="Playback controls">
+    <label>Stage
+      <select id="stage">
+        <option value="training">Training · 500 repeated notes</option>
+        <option value="dense_lane_switch_taps">Frozen test · lane switches</option>
+        <option value="new_chord_lane_sets">Frozen test · chords</option>
+        <option value="new_sequential_hold_lengths">Frozen test · hold notes</option>
+      </select>
+    </label>
+    <label>Test weights
+      <select id="arm">
+        <option value="learning_on">Learned weights</option>
+        <option value="shuffled_teaching">Shuffled-teaching weights</option>
+        <option value="untrained">Initial weights</option>
+      </select>
+    </label>
+    <label>Playback speed
+      <select id="speed">
+        <option value="1">1× simulated time</option>
+        <option value="5">5×</option>
+        <option value="20">20×</option>
+      </select>
+    </label>
+    <button id="play" type="button">Play</button>
+    <div class="range-box" id="trialBox">
+      <label>Training trial <strong id="trialLabel">1 / 500</strong>
+        <input id="trial" type="range" min="1" max="500" value="1" step="1">
+      </label>
+      <button id="firstPress" type="button">First press →</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <section class="panel">
+      <div class="scene-head"><h2 id="sceneTitle">Repeated lane-0 note</h2><span class="clock" id="clock">0 ms</span></div>
+      <canvas id="field" role="img" aria-label="Four-lane note field showing recorded key actions and judgements"></canvas>
+      <div class="legend"><span><i class="swatch note"></i>Tap</span><span><i class="swatch hold"></i>Hold</span><span><i class="swatch press"></i>Recent key press</span></div>
+    </section>
+    <section class="panel">
+      <div class="headline" id="headline">Trial 1 of 500</div>
+      <p class="status-line" id="description">The note approaches. The selected synapses still have their starting strengths.</p>
+      <div class="readouts">
+        <div class="readout"><span>Game judgement</span><strong id="judgement">Pending</strong></div>
+        <div class="readout"><span>Key action</span><strong id="keyAction">None yet</strong></div>
+        <div class="readout"><span>DAN teaching</span><strong id="teaching">Pending</strong></div>
+        <div class="readout"><span>Recorded progress</span><strong id="progress">0 / 500 trials</strong></div>
+      </div>
+      <h2>Seven synapses that changed during training</h2>
+      <canvas id="weightChart" role="img" aria-label="Mean strength of the seven changed KC to MBON synapses over 500 trials"></canvas>
+      <div class="chart-label"><span>Relative to trial 1</span><span>First press: trial 359</span></div>
+      <div id="weightRows"></div>
+      <p class="receipt" id="receipt"></p>
+    </section>
+  </div>
+
+  <p class="footnote">The note display is reconstructed from each trial’s fixed 500 ms approach and the saved test note times. Key actions, judgements, dopamine pulses, credited spikes, and weight changes come from the saved receipts. A highlighted key press stays visible briefly so a 10 ms tap can be seen at normal display frame rates.</p>
+  <p class="footnote"><strong>Full-song limitation:</strong> these frozen pattern tests do not show the dense same-lane repeats in <em>Freedom Dive</em>. In its saved chart trace, 53/158 direct same-lane tap repeats at a 250–300 ms gap missed, versus 0/27 returns after another lane at that gap. This is a descriptive comparison, not a controlled cause test. See the accompanying report for the `11` versus `121` analysis.</p>
+
+  <script type="application/json" id="ea-data">__EA_MVP_DATA__</script>
+  <script>
+  (() => {
+    'use strict';
+    const DATA = JSON.parse(document.getElementById('ea-data').textContent);
+    const training = DATA.training;
+    const order = ['dense_lane_switch_taps', 'new_chord_lane_sets', 'new_sequential_hold_lengths'];
+    const el = id => document.getElementById(id);
+    const field = el('field'), fieldCtx = field.getContext('2d');
+    const graph = el('weightChart'), graphCtx = graph.getContext('2d');
+    let stage = 'training', arm = 'learning_on', trialIndex = 0, timeMs = 0, playing = false, lastStamp = 0;
+    const cumulativePerfect = [0];
+    for (const row of training.trials) cumulativePerfect.push(cumulativePerfect.at(-1) + (row.judgement === 'PERFECT' ? 1 : 0));
+    const ratios = training.trials.map(row => row.after.reduce((sum, x, i) => sum + x / training.initial[i], 0) / 7);
+    const minRatio = Math.min(.2, ...ratios);
+
+    function resizeCanvas(canvas, ctx) {
+      const dpr = window.devicePixelRatio || 1;
+      const width = canvas.clientWidth, height = canvas.clientHeight;
+      const pxW = Math.round(width * dpr), pxH = Math.round(height * dpr);
+      if (canvas.width !== pxW || canvas.height !== pxH) { canvas.width = pxW; canvas.height = pxH; }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return [width, height];
+    }
+    function currentCase() { return stage === 'training' ? null : DATA.tests[stage]; }
+    function currentActions() { return stage === 'training' ? training.trials[trialIndex].actions : currentCase().arms[arm].actions; }
+    function currentResults() {
+      if (stage === 'training') {
+        const row = training.trials[trialIndex];
+        return [[row.judgementMs, 0, row.judgement, 'training-note', 'tap']];
+      }
+      return currentCase().arms[arm].results.filter(row => row[4] === 'tap' || row[4] === 'head' || row[4] === 'tail');
+    }
+    function currentNotes() { return stage === 'training' ? [[500, 500, 0, 'training-note']] : currentCase().notes; }
+    function latestEvent(rows, index) {
+      let latest = null;
+      for (const row of rows) if (row[0] <= timeMs) latest = row; else break;
+      return latest;
+    }
+    function drawField() {
+      const [w, h] = resizeCanvas(field, fieldCtx), ctx = fieldCtx;
+      ctx.fillStyle = '#0c1525'; ctx.fillRect(0, 0, w, h);
+      const left = Math.max(12, (w - Math.min(360, w - 24)) / 2);
+      const playW = Math.min(360, w - 24), laneW = playW / 4;
+      const top = 22, hitY = h - 57, travel = hitY - top;
+      for (let lane = 0; lane < 4; lane++) {
+        ctx.fillStyle = lane % 2 ? '#1b2e47' : '#213650';
+        ctx.fillRect(left + lane * laneW, top, laneW, hitY - top + 36);
+        ctx.strokeStyle = '#3e5872'; ctx.lineWidth = 1;
+        ctx.strokeRect(left + lane * laneW, top, laneW, hitY - top + 36);
+      }
+      const actions = currentActions(), results = currentResults();
+      for (const [start, end, lane, id] of currentNotes()) {
+        const resolved = results.find(row => row[3] === id && (row[4] === 'tap' || row[4] === 'tail'));
+        if (resolved && timeMs > resolved[0] + 45) continue;
+        if (timeMs < start - 500 || timeMs > end + 180) continue;
+        let headY = hitY - (start - timeMs) * travel / 500;
+        const x = left + lane * laneW + 8;
+        if (end > start) {
+          const tailY = hitY - (end - timeMs) * travel / 500;
+          if (timeMs > start) headY = hitY;
+          const bodyTop = Math.max(top, Math.min(headY, tailY));
+          const bodyBottom = Math.min(hitY + 2, Math.max(headY, tailY));
+          if (bodyBottom > bodyTop) { ctx.fillStyle = '#9c70a3'; ctx.fillRect(x + 8, bodyTop, laneW - 32, bodyBottom - bodyTop); }
+          if (tailY > top - 12 && tailY < hitY + 20) { ctx.fillStyle = '#e29ad2'; ctx.fillRect(x + 3, tailY - 6, laneW - 22, 12); }
+        }
+        if (headY > top - 14 && headY < hitY + 22) {
+          ctx.fillStyle = end > start ? '#e29ad2' : '#79b9fa';
+          ctx.fillRect(x, headY - 10, laneW - 16, 20);
+          ctx.strokeStyle = '#f0f6ff'; ctx.lineWidth = 1; ctx.strokeRect(x, headY - 10, laneW - 16, 20);
+        }
+      }
+      ctx.strokeStyle = '#f8d185'; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(left, hitY); ctx.lineTo(left + playW, hitY); ctx.stroke();
+      ctx.textAlign = 'center'; ctx.font = '600 17px system-ui';
+      const keys = ['D', 'F', 'J', 'K'];
+      for (let lane = 0; lane < 4; lane++) {
+        let last = null, lastDown = null;
+        for (const action of actions) if (action[1] === lane && action[0] <= timeMs) {
+          last = action; if (action[2]) lastDown = action;
+        }
+        const down = last && last[2];
+        const flash = lastDown && timeMs - lastDown[0] < 160;
+        if (down || flash) {
+          ctx.globalAlpha = down ? .55 : .28;
+          ctx.fillStyle = '#f9d079'; ctx.fillRect(left + lane * laneW + 3, hitY - 28, laneW - 6, 63);
+          ctx.globalAlpha = 1;
+        }
+        ctx.fillStyle = down ? '#ffffff' : '#c0d0e1';
+        ctx.fillText(keys[lane], left + (lane + .5) * laneW, hitY + 25);
+      }
+      const recent = latestEvent(results);
+      if (recent && timeMs - recent[0] < 370) {
+        ctx.textAlign = 'left'; ctx.font = '600 18px system-ui';
+        ctx.fillStyle = recent[2] === 'MISS' ? '#ffa794' : '#b5edc1';
+        ctx.fillText(recent[2], left + 8, top + 26);
+      }
+      if (stage === 'training') {
+        const row = training.trials[trialIndex];
+        if (row.pulseMs !== null && timeMs >= row.pulseMs && timeMs < row.pulseMs + 20) {
+          ctx.textAlign = 'right'; ctx.font = '500 14px system-ui'; ctx.fillStyle = '#ffcb8a';
+          ctx.fillText('Artificial DAN pulse', left + playW - 8, top + 25);
+        }
+      }
+    }
+    function activeWeights() {
+      if (stage !== 'training') return arm === 'untrained' ? training.initial : training.final;
+      const row = training.trials[trialIndex];
+      return row.danSpikeMs !== null && timeMs >= row.danSpikeMs ? row.after : row.before;
+    }
+    function drawWeightChart() {
+      const [w, h] = resizeCanvas(graph, graphCtx), ctx = graphCtx;
+      ctx.fillStyle = '#0e1b2d'; ctx.fillRect(0, 0, w, h);
+      const left = 40, right = w - 12, top = 14, bottom = h - 29;
+      const x = n => left + n / 500 * (right - left);
+      const y = ratio => bottom - (ratio - minRatio) / (1.02 - minRatio) * (bottom - top);
+      ctx.strokeStyle = '#39536f'; ctx.lineWidth = 1;
+      for (const value of [.2, .6, 1]) {
+        ctx.beginPath(); ctx.moveTo(left, y(value)); ctx.lineTo(right, y(value)); ctx.stroke();
+        ctx.fillStyle = '#a6b9ce'; ctx.font = '12px system-ui'; ctx.textAlign = 'right'; ctx.fillText(`${Math.round(value * 100)}%`, left - 5, y(value) + 4);
+      }
+      ctx.strokeStyle = '#91c4f2'; ctx.lineWidth = 2; ctx.beginPath();
+      ctx.moveTo(x(0), y(1));
+      ratios.forEach((ratio, i) => ctx.lineTo(x(i + 1), y(ratio)));
+      ctx.stroke();
+      const firstX = x(training.firstPress);
+      ctx.strokeStyle = '#f1cb8e'; ctx.setLineDash([4, 4]);
+      ctx.beginPath(); ctx.moveTo(firstX, top); ctx.lineTo(firstX, bottom); ctx.stroke(); ctx.setLineDash([]);
+      const currentTrial = stage === 'training' ? trialIndex + (timeMs / training.trialMs) : 500;
+      const current = activeWeights().reduce((sum, val, i) => sum + val / training.initial[i], 0) / 7;
+      ctx.fillStyle = '#fff2bd'; ctx.beginPath(); ctx.arc(x(currentTrial), y(current), 5, 0, Math.PI * 2); ctx.fill();
+      ctx.textAlign = 'center'; ctx.font = '12px system-ui'; ctx.fillStyle = '#a6b9ce';
+      ctx.fillText('0', x(0), h - 9); ctx.fillText('359', firstX, h - 9); ctx.fillText('500 trials', x(500) - 20, h - 9);
+    }
+    function updateWeightRows() {
+      const weights = activeWeights();
+      el('weightRows').innerHTML = weights.map((value, i) => {
+        const pct = Math.max(0, Math.min(100, value / training.initial[i] * 100));
+        return `<div class="weight-row"><span>KC ${training.kcIds[i]}</span><span class="weight-track"><span class="weight-fill" style="display:block;width:${pct.toFixed(2)}%"></span></span><span>${pct.toFixed(0)}%</span></div>`;
+      }).join('');
+    }
+    function updateLabels() {
+      el('clock').textContent = `${Math.round(timeMs).toLocaleString()} ms`;
+      el('trialLabel').textContent = `${trialIndex + 1} / 500`;
+      el('trial').value = String(trialIndex + 1);
+      el('arm').disabled = stage === 'training';
+      el('trialBox').hidden = stage !== 'training';
+      const actions = currentActions();
+      const lastAction = latestEvent(actions);
+      el('keyAction').textContent = lastAction ? `${lastAction[2] ? 'DOWN' : 'UP'} ${'DFJK'[lastAction[1]]} at ${lastAction[0].toFixed(0)} ms` : 'None yet';
+      if (stage === 'training') {
+        const row = training.trials[trialIndex];
+        const known = timeMs >= row.judgementMs;
+        const delivered = timeMs >= row.feedbackMs;
+        el('sceneTitle').textContent = 'Repeated lane-0 note';
+        el('headline').textContent = `Training trial ${row.n} of 500`;
+        el('judgement').textContent = known ? row.judgement : 'Pending';
+        el('teaching').textContent = !delivered ? 'Waiting for result' : row.pulseMs === null ? 'Silent after PERFECT' : timeMs < row.danSpikeMs ? 'MISS → pulse' : `3 DAN spikes; ${row.changed} weights changed`;
+        const completed = trialIndex + (delivered ? 1 : 0);
+        const perfect = cumulativePerfect[trialIndex] + (known && row.judgement === 'PERFECT' ? 1 : 0);
+        el('progress').textContent = `${completed}/500 · ${perfect} PERFECT`;
+        if (!known) el('description').textContent = 'The same 500 ms lane-0 approach repeats. Only synaptic strengths carry over to the next trial.';
+        else if (row.judgement === 'MISS') el('description').textContent = delivered ? `MISS delivered; recent KC spikes became eligible. At ${row.danSpikeMs} ms the artificial DAN spikes weaken ${row.changed} selected KC→MBON synapses.` : 'The game registered MISS. Teaching waits until the result is delivered.';
+        else el('description').textContent = 'The saved weights now produce a press. PERFECT supplies no DAN pulse, so the weights stay fixed.';
+        el('receipt').textContent = `Actual receipt: seed 907 learning-on · trial ${row.n}. Full KC and MBON voltage traces were not saved in this training receipt.`;
+      } else {
+        const test = currentCase(), rows = currentResults();
+        const judged = rows.filter(row => row[0] <= timeMs);
+        const last = judged.at(-1);
+        el('sceneTitle').textContent = test.title;
+        el('headline').textContent = `Frozen evaluation · ${test.title}`;
+        el('judgement').textContent = last ? `${last[2]} · ${judged.length}/${rows.length}` : 'Pending';
+        el('teaching').textContent = 'OFF · weights frozen';
+        el('progress').textContent = `${judged.length}/${rows.length} judgements`;
+        const armName = arm === 'learning_on' ? 'learned' : arm === 'shuffled_teaching' ? 'shuffled-teaching' : 'initial';
+        el('description').textContent = `${test.notes.length} notes with ${armName} weights. This is a later test, not another training pattern. Lane, chord, and hold handling use fixed engineered rules.`;
+        el('receipt').textContent = `Actual receipt: EA-13, seed 907, ${armName} arm. The note timeline and key events are saved; no learning occurs in this scene.`;
+      }
+    }
+    function render() { drawField(); drawWeightChart(); updateWeightRows(); updateLabels(); }
+    function setPlaying(value) { playing = value; el('play').textContent = playing ? 'Pause' : 'Play'; lastStamp = performance.now(); }
+    function setStage(value, keepPlaying = false) {
+      stage = value; timeMs = 0; el('stage').value = value;
+      if (!keepPlaying) setPlaying(false); render();
+    }
+    function advance(ms) {
+      timeMs += ms;
+      if (stage === 'training') {
+        while (timeMs >= training.trialMs) {
+          timeMs -= training.trialMs;
+          if (trialIndex < training.trials.length - 1) trialIndex++;
+          else { setStage(order[0], true); break; }
+        }
+      } else {
+        const duration = currentCase().durationMs;
+        if (timeMs >= duration) {
+          const index = order.indexOf(stage);
+          if (index < order.length - 1) setStage(order[index + 1], true);
+          else { timeMs = duration; setPlaying(false); }
+        }
+      }
+      render();
+    }
+    function tick(stamp) {
+      if (playing) advance(Math.max(0, Math.min(100, stamp - lastStamp)) * Number(el('speed').value));
+      lastStamp = stamp;
+      requestAnimationFrame(tick);
+    }
+    el('play').addEventListener('click', () => setPlaying(!playing));
+    el('stage').addEventListener('change', event => setStage(event.target.value));
+    el('arm').addEventListener('change', event => { arm = event.target.value; timeMs = 0; render(); });
+    el('trial').addEventListener('input', event => { trialIndex = Number(event.target.value) - 1; timeMs = 0; setPlaying(false); render(); });
+    el('firstPress').addEventListener('click', () => { stage = 'training'; el('stage').value = stage; trialIndex = training.firstPress - 1; timeMs = 0; setPlaying(false); render(); });
+    window.addEventListener('resize', render);
+    render(); requestAnimationFrame(tick);
+  })();
+  </script>
+</body>
+</html>

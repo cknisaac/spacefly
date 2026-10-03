@@ -1,0 +1,56 @@
+{
+  "protocol_id": "EA-MVP-FD3-MULTICUE-TASK-FREE-v1",
+  "status": "frozen_before_run",
+  "claim_boundary": "Task-free current-frame routing and frozen one-circuit responsiveness only; no chart score, learning, or claim that dense truncated cues are playable.",
+  "engineering_assumptions": {
+    "input_capacity": "At most 14 current head positions and at most two current hold tails, matching FD-1 observed maxima.",
+    "nearest_head": "Choose the visible head with maximum normalized screen position; provide only its current position and lane set to the fly adapter.",
+    "tie_rule": "Heads at exactly the same rendered position form one shared timing cue; fan out the result to their distinct current lanes.",
+    "head_kind": "Current rendered head shape labels tap versus hold; no note ID or schedule is exposed.",
+    "hold_state": "Track at most two held lanes; suppress tap UP for a held lane; emit UP only when that lane's visible tail reaches normalized position 0.",
+    "readout_rearm": "Insert one 1-ms blank frame after a selected cue ends before changing the selected lane set.",
+    "timing_input": "Reuse frozen FD2-A8 monotone TTC transform, fixed 500-ms horizon, and 50-ms past window."
+  },
+  "task_free_cases": {
+    "head_counts": [
+      0,
+      1,
+      2,
+      6,
+      14
+    ],
+    "tie_lane_sets": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "active_holds": 2,
+    "cue_classes": [
+      "full 500-ms isolated single",
+      "partially observed next cue after rearm",
+      "same-position two-lane cue",
+      "visible two-hold tail release"
+    ]
+  },
+  "frozen_policy": {
+    "receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+    "weights_unchanged": true,
+    "no_training": true,
+    "no_game_or_score": true,
+    "repeat_count": 2
+  },
+  "pass": "Frame bounds and routing are exact and deterministic; one full cue matches the FD2-A8 frozen response; lane fanout emits only tied lanes; a partial cue may be silent but must not emit an unintended lane; two hold states release only on their own visible tail; bounded finite MBON voltage and unchanged weights; exact repeats.",
+  "frozen_code_sha256": {
+    "runner": "49b5f20c35b6e7aead1e5684bf8b80d6d8da186af4708c45bbac9f073d91ac54",
+    "adapter": "4012f8578b64a412c9c5801b0c7bb77ecb496d5669fefa815c43c028e70fbe83",
+    "fd2_monotonic_runner": "4b595656d8b947fa473a00be6493a02759f7d0acc9530c29b2fb41eecdc254d8",
+    "screen_ttc_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

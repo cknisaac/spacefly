@@ -1,0 +1,45 @@
+{
+  "protocol_id": "EA-MVP-EA10-TWO-CHORD-HEADLESS-v1",
+  "status": "frozen_after_task_free_admission_before_game_run",
+  "claim_boundary": "ENGINEERING ASSUMPTION: the fixed frame readout fans shared MBON05 timing to the currently visible equal-time lane set. Sequential two-lane chords only; no unequal-time overlapping notes.",
+  "od": 8,
+  "visible_lead_us": 500000,
+  "dt_us": 1000,
+  "chords": [
+    [
+      {"note_id": "ea10-a-l0", "lane": 0, "time_us": 500000},
+      {"note_id": "ea10-a-l1", "lane": 1, "time_us": 500000}
+    ],
+    [
+      {"note_id": "ea10-b-l2", "lane": 2, "time_us": 1250000},
+      {"note_id": "ea10-b-l3", "lane": 3, "time_us": 1250000}
+    ]
+  ],
+  "arms": ["retained_lane0_trained_weights", "matched_initial_weights"],
+  "replays_per_arm": 2,
+  "weight_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "weight_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "admission_receipt": "runs/ea_mvp/chord_admission_v1.json",
+  "admission_receipt_sha256": "a05a0265bf52c361dd7d6b4cede8af567d0f580857b55388a2ac927378224b73",
+  "code_sha256": {
+    "src/project_b/ea_mvp/continuous_chords.py": "39d83ccf4d31c6e41403dbbe4be6e1e00d807b1e1775f059b5ce8f542128a52a",
+    "src/project_b/ea_mvp/continuous_multilane.py": "42341749d8e621ea5f196428afae25ad2c5104102972b28f66e5b81e38e0b610",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/malecns_continuous_position_learning/encoder.py": "38e148c3afae0a5d6709eb65a195695dbeb1dc12bd9dd3e0d448a1dab69a0d37",
+    "src/project_b/malecns_continuous_position_learning/probe.py": "45964f6856d22209039ecc2c0ad2a15dbd3532bf605e87e522fa33d449ad5ee9",
+    "src/project_b/simulation/spiking.py": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "src/project_b/synapses/graph.py": "6c1fd00108ec2b16286b3a9e0afe950cb23823a2158e798ab1be0d8cc9c20663",
+    "src/project_b/osu/mania_game.py": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "scripts/run_ea_mvp_chords.py": "62f625d786b021299b3f35d22244b7b9a5df83f3a5b7d2a20d9f66b9dc8493a9"
+  },
+  "pass_criteria": [
+    "four first DOWNs on expected lanes and within +/-73500us of note times",
+    "four headless judgements GOOD or better",
+    "exactly four DOWN and four UP actions; one neural simulation; two chord readout rearms",
+    "matched initial weights silent and all four notes MISS",
+    "weights unchanged and exact replay"
+  ]
+}

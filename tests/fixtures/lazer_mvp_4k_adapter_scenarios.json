@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "reference": {
+    "repository": "https://github.com/ppy/osu",
+    "release": "2026.1001.0-tachyon",
+    "commit": "da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9",
+    "ruleset": "osu!mania",
+    "od": 8,
+    "mods": [],
+    "rate": 1.0,
+    "scoring_mode": "ScoreV2 default"
+  },
+  "adapter": {
+    "episode_start_time_us": 0,
+    "observation_dt_us": 1000,
+    "visible_lead_us": 500000,
+    "position_at_spawn": 1.0,
+    "position_at_hitline": 0.0,
+    "scripted_policy_threshold": 0.05,
+    "scripted_key_hold_us": 1000
+  },
+  "scenarios": [
+    {
+      "id": "simultaneous_four_lane_position_chord",
+      "notes": [
+        { "id": "c0", "lane": 0, "time_us": 1000000 },
+        { "id": "c1", "lane": 1, "time_us": 1000000 },
+        { "id": "c2", "lane": 2, "time_us": 1000000 },
+        { "id": "c3", "lane": 3, "time_us": 1000000 }
+      ]
+    },
+    {
+      "id": "four_lane_independent_position_triggers",
+      "notes": [
+        { "id": "a0", "lane": 0, "time_us": 1000000 },
+        { "id": "a1", "lane": 1, "time_us": 1040000 },
+        { "id": "a2", "lane": 2, "time_us": 1080000 },
+        { "id": "a3", "lane": 3, "time_us": 1120000 }
+      ]
+    }
+  ]
+}

@@ -27,7 +27,10 @@ class GameEnvironment:
 
     At a timestamp, unresolved note expiries are processed before actions.
     Actions with equal timestamps retain caller order. Only a DOWN transition
-    judges a note. Each lane's earliest unresolved note has priority.
+    judges a note. The lazer profile follows its ordered note lock: an older
+    note is hittable only before the next note's start time; a successful hit
+    force-misses any earlier unresolved tap notes. Stable profiles retain the
+    M0 oldest-unresolved-note approximation.
     """
 
     def __init__(self, notes: Sequence[TapNote | HoldNote], config: OsuConfig | None = None):
@@ -66,11 +69,12 @@ class GameEnvironment:
         self._actions: list[ActionRecord] = []
         self._events: list[JudgementRecord | ActionRecord] = []
 
-    def _record_judgement(self, note: TapNote, event_time_us: int,
+    def _record_judgement(self, note: TapNote, logical_event_time_us: int,
                           judgement: ManiaJudgement, hit_error_us: int | None) -> None:
         self._resolved.add(note.note_id)
         record = JudgementRecord(note.note_id, note.lane, note.time_us,
-                                 event_time_us, judgement, hit_error_us)
+                                 logical_event_time_us, judgement, hit_error_us,
+                                 self.config.ruleset, observed_game_time_us=None)
         self._judgements.append(record)
         self._events.append(record)
 
@@ -85,13 +89,43 @@ class GameEnvironment:
                 self._record_judgement(note, expiry_us, ManiaJudgement.MISS, None)
         self.current_time_us = time_us
 
-    def _next_note(self, lane: int) -> TapNote | None:
+    def _advance_lane_cursor(self, lane: int) -> None:
         position = self._positions[lane]
         notes = self._lanes[lane]
         while position < len(notes) and notes[position].note_id in self._resolved:
             position += 1
         self._positions[lane] = position
-        return notes[position] if position < len(notes) else None
+
+    def _candidate_note(self, lane: int, time_us: int) -> tuple[int, TapNote, ManiaJudgement] | None:
+        """Return the first ordered, hittable note that judges this press."""
+        notes = self._lanes[lane]
+        self._advance_lane_cursor(lane)
+        for index in range(self._positions[lane], len(notes)):
+            note = notes[index]
+            if note.note_id in self._resolved:
+                continue
+            next_note = notes[index + 1] if index + 1 < len(notes) else None
+            if (self.config.ruleset == "lazer" and next_note is not None
+                    and time_us >= next_note.time_us):
+                # Mirrors OrderedHitPolicy.IsHittable(): an old note cannot
+                # hold input past the next note's start time.
+                continue
+            judgement = self.windows.press_judgement(time_us - note.time_us)
+            if judgement is not None:
+                return index, note, judgement
+        return None
+
+    def _force_miss_earlier_notes(self, lane: int, target_index: int,
+                                  event_time_us: int) -> None:
+        """Mirror OrderedHitPolicy.HandleHit for earlier tap notes."""
+        notes = self._lanes[lane]
+        target_time_us = notes[target_index].time_us
+        for note in notes[:target_index]:
+            if note.time_us >= target_time_us:
+                break
+            if note.note_id not in self._resolved:
+                self._record_judgement(note, event_time_us, ManiaJudgement.MISS, None)
+        self._advance_lane_cursor(lane)
 
     def apply_action(self, action: KeyAction) -> ActionRecord:
         """Apply one key transition and return its non-reward action record."""
@@ -111,16 +145,20 @@ class GameEnvironment:
             note_id = None
         else:
             self._key_down[lane] = True
-            note = self._next_note(lane)
-            candidate = (self.windows.press_judgement(action.time_us - note.time_us)
-                         if note is not None else None)
+            candidate = self._candidate_note(lane, action.time_us)
             if candidate is None:
                 disposition = ActionDisposition.NULL_PRESS
                 note_id = None
             else:
-                self._record_judgement(note, action.time_us, candidate,
-                                       action.time_us - note.time_us)
-                disposition = (ActionDisposition.EARLY_MISS if candidate is ManiaJudgement.MISS
+                note_index, note, judgement = candidate
+                self._record_judgement(
+                    note, action.time_us, judgement, action.time_us - note.time_us)
+                if (self.config.ruleset == "lazer"
+                        and judgement is not ManiaJudgement.MISS):
+                    # Lazer's column listener receives the new note result,
+                    # then OrderedHitPolicy force-misses older unresolved notes.
+                    self._force_miss_earlier_notes(lane, note_index, action.time_us)
+                disposition = (ActionDisposition.EARLY_MISS if judgement is ManiaJudgement.MISS
                                else ActionDisposition.HIT)
                 note_id = note.note_id
         record = ActionRecord(action, disposition, note_id)
@@ -203,10 +241,16 @@ class GameEnvironment:
         for item in state["events"]:
             if item["kind"] == "judgement":
                 row = item["record"]
+                if ("logical_event_time_us" in row and "event_time_us" in row
+                        and row["logical_event_time_us"] != row["event_time_us"]):
+                    raise ValueError("conflicting logical judgement times in checkpoint")
                 event = JudgementRecord(row["note_id"], row["lane"],
-                                        row["note_time_us"], row["event_time_us"],
+                                        row["note_time_us"],
+                                        row.get("logical_event_time_us", row.get("event_time_us")),
                                         ManiaJudgement(row["judgement"]),
-                                        row["hit_error_us"])
+                                        row["hit_error_us"],
+                                        row.get("ruleset", "stable_native"),
+                                        row.get("observed_game_time_us"))
             elif item["kind"] == "action":
                 row = item["record"]
                 action = row["action"]
@@ -222,7 +266,7 @@ class GameEnvironment:
         if ({j.note_id for j in judgements} != resolved or
                 len(judgements) != len(resolved) or
                 (now is None and events) or
-                any((e.event_time_us if isinstance(e, JudgementRecord)
+                any((e.logical_event_time_us if isinstance(e, JudgementRecord)
                      else e.action.time_us) > now for e in events)):
             raise ValueError("game ledger and resolved notes disagree")
         self.current_time_us = now

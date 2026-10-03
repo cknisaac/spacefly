@@ -1,0 +1,17 @@
+{
+  "protocol": "EA-MVP-FD5-LAZER-PARITY-v5",
+  "status": "PARTIAL",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "pinned_lazer_commit": "da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9",
+  "maximum_chart_window_us": 15000000,
+  "neutral_lead_in_us": 1000000,
+  "segment_boundary": "no active hold may cross; preserve source-chart order",
+  "permitted_claim": "exact key transitions, 1400 tap/head/tail result identities/labels, and non-miss offsets matched in segmented in-process ReplayPlayer tests",
+  "not_established": [
+    "one uninterrupted full-chart ReplayPlayer completion",
+    "repeatable full-chart ScoreV2 total, accuracy, or combo",
+    "installed desktop lazer parity or physical keyboard injection"
+  ],
+  "training": false,
+  "score_tuning": false
+}

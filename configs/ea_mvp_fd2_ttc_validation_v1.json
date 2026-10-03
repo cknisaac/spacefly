@@ -1,0 +1,28 @@
+{
+  "protocol_id": "EA-MVP-FD2-TTC-VALIDATION-v1",
+  "status": "frozen_before_run",
+  "claim_boundary": "Task-independent visual encoder controllability only; no full chart, score, training, or change to strict biology.",
+  "encoder": {
+    "dt_us": 1000,
+    "velocity_window_us": 50000,
+    "target_lead_us": 500000,
+    "formula": "v_hat=(p[t]-p[t-50ms])/50ms; ttc_hat=(1-p[t])/v_hat; countdown=clamp(ttc_hat/500ms,0,1)",
+    "no_motion_rule": "If current-minus-50ms screen displacement is not positive, return blank sensory input.",
+    "position_source": "Current and past normalized rendered screen positions only; no note IDs, map schedule, target timestamp, judgment, or score."
+  },
+  "speed_factors": [0.5, 0.75, 1.0, 1.25, 1.5],
+  "geometry_reference_duration_ms": 1499,
+  "task_free_controls": [
+    "stationary position stays blank",
+    "countdown stays finite and in [0,1]",
+    "constant-speed countdown is nonincreasing and matches geometric time-to-contact within pixel quantization",
+    "after a velocity step, the estimator uses only the new trailing 50-ms window",
+    "exact replay is deterministic"
+  ],
+  "frozen_policy_gate": {
+    "weights": "EA13 learning-on receipts 907, 1009, 1103; no training",
+    "repeats": 2,
+    "pass": "one DOWN within the inherited 73,500-us first-action window around receptor crossing; exactly one UP 10,000 us later; exact repeats; no action in untrained control; unchanged weights",
+    "no_score_selection": true
+  }
+}

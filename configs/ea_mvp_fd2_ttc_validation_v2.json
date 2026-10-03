@@ -1,0 +1,67 @@
+{
+  "protocol_id": "EA-MVP-FD2-TTC-VALIDATION-v2",
+  "status": "frozen_before_run",
+  "claim_boundary": "Task-independent visual encoder controllability and frozen-policy transfer only; no full chart, score, or training.",
+  "encoder": {
+    "dt_us": 1000,
+    "velocity_window_us": 50000,
+    "target_lead_us": 500000,
+    "formula": "v_hat=(p[t]-p[t-50ms])/50ms; ttc_hat=(1-p[t])/v_hat; q=clamp(ttc_hat/500ms,0,1)",
+    "no_motion_rule": "If displacement across the full past window is not positive, emit blank input.",
+    "cue_gate": "If ttc_hat > 500ms, emit blank input while preserving velocity history. At ttc_hat <= 500ms, emit q.",
+    "position_source": "Current and past normalized rendered screen positions only; no target timestamp, future schedule, note ID, judgment, or score."
+  },
+  "geometry_controls": {
+    "speed_factors": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "reference_approach_ms_at_1x": 1499,
+    "pixel_height": 560,
+    "stationary_blank": true,
+    "countdown_bounds": [
+      0.0,
+      1.0
+    ],
+    "time_to_contact_error_us_max": 55000,
+    "error_bound_basis": "One-pixel screen quantization over a 50-ms velocity window at the slowest tested constant speed; rounded up before outcomes."
+  },
+  "abrupt_speed_controls": {
+    "switch_position_fraction": 0.4,
+    "speed_pairs": [
+      [
+        1.0,
+        0.5
+      ],
+      [
+        1.0,
+        1.5
+      ],
+      [
+        0.5,
+        1.5
+      ],
+      [
+        1.5,
+        0.5
+      ]
+    ],
+    "continuity_rule": "Position at switch equals the distance accumulated at the pre-switch speed; no positional jump.",
+    "after_window_ttc_error_us_max": 55000
+  },
+  "frozen_policy_gate": {
+    "weights": "EA13 learning-on receipts 907, 1009, 1103; no training",
+    "repeats_per_seed_speed": 2,
+    "first_action_tolerance_us": 73500,
+    "release_us": 10000,
+    "pass": "Each seed/speed pair emits exactly one correct-lane DOWN within ±73.5ms of receptor crossing and one UP 10ms later; exact repeated trace; matched untrained silent; weights unchanged.",
+    "no_score_selection": true
+  },
+  "frozen_code_sha256": {
+    "runner": "09cdc78071d2977971f961db705424c5713e8183de764b948b4c724e447fcc31",
+    "screen_ttc_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "protocol_id": "EA-MVP-EA11-HOLD-READOUT-ADMISSION-v1",
+  "status": "frozen_before_probe",
+  "engineering_assumption": "ENGINEERING ASSUMPTION: the fixed encoder exposes current hold-head and hold-tail positions. The MBON05 timing response initiates the key DOWN; a fixed readout suppresses the tap's default 10-ms UP while the hold is active, then emits UP when the visible tail reaches position 0.",
+  "why_needed": "The trained timing policy emits a short tap by default. A hold requires keeping the selected key down until the displayed tail reaches the strike line; no biological hold pathway is identified in this reduced subgraph.",
+  "cue_lead_us": 500000,
+  "dt_us": 1000,
+  "durations_us": [300000, 1000000, 3500000],
+  "lanes": [0, 1, 3],
+  "replays_per_case": 2,
+  "pass": "one DOWN at 501000us in the note-relative episode; no UP before the tail reaches 0; one UP exactly at each frozen tail time; action lanes match the visible lane; exact replay; no game/feedback/learning; retained weights unchanged",
+  "weight_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "weight_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "code_sha256": {
+    "src/project_b/ea_mvp/continuous_holds.py": "0a904745b9e7f698cd72d06dccb4d1b525d184f02b94db94e52cfb40cfcd9474",
+    "src/project_b/ea_mvp/continuous_chords.py": "39d83ccf4d31c6e41403dbbe4be6e1e00d807b1e1775f059b5ce8f542128a52a",
+    "src/project_b/ea_mvp/continuous_multilane.py": "42341749d8e621ea5f196428afae25ad2c5104102972b28f66e5b81e38e0b610",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/malecns_continuous_position_learning/encoder.py": "38e148c3afae0a5d6709eb65a195695dbeb1dc12bd9dd3e0d448a1dab69a0d37",
+    "src/project_b/malecns_continuous_position_learning/probe.py": "45964f6856d22209039ecc2c0ad2a15dbd3532bf605e87e522fa33d449ad5ee9",
+    "src/project_b/simulation/spiking.py": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "src/project_b/synapses/graph.py": "6c1fd00108ec2b16286b3a9e0afe950cb23823a2158e798ab1be0d8cc9c20663",
+    "scripts/run_ea_mvp_hold_admission.py": "9c5cc73373cd8ac26448f73077c2e40242f1f1ae247a6d839f88d346d37a6923"
+  },
+  "prohibited": ["hold training", "passing scheduled end_time to policy", "score-selected release timing", "overlapping holds", "simultaneous tap-hold combinations"]
+}

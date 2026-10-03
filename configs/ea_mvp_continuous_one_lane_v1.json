@@ -1,0 +1,44 @@
+{
+  "arms": [
+    "retained_learned_weights",
+    "matched_initial_weights"
+  ],
+  "claim_boundary": "ENGINEERING ASSUMPTION fixed-speed, one-lane tap playback with retained fly weights; no within-map learning, other lanes or holds",
+  "code_sha256": {
+    "scripts/run_ea_mvp_continuous_one_lane.py": "9eeace2edbbe30fb9441f48a8d7795b4f8df5964f9a781518d1de91267fac51b",
+    "src/project_b/ea_mvp/continuous.py": "cb6d4a48944836f18c1993d64dcbf68a57f80ee19e03b5c0601b867cebcfdad1",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/osu/mania_game.py": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6"
+  },
+  "dt_us": 1000,
+  "engineering_assumption": "ENGINEERING ASSUMPTION: one fixed neural simulator and synaptic vector persist across the map; the existing nontrainable position-bin readout is rearmed only on blank-to-visible transitions. There are no overlapping cues. The policy receives current visible position or blank, no note ID/time/score.",
+  "learned_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "learned_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "limitations": "Three separated taps only. This is continuous neural playback, not training inside a map, four-key play, chords, holds or live osu!lazer.",
+  "notes": [
+    {
+      "lane": 0,
+      "note_id": "continuous-1",
+      "time_us": 500000
+    },
+    {
+      "lane": 0,
+      "note_id": "continuous-2",
+      "time_us": 1250000
+    },
+    {
+      "lane": 0,
+      "note_id": "continuous-3",
+      "time_us": 2000000
+    }
+  ],
+  "od": 8,
+  "primary_gate": "Learned arm: exactly three first DOWNs, one per note, all within \u00b173500us; exactly three UPs, no extras; all three headless tap judgements Good-or-better; one neural initialization and three readout rearms; exact two-run replay. Control: no DOWN and three MISS. Weight vector immutable throughout playback. Feedback labels delivered only when available.",
+  "protocol_id": "EA-MVP-EA7-CONTINUOUS-ONE-LANE-v1",
+  "replays_per_arm": 2,
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "status": "frozen_before_continuous_map_admission",
+  "visible_lead_us": 500000,
+  "weight_selection": "Use the first completed seed in the predeclared fixed-speed list (907), before observing this three-note map. Keep its final retained weights fixed. Matched initial weights from the same receipt are the no-learning control."
+}

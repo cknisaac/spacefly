@@ -1,0 +1,9 @@
+{
+  "notes": [
+    {"kind": "tap", "id": "mvp-note", "lane": 0, "time_us": 500000}
+  ],
+  "actions": [
+    {"time_us": 450000, "lane": 0, "kind": "down"},
+    {"time_us": 451000, "lane": 0, "kind": "up"}
+  ]
+}

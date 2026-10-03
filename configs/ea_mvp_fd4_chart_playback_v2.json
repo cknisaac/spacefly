@@ -1,0 +1,37 @@
+{
+  "protocol_id": "EA-MVP-FD4-CHART-PLAYBACK-v2",
+  "status": "frozen_before_run",
+  "basis": "FD4 playback v1 stopped before neural/game execution because FD-1 tuples did not carry a hold head shape label. A separate current-render-frame stream adds the visible tap/hold head feature.",
+  "chart": "xi - FREEDOM DiVE (razlteh), FREEDOM DiVE 4K Normal",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "source_frame_sha256": "660115c62d0656780742c838c7f6f201084e0dd1720bf5ed4fb270c183b30ba7",
+  "engineering_assumptions": [
+    "Crop raw screen positions outside the playfield and invert FD-1 raw coordinate: progress=1-raw_position.",
+    "The fly sees a current rendered tap/hold head shape label, not map object type or a note ID.",
+    "Use current frame only; choose nearest head and fan exact-position ties to visible lanes.",
+    "Use at most four per-lane-reduced current tail positions; release a held key when its nearest visible tail reaches raw position 0.",
+    "Reset TTC when nearest-head progress moves backward by more than one rendered pixel.",
+    "After selected-head switch or cue end, provide 11 blank 1-ms samples before new sensory input.",
+    "Latch cue entry and clip TTC countdown increases within each selected cue (FD2-A8).",
+    "Pair each UP to the original DOWN lanes; at most two active holds are supported."
+  ],
+  "arms": [
+    "EA13 learning-on seed 907 only"
+  ],
+  "repeats": 2,
+  "no_training": true,
+  "no_game_feedback": true,
+  "no_score_tuning": true,
+  "pass": "Exact chart hash and object counts; deterministic full replay; one continuous neural initialization; unchanged weights; all 1,310 objects receive final head/tap judgement; each emitted DOWN has a matching UP; no key remains held at end. Score and miss patterns are descriptive, not optimization targets.",
+  "frozen_code_sha256": {
+    "runner": "7128183c07bc3c92ba5b13f3963f15870225f8d3cdc0d08e3cf983b55c62e4a2",
+    "typed_builder": "e18952f752b73c95a36d0563bf8fe94a548f06b7ef06045ab529e2fe2677eb3b",
+    "beatmap_parser": "95a80ec78e693fd678afb0663ef2a9ace00c731aec7f17e3352ad6ed22b1fbf5",
+    "policy_source": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "scroll_map": "4bfbfbb6097feaec9bcbd9b97c924e4ef24503bb9e464cb85a8fba0daa43a742",
+    "fd2_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a",
+    "game_engine": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "spiking_simulator": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "adapter": "b36bfa13fc976d9455b3519f17c83514da99ad12bde03cfec10023a5f1e6b0ec"
+  }
+}

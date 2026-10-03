@@ -1,0 +1,36 @@
+{
+  "protocol_id": "EA-MVP-FD4-CHART-PLAYBACK-v3",
+  "status": "frozen_before_run",
+  "basis": "FD4 v2 completed but failed the action-pair gate and had many missed/null actions. The current nearest-head-only estimator restarted on every selected-note switch. This version carries a fixed position/TTC history per lane while keeping one neural circuit and one selected cue.",
+  "chart": "xi - FREEDOM DiVE (razlteh), FREEDOM DiVE 4K Normal",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "source_frame_sha256": "660115c62d0656780742c838c7f6f201084e0dd1720bf5ed4fb270c183b30ba7",
+  "engineering_assumptions": [
+    "Keep up to one current nearest-head motion history per lane, using only current/past frame positions; reset that lane's history when its nearest position jumps backward by more than one pixel.",
+    "Select the global nearest head and feed only its lane set and current TTC estimate to one fly circuit; exact-position ties fan out.",
+    "Crop raw screen positions outside the playfield and invert raw position to progress=1-raw_position.",
+    "Use visible typed tap/hold head shape and at most four per-lane-reduced current tail positions.",
+    "After cue switch, provide 11 blank 1-ms samples for key release/readout rearm while preserving other lanes' visual histories.",
+    "Latch cue entry and clip countdown increases within a selected cue (FD2-A8); pair UP with matching DOWN; support at most two holds."
+  ],
+  "task_free_control": "Two overlapping constant-speed cues 200 ms apart: the second lane's TTC state must already be valid at the first cue crossing and remain active after the 11-ms output blank.",
+  "arms": [
+    "EA13 learning-on seed 907 only"
+  ],
+  "repeats": 2,
+  "no_training": true,
+  "no_game_feedback": true,
+  "no_score_tuning": true,
+  "pass": "Exact chart/hash; task-free per-lane switch control; deterministic full replay; one continuous neural initialization; unchanged weights; all 1,310 objects receive final head/tap judgements; every physical DOWN is released; no key remains held at end. Descriptive score is not optimized.",
+  "frozen_code_sha256": {
+    "beatmap_parser": "95a80ec78e693fd678afb0663ef2a9ace00c731aec7f17e3352ad6ed22b1fbf5",
+    "spiking_simulator": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "typed_builder": "e18952f752b73c95a36d0563bf8fe94a548f06b7ef06045ab529e2fe2677eb3b",
+    "game_engine": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "policy_source": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "adapter": "83f97376870b0826c37978b1bb7de09522a980712dd2b4bcb538d369f4050992",
+    "scroll_map": "4bfbfbb6097feaec9bcbd9b97c924e4ef24503bb9e464cb85a8fba0daa43a742",
+    "fd2_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a",
+    "runner": "c696d3b1fa1e15a29af2eab0b363d9ee8ddf9f7ccb1730fa1fc8d7cbe5ac317e"
+  }
+}

@@ -11,9 +11,11 @@ dependencies = ["PyYAML>=6"]
 
 [project.optional-dependencies]
 connectome = ["numpy>=1.26", "pyarrow>=21"]
+mania = ["pygame>=2.6,<3"]
 
 [project.scripts]
 project-b-osu = "project_b.osu.cli:main"
+spacefly-mania = "project_b.osu.playable:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

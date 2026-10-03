@@ -1,0 +1,15 @@
+{
+  "protocol_id": "EA-MVP-EA5-DEVELOPMENT-v1",
+  "status": "frozen_before_development",
+  "teacher_protocol": "configs/ea_mvp_teacher_local_protocol.json",
+  "note_time_us": 500000,
+  "visible_lead_us": 500000,
+  "od": 8,
+  "episodes": 500,
+  "checkpoints": [0, 100, 250, 500],
+  "arms": ["learning_on", "dan_off", "plasticity_off"],
+  "primary_question": "Does label-only MISS-triggered local LTD acquire a retained first DOWN in the OD8 Good-or-better window without modifying the fixed encoder or readout?",
+  "decision_rule": "Report every checkpoint and control; do not select assumption values or a preferred checkpoint by game score. Any new assumption requires a new versioned protocol and fresh run.",
+  "engineering_assumptions": "All non-anatomical values are ENGINEERING ASSUMPTIONS inherited byte-for-byte from the pinned EA1-EA4 protocols. Repeating one standardized note after neural reset isolates synaptic retention; no trainable external state.",
+  "limitations": "Development only; repeating the same isolated note is not fresh confirmation or generalization. The MISS-only teacher may stop updating on non-MISS mistakes."
+}

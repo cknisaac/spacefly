@@ -2,7 +2,7 @@
 
 This project asks whether a small circuit chosen from a fruit-fly wiring diagram can change its response after a teaching signal. It combines a real **MaleCNS v1.0** map of which cells contact which, a computer model of electrical activity, and explicitly designed rules for input, teaching, learning, and output.
 
-**Current result:** the final moving-note experiment, Level 4D, is frozen. Teaching at the wrong region produced a first action at position **x=0.20** that persisted when teaching and learning were switched off. Teaching at the intended target near **x=0.70** produced no action. The naive model and a matched teaching-on/learning-off control produced no action. The declared behavioral test therefore **failed**, while the intended anatomy-dependent learning mechanism operated. We record the branch as **“Mechanistic success / behavioral robustness incomplete.”** See the [full claim and limits](docs/MALECNS_MOVING_LEARNING_BRANCH_FREEZE.md).
+**Iteration 1 is complete.** The separate [EA-MVP engineering learner](docs/EA_MVP_ITERATION_1_SUMMARY.md) trained a fixed-speed timing response in selected fly-constrained synapses and played a full 4K chart with those weights frozen. Input, teaching, lane/hold routing, and motor output are explicit **engineering assumptions**. Its shuffled-teaching control performed identically, unfamiliar-speed transfer failed, and dense same-lane repeats remain weak. The earlier strict MaleCNS Level 4D target-action test remains **FAIL**; see its [frozen claim and limits](docs/MALECNS_MOVING_LEARNING_BRANCH_FREEZE.md). These are separate results.
 
 ## What the model does, in ordinary terms
 
@@ -21,6 +21,8 @@ The cell IDs and contact relationships come from the connectome. The position en
 ## Explore the work
 
 - [Current status](docs/project-status.md): what passed, what failed, and what is frozen.
+- [Iteration-one handoff](docs/EA_MVP_ITERATION_1_SUMMARY.md): engineering learner, game integration, results, and limits.
+- [Fly training explainer](docs/EA_MVP_FLY_TRAINING_EXPLAINER.md) and [recorded training playback](visualization/ea-mvp-training-playback.html).
 - [Experiment results](results/index.md): each major stage's declared result and interpretation.
 - [Level 4D playback](visualization/malecns-level4d-playback.html): download or open the HTML locally to scrub a saved moving note, neural events, weights, voltage, and output. The training and frozen-evaluation traces are separate recorded phases.
 - [Documentation guide](docs/index.md): the infrastructure, synthetic, pathway, larval, and internal-learning tracks.
@@ -30,6 +32,11 @@ The cell IDs and contact relationships come from the connectome. The position en
 The append-only [development log](CURRENT.md) and original stage reports preserve the chronology. Older Branch A/B and milestone labels are historical names; the [decision timeline](docs/history/timeline.md) explains the changes.
 
 ## Get started
+
+To play the 4K osu!mania recreation, install with
+`python -m pip install -e ".[mania]"`, then run `spacefly-mania`. Press **O**
+to select a native 4K `.osu` or `.osz` map with its audio. See the
+[game controls and comparison](docs/OSU_MANIA_RECREATION_RESULT.md).
 
 Use Python **3.11 or newer**. From the repository root, create and activate a virtual environment, then install the package:
 
@@ -53,7 +60,7 @@ The import and some experiment tests require the source files described in the [
 | `docs/` | Scientific reports, plans, and guided indexes |
 | `research/` | Guide to evidence and exploratory work |
 | `results/` | Small published result bundles and artifact checksums |
-| `visualization/` | Offline playback of recorded traces |
+| `visualization/` | Offline playback of recorded traces, including EA-MVP training |
 | `data/` and `runs/` | Local source data and full generated runs, excluded from normal Git history |
 
 The Python package is still named `project_b` so existing scripts and frozen configurations keep working. A public software license and author citation will be added once their terms are chosen. The MaleCNS and larval connectome sources have their own provenance in the [data manifests](data/manifests/).

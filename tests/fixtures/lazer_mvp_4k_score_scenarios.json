@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reference": {
+    "repository": "https://github.com/ppy/osu",
+    "release": "2026.1001.0-tachyon",
+    "commit": "da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9",
+    "ruleset": "osu!mania",
+    "od": 8,
+    "mods": [],
+    "rate": 1.0,
+    "scoring_mode": "ScoreV2 default"
+  },
+  "scenarios": [
+    {
+      "id": "four_lane_chord_mixed_and_miss",
+      "notes": [
+        { "id": "n0", "lane": 0, "time_us": 1000000 },
+        { "id": "n1", "lane": 1, "time_us": 1000000 },
+        { "id": "n2", "lane": 2, "time_us": 1000000 },
+        { "id": "n3", "lane": 3, "time_us": 1000000 }
+      ],
+      "actions": [
+        { "time_us": 1000000, "lane": 0, "kind": "down" },
+        { "time_us": 1001000, "lane": 0, "kind": "up" },
+        { "time_us": 1020000, "lane": 1, "kind": "down" },
+        { "time_us": 1021000, "lane": 1, "kind": "up" },
+        { "time_us": 1050000, "lane": 2, "kind": "down" },
+        { "time_us": 1051000, "lane": 2, "kind": "up" }
+      ]
+    },
+    {
+      "id": "four_lane_note_lock_retry_and_combo_break",
+      "notes": [
+        { "id": "old", "lane": 0, "time_us": 1000000 },
+        { "id": "new", "lane": 0, "time_us": 1050000 },
+        { "id": "chord", "lane": 1, "time_us": 1050000 }
+      ],
+      "actions": [
+        { "time_us": 835000, "lane": 0, "kind": "down" },
+        { "time_us": 836000, "lane": 0, "kind": "up" },
+        { "time_us": 1050000, "lane": 0, "kind": "down" },
+        { "time_us": 1050000, "lane": 1, "kind": "down" },
+        { "time_us": 1051000, "lane": 0, "kind": "up" },
+        { "time_us": 1051000, "lane": 1, "kind": "up" }
+      ]
+    }
+  ]
+}

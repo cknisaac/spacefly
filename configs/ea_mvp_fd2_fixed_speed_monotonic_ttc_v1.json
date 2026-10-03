@@ -1,0 +1,28 @@
+{
+  "protocol_id": "EA-MVP-FD2-FIXED-SPEED-MONOTONIC-TTC-v1",
+  "status": "frozen_before_run",
+  "basis": "Follow-up to preserved latched-cue FAIL. Under the user-specified fixed-speed-per-map condition, a note's estimated remaining travel time should not increase as it approaches the receptor. Pixel quantization can create upward estimate bumps.",
+  "engineering_assumption": "Latch cue activation until the note disappears; while active, clamp each new countdown to min(previous_countdown, current_valid_countdown), holding the last countdown on invalid/no-motion frames.",
+  "claim_boundary": "Frozen-policy timing transfer over fixed pre-map speeds only; no claim for mid-map speed changes or complete charts.",
+  "speed_factors": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "seeds": [
+    907,
+    1009,
+    1103
+  ],
+  "repeats_per_case": 2,
+  "pass": "All learning-on traces emit exactly one lane-0 DOWN within +/-73.5ms of note contact, followed by UP exactly 10ms later; repeated traces match exactly; weights unchanged; untrained seed 907 is silent at 1x.",
+  "no_training": true,
+  "no_game_or_score": true,
+  "frozen_code_sha256": {
+    "runner": "4b595656d8b947fa473a00be6493a02759f7d0acc9530c29b2fb41eecdc254d8",
+    "prior_latched_runner": "554df7d6e662a28bdc0185f66179fc1dcf167279bf0ca6cf0f8d56a88d867378",
+    "screen_ttc_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "experiment_id": "LAZER-MVP-L0-4-CAUSAL-CAPACITY-v1",
+  "status": "frozen_before_capacity_run",
+  "candidate_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "candidate_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "game_config": "configs/lazer_mvp.yaml",
+  "game_config_sha256": "eb49541eb9306adb9c19076d4eafc4f5df8dc351d90e1219ff21442ed966b0c8",
+  "scope": "Task-free maximum-permitted local LTD capacity probe; no learning, teaching, reward, or DAN events.",
+  "game": {
+    "ruleset": "lazer",
+    "keys": 4,
+    "od": 8,
+    "lane": 0,
+    "note_time_us": 500000,
+    "approach_duration_us": 500000,
+    "dt_us": 1000,
+    "position_rule": "position = 1 - time_us / approach_duration_us; visible from t=0 through the note time"
+  },
+  "intervention": {
+    "weight_initialization": "plastic_contact_rows divided by total selected-cohort plastic_contact_rows",
+    "maximum_local_ltd_fraction_of_original": 0.2,
+    "target_preferred_position_max_inclusive": 0.147,
+    "target_kc_source_ids": [45199, 45259, 45380, 45434, 45460],
+    "matched_out_of_window_control_center": 0.725,
+    "out_of_window_control_kc_source_ids": [49545, 49867, 49544, 50411, 49526],
+    "out_of_window_selection": "five KCs nearest the frozen control center; stable source order breaks ties",
+    "apply": "Set only the selected condition's KC-to-MBON05 weights to exactly 20% of their original values before the note. Hold the resulting vector fixed throughout the note."
+  },
+  "conditions": [
+    {"id": "baseline_initial", "intervention": "none"},
+    {"id": "plasticity_off", "intervention": "none", "same_weights_as": "baseline_initial"},
+    {"id": "target_good_window_floor", "intervention": "target_kc_source_ids"},
+    {"id": "matched_out_of_window_floor", "intervention": "out_of_window_control_kc_source_ids"}
+  ],
+  "replication": {
+    "identical_replays_per_condition": 2,
+    "require_exact_replay": true
+  },
+  "primary_endpoint": "The first DOWN event's signed timing error relative to the note time, with no DOWN counted as failure.",
+  "criteria": {
+    "target_exactly_one_first_down_with_abs_error_at_most_us": 73500,
+    "baseline_no_down": true,
+    "plasticity_off_no_down": true,
+    "matched_out_of_window_not_good_or_better": true,
+    "all_replays_exact": true,
+    "source_hashes_match": true
+  },
+  "stop_rule": "Run this capacity-only comparison once. Do not train or begin the feedback-teacher stage in this run."
+}

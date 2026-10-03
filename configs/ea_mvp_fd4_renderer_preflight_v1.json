@@ -1,0 +1,22 @@
+{
+  "protocol_id": "EA-MVP-FD4-RENDERER-PREFLIGHT-v1",
+  "status": "frozen_before_run",
+  "claim_boundary": "Read-only replay of frozen FD-1 frames through the current-frame crop/invert adapter and TTC estimator; no neural chart run, game, score, or training.",
+  "source": "C:/Users/imdef/Documents/Codex/2026-10-03/https-claude-ai-artifact-1szgu2m2uaoex2fa4s3fnc-https/outputs/FD1_FREEDOM_DIVE_VISIBLE_FRAMES.jsonl.gz",
+  "source_sha256": "db9d26d55e5cb8cb1e9f9873a0f3d57ffb7c944fb1cb9cc6be1648af2c0dd79a",
+  "engineering_assumption": "Raw FD-1 normalized_position is (strike_line_y - head_y)/playfield_height: 0 at strike line, 1 at top. Crop heads outside [0,1], transform valid heads to progress=1-raw_position, and infer hold identity only from a same-lane co-visible tail. Clamp a tail at/past strike line to zero.",
+  "predeclared_checks": [
+    "frame bounds respect FD-1 maxima after crop",
+    "progress increases as same selected head approaches",
+    "TTC output is finite and in [0,1]",
+    "nonincreasing post-filter is deterministic",
+    "no chart labels or schedule enter encoder"
+  ],
+  "no_training": true,
+  "no_game_or_score": true,
+  "frozen_code_sha256": {
+    "runner": "e70e490874e1ff002f1909cc33853012a10d1059bd2af7ae1ea7bb91e23eec7c",
+    "adapter": "0676a54167d200f4a81ae5ae79ef74eb23442e971bcc108a72d1f8c5850cd53b",
+    "screen_ttc_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "protocol_id": "EA-MVP-FD4-CHART-PLAYBACK-v1",
+  "status": "frozen_before_run",
+  "chart": "xi - FREEDOM DiVE (razlteh), FREEDOM DiVE 4K Normal",
+  "chart_sha256": "ced99e231e7eee354feef04bbcde6889178814cb688325bccdeeeacb00dcbff9",
+  "source_frame_sha256": "db9d26d55e5cb8cb1e9f9873a0f3d57ffb7c944fb1cb9cc6be1648af2c0dd79a",
+  "engineering_assumptions": [
+    "Crop raw screen positions outside the playfield and invert FD-1's raw coordinate: progress=1-raw_position.",
+    "Use current frame only; choose the nearest head and fan exact-position ties to their visible lanes.",
+    "Infer a visible hold head from current same-lane tail/body evidence; release that lane when its nearest current tail reaches raw position 0.",
+    "Reset the TTC estimator when nearest-head progress discontinuously moves backward by more than one rendered pixel.",
+    "After cue end or selected-head switch, provide 11 blank 1-ms samples before new sensory input; preserve the existing 10-ms key pulse.",
+    "Latch cue entry and clip TTC countdown increases within each selected cue (FD2-A8).",
+    "Route each UP to lanes currently held from a matching DOWN; at most two active holds are supported."
+  ],
+  "arms": [
+    "EA13 learning-on seed 907 only"
+  ],
+  "repeats": 2,
+  "no_training": true,
+  "no_game_feedback": true,
+  "no_score_tuning": true,
+  "pass": "Exact chart hash and object counts; deterministic full replay; one continuous neural initialization; unchanged weights; all 1,310 objects receive final head/tap judgement; each emitted DOWN has a matching UP; no key remains held at end. Scores and per-pattern misses are descriptive, not optimization targets.",
+  "frozen_code_sha256": {
+    "runner": "8a6f222e764034e49d57f13fe1108fa705b06d86d50ec9da4a9fa92f9467965f",
+    "adapter": "b36bfa13fc976d9455b3519f17c83514da99ad12bde03cfec10023a5f1e6b0ec",
+    "fd2_encoder": "0afade560807fe4d612591364f2fac5735fa4fe310dc7d34344cc9d2496a237a",
+    "game_engine": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "frame_source": "db9d26d55e5cb8cb1e9f9873a0f3d57ffb7c944fb1cb9cc6be1648af2c0dd79a"
+  }
+}

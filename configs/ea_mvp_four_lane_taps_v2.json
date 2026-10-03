@@ -1,0 +1,42 @@
+{
+  "protocol_id": "EA-MVP-EA9-FOUR-LANE-SEQUENTIAL-TAPS-v2",
+  "status": "frozen_before_game_run",
+  "claim_boundary": "ENGINEERING ASSUMPTION: shared lane-0-trained timing weights drive a fixed current-lane selector for four sequential taps in the headless game. No lane-specific learning, simultaneous notes, holds, or live-client claim.",
+  "od": 8,
+  "visible_lead_us": 500000,
+  "dt_us": 1000,
+  "notes": [
+    {"note_id": "ea9-lane-0", "lane": 0, "time_us": 500000},
+    {"note_id": "ea9-lane-1", "lane": 1, "time_us": 1250000},
+    {"note_id": "ea9-lane-2", "lane": 2, "time_us": 2000000},
+    {"note_id": "ea9-lane-3", "lane": 3, "time_us": 2750000}
+  ],
+  "arms": ["retained_lane0_trained_weights", "matched_initial_weights"],
+  "replays_per_arm": 2,
+  "weight_source": "first completed predeclared fixed-speed check seed 907; weights learned only on lane-0 isolated notes; no extra training on the four-lane map",
+  "weight_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "weight_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "lane_mapping_protocol": "configs/ea_mvp_lane_mapping_admission_v1.json",
+  "lane_mapping_receipt": "runs/ea_mvp/lane_mapping_admission_v1.json",
+  "lane_mapping_receipt_sha256": "d38c5450cfdd64797734e4a7caba80d802c16c471d8e0903618e03ac0586a486",
+  "code_sha256": {
+    "src/project_b/ea_mvp/continuous_multilane.py": "42341749d8e621ea5f196428afae25ad2c5104102972b28f66e5b81e38e0b610",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/malecns_continuous_position_learning/encoder.py": "38e148c3afae0a5d6709eb65a195695dbeb1dc12bd9dd3e0d448a1dab69a0d37",
+    "src/project_b/malecns_continuous_position_learning/probe.py": "45964f6856d22209039ecc2c0ad2a15dbd3532bf605e87e522fa33d449ad5ee9",
+    "src/project_b/simulation/spiking.py": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "src/project_b/synapses/graph.py": "6c1fd00108ec2b16286b3a9e0afe950cb23823a2158e798ab1be0d8cc9c20663",
+    "src/project_b/osu/mania_game.py": "7eb158b463e2f2988064992cbfed0fd8251db7c2a4ae5cef6d90179eca381bf6",
+    "scripts/run_ea_mvp_four_lane_taps_v2.py": "9889cfeffd8eb996a7d34ae3a16d49f5e569b53a96a6516eefecea1047761962"
+  },
+  "pass_criteria": [
+    "trained arm emits exactly one DOWN per note and one UP per DOWN, on the matching lane, with each DOWN within +/-73500us of its target",
+    "all four game judgements are PERFECT, GREAT, or GOOD",
+    "one neural initialization and four readout rearms; weights unchanged; no additional actions",
+    "matched initial weights emit no DOWN and receive four MISS results",
+    "both arms replay exactly; lane mapping admission receipt hash matches"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "protocol_id": "EA-MVP-EA3-TASK-FREE-ADMISSION-v1",
+  "status": "frozen_before_probe",
+  "scope": "non-learning present-position fly interface check; no game judgement, score, DAN or plasticity",
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "engineering_assumptions": {
+    "EA-01": "reuse frozen 32-KC Gaussian present-position encoder, sigma 0.08, peak drive 1.2 mV-equivalent",
+    "EA-02": "reuse fixed inverse MBON05 0.05-position-bin readout, 0.005572335995331903 mV-equivalent threshold, 10 ms hold",
+    "EA-03": "reuse contact-ratio normalized KC-to-MBON05 weights and 2 ms synaptic delay as bounded electrical overlay",
+    "EA-04": "reuse 1 ms LIF integration and frozen membrane parameters from source config",
+    "EA-07": "reuse 32 audited source-order KCs and MBON05 reduced MaleCNS subset"
+  },
+  "observation_dt_us": 1000,
+  "traversal_us": 500000,
+  "position_start": 1.0,
+  "position_end": 0.0,
+  "probe_centers": [0.2, 0.5, 0.8],
+  "local_preferred_position_half_width": 0.1,
+  "local_weight_multiplier": 0.2,
+  "replays_per_arm": 2,
+  "arms": ["initial_weights", "local_0.2", "local_0.5", "local_0.8"],
+  "primary_gate": "initial_weights has no DOWN and at least two of three local arms have one first DOWN within 0.10 normalized position of their own probe center; exact repeated traces",
+  "failure_rule": "stop and report FAIL if primary_gate does not pass; no gain, threshold, cohort or center adjustment",
+  "excluded": ["game scoring", "teaching", "plasticity", "training", "confirmation", "held-out map selection"]
+}

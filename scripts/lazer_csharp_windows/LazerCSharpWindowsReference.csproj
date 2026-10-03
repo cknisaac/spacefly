@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PinnedSourceRoot Condition="'$(PinnedSourceRoot)' == ''">$(MSBuildThisFileDirectory)..\..\work\osu_lazer_reference</PinnedSourceRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(PinnedSourceRoot)\osu.Game.Rulesets.Mania\Scoring\ManiaHitWindows.cs" Link="Pinned\ManiaHitWindows.cs" />
+    <Compile Include="$(PinnedSourceRoot)\osu.Game\Rulesets\Scoring\HitWindows.cs" Link="Pinned\HitWindows.cs" />
+    <Compile Include="$(PinnedSourceRoot)\osu.Game\Beatmaps\IBeatmapDifficultyInfo.cs" Link="Pinned\IBeatmapDifficultyInfo.cs" />
+    <Compile Include="$(PinnedSourceRoot)\osu.Game.Rulesets.Mania\UI\OrderedHitPolicy.cs" Link="Pinned\OrderedHitPolicy.cs" />
+  </ItemGroup>
+</Project>

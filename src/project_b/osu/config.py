@@ -25,8 +25,8 @@ class OsuConfig:
         if not od.is_finite() or not Decimal("0") <= od <= Decimal("10"):
             raise ValueError("od must be finite and in 0..10")
         object.__setattr__(self, "od", od)
-        if self.ruleset not in {"stable_native", "stable_convert"}:
-            raise ValueError("M0 supports stable_native and stable_convert; lazer is not implemented")
+        if self.ruleset not in {"stable_native", "stable_convert", "lazer"}:
+            raise ValueError("ruleset must be stable_native, stable_convert, or lazer")
 
     def as_dict(self) -> dict[str, object]:
         return {"keys": self.keys, "od": str(self.od), "ruleset": self.ruleset}

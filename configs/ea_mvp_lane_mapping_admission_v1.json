@@ -1,0 +1,31 @@
+{
+  "protocol_id": "EA-MVP-EA8-LANE-MAPPING-ADMISSION-v1",
+  "status": "frozen_before_probe",
+  "engineering_assumption": "ENGINEERING ASSUMPTION: the fixed position observation carries the currently visible lane number unchanged to the fixed readout; lane 0..3 maps to key lane 0..3. The connectome-constrained MBON05 circuit controls press timing only. Lane identity is neither represented in the neural state nor learned.",
+  "why_needed": "The admitted 32-KC to MBON05 source subgraph has one timing output and no demonstrated four-key motor pathway. A fixed lane selector permits four-key headless playback while retaining all adaptation in the existing selected KC-to-MBON05 synapses.",
+  "frozen_mapping": {"0": 0, "1": 1, "2": 2, "3": 3},
+  "probe": {
+    "kind": "task-free fixed-cue sweep; no game, no feedback, no learning",
+    "visible_lead_us": 500000,
+    "dt_us": 1000,
+    "lanes": [0, 1, 2, 3],
+    "replays_per_lane": 2,
+    "weights": "retained EA-5 v2 weights from first predeclared fixed-speed receipt seed 907; unchanged across lanes",
+    "pass": "each lane emits exactly one DOWN and one UP, DOWN falls within the existing frozen +/-73500us Good window around the 500000us target, DOWN/UP both carry the input lane, and both replays are identical; no other actions"
+  },
+  "source_config": "configs/malecns_continuous_position_learning_v2_5.json",
+  "source_config_sha256": "528ac42f04bd7f3e254ee187b32f2279fa337ce47a370eb364411b59ae87f870",
+  "weight_receipt": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+  "weight_receipt_sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+  "code_sha256": {
+    "src/project_b/ea_mvp/continuous_multilane.py": "105f7a79875af7dbee9e318b5c69480b02712528ac4306102305312646e5a477",
+    "src/project_b/ea_mvp/continuous_v2.py": "9f207e90c46b1376c07b101d145374e171a34c70830622e6fe24bacf5c9ad6a9",
+    "src/project_b/malecns_continuous_position_learning/online_readout.py": "742afcfaf15291ec8a993f22422707893838aa28fd0c1c05d75c59682b573ff3",
+    "src/project_b/malecns_continuous_position_learning/encoder.py": "38e148c3afae0a5d6709eb65a195695dbeb1dc12bd9dd3e0d448a1dab69a0d37",
+    "src/project_b/malecns_continuous_position_learning/probe.py": "45964f6856d22209039ecc2c0ad2a15dbd3532bf605e87e522fa33d449ad5ee9",
+    "src/project_b/simulation/spiking.py": "b02c1935f9bc101255593193f4b303126a9bca37732a2d1be0e30088707c5fea",
+    "src/project_b/synapses/graph.py": "6c1fd00108ec2b16286b3a9e0afe950cb23823a2158e798ab1be0d8cc9c20663",
+    "scripts/run_ea_mvp_lane_mapping_admission.py": "21007eeb799f984a74ff276091575a4a19f473e954601c2d78f5fd4964ba6c34"
+  },
+  "prohibited": ["training", "judgement feedback", "lane-specific weights", "lane encoding changes", "threshold or timing changes", "hidden note schedule passed to the policy"]
+}

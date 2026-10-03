@@ -15,6 +15,8 @@ from project_b.osu import (
     play,
 )
 from project_b.osu.types import INT64_MAX
+from project_b.osu.types import JudgementRecord
+from project_b.osu.feedback import game_feedback_for_judgement
 
 NOTE_TIME = 1_000_000
 
@@ -126,8 +128,52 @@ class EnvironmentTests(unittest.TestCase):
         converted = play(notes, actions, OsuConfig(od=8, ruleset="stable_convert"))
         self.assertEqual(native.judgements[0].judgement, ManiaJudgement.GREAT_300)
         self.assertEqual(converted.judgements[0].judgement, ManiaJudgement.GOOD_200)
+        lazer = play(notes, actions, OsuConfig(od=8, ruleset="lazer"))
+        self.assertEqual(lazer.judgements[0].judgement, ManiaJudgement.GREAT_300)
 
-    def test_earliest_unresolved_note_has_lane_priority(self) -> None:
+        perfect = play(notes, [down(NOTE_TIME)], OsuConfig(od=8, ruleset="lazer"))
+        self.assertEqual(perfect.judgements[0].result_name, "PERFECT")
+        self.assertEqual(perfect.judgements[0].base_accuracy_value, 305)
+
+    def test_lazer_late_expiry_uses_meh_success_window(self) -> None:
+        config = OsuConfig(od=8, ruleset="lazer")
+        just_in_time = play([TapNote("n", 0, NOTE_TIME)],
+                            [down(NOTE_TIME + 127_500)], config)
+        self.assertEqual(just_in_time.judgements[0].judgement, ManiaJudgement.MEH_50)
+        self.assertEqual(just_in_time.judgements[0].hit_error_us, 127_500)
+
+        expired = play([TapNote("n", 0, NOTE_TIME)], [], config)
+        self.assertEqual(expired.judgements[0].event_time_us, NOTE_TIME + 127_501)
+        self.assertEqual(expired.judgements[0].judgement, ManiaJudgement.MISS)
+        self.assertIsNone(expired.judgements[0].hit_error_us)
+
+    def test_lazer_too_early_null_differs_from_pressed_miss(self) -> None:
+        config = OsuConfig(od=8, ruleset="lazer")
+        pressed_miss = play([TapNote("n", 0, NOTE_TIME)],
+                            [down(NOTE_TIME - 150_000)], config)
+        self.assertEqual(pressed_miss.judgements[0].judgement, ManiaJudgement.MISS)
+        self.assertEqual(pressed_miss.actions[0].disposition, ActionDisposition.EARLY_MISS)
+
+        too_early = play([TapNote("n", 0, NOTE_TIME)],
+                         [down(NOTE_TIME - 165_000)], config)
+        self.assertEqual(too_early.actions[0].disposition, ActionDisposition.NULL_PRESS)
+        self.assertEqual(too_early.judgements[0].event_time_us, NOTE_TIME + 127_501)
+
+    def test_lazer_checkpoint_round_trip_preserves_expiry_and_result_profile(self) -> None:
+        notes = [TapNote("n", 0, NOTE_TIME)]
+        config = OsuConfig(od=8, ruleset="lazer")
+        original = GameEnvironment(notes, config)
+        original.advance_to(NOTE_TIME + 127_500)
+        original.apply_action(down(NOTE_TIME + 127_500))
+        checkpoint = original.state()
+
+        resumed = GameEnvironment(notes, config)
+        resumed.restore(checkpoint)
+        self.assertEqual(resumed.result(), original.result())
+        self.assertEqual(resumed.result().judgements[0].result_name, "MEH")
+        self.assertEqual(resumed.result().judgements[0].base_accuracy_value, 50)
+
+    def test_previous_note_keeps_priority_until_next_note_onset(self) -> None:
         notes = [TapNote("old", 0, NOTE_TIME), TapNote("new", 0, NOTE_TIME + 100_000)]
         # Both windows are open; the old note is chosen before the newer one.
         result = play(notes, [down(NOTE_TIME + 50_000), up(NOTE_TIME + 50_000),
@@ -135,6 +181,32 @@ class EnvironmentTests(unittest.TestCase):
         self.assertEqual(result.judgements[0].note_id, "old")
         self.assertEqual(result.judgements[1].note_id, "new")
         self.assertEqual(result.actions[-1].disposition, ActionDisposition.HIT)
+
+    def test_next_note_locks_previous_at_its_start_and_force_misses_it(self) -> None:
+        notes = [TapNote("old", 0, NOTE_TIME),
+                 TapNote("new", 0, NOTE_TIME + 50_000)]
+        result = play(notes, [down(NOTE_TIME + 50_000)],
+                      OsuConfig(od=8, ruleset="lazer"))
+
+        self.assertEqual(
+            [(j.note_id, j.judgement, j.event_time_us, j.hit_error_us)
+             for j in result.judgements],
+            [("new", ManiaJudgement.MAX_320, NOTE_TIME + 50_000, 0),
+             ("old", ManiaJudgement.MISS, NOTE_TIME + 50_000, None)],
+        )
+        self.assertEqual([type(event).__name__ for event in result.events],
+                         ["JudgementRecord", "JudgementRecord", "ActionRecord"])
+        self.assertEqual(result.actions[0].note_id, "new")
+        self.assertEqual(result.actions[0].disposition, ActionDisposition.HIT)
+
+    def test_stable_profile_retains_m0_oldest_unresolved_note_choice(self) -> None:
+        notes = [TapNote("old", 0, NOTE_TIME),
+                 TapNote("new", 0, NOTE_TIME + 50_000)]
+        result = play(notes, [down(NOTE_TIME + 50_000)])
+
+        self.assertEqual(result.actions[0].note_id, "old")
+        self.assertEqual(result.judgements[0].note_id, "old")
+        self.assertEqual(result.judgements[0].judgement, ManiaJudgement.GOOD_200)
 
     def test_next_note_outside_early_miss_window_is_null(self) -> None:
         notes = [TapNote("old", 0, NOTE_TIME), TapNote("new", 0, NOTE_TIME + 200_000)]
@@ -159,6 +231,41 @@ class EnvironmentTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             env.advance_to(NOTE_TIME - 1)
         self.assertEqual(env.finish(), env.finish())
+
+    def test_logical_and_observed_times_are_distinct_and_policy_safe(self) -> None:
+        logical_us, observed_us = NOTE_TIME + 127_501, NOTE_TIME + 140_000
+        record = JudgementRecord("n", 0, NOTE_TIME, logical_us,
+                                 ManiaJudgement.MISS, None, "lazer", observed_us)
+        self.assertEqual(record.logical_event_time_us, logical_us)
+        self.assertEqual(record.event_time_us, logical_us)
+        self.assertEqual(record.observed_game_time_us, observed_us)
+        feedback = game_feedback_for_judgement(record)
+        self.assertEqual(feedback.available_at_us, logical_us)
+        self.assertFalse(hasattr(feedback, "observed_game_time_us"))
+
+    def test_python_records_have_no_observed_time_and_legacy_state_restores(self) -> None:
+        notes = [TapNote("n", 0, NOTE_TIME)]
+        env = GameEnvironment(notes, OsuConfig(ruleset="lazer"))
+        env.advance_to(NOTE_TIME + 127_501)
+        record = env.result().judgements[0]
+        self.assertEqual(record.logical_event_time_us, NOTE_TIME + 127_501)
+        self.assertIsNone(record.observed_game_time_us)
+
+        state = env.state()
+        saved = state["events"][0]["record"]
+        self.assertIn("logical_event_time_us", saved)
+        self.assertIn("observed_game_time_us", saved)
+        restored = GameEnvironment(notes, OsuConfig(ruleset="lazer"))
+        restored.restore(state)
+        self.assertEqual(restored.result(), env.result())
+
+        legacy_state = env.state()
+        legacy_record = legacy_state["events"][0]["record"]
+        legacy_record["event_time_us"] = legacy_record.pop("logical_event_time_us")
+        legacy_record.pop("observed_game_time_us")
+        legacy = GameEnvironment(notes, OsuConfig(ruleset="lazer"))
+        legacy.restore(legacy_state)
+        self.assertEqual(legacy.result(), env.result())
 
     def test_no_action_expiry_and_signed_negative_input_time(self) -> None:
         missed = play([TapNote("n", 0, 0)], [])

@@ -1,0 +1,427 @@
+{
+  "reference": {
+    "commit": "da27300fcbfa246f87c3ba1a14cbd00b68c7e9a9",
+    "mods": [],
+    "od": 8,
+    "rate": 1.0,
+    "release": "2026.1001.0-tachyon",
+    "repository": "https://github.com/ppy/osu",
+    "ruleset": "osu!mania",
+    "scoring_mode": "ScoreV2 default"
+  },
+  "scenarios": [
+    {
+      "actions": [
+        {
+          "kind": "down",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "kind": "up",
+          "lane": 0,
+          "time_us": 1001000
+        },
+        {
+          "kind": "down",
+          "lane": 1,
+          "time_us": 1020000
+        },
+        {
+          "kind": "up",
+          "lane": 1,
+          "time_us": 1021000
+        },
+        {
+          "kind": "down",
+          "lane": 2,
+          "time_us": 1050000
+        },
+        {
+          "kind": "up",
+          "lane": 2,
+          "time_us": 1051000
+        }
+      ],
+      "events": [
+        {
+          "hit_error_us": 0,
+          "kind": "judgement",
+          "lane": 0,
+          "logical_event_time_us": 1000000,
+          "note_id": "n0",
+          "note_time_us": 1000000,
+          "observed_game_time_us": 1000000,
+          "result": "PERFECT",
+          "score": {
+            "accuracy": 1,
+            "accuracy_denominator": 305,
+            "accuracy_judgement_count": 1,
+            "accuracy_numerator": 305,
+            "base_accuracy_points": 305,
+            "combo_after": 1,
+            "combo_before": 0,
+            "combo_score_portion": 150,
+            "highest_combo_after": 1,
+            "maximum_accuracy": 1,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 4,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.25,
+            "total_score": 239358,
+            "total_score_delta": 239358,
+            "total_score_without_mods": 239358
+          }
+        },
+        {
+          "action": "down",
+          "disposition": "hit",
+          "event_time_us": 1000000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": "n0"
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 1001000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": null
+        },
+        {
+          "hit_error_us": 20000,
+          "kind": "judgement",
+          "lane": 1,
+          "logical_event_time_us": 1020000,
+          "note_id": "n1",
+          "note_time_us": 1000000,
+          "observed_game_time_us": 1020000,
+          "result": "GREAT",
+          "score": {
+            "accuracy": 0.9918032786885246,
+            "accuracy_denominator": 610,
+            "accuracy_judgement_count": 2,
+            "accuracy_numerator": 605,
+            "base_accuracy_points": 300,
+            "combo_after": 2,
+            "combo_before": 1,
+            "combo_score_portion": 300,
+            "highest_combo_after": 2,
+            "maximum_accuracy": 0.9959016393442623,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 4,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.4959016393442623,
+            "total_score": 465007,
+            "total_score_delta": 225649,
+            "total_score_without_mods": 465007
+          }
+        },
+        {
+          "action": "down",
+          "disposition": "hit",
+          "event_time_us": 1020000,
+          "kind": "action",
+          "lane": 1,
+          "note_id": "n1"
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 1021000,
+          "kind": "action",
+          "lane": 1,
+          "note_id": null
+        },
+        {
+          "hit_error_us": 50000,
+          "kind": "judgement",
+          "lane": 2,
+          "logical_event_time_us": 1050000,
+          "note_id": "n2",
+          "note_time_us": 1000000,
+          "observed_game_time_us": 1050000,
+          "result": "GOOD",
+          "score": {
+            "accuracy": 0.8797814207650273,
+            "accuracy_denominator": 915,
+            "accuracy_judgement_count": 3,
+            "accuracy_numerator": 805,
+            "base_accuracy_points": 200,
+            "combo_after": 3,
+            "combo_before": 2,
+            "combo_score_portion": 458.49625007211563,
+            "highest_combo_after": 3,
+            "maximum_accuracy": 0.9098360655737705,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 4,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.6598360655737705,
+            "total_score": 475966,
+            "total_score_delta": 10959,
+            "total_score_without_mods": 475966
+          }
+        },
+        {
+          "action": "down",
+          "disposition": "hit",
+          "event_time_us": 1050000,
+          "kind": "action",
+          "lane": 2,
+          "note_id": "n2"
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 1051000,
+          "kind": "action",
+          "lane": 2,
+          "note_id": null
+        },
+        {
+          "hit_error_us": null,
+          "kind": "judgement",
+          "lane": 3,
+          "logical_event_time_us": 1127501,
+          "note_id": "n3",
+          "note_time_us": 1000000,
+          "observed_game_time_us": 1139145,
+          "result": "MISS",
+          "score": {
+            "accuracy": 0.6598360655737705,
+            "accuracy_denominator": 1220,
+            "accuracy_judgement_count": 4,
+            "accuracy_numerator": 805,
+            "base_accuracy_points": 0,
+            "combo_after": 0,
+            "combo_before": 3,
+            "combo_score_portion": 458.49625007211563,
+            "highest_combo_after": 3,
+            "maximum_accuracy": 0.6598360655737705,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 4,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.6598360655737705,
+            "total_score": 295894,
+            "total_score_delta": -180072,
+            "total_score_without_mods": 295894
+          }
+        }
+      ],
+      "id": "four_lane_chord_mixed_and_miss",
+      "notes": [
+        {
+          "id": "n0",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "id": "n1",
+          "lane": 1,
+          "time_us": 1000000
+        },
+        {
+          "id": "n2",
+          "lane": 2,
+          "time_us": 1000000
+        },
+        {
+          "id": "n3",
+          "lane": 3,
+          "time_us": 1000000
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "down",
+          "lane": 0,
+          "time_us": 835000
+        },
+        {
+          "kind": "up",
+          "lane": 0,
+          "time_us": 836000
+        },
+        {
+          "kind": "down",
+          "lane": 0,
+          "time_us": 1050000
+        },
+        {
+          "kind": "down",
+          "lane": 1,
+          "time_us": 1050000
+        },
+        {
+          "kind": "up",
+          "lane": 0,
+          "time_us": 1051000
+        },
+        {
+          "kind": "up",
+          "lane": 1,
+          "time_us": 1051000
+        }
+      ],
+      "events": [
+        {
+          "action": "down",
+          "disposition": "null_press",
+          "event_time_us": 835000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": null
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 836000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": null
+        },
+        {
+          "hit_error_us": 0,
+          "kind": "judgement",
+          "lane": 0,
+          "logical_event_time_us": 1050000,
+          "note_id": "new",
+          "note_time_us": 1050000,
+          "observed_game_time_us": 1050000,
+          "result": "PERFECT",
+          "score": {
+            "accuracy": 1,
+            "accuracy_denominator": 305,
+            "accuracy_judgement_count": 1,
+            "accuracy_numerator": 305,
+            "base_accuracy_points": 305,
+            "combo_after": 1,
+            "combo_before": 0,
+            "combo_score_portion": 150,
+            "highest_combo_after": 1,
+            "maximum_accuracy": 1,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 3,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.3333333333333333,
+            "total_score": 325175,
+            "total_score_delta": 325175,
+            "total_score_without_mods": 325175
+          }
+        },
+        {
+          "hit_error_us": null,
+          "kind": "judgement",
+          "lane": 0,
+          "logical_event_time_us": 1050000,
+          "note_id": "old",
+          "note_time_us": 1000000,
+          "observed_game_time_us": 1050000,
+          "result": "MISS",
+          "score": {
+            "accuracy": 0.5,
+            "accuracy_denominator": 610,
+            "accuracy_judgement_count": 2,
+            "accuracy_numerator": 305,
+            "base_accuracy_points": 0,
+            "combo_after": 0,
+            "combo_before": 1,
+            "combo_score_portion": 150,
+            "highest_combo_after": 1,
+            "maximum_accuracy": 0.6666666666666666,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 3,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.3333333333333333,
+            "total_score": 112675,
+            "total_score_delta": -212500,
+            "total_score_without_mods": 112675
+          }
+        },
+        {
+          "action": "down",
+          "disposition": "hit",
+          "event_time_us": 1050000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": "new"
+        },
+        {
+          "hit_error_us": 0,
+          "kind": "judgement",
+          "lane": 1,
+          "logical_event_time_us": 1050000,
+          "note_id": "chord",
+          "note_time_us": 1050000,
+          "observed_game_time_us": 1050000,
+          "result": "PERFECT",
+          "score": {
+            "accuracy": 0.6666666666666666,
+            "accuracy_denominator": 915,
+            "accuracy_judgement_count": 3,
+            "accuracy_numerator": 610,
+            "base_accuracy_points": 305,
+            "combo_after": 1,
+            "combo_before": 0,
+            "combo_score_portion": 300,
+            "highest_combo_after": 1,
+            "maximum_accuracy": 0.6666666666666666,
+            "maximum_accuracy_points": 305,
+            "maximum_combo": 3,
+            "maximum_total_score": 1000000,
+            "minimum_accuracy": 0.6666666666666666,
+            "total_score": 303696,
+            "total_score_delta": 191021,
+            "total_score_without_mods": 303696
+          }
+        },
+        {
+          "action": "down",
+          "disposition": "hit",
+          "event_time_us": 1050000,
+          "kind": "action",
+          "lane": 1,
+          "note_id": "chord"
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 1051000,
+          "kind": "action",
+          "lane": 0,
+          "note_id": null
+        },
+        {
+          "action": "up",
+          "disposition": "release",
+          "event_time_us": 1051000,
+          "kind": "action",
+          "lane": 1,
+          "note_id": null
+        }
+      ],
+      "id": "four_lane_note_lock_retry_and_combo_break",
+      "notes": [
+        {
+          "id": "old",
+          "lane": 0,
+          "time_us": 1000000
+        },
+        {
+          "id": "new",
+          "lane": 0,
+          "time_us": 1050000
+        },
+        {
+          "id": "chord",
+          "lane": 1,
+          "time_us": 1050000
+        }
+      ]
+    }
+  ],
+  "schema_version": 1
+}
