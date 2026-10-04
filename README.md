@@ -119,6 +119,7 @@ Probably every rhythm game enthusiast has heard of Freedom Dive. So i decided to
 
 You can view the results here: 
 https://github.com/user-attachments/assets/240138f4-dff9-4a6c-a03b-74153c150c61
+(sorry i know the video is silent just imagine the music, if you've never heard it before give it a listen online c:)
 
 More info: [Iteration-one results](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) and [saved receipt bundles](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1).
 
