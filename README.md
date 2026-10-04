@@ -1,59 +1,131 @@
-# Learning in a fly connectome: a research prototype
+Hi there!
 
-This project asks whether a small circuit chosen from a fruit-fly wiring diagram can change its response after a teaching signal. It combines a real **MaleCNS v1.0** map of which cells contact which, a computer model of electrical activity, and explicitly designed rules for input, teaching, learning, and output.
+This is the first iteration of my Spacefly project: Attempting to make a fly brain "learn" how to play osu!mania 4k. 
+(wow, the word attempting does a LOT of heavy lifting here as you will see c:)
 
-**Current result:** the final moving-note experiment, Level 4D, is frozen. Teaching at the wrong region produced a first action at position **x=0.20** that persisted when teaching and learning were switched off. Teaching at the intended target near **x=0.70** produced no action. The naive model and a matched teaching-on/learning-off control produced no action. The declared behavioral test therefore **failed**, while the intended anatomy-dependent learning mechanism operated. We record the branch as **“Mechanistic success / behavioral robustness incomplete.”** See the [full claim and limits](docs/MALECNS_MOVING_LEARNING_BRANCH_FREEZE.md).
 
-## What the model does, in ordinary terms
+## What does it mean for a fly to learn? 
 
-A *connectome* is a map of connections between nerve cells. Here, 32 selected Kenyon cells (KCs) feed a mushroom-body output cell called MBON05. A simulated note travels across a one-dimensional position from 1 to 0. A fixed input rule makes different KCs respond at different positions. During training, an external event stimulates three anatomy-selected dopamine neurons (DANs). If an active KC has a mapped route to an active DAN, the model can weaken that KC's connection to MBON05. A fixed rule turns MBON05 activity into an action event.
+For a first-time experienced event, some sensory input is taken in, processed by sensory neurons, which then activates a particular Kenyon-cell (KC) pattern. KCs are neurons that represent certain sensory patterns. They reside in the mushroom body, a brain region involved in learning and memory. The event at the same time (or at least close together) generates either a positive or negative outcome which activates certain dopamine neurons (DAN); PAM and PPL1 neurons specifically for reward and punishment respectively*. These signals also get sent to the mushroom body.
+The cue-activated KCs and signal coincide and dopamine helps change the strength of KC-to-output neuron synapses.
 
-```text
-moving note → fixed position encoder → KC spikes → KC→MBON05 connections
-                                               ↑            ↓
-external teaching event → selected DAN spikes → local learning gate
-                                                            ↓
-                                               MBON05 response → fixed action event
+In the future when the fly comes across the same sensory input, the cue activates the KCs again, and the modified connections bias output towards a positive outcome**. (e.g. go towards food if edible, stay away if not)
+
+tldr: learning means the functional strength of synapses are being changed. 
+
+*PAM and PPL1 clusters are way more diverse than i explain them to be, and can have way more complicated effects than just "reward and punishment".
+**Of course, in a real scenario, many other factors like hunger, innate preference etc. also affect the outcome
+
+
+More info: [Fly learning and the modeled mechanism](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_FLY_TRAINING_EXPLAINER.md).
+
+## Existing projects
+
+With all the recent videos popping up on my feed on making flies play games, I was curious on how these projects worked. However, I realized that many projects online did not actually demonstrate the fly's capacity to learn. 
+
+Most* projects on game demos keep the fly circuit and weights fixed (such that synapse strength doesn't and cannot change) while training an external controller to interpret neural activity as game actions: "This activity most likely implies this game action." The external component is the one learning, while the fly brain is just a computational substrate. 
+
+*well, at least the ones i came across
+
+
+## The goal of this project:
+
+Can a MaleCNS circuit learn lane choice and precise timing in four-lane osu!mania through internal, reinforcement-driven synaptic changes?
+
+
+## What even is MaleCNS?
+
+MaleCNS v1.0 is a connectome dataset. A connectome is a map which shows the placements of neurons, where they run and their synapse connections. Specifically, MaleCNS is that of an adult male fruit fly's central nervous system, mapping the brain, optic lobes and ventral nerve cord (spinal cord basically) with connections preserved across the neck.
+
+More info: [Connectome source data](data/README.md).
+
+## What is osu!mania?
+
+osu!mania is a VSRG (vertical scrolling rhythm game). Notes appear from the top (or bottom) of the screen and move up (or down) to a judgement line, where you must hit it in time to achieve an accuracy score. 
+
+
+## Start
+
+I originally intended the flow of the project to go like this:
+
+```mermaid
+flowchart TD
+    cue["osu! note cue"] --> sensory["sensory encoding"]
+    sensory --> circuit["fly-derived circuit"]
+    circuit --> key["key press"]
+    key --> judgment["osu! judgment"]
+    judgment --> teaching["teaching signal"]
+    teaching --> circuit
 ```
 
-The cell IDs and contact relationships come from the connectome. The position encoder, simulated voltage scale, dopamine stimulation, plasticity formula, and action rule are **engineering assumptions**. This experiment does not simulate a whole fly or establish that a fly would perform the task. Level 4D does not send a physical keyboard press or receive an osu! judgment.
+A visual note appears on screen, a fixed, artificial sensory encoder converts the lane and current position of the note into timed input (the fly brain has no eyes). Then, we specify a circuit route: activated KCs form a cue-related activity pattern, influencing mushroom-body output neurons and descending neurons; neurons that carry signals down to local motor circuits. A fixed readout turns that descending activity into a key-down and key-up event (the fly brain has no limbs), which is then judged by the game on how accurate the key press was. 
 
-## Explore the work
+That judgement is then turned into a utility score and compares it against its predicted utility. A artificial teaching route* maps the error (actual - predicted utility score) to vary selected dopamine neurons which sends signals to the mushroom body. The signals adjust the strength of selected connections, and eventually after lots of training, the timing of key presses would hopefully become more accurate. 
 
-- [Current status](docs/project-status.md): what passed, what failed, and what is frozen.
-- [Experiment results](results/index.md): each major stage's declared result and interpretation.
-- [Level 4D playback](visualization/malecns-level4d-playback.html): download or open the HTML locally to scrub a saved moving note, neural events, weights, voltage, and output. The training and frozen-evaluation traces are separate recorded phases.
-- [Documentation guide](docs/index.md): the infrastructure, synthetic, pathway, larval, and internal-learning tracks.
-- [Research guide](research/index.md): source evidence, candidate notes, and unresolved questions.
-- [Source data](data/README.md): official downloads, checksums, and the local-only data boundary.
+*the fly gains nothing out of getting a good score, so we recreate feedback artificially 
 
-The append-only [development log](CURRENT.md) and original stage reports preserve the chronology. Older Branch A/B and milestone labels are historical names; the [decision timeline](docs/history/timeline.md) explains the changes.
+Given our limitations of not having a literal fly, we have multiple engineered interfaces, particularly the sensory encoder, fixed keyboard readout, utility and artificial teaching routes
 
-## Get started
 
-Use Python **3.11 or newer**. From the repository root, create and activate a virtual environment, then install the package:
+More info: [Design and engineering assumptions](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_SPEC.md).
 
-```text
-python -m venv .venv
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-# macOS/Linux: source .venv/bin/activate
-python -m pip install -e ".[connectome]"
-python -m unittest discover -s tests
-```
+## Problems
 
-The import and some experiment tests require the source files described in the [data guide](data/README.md). The saved [compact Level 4D result](results/malecns-level4d/summary.md) and playback can be inspected without rerunning training. See [reproducibility](docs/reproducibility.md) for exact boundaries and commands.
+However, there were tons of problems at both the circuit and learning stages. 
 
-## Repository map
+The selected MaleCNS circuit did not reliably carry visual input all the way to the intended output.
+With a 140 neuron circuit, the encoder sent signals to the KCs but all of them (107) did not spike. 
+Directly simulating KCs to send signals to MBON32 (a chosen mushroom body output neuron) also did not spike it.
+Directly simulating MBON32 however made descending neurons respond, but it still stands that the circuit could not fully link well.
+Increasing and decreasing the neuron count in the circuit supported small parts of the circuit, but did not immediately solve the bottleneck.
 
-| Path | Contents |
-| --- | --- |
-| `src/project_b/` | Simulator, connectome import, game fixture, and experiments |
-| `configs/` | Frozen protocols and source selection |
-| `tests/` | Deterministic checks |
-| `docs/` | Scientific reports, plans, and guided indexes |
-| `research/` | Guide to evidence and exploratory work |
-| `results/` | Small published result bundles and artifact checksums |
-| `visualization/` | Offline playback of recorded traces |
-| `data/` and `runs/` | Local source data and full generated runs, excluded from normal Git history |
+This is where the difference between a connectome and a biological circuit comes in.
+MaleCNS can show which neurons are connected, but not how strongly or quickly they affected each other, or what input did a neuron need to fire. So, "directly simulating" caused issues as measured values are not available for the exact circuit. I COULD tune the numbers over countless runs, but 1) that would take countless hours and 2) It won't let me learn anything about the fly's behaviour.
 
-The Python package is still named `project_b` so existing scripts and frozen configurations keep working. A public software license and author citation will be added once their terms are chosen. The MaleCNS and larval connectome sources have their own provenance in the [data manifests](data/manifests/).
+The synthetic learner also had issues with its policy. One notable example was how it led to very good accuracy inputs, but only if a unscored input was registered earlier for the same approaching note. Eventually after a long time repeatedly tuning with no results (coupled with issues with the actual circuit), I realized that this intended project would be going into a indefinite research loop.
+
+
+So instead, I decided to first recreate the osu!mania game interface with all the useful parts (basically a clone) to ensure my validity tests were accurate and represented the actual game.
+
+More info: [Visual-route report](docs/ELECTRICAL_V1_SENSORY_ROUTE_CAUSALITY.md), [later circuit controllability](docs/B3_CANDIDATE1_CONTROLLABILITY.md), and [synthetic learner diagnosis](docs/SYNTHETIC_M2_ROOT_CAUSE.md).
+
+## v2
+
+Then, the flow of the project turned into this:
+
+The fly circuit has 32 KCs, assigned a different preferred position based off a countdown of the note till judgement line hit. Every 1ms, encoder gives the KCs near the current note position the strongest electric input and less to KCs further and further. Each KC accumulates that input, and after enough accumulation of input: above a firing threshold, send signals to MBON05. Then, a fixed rule reads MBON05, and if its voltage is within a certain set threshold, issue a DOWN key press, then an UP 10ms later. After each spike (above threshold), reset the voltage of the specific KC.
+
+What about hold notes? Software keeps the key DOWN and releases when the visible tail (information from the game renderer) reaches the hit line.
+
+Multiple notes (chords)? Software noted if two notes reached the line together, the one timed press would be copied to both lanes. 
+
+For a crowded chart (higher difficulty), the software handles the closest note first, then after the cue changes, buffer 11ms for readout to finish the cue, reset and get ready for the next. If the circuit decided DOWN for a key already DOWN, the software suppressed that new input. 
+
+During training (500 reps of one tap trial): the first few (358) runs, model made no presses so the game marked a miss. the dopamine neurons are directly stimulated, and the learning rule looked at each KC spiked within a 250ms eligibility window, then asked:
+
+Did this KC spike in the preceding 250 ms?
+Is its KC→MBON05 connection one of the 32 selected connections?
+Is that KC covered by one of the active, anatomy-selected DANs?
+If so, modify that connection.
+
+You can view how training went here: [Training and test visualization (MP4)](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/visualization/ea-mvp-training-showcase.mp4)
+
+More info: [Interactive training HTML](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/visualization/ea-mvp-training-playback.html), [training explainer](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_FLY_TRAINING_EXPLAINER.md), and [assumption registry](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_SPEC.md).
+
+## Results 
+
+Probably every rhythm game enthusiast has heard of Freedom Dive. So i decided to make it play one of the most popular maps and see how it went :)
+
+You can view the results here: [Freedom Dive replay (MP4)](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/visualization/freedom-dive-fly-replay-silent.mp4)
+
+
+More info: [Iteration-one results](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) and [saved receipt bundles](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1).
+
+
+
+
+
+
+
+
+[Previous README](README.previous.md).
