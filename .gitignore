@@ -5,6 +5,11 @@ __pycache__/
 .coverage
 .venv/
 runs/
+/work/
+build/
+dist/
+**/bin/
+**/obj/
 data/raw/
 data/processed/
 

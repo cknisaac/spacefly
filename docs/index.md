@@ -2,6 +2,12 @@
 
 Start with [current project status](project-status.md), then [architecture](architecture.md) and [reproducibility](reproducibility.md). The [complete document catalog](catalog.md) lists every preserved report under `docs/`.
 
+## Completed iteration 1
+
+The latest engineering implementation, videos, and receipt bundles are on the [EA-MVP branch](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner). Start with its [iteration-one summary](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) and [training explainer](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_FLY_TRAINING_EXPLAINER.md).
+
+The guides below cover the earlier infrastructure and strict-connectome studies retained on `main`. The [previous README](history/README-before-iteration-1.md) is archived as part of that history.
+
 ## Project tracks
 
 | Track | What it covers | Start here |

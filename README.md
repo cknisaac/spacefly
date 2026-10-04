@@ -109,6 +109,7 @@ Is that KC covered by one of the active, anatomy-selected DANs?
 If so, modify that connection.
 
 You can view how training went here: 
+
 https://github.com/user-attachments/assets/6582b5f8-d974-4e43-b521-f25ee35cc9e2
 
 More info: [Interactive training HTML](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/visualization/ea-mvp-training-playback.html), [training explainer](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_FLY_TRAINING_EXPLAINER.md), and [assumption registry](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_SPEC.md).
@@ -118,16 +119,12 @@ More info: [Interactive training HTML](https://github.com/cknisaac/spacefly/blob
 Probably every rhythm game enthusiast has heard of Freedom Dive. So i decided to make it play one of the most popular maps and see how it went :)
 
 You can view the results here: 
+
 https://github.com/user-attachments/assets/240138f4-dff9-4a6c-a03b-74153c150c61
+
 (sorry i know the video is silent just imagine the music, if you've never heard it before give it a listen online c:)
 
 More info: [Iteration-one results](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) and [saved receipt bundles](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1).
 
 
-
-
-
-
-
-
-[Previous README](README.previous.md).
+[Previous README](docs/history/README-before-iteration-1.md).

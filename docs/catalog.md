@@ -6,6 +6,7 @@ This index lists the Markdown reports preserved under `docs/`. The [documentatio
 
 - [Implemented system at a glance](architecture.md)
 - [Major project decisions](history/decisions.md)
+- [Learning in a fly connectome: a research prototype](history/README-before-iteration-1.md)
 - [Project timeline](history/timeline.md)
 - [Documentation guide](index.md)
 - [Current project status](project-status.md)

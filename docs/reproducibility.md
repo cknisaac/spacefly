@@ -1,5 +1,9 @@
 # Reproducibility and publication boundary
 
+## Engineering iteration-one artifacts
+
+The [EA-MVP branch](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner) contains the later engineering implementation. Its [receipt bundles](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1/README.md) document how to restore saved training and Freedom Dive run data. The [viewer guide](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/visualization/README.md) links the self-contained HTML and MP4s. The following sections describe the earlier artifacts and software on `main`.
+
 ## Inspect the published result
 
 The [Level 4D result bundle](../results/malecns-level4d/summary.md) contains a compact machine-readable metric file, every frozen position-map row, artifact hashes, and a portable playback. It was extracted from the existing full receipt without running another learning experiment.

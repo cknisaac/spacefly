@@ -1,6 +1,10 @@
 # Current project status
 
-**As of 2026-10-03:** the MaleCNS moving-learning branch ends at Level 4D. Its branch classification is **Mechanistic success / behavioral robustness incomplete**. Its declared strict behavioral gate is **FAIL**.
+**As of 2026-10-05:** iteration 1 is complete on the [EA-MVP engineering branch](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner). It trained a repeated fixed-speed timing response in selected KC→MBON05 weights, then used frozen weights for a headless Freedom Dive replay. Shuffled teaching produced the same later behavior, dense same-lane repeats remain weak, and full-map osu!lazer score parity is partial. See the [iteration-one summary](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) for the declared gates and limits.
+
+## Earlier strict MaleCNS branch
+
+The strict moving-learning branch ended at Level 4D on 2026-10-03. Its branch classification remains **Mechanistic success / behavioral robustness incomplete**. Its declared strict behavioral gate is **FAIL**.
 
 | Frozen Level 4D condition | Observed first action |
 | --- | --- |

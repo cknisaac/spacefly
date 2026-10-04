@@ -1,6 +1,8 @@
 # Implemented system at a glance
 
-The repository contains several related systems. The current MaleCNS Level 4D experiment uses a **reduced circuit**, not the complete connectome or the headless game loop:
+The repository contains several related systems. The later [EA-MVP engineering implementation](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/src/project_b/ea_mvp) connects a reduced timing circuit to a headless game through explicit engineered interfaces; see its [training explainer](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_FLY_TRAINING_EXPLAINER.md).
+
+This page describes the earlier frozen MaleCNS Level 4D experiment retained on `main`. It uses a **reduced circuit**, not the complete connectome or the headless game loop:
 
 ```text
 current note position → fixed Gaussian KC encoder → 32 modeled KC cells

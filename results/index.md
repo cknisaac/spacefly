@@ -2,6 +2,12 @@
 
 **Contract result** is the decision under the rule declared before a run. **Interpretation** describes what the run still showed. A partial mechanism does not turn a strict FAIL into PASS.
 
+## Iteration-one engineering results
+
+The completed EA-MVP and Freedom Dive stages are recorded on the engineering branch in the [iteration-one decision ledger](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md). Its [published receipt bundles](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1) restore the saved run paths without retraining.
+
+## Earlier strict-connectome and synthetic studies
+
 | Study | Contract result | Interpretation | Report |
 | --- | --- | --- | --- |
 | Synthetic randomized-map learning | FAIL reliability/timing gate | Engineering fixture only | [Legacy status](../docs/LEGACY_SYNTHETIC_STATUS.md) |

@@ -10,5 +10,8 @@ This is a reading map, not a replacement for the dated [append-only process log]
 | Larval exploration | Separate L1R/L2/L3 evidence and engineering variants examined | [Larval guide](../tracks/larval-learning/index.md) |
 | Adult internal learning, Levels 1–3B | Reduced KC→MBON fixture and DAN bridge; mixed strict outcomes | [Internal-learning guide](../tracks/malecns-internal-learning/index.md) |
 | Adult moving note, Level 4D | Wrong-region learned action retained; target action absent; strict FAIL | [Frozen branch summary](../MALECNS_MOVING_LEARNING_BRANCH_FREEZE.md) |
+| Engineering iteration 1, completed 2026-10-04 | Repeated-note training and frozen Freedom Dive replay under explicit engineering assumptions; feedback-pairing and dense-repeat limits remain | [EA-MVP summary](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) |
 
 The [result registry](../../results/index.md) records each key gate without changing its original judgment.
+
+The [previous README](README-before-iteration-1.md) preserves the earlier public introduction.
