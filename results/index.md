@@ -16,8 +16,8 @@
 | Level 4C moving-note learning | FAIL | Startup action at first KC spike hid learning position | [Level 4C](../docs/MALECNS_LEVEL4C_MOVING_NOTE_LEARNING_RESULT.md) |
 | **Level 4D final moving-note learning** | **FAIL strict target action** | **Mechanistic success / behavioral robustness incomplete** | [Compact bundle](malecns-level4d/summary.md), [full report](../docs/MALECNS_LEVEL4D_FINAL_REPAIR_RESULT.md) |
 
-The separate **EA-MVP engineering-assumption iteration** is summarized in the [iteration-one handoff](../docs/EA_MVP_ITERATION_1_SUMMARY.md). Its fixed-speed repeated-note learning, frozen pattern tests, and *Freedom Dive* playback use artificial sensory/teacher/motor boundaries; they do not replace the strict Level 4D FAIL or satisfy the original 6/8 confirmation gate.
+The separate **EA-MVP engineering-assumption iteration** is summarized in the [iteration-one handoff](../docs/EA_MVP_ITERATION_1_SUMMARY.md), with [compressed raw receipts](ea-mvp-iteration-1/README.md). Its fixed-speed repeated-note learning, frozen pattern tests, and *Freedom Dive* playback use artificial sensory/teacher/motor boundaries; they do not replace the strict Level 4D FAIL or satisfy the original 6/8 confirmation gate.
 
-The original protocols and failure labels remain in the [document catalog](../docs/catalog.md). The [reproducibility guide](../docs/reproducibility.md) explains which full raw receipts are local-only.
+The original protocols and failure labels remain in the [document catalog](../docs/catalog.md). The [reproducibility guide](../docs/reproducibility.md) explains which other historical raw receipts are local-only.
 
 The [local diagnostic manifest](local-artifact-manifest.csv) records paths, sizes, and hashes of large historical `docs/figures/` artifacts that are excluded from Git.

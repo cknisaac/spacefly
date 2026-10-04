@@ -1,0 +1,931 @@
+{
+  "format": "sha256 file inventory; bundles retain repository-relative paths",
+  "artifacts": [
+    {
+      "path": "runs/ea_mvp/broad_eval_v1.json",
+      "bytes": 133168,
+      "sha256": "c8c29f32d11e1102528412f894a3465e5db7bd67e9b3702cda8bf021b44225a1",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/chord_admission_v1.json",
+      "bytes": 3402,
+      "sha256": "a05a0265bf52c361dd7d6b4cede8af567d0f580857b55388a2ac927378224b73",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/chords_v1.json",
+      "bytes": 4645,
+      "sha256": "c7a729d65effebaaebdf3f824175d8de02ec181357da4fb914a87b0601c34ac1",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/independent_audit.json",
+      "bytes": 938,
+      "sha256": "1fa80b6767d864bac467f724d736c8ef3bfaa33854f43a8ad0d0cd50af86390a",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_dan_off.json.gz",
+      "bytes": 14885,
+      "sha256": "a14a9a59ba8539aa42b170bcce761bf8eb0691d4842f7775096e87035747ea2f",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_learning_on.json.gz",
+      "bytes": 65594,
+      "sha256": "cf38df054196d21574c93729cc4598029a4efbd8afb7c64ddf9bc1d3384e35bd",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_plasticity_off.json.gz",
+      "bytes": 15342,
+      "sha256": "198eaab7810b1787224032bc859368be1864d8367004db98cbd1fe8901ed7c0e",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_shuffled_teaching.json.gz",
+      "bytes": 66331,
+      "sha256": "28bf3ea4c38ecb610121180925dd9cd3fd403e259c50d200c8d7e17b222433e9",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1009_untrained.json.gz",
+      "bytes": 1576,
+      "sha256": "9f92437eec8ec1796028f54b87be2ab608e92869e7ef3abba5d66d31e0f1f5b8",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_dan_off.json.gz",
+      "bytes": 14928,
+      "sha256": "07532e5aa6ff3be6260ec291b32b90ec03bfad03b869e6ffb31b71911d2eeb76",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_learning_on.json.gz",
+      "bytes": 66298,
+      "sha256": "8c6644bcc0aa6334ffd599e408a0483b551af9f7d983bc53cfeec50bebe44e9b",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_plasticity_off.json.gz",
+      "bytes": 15332,
+      "sha256": "ca4efa1c7670519de24e7b73577200e0b98ef63bf282e3dc8c41b545ca5ad9f7",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_shuffled_teaching.json.gz",
+      "bytes": 66928,
+      "sha256": "1c84a4bd2f819825baf737fd1b54fb809c676789615a01d86ce429d6051c3f7e",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_1103_untrained.json.gz",
+      "bytes": 1578,
+      "sha256": "a030a951db04f24fa69ee7d2afb931b005ba3f19c36420b376d9436a4df15434",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_dan_off.json.gz",
+      "bytes": 14919,
+      "sha256": "50b571b23454f61a7ad6eaebcdb6161571a34daec23cf07a270f57cda9b9c4ed",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_learning_on.json.gz",
+      "bytes": 65345,
+      "sha256": "f80018f3b3c4559d3fb688b9058b36ea7c2dee75f3b923d585e16494bcad1a2f",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_plasticity_off.json.gz",
+      "bytes": 15322,
+      "sha256": "4380793e9a743531f8428fc2563eff7e9a994bb1c20ce2f17648027d99776503",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_shuffled_teaching.json.gz",
+      "bytes": 66122,
+      "sha256": "0c8ae2ee84b4931735f426114211b54113ac072ed49c14153074bc8e49a45a2d",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/seed_907_untrained.json.gz",
+      "bytes": 1575,
+      "sha256": "e0737bd4a96de955e32557ab5d2c0d7e49aa2ad85d52783fd2e5172e0b67b58f",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_fixed_v1/summary.json",
+      "bytes": 8429,
+      "sha256": "36b41d310bdebb3a6a24a2e72b1594f1463fdc8fbb57a47329a578630268d1cf",
+      "bundle": "ea-confirmation-fixed.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/independent_audit.json",
+      "bytes": 2028,
+      "sha256": "2a0b473fe6cb0c514cf95c65290b5d8e98d1426c398e41db526946dcb4ae0cc2",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_101_dan_off.json.gz",
+      "bytes": 15248,
+      "sha256": "90db62c1781bf379958b0c9ced9cc9cf5b5279f57266fc7785666b848f19f323",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_101_learning_on.json.gz",
+      "bytes": 66864,
+      "sha256": "39037d36445963cf449a752e5178f9b637d57cb2066a57cef97f29c1c920ca15",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_101_plasticity_off.json.gz",
+      "bytes": 15583,
+      "sha256": "9bd43025a5304b759ef818af151d11aead04e7830b6c630b6337fd374c1ed970",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_101_shuffled_teaching.json.gz",
+      "bytes": 67449,
+      "sha256": "ae17c63b16c0e006e8afd86e2abd7d4bc97caaaa9c3c66349b776fbad989b294",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_101_untrained.json.gz",
+      "bytes": 1812,
+      "sha256": "4d09a31789c9c10fc45598c4e197b4d0186516f9fe220dd4a0c3ecb462a0e579",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_211_dan_off.json.gz",
+      "bytes": 15389,
+      "sha256": "ee84331d8ca2890092fa357eb7582fee8ba2315d56a29b27cf88573346da38af",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_211_learning_on.json.gz",
+      "bytes": 65838,
+      "sha256": "03366d35ff2914fb2f1d293175393d9e98e8b6e3775e913f59a8be84abc59a76",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_211_plasticity_off.json.gz",
+      "bytes": 15463,
+      "sha256": "f6632b0055ec84edda221d6a7e1ad77ff3925756e29ac251750bca3a636c98d5",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_211_shuffled_teaching.json.gz",
+      "bytes": 66515,
+      "sha256": "4a3dee95ead979c6336bfb37264b1530a57189dd6a729491c7aec3cd1e740f3a",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_211_untrained.json.gz",
+      "bytes": 1812,
+      "sha256": "2b38239b3876a0d64b29d254e2213d611ff4b5fd8aeaf3db22861a668e79ff2f",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_307_dan_off.json.gz",
+      "bytes": 15239,
+      "sha256": "3c9440f1012a9998c62211a9e468de5d32143b36636a4fe5f5d76319a22d13c3",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_307_learning_on.json.gz",
+      "bytes": 66387,
+      "sha256": "4cdaa26c9b295672f6d850732ed8446ff0e2dca28d231c25b0e229e8d6c4d006",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_307_plasticity_off.json.gz",
+      "bytes": 15575,
+      "sha256": "25ffad15a1f0da71907d857f7742753ff96635c8c9cc3451e49abb99c00790ea",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_307_shuffled_teaching.json.gz",
+      "bytes": 67097,
+      "sha256": "1ad936ce9257aa29aff8be3794abc3f8c9e4d6f3aa44bf154522c1b8cadd50ba",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_307_untrained.json.gz",
+      "bytes": 1811,
+      "sha256": "a99c8b7c741256a2fd55796829366b73b56768f9aebddd6862f326b914acb531",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_401_dan_off.json.gz",
+      "bytes": 15243,
+      "sha256": "6d7f80543953f7dc42526427f0ed3ddce9c529bf5c313f672c01daed3c5e4190",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_401_learning_on.json.gz",
+      "bytes": 66834,
+      "sha256": "d255cb5b8968505c4b5b828a1d5871c22e7dc4a1efc59c857434461d103b720b",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_401_plasticity_off.json.gz",
+      "bytes": 15465,
+      "sha256": "57b69e478caca0de99b2af9a5111513cbcf6bed40750a713ee7990a067624f2b",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_401_shuffled_teaching.json.gz",
+      "bytes": 67533,
+      "sha256": "27fd44f78f19b5c08ffac3bda2d0dbb696581634c042f29496758b33f000bf48",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_401_untrained.json.gz",
+      "bytes": 1814,
+      "sha256": "cb562f4a51be4f6d6753046bc0fcce15cfce98708ebb40fa4ab4d5d68039a23b",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_503_dan_off.json.gz",
+      "bytes": 15242,
+      "sha256": "bc83cecd772771d3d31ec8882e602478e3d6daafe7d6f59ceb6af2563a0e152e",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_503_learning_on.json.gz",
+      "bytes": 65544,
+      "sha256": "ba7e5669241aa0266e7b4bbf7e0565e5ff83438fd6b8025c889286bd47afe23a",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_503_plasticity_off.json.gz",
+      "bytes": 15465,
+      "sha256": "2f28b0527b235b8bc5df5bd62b3d1f488f349e69609a36e4108cb213b253068f",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_503_shuffled_teaching.json.gz",
+      "bytes": 66348,
+      "sha256": "3bc6cb6d2ed3241bc8b76d8e44645fcba565b07da4776ec804be35bd570dbe66",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_503_untrained.json.gz",
+      "bytes": 1810,
+      "sha256": "0af24f0081b24b1235a4e8fd4b05f5dfaa9cb4e2c080ba278772d810c60d7bef",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_601_dan_off.json.gz",
+      "bytes": 15198,
+      "sha256": "8eee476fc50831e41151b939f233429743e4cbc9aaea86701e62b449d977e2b7",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_601_learning_on.json.gz",
+      "bytes": 66283,
+      "sha256": "ea88803c31b4ebf01ebd2bbce1139b84d05f345aead9042578d6ce0bc35c261f",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_601_plasticity_off.json.gz",
+      "bytes": 15576,
+      "sha256": "7188fe5830d95abf773a976209e71aa160d02dc6df1b1297717badd5ba0a9556",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_601_shuffled_teaching.json.gz",
+      "bytes": 66923,
+      "sha256": "168e202f73bc5b139322d84e280df462c4c70dfb8188719ff54229e4a3a696a3",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_601_untrained.json.gz",
+      "bytes": 1809,
+      "sha256": "8a65626c65234eddbcd487c5ab43c9c72582da1199f9d65deff5e7d859737fad",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_701_dan_off.json.gz",
+      "bytes": 15367,
+      "sha256": "58e12cc6633cd3aa101a71abec3b7882b313a952653e745705addd0614291602",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_701_learning_on.json.gz",
+      "bytes": 65722,
+      "sha256": "bf68ef5227561f818ab030ef2f3c995a1d20db53026696f94ce14b9328e23872",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_701_plasticity_off.json.gz",
+      "bytes": 15483,
+      "sha256": "483666bfc8bf4f9f5404182f10049dab64160b025bcc0db8b39623eb958ac566",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_701_shuffled_teaching.json.gz",
+      "bytes": 66379,
+      "sha256": "64580b9b352822644c625ad474f7f84c611fa6c8eb2dc55e1741816f9a08bed3",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_701_untrained.json.gz",
+      "bytes": 1814,
+      "sha256": "3d4f8a262d4728a6eac7a86741630cd194a9c8db60f3e5c5a9ab81df1749e9fa",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_809_dan_off.json.gz",
+      "bytes": 15245,
+      "sha256": "dfceeb8e8a11da25ba3988704f1c5a47041c87a8f916d655d5a44159b199752e",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_809_learning_on.json.gz",
+      "bytes": 66658,
+      "sha256": "de7b6a6e0764145b06ae23f33481479224ebd943fd3f889194c7e9f7affe7279",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_809_plasticity_off.json.gz",
+      "bytes": 15465,
+      "sha256": "9d86f8a15ba85a93d3bd5143c7c6cb4d554c6e5646e44ee14c6cc2086e305a84",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_809_shuffled_teaching.json.gz",
+      "bytes": 67292,
+      "sha256": "a909c2f8a61a8e313b740e9af0a4e7644d4bc68eefabe85ece4d6e3acf879d09",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/seed_809_untrained.json.gz",
+      "bytes": 1810,
+      "sha256": "d7736205acbcdbc83789a079093cc578409feb585d3eb91e6795000552ed5834",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/confirmation_v2/summary.json",
+      "bytes": 22275,
+      "sha256": "9419d9671464af8ea8374fce2f39b4490abd66fc0228cac084faece4b558e2c3",
+      "bundle": "ea-confirmation-v2.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/continuous_one_lane_v1.json",
+      "bytes": 5111,
+      "sha256": "44bbcc1132f93cdfe2185ab34d6e1db06f2b3e7f9127baf952251819e8cb8fca",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/continuous_one_lane_v2.json",
+      "bytes": 4634,
+      "sha256": "8d24520deb3ad8153d390298114b40fd562f474e0ff9f6f5f2fbdcbaa9822772",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/development_v1.json",
+      "bytes": 10666370,
+      "sha256": "c7e8339cdeda60efd839ef0f823d70ff619cbaa7d3bee582cf23b0e66c96b36c",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/development_v2.json",
+      "bytes": 12037520,
+      "sha256": "2f559f0f351fdbe531662b704833f9176124fc88546f0dd0468bbd3f157d40ab",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd1_typed_frames_v1.jsonl.gz",
+      "bytes": 5185434,
+      "sha256": "660115c62d0656780742c838c7f6f201084e0dd1720bf5ed4fb270c183b30ba7",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_fixed_speed_latched_cue_console.json",
+      "bytes": 16192,
+      "sha256": "f2464f35c62368a495dba953971d09b9d2481c99261ee4aee0c50a077fa02b9c",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_fixed_speed_latched_cue_v1.json",
+      "bytes": 16190,
+      "sha256": "13af0e72de38d4a4a69dc075e63a6b8332fdda0fc8b00bfccd23b55387b59894",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_fixed_speed_monotonic_ttc_console.json",
+      "bytes": 17211,
+      "sha256": "86de3476d60b81fa5e66c32f51f325ceeda9d5eb51836b44f96683ec2ffcb581",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_fixed_speed_monotonic_ttc_v1.json",
+      "bytes": 17209,
+      "sha256": "bc074c9016739019e945951c4570aa35e15158d701dc91840dff53184ae69754",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_fixed_speed_policy_v1.json",
+      "bytes": 14037,
+      "sha256": "ba6b97fe3debcd191708dabc98e4437e522fe8597752869f3f472580a8194e67",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_sensory_probe_v1.json",
+      "bytes": 5328,
+      "sha256": "67e34dbff7134f232e8c7bd41d00869ba439566205f861ccac5f4aa7cdf7d91d",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_ttc_validation_v1.json",
+      "bytes": 20832,
+      "sha256": "25055100a4aa0fe4d025a401e4d8acbaad52b98b81350a2b3a7019a397d72204",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd2_ttc_validation_v2.json",
+      "bytes": 5771,
+      "sha256": "a3d6e7dbc6332bbab90ed5e8a92abfd518ac2f893115d6205b922e5ee4b47a76",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd3_multicue_task_free_console.json",
+      "bytes": 7465,
+      "sha256": "3916befaf5b229f4bb17b251009d26f4814cfdfe0404a9e6bfe0decb754671c3",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd3_multicue_task_free_v1.json",
+      "bytes": 7463,
+      "sha256": "4c88cd07d09dc06e93fd35c5a820ded32a8c318288fcb9b30a7534bcbc685924",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd3_multicue_task_free_v2.json",
+      "bytes": 9935,
+      "sha256": "e2b97a26dc508e2dc2a3860ebd7e67cde37165675036f1543911abeb481c7053",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd3_multicue_task_free_v2_console.json",
+      "bytes": 9937,
+      "sha256": "651e97a378730437207ac54df6697b8e10415a2d9904c863e707c3554cb24273",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd4_chart_playback_v1.json",
+      "bytes": 1846608,
+      "sha256": "ab7e0a5d01cf09761bc47cebe2720a1d42fc17c624e7ddf382b0becc48e341ce",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd4_chart_playback_v3.json",
+      "bytes": 1866866,
+      "sha256": "32a2e6d54f614e139421c9e49d0c521ab4c64637f741e441484ee48b7e39617e",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd4_chart_playback_v4.json",
+      "bytes": 1867264,
+      "sha256": "990935ea5ca6f2c9fec76a651558387e2d65987f7f61281b897f047a6500438a",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd4_renderer_preflight_v2.json",
+      "bytes": 1331,
+      "sha256": "a0840c9fd4c02a96cb2b9a3ebd0877f8337ccb42e4b564a32e2054ea25927adb",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd4_typed_renderer_stream_v1.json",
+      "bytes": 919,
+      "sha256": "daf5b3b94d9dd7796cc93c8c01f07d9f333d7da3a77466fea7a153569f76a473",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd5_lazer_parity_probe_capture_v5.json",
+      "bytes": 613555,
+      "sha256": "abf06d4ae06a305a10564e67ef43650e52e94c0620f421d4c068090a65ff5185",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd5_lazer_parity_v2.json",
+      "bytes": 639813,
+      "sha256": "914de744a616a12833cf544a8b9deda7b5297585c744a972cc2dc34c9d0c24ae",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd5_lazer_parity_v4.json",
+      "bytes": 1237575,
+      "sha256": "a56aac3682026d0a9892e1e8f08e88260ba36edd7c30a2673f680b2548ae8dd7",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/fd5_lazer_parity_v5.json",
+      "bytes": 1239027,
+      "sha256": "f0f570000a4cf01965296ea4860277d68dbef6ffa7d6da9f7ac35466b843bc3f",
+      "bundle": "freedom-dive.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/four_lane_taps_v1.json",
+      "bytes": 4695,
+      "sha256": "d4098a9c5d399122eab822a027910bfb7c5f6d5c11ee46ff7a696d4c5a8c79ff",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/four_lane_taps_v2.json",
+      "bytes": 4694,
+      "sha256": "60805a11e0bc841f6f7ab637c21290e6063cb1d29dbeb2a544140b1c71f247f3",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/hold_admission_v1.json",
+      "bytes": 1422,
+      "sha256": "682a7d6633c62620cad9363ce2331bdd8b4a6135e9137fe184817fee453c897e",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/hold_admission_v2.json",
+      "bytes": 2032,
+      "sha256": "702fe49157c533e06c3a3810b2e0cc28243b09857702d95d69d622b0263f8270",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/holds_v1.json",
+      "bytes": 8757,
+      "sha256": "58f33e3285def84b1bc02d531d8f2ab742d4582d1b6bc096303db87ac44c028e",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/lane_mapping_admission_v1.json",
+      "bytes": 2256,
+      "sha256": "d38c5450cfdd64797734e4a7caba80d802c16c471d8e0903618e03ac0586a486",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/no_cue_output.json",
+      "bytes": 685997,
+      "sha256": "84a742a6f3da618f41d79d8a278011e0f7745193ceb2b647b107c9c2d9f95288",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/readout_rearm_probe_v1.json",
+      "bytes": 19675,
+      "sha256": "ca61c0841e32ae62d27b9ad903e9254ca36592bf0f7ee54246ef29edf26c9836",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/task_free_admission.json",
+      "bytes": 6030,
+      "sha256": "ebc0b8938964b5d34f1097b981c15f8aa686dccfbdeb724bf06a9c5bd590266a",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/teacher_local_result.json",
+      "bytes": 27635,
+      "sha256": "ad11190e8896003966e76b2ada4badc3aa25fadca017595517b92a51a9a5b95c",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/ea_mvp/temporal_credit_probe_v1.json",
+      "bytes": 3256,
+      "sha256": "a6ca18c69e7ddd79f0cd80c017fb7ed325f3f70f3670ea7536d1344762189620",
+      "bundle": "ea-core.tar.gz"
+    },
+    {
+      "path": "runs/lazer_mvp_capacity/result.json",
+      "bytes": 24313,
+      "sha256": "7ec737260c1bd98492e8e05e1a1b0cfe14996d9b1ab1c41b6cd2e926de78cc96",
+      "bundle": "lazer-mvp.tar.gz"
+    },
+    {
+      "path": "runs/lazer_mvp_l0_9a/csharp_hit_windows.json",
+      "bytes": 2098,
+      "sha256": "2efbb0721ecfde1cce2642fc33fbe3c4633a6d47d83e4454d473bee4d4611bba",
+      "bundle": "lazer-mvp.tar.gz"
+    },
+    {
+      "path": "runs/lazer_mvp_l0_9a/csharp_source_subset.json",
+      "bytes": 2431,
+      "sha256": "df5d737a2c5548e22b47e21bbde947fb236d40d0ceec17ca595d02493bd90859",
+      "bundle": "lazer-mvp.tar.gz"
+    },
+    {
+      "path": "runs/lazer_mvp_l0_9a/python_headless_output.json",
+      "bytes": 8366,
+      "sha256": "48d1367d8bf8dd88335ce543b611780eed0012372ea6d1dc0bf2a4b73ead7183",
+      "bundle": "lazer-mvp.tar.gz"
+    },
+    {
+      "path": "visualization/freedom-dive-fly-replay-silent.mp4",
+      "bytes": 4799919,
+      "sha256": "c045b4e33b06bafa565865405585bac1bafd083d7af38f9695f757a935034d37",
+      "bundle": null
+    },
+    {
+      "path": "work/analyze_fd4_lane_repeats.py",
+      "bytes": 2307,
+      "sha256": "ff969117744439dae0b908278977dc8b57d2d41c68a90bf5b9bcd16772e7708b",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/build_fly_training_viewer.py",
+      "bytes": 5712,
+      "sha256": "d22d74479f945919c9af0738a3e234da460b047fa026186426ec85eeb971f3c5",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/check_fly_training_viewer.js",
+      "bytes": 3026,
+      "sha256": "6798a4a61a22ab276b79b6e26147d44d84020e8637ca7cb99116b1885d1f7f4e",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_chart_input.json",
+      "bytes": 234083,
+      "sha256": "6422611b53d473b12cdd200cb3026845d23fab5d7cbfedb72c1b2d33e72d2f9a",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_chart_input_v2.json",
+      "bytes": 474878,
+      "sha256": "e1b085523759029700ee7d4c3e9e677965ffacaf350af0314802e30d4184dd2c",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_chart_input_v3.json",
+      "bytes": 462295,
+      "sha256": "aac191f0fc5009f49b714a010b3c50573ebb332f8da95f32ea79d60226bd5ed0",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_chart_input_v4.json",
+      "bytes": 463808,
+      "sha256": "7cf0fbc228d22be9fec07f49100857e5b3e794f0e3d218a47da75ae7b7eb30c1",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v2.jsonl",
+      "bytes": 300917,
+      "sha256": "72244e0155d3065683d30087e062fcb456787e2f4f947f7b44f9c0d6fd579672",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v2_repeat.jsonl",
+      "bytes": 301091,
+      "sha256": "955b3716108d529d6d8a3ca82d65a19f541d8472f3020106d1cc8f0f46f3e055",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v3.jsonl",
+      "bytes": 296725,
+      "sha256": "d5a200c8f0ba99e7e711def761cd9ee82f5a3f36e001dc6b0efa142f64447028",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v3_repeat.jsonl",
+      "bytes": 296155,
+      "sha256": "7a22dd1c988f38b058837dbb2a0cb39c53164db3042f48190b9d90270ab99b09",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v4.jsonl",
+      "bytes": 286046,
+      "sha256": "3bc55a73f2ae43a8ab2c661e3c5f8469a33c29754236b57615390f44ece6fc83",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v4_repeat.jsonl",
+      "bytes": 286046,
+      "sha256": "5a68420b15926e108faa4ddae954514846807b69c6d4e0c86e7b3808532a7fa5",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v5.jsonl",
+      "bytes": 286771,
+      "sha256": "793d3f0c49da2dfc27cd5f97717cd450c6866634ca17ba2735325f7d73344494",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_fd5_lazer_v5_repeat.jsonl",
+      "bytes": 286771,
+      "sha256": "15e0617db1c45dddf0e8f76eca95710754ea17b477248a1fe0525ae415d1bf59",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/ea_mvp_lazer_hold_adapter.jsonl",
+      "bytes": 4821,
+      "sha256": "04d8ad32c4af3d57c26ef3562edd0c93cda55c51736ca866b0474a0335614dda",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/export_fd4_replay_video.py",
+      "bytes": 5976,
+      "sha256": "037b17209dd0c92eb7313758252dada30d3b9b8133b74746795b5b9ce1b91d11",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/fly_training_playback.html",
+      "bytes": 200329,
+      "sha256": "ba906926f91fb80ee39dcb295fb2c0112590bf16d7cf6874024b6acf554b3124",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/fly_training_playback.template.html",
+      "bytes": 21462,
+      "sha256": "92948c2845bfc88d946e39d827d9fd1039372dfda7f9d60ea305f10b6e2a4a49",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_audit.py",
+      "bytes": 2585,
+      "sha256": "c27b23810efdf7a8a163b9087e90c5e1e1991b400c3d2698037b6adb33504824",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_frame.png",
+      "bytes": 15858,
+      "sha256": "806d6c89a09376ead4953b5c7d457769a9d524fcad897ec2883ce397aeb2e17b",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_lazer_map.json",
+      "bytes": 82921,
+      "sha256": "5baf2c9ea699e8b588ac092b89608bfc509acab1750ee2b0e217b5c567009011",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_lazer_replay.json",
+      "bytes": 96,
+      "sha256": "35cca8e4ce2dc7a05f715ebbd689f5cd70d05e3a66d34234e32b2cc10d7e1cd3",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_replay_check.png",
+      "bytes": 82828,
+      "sha256": "ece19c689838c65d5a0efc946eee7eb12b74e7ebc4ffe6a6f17f127e8e4fde0f",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_results.png",
+      "bytes": 37139,
+      "sha256": "c5168e0a19d465da000a5eee67c37e2e6cff5dce92e17b2dd1983407c954b2fa",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/freedom_dive_ui_smoke.py",
+      "bytes": 956,
+      "sha256": "cbe1cc7c8426b27ce2ba0b11d0b2ee91e523f7a52dd24604f2d2896b915e83db",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/l0_9a1_python.json",
+      "bytes": 9016,
+      "sha256": "e087c991b4e56acc16c34562eee8d52e5068513dd13c5804e5303a13eda6c3d9",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_adapter_episodes.json",
+      "bytes": 226657,
+      "sha256": "935c8b8c911004d7e2ecc9244428cbe6a1f8546c6317862e906ad87d6c32c01a",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_adapter_normalized.json",
+      "bytes": 12126,
+      "sha256": "f74aa47252bbe978e2f53dd02a6e71cc391db3ef5ce760268d40679dd0e2a0d2",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_adapter_probe.jsonl",
+      "bytes": 5677,
+      "sha256": "8555999fd24dfc4d2ad299db1c3c9efc158db2fcfb3fd15d0142ee0029055767",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_adapter_probe_repeat.jsonl",
+      "bytes": 5677,
+      "sha256": "8555999fd24dfc4d2ad299db1c3c9efc158db2fcfb3fd15d0142ee0029055767",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_score_probe.jsonl",
+      "bytes": 4753,
+      "sha256": "beecd324965c300753401a80a2dfa3180defbdf5ce41fb8b9e2631be162913eb",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_4k_score_probe_repeat.jsonl",
+      "bytes": 4753,
+      "sha256": "5a6b98a27b941fbe18fcef92742d05e36c19599722cf217ecd0156652c90a252",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_hold_probe.jsonl",
+      "bytes": 3232,
+      "sha256": "9a9d8d758a62e4073ee493a2ddd861bbe9804c762ec26d1b783c63567554eef0",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_od8_csharp_windows.json",
+      "bytes": 2098,
+      "sha256": "2efbb0721ecfde1cce2642fc33fbe3c4633a6d47d83e4454d473bee4d4611bba",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_normalized_trace.json",
+      "bytes": 7609,
+      "sha256": "c3963d3d3b8c1aa5e7124657654fd42ffad1ec26988db6e91f3b3f83a5337e15",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_reference_probe.jsonl",
+      "bytes": 5337,
+      "sha256": "9942cfee21f164151643e1873bb0b54271f5765b9e7a26fb04eff94ff14bb566",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_reference_probe_repeat.jsonl",
+      "bytes": 5337,
+      "sha256": "296ec4bd6fb77fb94fdefa10e99df4b660703324cf61e1c53df770be81fea967",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_reference_results.jsonl",
+      "bytes": 1610,
+      "sha256": "713912cea78692718732e7ec5c1d0266125382cd455174cb2e048fc30ce8d6c2",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_reference_results_repeat.jsonl",
+      "bytes": 1610,
+      "sha256": "435f3ac2866904ac84025f20a1f7e5b3e8d49f90dd7c2f3b2da96dbafc6c7a59",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_runtime_timing_results.jsonl",
+      "bytes": 2534,
+      "sha256": "b7e157b0b0f54c5c022d82af56b3dad12fb64e76ef75253c33b942d643fd44e1",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_score_probe.json",
+      "bytes": 12318,
+      "sha256": "968dccbdbece32171232257dc862511090013d1e2ecaecb1de009b1c93127ddc",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/lazer_score_probe_repeat.json",
+      "bytes": 12318,
+      "sha256": "968dccbdbece32171232257dc862511090013d1e2ecaecb1de009b1c93127ddc",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/playable_smoke.png",
+      "bytes": 13612,
+      "sha256": "fe75b97789c3965dc761048ff49fcc9d9e31fa0d04c8cfe44d3cb8562dc6c167",
+      "bundle": "work-evidence.tar.gz"
+    },
+    {
+      "path": "work/playable_smoke.py",
+      "bytes": 1834,
+      "sha256": "648469a489e947773f54a163d7095f85a267592936d2bbf925b5051eeb7c35e4",
+      "bundle": "work-evidence.tar.gz"
+    }
+  ],
+  "bundles": [
+    {
+      "path": "results/ea-mvp-iteration-1/ea-confirmation-fixed.tar.gz",
+      "bytes": 382166,
+      "sha256": "08a606fd6da76092ad6849c00f0cfadf7c68e19f961048386784e1f0ae769a8c"
+    },
+    {
+      "path": "results/ea-mvp-iteration-1/ea-confirmation-v2.tar.gz",
+      "bytes": 1029052,
+      "sha256": "b0ee4f1e867644758e65add19c397007f2aec99b916965919af7396366aca538"
+    },
+    {
+      "path": "results/ea-mvp-iteration-1/ea-core.tar.gz",
+      "bytes": 313771,
+      "sha256": "9a26859dc570cbdcc87f16bd2ab1e9a57ddea70e64d1cc91eee22ef18e4eee75"
+    },
+    {
+      "path": "results/ea-mvp-iteration-1/freedom-dive.tar.gz",
+      "bytes": 5491008,
+      "sha256": "6b85259ab91de5880f5c9d9347d9761e1c0b7df3cac102e74b26fc06b4e8cffe"
+    },
+    {
+      "path": "results/ea-mvp-iteration-1/lazer-mvp.tar.gz",
+      "bytes": 3713,
+      "sha256": "c1878b93fcc5c04269833a017312e9b1538fc5ea927a34a38b1e247203afc60a"
+    },
+    {
+      "path": "results/ea-mvp-iteration-1/work-evidence.tar.gz",
+      "bytes": 533726,
+      "sha256": "27a84dafda3f612ba5460f5ae53100da1cb980e1acac0aa9fcc06fe9d3d74a0a"
+    }
+  ]
+}

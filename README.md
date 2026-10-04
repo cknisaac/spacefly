@@ -23,6 +23,7 @@ The cell IDs and contact relationships come from the connectome. The position en
 - [Current status](docs/project-status.md): what passed, what failed, and what is frozen.
 - [Iteration-one handoff](docs/EA_MVP_ITERATION_1_SUMMARY.md): engineering learner, game integration, results, and limits.
 - [Fly training explainer](docs/EA_MVP_FLY_TRAINING_EXPLAINER.md) and [recorded training playback](visualization/ea-mvp-training-playback.html).
+- [Silent Freedom Dive replay](visualization/freedom-dive-fly-replay-silent.mp4) and [iteration-one raw receipt bundles](results/ea-mvp-iteration-1/README.md).
 - [Experiment results](results/index.md): each major stage's declared result and interpretation.
 - [Level 4D playback](visualization/malecns-level4d-playback.html): download or open the HTML locally to scrub a saved moving note, neural events, weights, voltage, and output. The training and frozen-evaluation traces are separate recorded phases.
 - [Documentation guide](docs/index.md): the infrastructure, synthetic, pathway, larval, and internal-learning tracks.
@@ -59,7 +60,7 @@ The import and some experiment tests require the source files described in the [
 | `tests/` | Deterministic checks |
 | `docs/` | Scientific reports, plans, and guided indexes |
 | `research/` | Guide to evidence and exploratory work |
-| `results/` | Small published result bundles and artifact checksums |
+| `results/` | Published result bundles, compressed EA-MVP receipts, and artifact checksums |
 | `visualization/` | Offline playback of recorded traces, including EA-MVP training |
 | `data/` and `runs/` | Local source data and full generated runs, excluded from normal Git history |
 

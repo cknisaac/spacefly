@@ -33,7 +33,7 @@ The *Freedom Dive* trace is weaker on `11`-like direct repeats than on `121`-lik
 
 **Not supported:** that a living fly can play osu!; that this is a complete fly-brain simulation; that natural visual, motor, or game-feedback pathways were established; that correct judgement pairing caused the weight state (shuffled teaching performed identically); that dense same-lane repeats, mid-map speed changes, or mixed overlaps are solved; or that the full score was reproduced in the desktop osu!lazer client.
 
-Source, configuration, protocols, reports, scripts, tests, and the standalone HTML playback are in Git. The imported `.osz`, audio, raw connectome tables, and large `runs/` receipts stay local. Reports identify these local paths and pinned hashes; the published HTML embeds a compact selection of recorded events so it opens without those local files. The original Python package name `project_b` is retained for compatibility.
+Source, configuration, protocols, reports, scripts, tests, the standalone HTML playback, a [silent replay video](../visualization/freedom-dive-fly-replay-silent.mp4), and [compressed iteration-one receipts](../results/ea-mvp-iteration-1/README.md) are in Git. The bundles restore the original `runs/ea_mvp/` paths and selected `work/` diagnostics; the published HTML embeds a compact selection of recorded events so it opens without extraction. The imported `.osz`, song audio, raw connectome tables, and copied osu!lazer source stay local. The original Python package name `project_b` is retained for compatibility.
 
 ## Release verification
 

@@ -17,7 +17,7 @@ The suite includes checks that need locally available connectome artifacts. The 
 
 ## Full historical runs
 
-The `runs/` tree contains large raw results and is ignored by Git. Many old reports link to local `runs/` files or heavy `docs/figures/` traces. Those links describe original evidence paths; a fresh GitHub checkout will have the compact published bundle but not every historical raw event stream. [Artifact hashes](../results/malecns-level4d/artifacts.json) and the [local diagnostic manifest](../results/local-artifact-manifest.csv) let an independently obtained full receipt be checked against this record.
+The `runs/` tree is ignored by Git. The [EA-MVP iteration-one bundles](../results/ea-mvp-iteration-1/README.md) publish that track's raw receipts as compressed archives that restore their original paths. Other historical reports still link to local `runs/` files or heavy `docs/figures/` traces not included in a fresh checkout. [Artifact hashes](../results/malecns-level4d/artifacts.json) and the [local diagnostic manifest](../results/local-artifact-manifest.csv) let an independently obtained full historical receipt be checked against this record.
 
 The Level 4D runner is [`experiment_level4d_final_moving_note_repair.py`](../src/project_b/malecns_continuous_position_learning/experiment_level4d_final_moving_note_repair.py), with a [frozen configuration](../configs/malecns_level4d_final_moving_note_repair.json). Its parent-stage receipts and source-derived anatomy files are required for exact replay. The repository does not currently provide a one-command, data-free reproduction of the entire experimental history. Read the [protocol](MALECNS_LEVEL4D_FINAL_REPAIR_PROTOCOL.md) before interpreting or rerunning it.
 
