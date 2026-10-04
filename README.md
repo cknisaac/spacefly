@@ -126,5 +126,10 @@ https://github.com/user-attachments/assets/240138f4-dff9-4a6c-a03b-74153c150c61
 
 More info: [Iteration-one results](https://github.com/cknisaac/spacefly/blob/ea-mvp-engineering-assumption-fly-learner/docs/EA_MVP_ITERATION_1_SUMMARY.md) and [saved receipt bundles](https://github.com/cknisaac/spacefly/tree/ea-mvp-engineering-assumption-fly-learner/results/ea-mvp-iteration-1).
 
+So, does this mean a real fly can learn to play osu!mania? Probably not (yet). Can we take a small part of a fly’s brain map, fill in the missing pieces with engineered rules, then train it to time key presses in a recreated osu!mania game? Sure! 
+
+Thanks for reading so far! 
+This project is far from complete. My end goal is to recreate as much of the biological learning process as possible, maybe discover a few new things along the way, and eventually test it on way harder and way more variety of maps. This is just the beginning :)
+
 
 [Previous README](docs/history/README-before-iteration-1.md).
