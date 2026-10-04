@@ -22,7 +22,7 @@ The cell IDs and contact relationships come from the connectome. The position en
 
 - [Current status](docs/project-status.md): what passed, what failed, and what is frozen.
 - [Iteration-one handoff](docs/EA_MVP_ITERATION_1_SUMMARY.md): engineering learner, game integration, results, and limits.
-- [Fly training explainer](docs/EA_MVP_FLY_TRAINING_EXPLAINER.md) and [recorded training playback](visualization/ea-mvp-training-playback.html).
+- [Fly training explainer](docs/EA_MVP_FLY_TRAINING_EXPLAINER.md), [interactive recorded playback](visualization/ea-mvp-training-playback.html), and [training showcase MP4](visualization/ea-mvp-training-showcase.mp4).
 - [Silent Freedom Dive replay](visualization/freedom-dive-fly-replay-silent.mp4) and [iteration-one raw receipt bundles](results/ea-mvp-iteration-1/README.md).
 - [Experiment results](results/index.md): each major stage's declared result and interpretation.
 - [Level 4D playback](visualization/malecns-level4d-playback.html): download or open the HTML locally to scrub a saved moving note, neural events, weights, voltage, and output. The training and frozen-evaluation traces are separate recorded phases.

@@ -9,6 +9,7 @@
 - A saved fixed-speed training run. In seed 907, 500 repetitions of one lane-0 note led to the first press at trial 359; trials 1–358 were MISS and trials 359–500 were PERFECT. Seven selected synaptic weights changed. This is repeated single-note training, not training on four-lane songs or varied patterns.
 - Frozen-weight tests: sequential lanes, equal-time chords, sequential holds, three EA-13 pattern families, and a full headless *Freedom Dive* run. The song replay used one continuing neural simulator, judged 1,310 chart objects, and kept fly weights fixed. The separate replay companion shows the saved run in the recreation. See [EA-13](EA_MVP_EA13_BROAD_EVALUATION_RESULT.md) and [FD-6](EA_MVP_FD6_REPLAY_COMPANION_RESULT.md).
 - A [self-contained HTML playback](../visualization/ea-mvp-training-playback.html) for the 500 recorded training trials and three later frozen pattern tests. This is saved-event playback, not a live neural run. The [viewer guide](../visualization/README.md) explains its controls and data boundary.
+- A [training showcase MP4](../visualization/ea-mvp-training-showcase.mp4) capturing the same saved playback across all test-weight options, with the repetitive first 350 training trials shown at 20×.
 
 ## Decision ledger
 
